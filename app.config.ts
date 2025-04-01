@@ -1,63 +1,63 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'shadcn-docs-nuxt',
-      description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
+      name: "Msty Studio Docs",
+      description:
+        "Get started with guides and resources to maximize your conversational AI experience with Msty Studio.",
     },
     theme: {
-      customizable: true,
-      color: 'zinc',
+      customizable: false,
+      color: "blue",
       radius: 0.5,
     },
     header: {
-      title: 'shadcn-docs-starter',
+      title: "Msty Studio Docs",
       showTitle: true,
       darkModeToggle: true,
       logo: {
-        light: '/logo.svg',
-        dark: '/logo-dark.svg',
+        light: "/icon.svg",
+        dark: "/icon.svg",
       },
       nav: [],
-      links: [{
-        icon: 'lucide:github',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
-        target: '_blank',
-      }],
+      links: [
+        {
+          icon: "tabler:brand-github",
+          to: "https://github.com/cloudstack-llc/msty-studio-docs",
+          target: "_blank",
+        },
+      ],
     },
     aside: {
-      useLevel: true,
-      collapse: false,
+      useLevel: false,
     },
     main: {
       breadCrumb: true,
       showTitle: true,
     },
     footer: {
-      credits: 'Copyright © 2024',
-      links: [{
-        icon: 'lucide:github',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
-        target: '_blank',
-      }],
+      credits: "CloudStack, LLC",
+      links: [
+        {
+          icon: "ph:cube",
+          to: "https://msty.app?ref=docs",
+          target: "_blank",
+        },
+      ],
     },
     toc: {
-      enable: true,
-      title: 'On This Page',
-      links: [{
-        title: 'Star on GitHub',
-        icon: 'lucide:star',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
-        target: '_blank',
-      }, {
-        title: 'Create Issues',
-        icon: 'lucide:circle-dot',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues',
-        target: '_blank',
-      }],
+      enable: false,
+      title: "On This Page",
+      links: [
+        {
+          title: "Go to Msty App",
+          to: "https://msty.app?ref=docs",
+          target: "_blank",
+        },
+      ],
     },
     search: {
       enable: true,
       inAside: false,
-    }
-  }
+    },
+  },
 });
