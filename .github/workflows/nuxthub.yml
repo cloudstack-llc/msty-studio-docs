@@ -40,4 +40,4 @@ jobs:
         uses: nuxt-hub/action@v1
         id: deploy
         with:
-          project-key: msty-studio-doc-ii43
+          project-key: msty-studio-doc-w69t
