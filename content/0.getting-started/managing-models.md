@@ -57,3 +57,13 @@ This allows you to use an AI that may be better at generating descriptions than 
 ## Set A Default Model
 
 To set a default model, expand the model selection box in the Conversations toolbar and then select the star icon to set the model as the default.
+
+## Update Model Name
+
+From the model selector in the the Conversations toolbar, select the edit icon to update the model name.
+
+You can update the model name to be more descriptive of the model's purpose or the type of conversations that you are having with it.
+
+## Set Model's Purpose (tags)
+
+Also, from the window that opens when you select the edit icon, you can set the model's purpose. These are tags that are used to categorize the model according to the standard use-cases they provide.
