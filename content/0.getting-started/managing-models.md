@@ -2,6 +2,7 @@
 title: Managing Models
 description: Adding and managing AI Models in Msty Studio
 navTruncate: false
+ogImage: https://docs.msty.studio/images/model-hub.png
 ---
 
 You can manage AI providers and models from **Model Hub**.
