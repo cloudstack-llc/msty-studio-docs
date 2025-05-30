@@ -66,4 +66,15 @@ You can update the model name to be more descriptive of the model's purpose or t
 
 ## Set Model's Purpose (tags)
 
+![model purpose](/images/model-purpose.png)
+
 Also, from the window that opens when you select the edit icon, you can set the model's purpose. These are tags that are used to categorize the model according to the standard use-cases they provide.
+
+### Model Purpose Types
+- **Text**: General text generation and understanding. Typical applications include text classification, generation, translation, completion, and summarization. 
+- **Coding**: Assisting with code generation and debugging. Typical applications include code completion, generation, analysis, debugging, and summarization. 
+- **Tools**: Interfacing with external tools and APIs. These models can be used for Msty Tools feature (MCP).
+- **Image**: Generate images. This will need to be set correctly according to model type, see [Image Generation](/features/image-gen).
+- **Vision**: Analyzing and understanding visual content, such as if you were to add an image attachment to a chat. Typical applications include image classification, object detection, visual search, and image descriptions. 
+- **Embedding**: Creating and using embeddings for various tasks. The models are used for vectorization, similarity search, and clustering and are typically used for RAG - such as with Msty's Knowledge Stacks feature.
+- **Streaming**: Handling real-time (or near real-time) data streams. Typical applications include real-time data processing, event detection, and anomaly detection.
