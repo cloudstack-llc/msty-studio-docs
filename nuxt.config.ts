@@ -11,4 +11,19 @@ export default defineNuxtConfig({
   },
 
   modules: ["@nuxthub/core"],
+
+  components: {
+    dirs: [
+      "~/components",
+      "~/components/ui",
+      {
+        path: "~/components/content",
+        prefix: "",
+      },
+    ],
+  },
+
+  alias: {
+    "@": "/<rootDir>",
+  },
 });
