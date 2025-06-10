@@ -2,6 +2,20 @@
 title: Managing Models
 description: Adding and managing AI Models in Msty Studio
 navTruncate: false
+resources:
+  videos:
+    - "CQtkVGItavA"
+    - "hQ8BcdpQwlw"
+    - "lwigyQ2whY0"
+  blogs:
+    - title: "Unleashing Local AI - Transform Your Coding Experience with Msty"
+      description: "Discover how to enhance your coding workflow using local AI models with Msty, GitHub Copilot, and Roo Code for personalized, offline support."
+      image: "/images/getting-started.png"
+      url: "https://msty.ai/blog/local-ai-coding-assistants"
+    - title: "The AI Settings Dictionary"
+      description: "AI settings are a powerful way to customize your AI experience. Here is what they all mean and how to use them."
+      image: "/images/getting-started.png"
+      url: "https://msty.ai/blog/the-ai-settings-dictionary"
 ---
 
 You can manage AI providers and models from **Model Hub**.
@@ -71,10 +85,13 @@ You can update the model name to be more descriptive of the model's purpose or t
 Also, from the window that opens when you select the edit icon, you can set the model's purpose. These are tags that are used to categorize the model according to the standard use-cases they provide.
 
 ### Model Purpose Types
-- **Text**: General text generation and understanding. Typical applications include text classification, generation, translation, completion, and summarization. 
-- **Coding**: Assisting with code generation and debugging. Typical applications include code completion, generation, analysis, debugging, and summarization. 
+
+- **Text**: General text generation and understanding. Typical applications include text classification, generation, translation, completion, and summarization.
+- **Coding**: Assisting with code generation and debugging. Typical applications include code completion, generation, analysis, debugging, and summarization.
 - **Tools**: Interfacing with external tools and APIs. These models can be used for Msty Tools feature (MCP).
 - **Image**: Generate images. This will need to be set correctly according to model type, see [Image Generation](/features/image-gen).
-- **Vision**: Analyzing and understanding visual content, such as if you were to add an image attachment to a chat. Typical applications include image classification, object detection, visual search, and image descriptions. 
+- **Vision**: Analyzing and understanding visual content, such as if you were to add an image attachment to a chat. Typical applications include image classification, object detection, visual search, and image descriptions.
 - **Embedding**: Creating and using embeddings for various tasks. The models are used for vectorization, similarity search, and clustering and are typically used for RAG - such as with Msty's Knowledge Stacks feature.
 - **Streaming**: Handling real-time (or near real-time) data streams. Typical applications include real-time data processing, event detection, and anomaly detection.
+
+::Resources

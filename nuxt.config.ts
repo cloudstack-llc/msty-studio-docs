@@ -22,4 +22,8 @@ export default defineNuxtConfig({
       },
     ],
   },
+
+  alias: {
+    "@": "/<rootDir>",
+  },
 });

@@ -3,12 +3,26 @@
     v-if="page.resources?.videos?.length || page.resources?.blogs?.length"
     class="mt-8"
   >
-    <h2 class="text-2xl font-bold mb-4">Related Resources</h2>
+    <h2
+      :id="id"
+      class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors [&:not(:first-child)]:mt-10"
+    >
+      <NuxtLink
+        :to="`#${id}`"
+        class="text-inherit no-underline hover:no-underline hover:cursor-pointer"
+      >
+        Related Resources
+      </NuxtLink>
+    </h2>
 
     <!-- Videos Section -->
-    <div v-if="page.resources?.videos?.length" class="mb-8">
-      <h3 class="text-xl font-semibold mb-4">Videos</h3>
-      <div class="relative group">
+    <div v-if="page.resources?.videos?.length" class="mt-6 mb-8">
+      <h3
+        class="scroll-m-20 text-2xl font-semibold tracking-tight [&:not(:first-child)]:mt-8"
+      >
+        Videos
+      </h3>
+      <div class="relative group mt-4">
         <button
           v-show="canScrollLeft.videos"
           @click="scrollLeft('videos')"
@@ -37,25 +51,23 @@
           <div
             v-for="videoId in page.resources.videos"
             :key="videoId"
-            class="flex-none w-80"
+            class="flex-none w-[340px]"
           >
-            <div class="rounded-lg border bg-white shadow-sm">
+            <div
+              class="rounded-lg border bg-white shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-200 overflow-hidden"
+            >
               <a
                 :href="`https://youtube.com/watch?v=${videoId}`"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="block"
               >
-                <img
-                  :src="`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`"
-                  :alt="`YouTube video ${videoId}`"
-                  class="w-full h-48 object-cover rounded-t-lg"
-                />
-                <div class="p-4">
-                  <h4 class="font-semibold mb-2">Watch on YouTube</h4>
-                  <p class="text-sm text-gray-600">
-                    Click to watch this video on YouTube
-                  </p>
+                <div class="relative pt-[56.25%] overflow-hidden rounded-t-lg">
+                  <img
+                    :src="`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`"
+                    :alt="`YouTube video ${videoId}`"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </a>
             </div>
@@ -86,8 +98,12 @@
 
     <!-- Blogs Section -->
     <div v-if="page.resources?.blogs?.length" class="mb-8">
-      <h3 class="text-xl font-semibold mb-4">Blog Posts</h3>
-      <div class="relative group">
+      <h3
+        class="scroll-m-20 text-2xl font-semibold tracking-tight [&:not(:first-child)]:mt-8"
+      >
+        Blog Posts
+      </h3>
+      <div class="relative group mt-4">
         <button
           v-show="canScrollLeft.blogs"
           @click="scrollLeft('blogs')"
@@ -118,7 +134,9 @@
             :key="blog.url"
             class="flex-none w-80"
           >
-            <div class="rounded-lg border bg-white shadow-sm">
+            <div
+              class="rounded-lg border bg-white shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-200"
+            >
               <a
                 :href="blog.url"
                 target="_blank"
@@ -164,9 +182,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, reactive } from "vue";
+import { ref, onMounted, reactive, computed } from "vue";
 
 const { page } = useContent();
+
+const id = computed(() => "related-resources");
 
 const videosContainer = ref<HTMLElement | null>(null);
 const blogsContainer = ref<HTMLElement | null>(null);
@@ -224,19 +244,22 @@ const scrollRight = (type: "videos" | "blogs") => {
   });
 };
 
-onMounted(() => {
-  // Initial check
-  checkScroll(videosContainer.value, "videos");
-  checkScroll(blogsContainer.value, "blogs");
-
-  // Add resize observer to handle window resizing
-  const resizeObserver = new ResizeObserver(() => {
+onMounted(async () => {
+  if (page.value.resources?.videos?.length) {
+    const { $youtube } = useNuxtApp();
+    // Initial check
     checkScroll(videosContainer.value, "videos");
     checkScroll(blogsContainer.value, "blogs");
-  });
 
-  if (videosContainer.value) resizeObserver.observe(videosContainer.value);
-  if (blogsContainer.value) resizeObserver.observe(blogsContainer.value);
+    // Add resize observer to handle window resizing
+    const resizeObserver = new ResizeObserver(() => {
+      checkScroll(videosContainer.value, "videos");
+      checkScroll(blogsContainer.value, "blogs");
+    });
+
+    if (videosContainer.value) resizeObserver.observe(videosContainer.value);
+    if (blogsContainer.value) resizeObserver.observe(blogsContainer.value);
+  }
 });
 </script>
 
