@@ -10,11 +10,11 @@ resources:
   blogs:
     - title: "Unleashing Local AI - Transform Your Coding Experience with Msty"
       description: "Discover how to enhance your coding workflow using local AI models with Msty, GitHub Copilot, and Roo Code for personalized, offline support."
-      image: "/images/getting-started.png"
+      image: "https://msty.ai/blog/toolbox/unleash-local-ai.png"
       url: "https://msty.ai/blog/local-ai-coding-assistants"
     - title: "The AI Settings Dictionary"
       description: "AI settings are a powerful way to customize your AI experience. Here is what they all mean and how to use them."
-      image: "/images/getting-started.png"
+      image: "https://msty.ai/blog/ai-settings-dictionary/ai-settings-dictionary.png"
       url: "https://msty.ai/blog/the-ai-settings-dictionary"
 ---
 
