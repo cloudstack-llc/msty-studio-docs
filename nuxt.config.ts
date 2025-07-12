@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/": {
-      redirect: "/getting-started/onboarding",
+      redirect: "/getting-started",
     },
   },
 
