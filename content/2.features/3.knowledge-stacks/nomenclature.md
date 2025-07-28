@@ -5,10 +5,6 @@ navTruncate: false
 resources:
   videos:
   blogs:
-    - title: ""
-      description: ""
-      image: ""
-      url: ""
 ---
 
 ## Nomenclature
