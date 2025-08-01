@@ -1,3 +1,57 @@
+::callout{variant="primary"}
+**Looking for Msty App?**  
+If you're looking for the **Msty App 1.x** documentation instead, you can find it here: [**Go to Msty App Docs →**](http://docs.msty.app){target="\_blank"}
+::
+
+[Msty Studio](https://msty.ai){target="\_blank"} is a [privacy-first](https://msty.ai/privacy-first){target="\_blank"} AI platform that empowers you to design and run advanced AI workflows using local and online models, directly from a web or desktop interface. Msty offers seamless integration with hundreds of top-tier models, powerful tools like Personas, Toolbox, and Turnstiles, and fully local data storage, ensuring both sophistication and security in your AI processes.
+
+## Getting Started
+
+Subscribers get access to both Msty Studio Web and Desktop.
+
+::alert{type="info" icon="tabler:info-circle"}
+Data does not sync between devices. Data is stored locally on your device. Studio web stores data directly to your browser.
+::
+
+### Msty Studio Web
+
+Msty Studio Web is a web-based application that is capable of running the marjority of features that Msty Studio offers. However, to unlock additional features, including Real-Time Data, Toolbox, and Local Models, Studio web will need to connect to [Sidecar](/getting-started/sidecar). Sidecar can either be ran on your same device or on a remote device.
+
+Even though Msty App is a web-based app, data is stored directly on your browser's local storage. This helps us maintain our Privacy-first policy and our commitment to keep your data in your control.
+
+#### Existing Msty App v1.x user?
+
+If you are an existing user of Msty App, please see the [Quick Start](/getting-started/quick-start) guide to get started.
+
+#### New to Msty?
+
+If you are brand new to Msty, please see the [Onboarding](/getting-started/onboarding) guide to get started.
+
+### Msty Studio Desktop
+
+Msty Studio Desktop is our Msty Desktop 2.0 app. Check out our [Announcement](https://msty.ai/blog/announcing-studio-desktop){target="\_blank"} to learn more about our vision for Msty Studio Desktop.
+
+To get started with Studio Desktop, please see the [Desktop](/getting-started/desktop) guide.
+
+## Popular Topics
+
+- [Managing Models](/getting-started/managing-models) - Learn how to add and configure AI models
+- [Toolbox](/features/toolbox/tools) - Leverage powerful tools using MCP
+- [Knowledge Stacks](/features/knowledge-stacks/overview) - RAG the right way
+- [Workspaces](/features/workspaces) - Organize your projects and conversations
+- [Environment Variables](/features/environment) - Configure your development environment
+- [Data Backups](/features/data-backups) - Keep your data safe and synchronized
+
+## Need Help?
+
+- **Getting Started**: Check out our [Quick Start](/getting-started/quick-start) or [Onboarding](/getting-started/onboarding) guides
+- **How-Tos**: Find step-by-step guides in our [How-Tos](/how-tos/manage-license) section
+- **Whats new**: See what's new in Msty Studio by visiting our [Changelog](https://msty.ai/changelog){target="\_blank"}
+- **Support**: Visit our [Discord](https://msty.app/discord){target="\_blank"} for issues and discussions
+
+
+---
+
 ## Welcome to Msty Studio!
 
 Already have the **Aurum license** and **Msty App** installed? Awesome — you're all set to start using **Msty Studio**!
@@ -6,7 +60,9 @@ If you **do not** have an Aurum license and Msty App running on your device, the
 
 Before continuing, grab your license key, which you can do by going to [Lemon Squeezy](https://app.lemonsqueezy.com/my-orders/login).
 
-### Quick Start Instructions
+For Studio Desktop, you can migrate your data from Msty App v1.x to Studio Desktop. See the [Data Migration](#data-migration-for-msty-app-users) section for more details.
+
+## Quick Start Instructions for Msty Studio Web
 
 ::steps
 
@@ -34,6 +90,57 @@ Before continuing, grab your license key, which you can do by going to [Lemon Sq
 **Don’t have Msty App installed or running yet?**
 No worries — just head to the next section, and we’ll guide you through the full setup step by step.
 ::
+
+## Data Migration for Msty App Users
+
+Msty App v1.x users can migrate much of their data to Msty Studio Desktop. Please keep in mind that Studio Desktop is in Alpha right now - **backup** your data for BOTH Msty App and Msty Studio Desktop prior to migration.
+
+::alert{type="info" icon="tabler:info-circle"}
+Data migration is only available for Msty Studio Desktop at this time. 
+::
+
+### Data Migration includes
+
+You can migrate any of the following items from Msty App v1.x to Msty Studio Desktop:
+- **Prompts**: All your workspace's Prompt Library prompts
+- **Remote Model Providers**: All your workspace's remote providers and selected models from Msty App - **does NOT include API keys**, these will need to be re-entered for each provider
+- **Conversations**: All your workspace's conversations 
+- **Attachments**: All your workspace's attachments that you include in the zip file
+
+Migrated conversations and prompts will be added to new project folders in Msty Studio. Your existing Msty Studio Desktop data will not be overwritten.
+
+### Migration steps
+
+You can migrate data one workspace at a time. If you have multiple workspaces, you will need to repeat the migration steps for each workspace you intend to migrate data to.
+
+::steps
+
+1. Locate the **msty.db** database and attachment files
+
+To locate the **default workspace** database and attachments, follow these steps:
+  - Open Msty App and go to **Settings > General > Data Paths** and open location for **App Data**
+  - This will open the folder where the default workspace database file and attachments folder are stored
+
+![Default Workspace Data Paths](/images/quick-start/default-data.png)
+
+To locate a **custom workspace** database and attachments, follow these steps:
+  - Right click on the workspace and then select option to **Reveal in Finder** (macOS) or **Open Folder** (Windows)
+
+![Default Workspace Data Paths](/images/quick-start/workspace-data.png)
+
+2. If you plan to migrate attachments, first zip the attachments folder 
+3. Open Msty Studio Desktop
+4. Ensure you are in the workspace you want to migrate data to
+   - If you are not in the correct workspace, switch to the desired workspace by clicking on the workspace icon
+5. Go to **Settings > Data > Data Migration** 
+6. Select the database file you want to import the items from
+7. Select the items you want to import from the database file
+9. Optionally select a zipped attachments file to import; attachments can also be imported later, after the database has been imported
+8. Click the **Migrate** button to migrate items from database file
+
+:: 
+
+You will see confirmation messages when data migration and attachment imports are complete. 
 
 ::Resources
 
@@ -66,6 +173,118 @@ These onboarding instructions are meant for new Msty users. If you are an existi
 
 ::alert{type="info" icon="tabler:info-circle"}
 **Safari user?** Safari is not directly supported by Msty Studio however there is a workaround using [Msty Sidecar](/getting-started/sidecar) by leveraging the tunneling feature.
+::
+
+::Resources
+
+
+---
+
+**Msty Studio Desktop Alpha is now available for Aurum license holders!**
+
+All of the features you love in Msty Studio Web are now available in a desktop application. 
+
+Check out the our [announcement blog post](https://msty.ai/blog/announcing-studio-desktop) for more details.
+
+Please join our [Discord](https://msty.app/discord) to share your feedback and help us improve the desktop experience. 
+
+![msty studio](/images/image-comparison.png)
+
+### Quick Facts
+1. Alpha available for Aurum License holders only.
+2. Studio Desktop installs separately from Msty App (v1.x).
+3. You do not need remove Msty App (v1.x), you can continue using it while using Studio Desktop.
+4. You will need your Aurum license key to activate Studio Desktop - see [Manage License](/how-tos/manage-license) for details on how to get your license key.
+5. Studio Desktop activation will count against your Aurum activated devices limit, so you may need to deactivate a device if you have reached your limit.
+6. Studio Desktop is available for Windows, Mac, and Linux.
+7. A migration tool is being developed to help you migrate your existing Msty App (v1.x) data to Studio Desktop.
+8. Studio Desktop does not require Msty Sidecar to use tools, RTDs, and local models. Sidecar is a companion for the web version of Msty Studio. However, you can optionally connect Studio Web to Studio Desktop instead of Sidecar to use tools, RTDs, and local models.
+
+
+## Download Options
+
+Please select the download option for your operating system.
+
+::tabs{variant="card" sync="user-os"}
+::div{label="Windows" icon="iconoir:windows"}
+
+### Windows
+
+- [Download Msty Studio Desktop (x64)](https://next-assets.msty.studio/app/alpha/win/MstyStudio_x64.exe)
+
+::
+
+::div{label="Mac" icon="hugeicons:apple"}
+
+### Mac
+
+- [Download Msty Studio Desktop (Apple Silicon - M1, M2, M3, M4)](https://next-assets.msty.studio/app/alpha/mac/MstyStudio_arm64.dmg)
+- [Download Msty Studio Desktop (Intel Macs)](https://next-assets.msty.studio/app/alpha/mac/MstyStudio_x64.dmg)
+
+::
+
+::div{label="Linux" icon="ph:linux-logo"}
+
+### Linux
+
+Linux requires some additional manual steps after downloading. 
+
+---
+
+### AppImage Instructions
+
+[Download Msty Studio Desktop (x64 AppImage)](https://next-assets.msty.studio/app/alpha/linux/MstyStudio_x86_64.AppImage)
+
+After download is complete, run the following command in your terminal to make the AppImage executable:
+
+```bash
+chmod a+x ./<DownloadedFileName>.AppImage
+```
+
+Then, you can run the AppImage file:
+
+```bash
+./<DownloadedFileName>.AppImage --no-sandbox
+
+```
+Note: You may need to install appropriate packages like libfuse2 (if your system does not have them already) in order to run the AppImage file.
+
+
+**Using GTK 2/3 and GTK 4 in the same process is not supported** Error? 
+
+Try running Msty from the terminal with: 
+```bash
+./MstyStudio_x86_64.AppImage --gtk-version=3
+```
+
+---
+
+### Deb Instructions
+
+[Download Msty Studio Desktop (x64 deb)](https://next-assets.msty.studio/app/alpha/linux/MstyStudio_amd64.deb)
+
+After download is complete, run the following command to install the deb package:
+```
+sudo apt install ./<DownloadedFileName>.deb
+```
+
+Once the installation is complete, run the following command to launch Msty Studio Desktop:
+
+```bash
+msty
+```
+
+Sometimes the installation may experience permission issues if the '_apt' user does not have enough privileges. In that case, run the following two commands to mitigate this issue and then run Msty again.
+
+```bash
+sudo chown root:root /opt/Msty/chrome-sandbox
+```
+```bash
+sudo chmod 4755 /opt/Msty/chrome-sandbox
+```
+
+
+
 ::
 
 ::Resources
@@ -185,109 +404,17 @@ open -a MstySidecar
 
 This may come in handy in certain situations, such as if you are experiencing issues with Sidecar detecting services on your local machine, such as NPM, Python, etc.
 
-::Resources
+## Setting a custom token
 
+You can set a custom token for Sidecar by adding a `.token` file to the Sidecar app data directory. On Mac, this is typically located at `~/Library/Application Support/MstySidecar`. On Windows, it is usually found at `%APPDATA%\MstySidecar`.
 
----
-
-**Msty Studio Desktop Alpha is now available for Aurum license holders!**
-
-All of the features you love in Msty Studio Web are now available in a desktop application. 
-
-Check out the our [announcement blog post](https://msty.ai/blog/announcing-studio-desktop) for more details.
-
-Please join our [Discord](https://msty.app/discord) to share your feedback and help us improve the desktop experience. 
-
-![msty studio](/images/image-comparison.png)
-
-### Quick Facts
-1. Alpha available for Aurum License holders only.
-2. Studio Desktop installs separately from Msty App (v1.x).
-3. You do not need remove Msty App (v1.x), you can continue using it while using Studio Desktop.
-4. You will need your Aurum license key to activate Studio Desktop - see [Manage License](/how-tos/manage-license) for details on how to get your license key.
-5. Studio Desktop activation will count against your Aurum activated devices limit, so you may need to deactivate a device if you have reached your limit.
-6. Studio Desktop is available for Windows, Mac, and Linux.
-7. A migration tool is being developed to help you migrate your existing Msty App (v1.x) data to Studio Desktop.
-8. Studio Desktop does not require Msty Sidecar to use tools, RTDs, and local models. Sidecar is a companion for the web version of Msty Studio. However, you can optionally connect Studio Web to Studio Desktop instead of Sidecar to use tools, RTDs, and local models.
-
-
-## Download Options
-
-Please select the download option for your operating system.
-
-::tabs{variant="card" sync="user-os"}
-::div{label="Windows" icon="iconoir:windows"}
-
-### Windows
-
-- [Download Msty Studio Desktop (x64)](https://next-assets.msty.studio/app/alpha/win/MstyStudio_x64.exe)
-
-::
-
-::div{label="Mac" icon="hugeicons:apple"}
-
-### Mac
-
-- [Download Msty Studio Desktop (Apple Silicon - M1, M2, M3, M4)](https://next-assets.msty.studio/app/alpha/mac/MstyStudio_arm64.dmg)
-- [Download Msty Studio Desktop (Intel Macs)](https://next-assets.msty.studio/app/alpha/mac/MstyStudio_x64.dmg)
-
-::
-
-::div{label="Linux" icon="ph:linux-logo"}
-
-### Linux
-
-Linux requires some additional manual steps after downloading. 
-
----
-
-### AppImage Instructions
-
-[Download Msty Studio Desktop (x64 AppImage)](https://next-assets.msty.studio/app/alpha/linux/MstyStudio_x86_64.AppImage)
-
-After download is complete, run the following command in your terminal to make the AppImage executable:
+For a random value, you can use the following command:
 
 ```bash
-chmod a+x ./<DownloadedFileName>.AppImage
+echo -n $(openssl rand -hex 40) > ~/path/to/MstySidecar/.token
 ```
 
-Then, you can run the AppImage file:
-
-```bash
-./<DownloadedFileName>.AppImage --no-sandbox
-
-```
-Note: You may need to install appropriate packages like libfuse2 (if your system does not have them already) in order to run the AppImage file.
-
----
-
-### Deb Instructions
-
-[Download Msty Studio Desktop (x64 deb)](https://next-assets.msty.studio/app/alpha/linux/MstyStudio_amd64.deb)
-
-After download is complete, run the following command to install the deb package:
-```
-sudo apt install ./<DownloadedFileName>.deb
-```
-
-Once the installation is complete, run the following command to launch Msty Studio Desktop:
-
-```bash
-msty
-```
-
-Sometimes the installation may experience permission issues if the '_apt' user does not have enough privileges. In that case, run the following two commands to mitigate this issue and then run Msty again.
-
-```bash
-sudo chown root:root /opt/Msty/chrome-sandbox
-```
-```bash
-sudo chmod 4755 /opt/Msty/chrome-sandbox
-```
-
-
-
-::
+Then, restart Sidecar to apply the new token. This token will be used for both local connections and remote connections via tunneling.
 
 ::Resources
 
@@ -455,6 +582,12 @@ This document will cover the **even more advanced** settings that are not includ
 
 Please note that these settings are _generally_ available across models; however, a model may not support all (or any) of these. If you try to add them to a model that doesn't support them, they will be ignored or an error may be thrown. Please check the documentation for the model provider you are using for their available settings.
 
+
+## Thinking Effort
+
+See the [Thinking Effort](/features/thinking-effort) docs for more information on how to use the thinking effort feature.
+
+
 ## Advanced Runtime Configurations
 
 ```json
@@ -621,28 +754,137 @@ Please note that these settings are _generally_ available across models; however
 
 ---
 
-Insights provides detailed analytics on token usage patterns, helping you understand consumption habits across different models. You can also view cost estimates and usage breakdowns by specific models, enabling more informed decision-making about AI tool usage.
+Many reasoning models allow you to adjust the thinking effort of the model. This feature allows you to control how much time and effort the model spends reasoning about a response before generating it.
+
+Please note that not all models support reasoning and that model providers may have different configurations for thinking effort. The "thinking" text may also not be returned for all models as well. 
+
+## Set Model Purpose with Reasoning
+In order to adjust reasoning and thinking effort, you must first enable **Thinking** as a model's purpose. This is done by editing a model from the model selection dropdown list, then selecting the edit icon, and then enabling **Thinking**. 
+
+![model purpose](/images/thinking-effort/thinking-purpose.png)
+
+## Set Thinking Effort
+Once Thinking is enabled, you can set the thinking effort for the model. This can be done by selecting the **Thinking Effort** dropdown in the model settings.
+
+![thinking effort parameter](/images/thinking-effort/thinking-parameter.png)
+
+## Providers
+Providers may support different thinking effort configurations. The following providers are known to support thinking effort. However, not all models within these providers support thinking effort configurations. Please check the provider and their model documentation for more details. You will likely see an error message returned when chatting if you try to set thinking effort on a model that does not support it.
+
+### Key
+Use the following key to understand the thinking effort support for each provider below. 
+
+- **None**: no thinking effort is applied, model will respond immediately without any reasoning
+- **Default**: the default thinking effort configuration determined by the provider
+- **Think Lightly**: a light reasoning effort, model will take a short time to respond with minimal reasoning
+- **Think Moderately**: a moderate reasoning effort, model will take a longer time to respond with some reasoning
+- **Think Deeply**: a deep reasoning effort, model will take the longest time to respond with extensive reasoning
+- **Dynamic**: the model will dynamically adjust the thinking effort based on the complexity
+- **Exclude**: the model performs its default reasoning effort, but does not return the reasoning text
+
+### Ollama / Msty Models
+Supports: 
+- None
+- Default
+
+### OpenAI Compatible Models
+Supports: 
+- None
+- Default
+
+### OpenAI / ChatGPT
+Supports: 
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
+
+### Anthropic / Claude
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
+
+### Google Generative AI / Gemini
+Supports: 
+- None 
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
+- Dynamic
 
 ::alert{type="info" icon="tabler:info-circle"}
-Costs and token usage are estimations only. Please refer your model provider account for accurate token usage and costs.
+Gemini 2.5 Pro does not allow for thinking to be disabled
 ::
 
-## Summary
+### xAI
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
 
-![token and cost summary](/images/tokens-costs.png)
+### OpenRouter
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
+- Exclude
 
-The **Summary** tab provides an overview of token usage and cost estimates. You can even filter by date range to see how usage has changed over time - including a temperature map visualization of day-by-day usage.
+### Mistral AI
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
 
-## Provider
+### Perplexity
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
 
-![provider model insights](/images/provider-insights.png)
+### Groq
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
 
-The **Provider** tab provides more detailed insights into token usage by Provider. You can further break down usage by individual models, allowing you to identify which models are consuming the most tokens. This helps in optimizing costs and understanding model-specific usage patterns.
+### Cohere
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
 
-Also provided are graphs displaying model throughput and latency, which can help you identify any performance issues or bottlenecks in model usage.
+### Azure OpenAI
+Supports: 
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
+
+### DeepSeek
+Supports: 
+- None
+- Default
+- Think Lightly
+- Think Moderately
+- Think Deeply
 
 ::Resources
-
 
 ---
 
@@ -669,6 +911,54 @@ We highly recommend that you back up your data before restoring, if possible. Re
 If you want to clear all of your data, you can do so by clicking the **Clear Data** button in the **Settings** section. This will delete all of your data and cannot be undone.
 
 We highly recommend that you back up your data before clearing it.
+
+::Resources
+
+
+---
+
+Insights provides detailed analytics on token usage patterns, helping you understand consumption habits across different models. You can also view cost estimates and usage breakdowns by specific models, enabling more informed decision-making about AI tool usage.
+
+::alert{type="info" icon="tabler:info-circle"}
+Costs and token usage are estimations only. Please refer your model provider account for accurate token usage and costs.
+::
+
+## Summary
+
+![token and cost summary](/images/tokens-costs.png)
+
+The **Summary** tab provides an overview of token usage and cost estimates. You can even filter by date range to see how usage has changed over time - including a temperature map visualization of day-by-day usage.
+
+## Provider
+
+![provider model insights](/images/provider-insights.png)
+
+The **Provider** tab provides more detailed insights into token usage by Provider. You can further break down usage by individual models, allowing you to identify which models are consuming the most tokens. This helps in optimizing costs and understanding model-specific usage patterns.
+
+Also provided are graphs displaying model throughput and latency, which can help you identify any performance issues or bottlenecks in model usage.
+
+::Resources
+
+
+---
+
+You can enhance your Msty Studio experience by enabling different modes. Each mode is designed to optimize the interaction with Sutdio and the model so that you can focus on the task at hand.
+
+## Vapor
+
+Conversations will not be saved by Msty Studio's history and will disappear when you turn it off or navigate away. Think of Vapor-mode conversations as a fleeting interaction. It exists only for the duration of your current exchange.
+
+::alert{type="info" icon="tabler:info-circle"}
+Note that if you use a cloud model, then you are still sending data to the model provider.
+::
+
+## Focus
+
+Focus Mode strips away unnecessary elements like the sidebar menu, workspaces, and directory listings to help you concentrate solely on your current task.
+
+## Zen
+
+Zen Mode takes Focus Mode a step further by removing the chat input box, allowing you to immerse yourself in the conversation without distractions. This mode is ideal for deep work or when you want to engage with the model without interruptions.
 
 ::Resources
 
@@ -702,29 +992,6 @@ This will toggle the visibility of the sidebar, allowing you to maximize your wo
 
 This will open a picker that allows you to quickly select an [environment variable](/features/environments). This is useful for inserting variables into your conversations or for quickly accessing specific information.
 ![shiftcut env picker](/images/shiftcuts/shiftcut-env.png)
-
-::Resources
-
-
----
-
-You can enhance your Msty Studio experience by enabling different modes. Each mode is designed to optimize the interaction with Sutdio and the model so that you can focus on the task at hand.
-
-## Vapor
-
-Conversations will not be saved by Msty Studio's history and will disappear when you turn it off or navigate away. Think of Vapor-mode conversations as a fleeting interaction. It exists only for the duration of your current exchange.
-
-::alert{type="info" icon="tabler:info-circle"}
-Note that if you use a cloud model, then you are still sending data to the model provider.
-::
-
-## Focus
-
-Focus Mode strips away unnecessary elements like the sidebar menu, workspaces, and directory listings to help you concentrate solely on your current task.
-
-## Zen
-
-Zen Mode takes Focus Mode a step further by removing the chat input box, allowing you to immerse yourself in the conversation without distractions. This mode is ideal for deep work or when you want to engage with the model without interruptions.
 
 ::Resources
 
@@ -948,6 +1215,382 @@ We recommend keeping an eye on Sidecar logs to see if there are any errors or is
 
 ::Resources
 
+
+---
+
+Knowledge Stacks are Msty Studio’s take on Retrieval-Augmented Generation (RAG), designed to help you create, manage, and use collections of knowledge in a structured, flexible way. They let you organize your data for easy access in conversations, proving models with deep, domain-specific understanding.
+::alert{type="info" icon="tabler:info-circle"}
+Knowledge Stacks are currently available in Msty Studio Desktop only
+::
+
+## Key Features of Knowledge Stacks
+
+A few of the key features that make Msty's Knowledge Stacks stand out include:
+- **Flexible Embedding**: You can select and embed using a local embedding model of your choice, allowing you to tailor the knowledge stack to your specific needs
+- **Chunk Console and Visualizer**: With the visualizer, you can view how your documents are chunked and run example queries using the console, making it easier to understand and utilize your data
+- **Advanced Query Settings**: Fine-tune how your knowledge stack responds to queries with customizable settings for relevance, context, and more
+- **Synthesized Responses**: Msty can generate responses based on the knowledge in your stack, allowing for more dynamic and context-aware interactions
+- **PII (Personal Identifiable Information) Scrubbing**: Msty includes ability for identifying and redacting sensitive information in your knowledge stack
+
+## Creating your First Knowledge Stack
+
+When creating your Knowledge Stack, think of each stack as a category or topic that you want to explore or utilize in your AI applications. You can add various types of content to your stack, such as files, folders, notes, and YouTube links. However, we recommend that you keep your stack focused on a single topic or theme to maximize its effectiveness.
+
+::steps
+1. Click the Knowledge Stacks icon and select option to create a new stack
+2. Add a **Title** and **Description** for your stack
+3. Add **Files**, **Folders**, **Notes**, and/or **YouTube Links** to your stack
+4. Configure the **Compose Settings** - view [Compose Options](/features/knowledge-stacks/compose-options) for advanced configuration options
+5. **Compose** your Knowledge Stack
+::
+
+![create your first knowledge stack](/images/knowledge-stacks/ks-setup-full.png)
+
+Knowledge Stack is a powerful tool for organizing and utilizing your data and AI effectively. Be sure to explore the other features and settings in this section to get the most out of your Knowledge Stacks.
+
+## Using Knowledge Stacks in Conversations
+
+Once you have created and composed your Knowledge Stack, you can use it in your conversations.
+
+::steps
+1. Start or open a conversation in Msty Studio
+2. Select the **Knowledge Stack** icon in the conversation toolbar
+3. Choose the Knowledge Stack you want to use from the list
+4. Start chatting with a model
+::
+
+![knowledge stacks enabled in chat](/images/knowledge-stacks/select-ks.png)
+
+The model will have access to the knowledge in your selected stack, allowing it to provide more informed and context-aware responses.
+
+![knowledge stacks chat response](/images/knowledge-stacks/sherlock-holmes-response.png)
+
+Check out [Query Settings](/features/knowledge-stacks/query-settings) for advanced query options that will help you improve search results.
+
+## Import Default Knowledge Stacks
+
+Select the down chevron next to **New Knowledge Stack** and then select **Import Default Knowledge Stack**. 
+
+This will load a prebuilt Knowledge Stack containing Msty Studio’s documentation. It’s a great way to explore and test how Knowledge Stacks work without needing to upload your own files. Plus, you’ll have instant access to the full Msty Studio docs directly within your conversations.
+
+::Resources
+
+---
+
+Composing resources initiates the process of preparing your files for retrieval-based AI interactions. When you compose, each resource is parsed and broken down into meaningful chunks, then transformed into vector representations using an embedding model. These vectors are stored in a searchable index, enabling the system to quickly retrieve relevant context during a prompt. 
+
+This step is essential for making your documents usable in Knowledge Stacks and ensuring accurate, context-aware responses from the AI.
+
+You can configure compose settings at the resource level and at the composition process level.
+
+## Resource Compose Advanced Options
+
+When adding new resources under files, folders, notes, and YouTube links, additional configuration options will be available under the ellipsis menu. 
+
+Configuration capabilities depend on resource upload types. 
+
+### Load Modes
+
+Select how a file will be loaded during Knowledge Stack compositions. For file uploads, there are three options you can choose from. 
+
+![file load modes](/images/knowledge-stacks/load-modes.png)
+
+#### Static Mode
+Uses the cached version from when the file was added. Fast and predictable, but doesn't reflect recent changes.
+
+Use this option for source files that are not likely to modified. 
+
+This is the default mode for files added to Knowledge Stacks. 
+
+#### Dynamic Mode
+Loads the latest file content on each composition. Slightly slower but always up-to-date.
+
+Use this option if you modify source files, want the latest to be included in new compositions, but you are not concerned about the Knowledge Stack having latest information and are okay with manually re-composing. 
+
+#### Sync Mode
+Watches for file changes and automatically recomposes. Best for small, frequently updated files.
+
+Use this option if you want the Knowledge Stack to automatically be re-composed when launching Msty and Msty detects that there is a change to a file that is configured for sync mode. 
+
+After marking a file for sync mode, you will need to **Start Sync Mode** from the Knowledge Stack menu in order to watch for file changes and to automatically re-compose the stack.
+
+![enable file change watch](/images/knowledge-stacks/enable-sync-mode.png)
+
+::alert{type="info" icon="tabler:info-circle"}
+Sync Mode can be expensive in terms of your local resources and processing if files update frequently.
+::
+
+### Mark for Reprocessing 
+
+Marking a resource for reprocessing will process only those marked resources when clicking **Compose**. 
+
+### Ignore for Retrieval
+
+Select **Ignore for Retrieval** to prevent a resource from being queryable. This is helpful as you perfect your Knowledge Stacks. 
+
+### Lock a Resource
+
+You can either temporarily or permanently lock a resource. 
+
+**Temporarily** locking a resource will exclude the file during re-composing. However, the resource from it's last composition will be included in query results. 
+
+**Permanently** locking a file is irreversible and will lock the composed resource forever - until deletion. 
+
+::alert{type="info" icon="tabler:info-circle"}
+Use Permanent Lock only if you know you will never update the source file in the future. 
+::
+
+
+If you import a Knowledge Stack, the resources in that imported stack are by default permanently locked. This is because the source files are assumed to not be on your machine and only the vectorized database for the stack is being imported. 
+
+## Compose Settings
+
+In the **Compose Settings** area, you can configure the how the Knowledge Stack is composed.
+
+
+![configure compose settings](/images/knowledge-stacks/compose-settings.png)
+
+### Embedding Model
+
+Msty uses [gte-tiny](https://huggingface.co/TaylorAI/gte-tiny){target="_blank"} by default, but you can change it to any other embedding model available in your Msty App. You can find an embedding model in **Model Hub > Local AI Models**.
+
+Some embedding models outperform others by better capturing semantic meaning, understanding context, and generalizing across domains. High-quality models improve retrieval accuracy by generating more meaningful vector representations of text. 
+
+When choosing an embedding model, look for strong retrieval performance, domain relevance, efficiency (in size and speed), and compatibility with your deployment setup.
+
+### Chunking Method
+
+Chunking is the process of breaking down large documents into smaller, manageable pieces (or "chunks") to make them suitable for vectorization and retrieval. Each chunk is typically a few hundred words and is designed to preserve context while fitting within token limits of embedding and language models. Effective chunking ensures that relevant information can be retrieved accurately, improving the quality of responses. 
+
+Choose how you want to split your content into chunks. 
+
+Options include:
+  - **Recursive Character**: Splits text into chunks based on character count.
+  - **Sentence**: Splits text into chunks based on sentence boundaries.
+
+### Overlapping 
+Configure how much overlap you want between chunks.
+
+This configuration is available when Chunking Method is set to Recursive Character. 
+
+### Chunk Size
+Set the maximum size for each chunk. Smaller chunks may improve search accuracy but can increase processing time and token usage.
+
+### Chunk Size to Ignore
+Specify chunk sizes that should be ignored during processing. Useful for excluding very small or very large chunks that may not be relevant.
+
+## Compose
+
+When you are ready to compose, select the **Compose** button. 
+
+![compose a knowledge stack](/images/knowledge-stacks/compose-ks.png)
+
+If you haven't made any changes to compose configurations, and want to re-compose, select the **Force Compose** option. 
+
+::Resources
+
+---
+
+For more accurate results, use the **Query Settings** to configure how your stacks should be queried during conversations. 
+
+You can setup default Query Settings from the Knowledge Stacks main configuration section. 
+
+The default Query Settings will be used when you select the corresponding stack to be used during a conversation. 
+
+From the Conversation Add-Ons, you can alter the settings for the conversation if needed.
+
+If you select multiple stacks to be available in a conversation, then the default settings for only one of the stacks will be returned. So, it is recommended to validate and configure the query settings to be used for the conversation. 
+
+## Default Query Settings
+
+In the Knowledge Stack configuration, select **Query Settings** to set the defaults for that stack. 
+
+![chunk visualizer](/images/knowledge-stacks/query-settings-default.png)
+
+### Chunk Retrieval Mode
+
+You can set which retrieval mode is used during conversations. 
+
+#### Push Mode
+This mode first queries the Knowledge Stack and then sends the results to the model for context. 
+
+This is the default mode. 
+
+#### Pull Mode
+This mode allows for the model to perform the actual query. In essence, this makes Knowledge Stacks act more like an MCP tool that a model is able to leverage. 
+
+::alert{type="info" icon="tabler:info-circle"}
+Ensure the model is able to perform tool calls if using this mode
+::
+
+### Prompt Prefix
+As with any interaction with LLMs and SLMs, it's all in the prompt. 
+
+For improved results, add a prompt that helps the model understand what they have access to and what they are expected to do with the provided context. 
+
+### Number of Chunks
+Set the max number of chunks that are delivered to the model. 
+
+### Similarity Threshold
+Define the similarity threshold. Set higher if you are looking for more exact results and similarities. 
+
+### Search type
+Choose how you want to search through your Knowledge Stack when retrieving relevant context.
+
+#### Semantic
+Semantic search uses vector embeddings to understand the meaning behind your query and retrieve conceptually similar content, even if exact words don’t match. This is ideal for natural language prompts or when you're looking for ideas, explanations, or loosely related information.
+
+This is the default setting. 
+
+#### Keyword
+Keyword search performs a more literal match, scanning for exact terms or phrases present in the query. This method is best for precise lookups, such as searching for specific names, terms, or technical references where wording consistency matters.
+
+#### Hybrid
+Hybrid search intelligently combines both semantic and keyword approaches. It allows Msty to interpret your prompt and dynamically choose the best retrieval method to maximize accuracy and relevance. Useful when you're unsure which method fits best or when queries benefit from both meaning and precision. 
+
+### Max Full Content contexts
+By default, RAG systems retrieve and send only the most relevant chunks to the model, which is sufficient for many use cases like answering questions or extracting details. However, this approach falls short for tasks that require full-document understanding, such as summarization, narrative analysis, or comprehensive comparisons where partial context can lead to incomplete or inaccurate results.
+
+Msty’s Knowledge Stacks supports sending the full content when needed. Use this setting to define the maximum number of full files that can be included in the model's context when such depth is required.
+
+::alert{type="info" icon="tabler:info-circle"}
+Note: This is disabled by default and should be used selectively based on the task and model token limits. Also, this method is triggered semantically - adjust your prompt if full context is desired but is not being provided.
+::
+
+### Synthesize Query
+Synthesizing queries enables the model to generate richer, more dynamic responses by interpreting and combining relevant information from your Knowledge Stack. This leads to more context-aware interactions, especially for tasks that require reasoning, summarization, or multi-part answers.
+
+This is disabled by default. 
+
+### PII Scrubbing
+If you do not want personal identifiable information (PII) to be sent to the model, typically a concern when using online model providers, then enable this setting. 
+
+You will be asked to select a locally installed model that will be tasked with detecting any PII in the Knowledge Stack and to redact the information. 
+
+For best results and for added security, test PII Scrubbing in [Chunks Visualizer](/features/knowledge-stacks/chunks-visualizer) and [Chunks Console](/features/knowledge-stacks/chunks-console) prior to using Knowledge Stacks with online providers where PII is a concern. 
+
+![pii](/images/knowledge-stacks/pii.png)
+
+## Conversation Query Settings
+
+In conversations, the default Query Settings will be used; however, you can alter the settings for the conversation. All of the same settings are available with the exception of the prompt prefix. 
+
+If you are enabling multiple Knowledge Stacks in a conversation, be sure to review the Query Settings to ensure they are appropriate for your intended conversation. 
+
+## Knowledge Stacks Query Results
+
+In the conversation with a model, if Knowledge Stacks are enabled, you can see the results that were provided to the model.
+
+### Knowledge Stacks Metrics
+![knowledge stacks results metrics](/images/knowledge-stacks/knowledge-stack-contexts-metrics.png)
+
+The first portion displays high level metrics for the Knowledge Stacks results as well as which settings were used to query the results with. 
+
+#### Query Analysis
+![knowledge stacks query analysis](/images/knowledge-stacks/query-analysis.png)
+This section provides more details about which specific document resources were returned, if the contexts provided was chunks and/or full contensts, and the search keywords used and how they were weighted. 
+
+#### Returned Chunks and Full Contexts
+![knowledge stacks returned results](/images/knowledge-stacks/returned-results.png)
+The last section shows the actual chunks and/or full contents that were returned and sent as context to the model. 
+
+
+::Resources
+
+---
+
+Chunking is the process of breaking down large documents into smaller, manageable pieces (or "chunks") to make them suitable for vectorization and retrieval. Effective chunking ensures that relevant information can be retrieved accurately, improving the quality of responses. 
+
+In Msty Studio’s **Chunk Visualizer**, you're looking to ensure that chunks are **coherent**, **contextually complete**, and **logically separated**; meaning, each chunk should ideally contain a self-contained idea or narrative unit. Good chunks avoid cutting sentences or thoughts in awkward places, which can confuse embedding models and degrade retrieval quality.
+
+::alert{type="info" icon="tabler:info-circle"}
+Chunk Visualizer is available after the Knowledge Stack completes composition. 
+::
+
+## What to look for
+
+![chunk visualizer](/images/knowledge-stacks/chunk-visualizer.png)
+
+In the above example, you can see how the chunks for this stack are defined and which portions overlap between chunks. For example, **Chunk 6 and 7** share the phrase *“with a thoughtful face, smoking his”*, which ensures continuity across chunks. This this is generally desirable for maintaining context flow during retrieval. 
+
+**Watch out for:**
+- Chunks that are too short
+- Chunks thar are too fragmented
+- Chunks that split critical ideas unnaturally
+
+The Chunks Visualizer helps you fine-tune by showing overlaps, chunk boundaries, and how text flows between them.
+
+If the chunks are not meeting your expectations, see [Compose Options](/features/knowledge-stacks/compose-options) to learn how you can adjust chunk settings. 
+
+## Show Stitched
+
+This option will stitch the chunks into a full document. The will give you an uninteruppted view of the Knowledge Stack file. 
+
+With Msty Studio’s Knowledge Stacks, models can either retrieve relevant chunks based on your query or stitch the entire stack together when full context is needed. Chunk-based retrieval is often sufficient for many use cases, offering fast and targeted responses. However, for tasks that require understanding the complete structure or narrative of a file, stitching the full stack provides the model with all available context, leading to more accurate and comprehensive results.
+
+## Chunks Console
+
+Chunk Console lets you perform queries against the Knowledge Stack and view results. See [Chunk Console](/features/knowledge-stacks/chunks-console) for more information. 
+
+
+
+::Resources
+
+---
+
+With the Chunks Console, you can test how chunks can be queried and what results return. Using the Chunks Console is a key way to refine the accuracy of Knowledge Stacks to help ensure the appropriate data is being made available to models. 
+
+You can test different [Query Settings](/features/knowledge-stacks/query-settings) to see what is returned. 
+
+![chunks console](/images/knowledge-stacks/chunks-console.png)
+
+If you see unexpected results, then you can modify either the Query Settings or the [Compose Options](features/knowledge-stacks/query-settings) to better refine your stacks. 
+
+## Remove Chunks
+If chunks are returned that you do not want to be included in query results and conversations with models, select the trashcan icon to remove the chunk. 
+
+Note that the next time the resource is composed, the chunk will again likely be added back. 
+
+## Personal Identifying Information (PII)
+
+Enable the PII Scrubbing option to scrub personal identifying information. This will replace detected PII data with flags so that PII is not sent to the model. 
+
+![scrub pii chunks console](/images/knowledge-stacks/pii-chunks-console.png)
+
+This is a great way to help prevent unwanted PII being sent to online models. 
+
+The Chunks Console makes it easier to verify that PII has been scrubbed by using various queries and verifying PII is being redacted. 
+
+::Resources
+
+---
+
+Analytics and Insights is a detailed report providing key insights as well as recommendations for improving Knowledge Stacks. 
+
+This feature is in progress. Please join us on Discord and let us know what you think. 
+
+::Resources
+
+---
+
+## Folder Management 
+
+You can create and manage folders and Knowledge Stacks. The management capabilities are same as other areas in Msty Studio. 
+
+## Export a Knowledge Stack
+Click on the ellipsis icon next to a Knowledge Stack and the select the option to **Export**. 
+
+Select where on your device to save, and then select **Save**. 
+
+This will save the vectorized database of the Knowledge Stack that you can keep as a backup or share with others. 
+
+## Import a Knowledge Stack
+
+Select the option to **Import Knowledge Stacks** to import a stack into Msty Studio. 
+
+The imported stack will automatically be a **locked stack** and you will not be abled to re-compose locked stacks. 
+
+::Resources
 
 ---
 
@@ -1233,7 +1876,7 @@ Delete the message from the conversation if they irrelevant or unwanted messages
 
 You can chat with multiple models at once, making it easy to compare responses. This makes it easier to identify the strengths and weaknesses of each model, and to choose the one that best fits your needs.
 
-## Add Slit Chat
+## Add Split Chat
 
 ![Add split chat](/images/split-chat.png)
 
@@ -1281,8 +1924,137 @@ To create a new **Child Project**, select the ellipsis icon next to the Project 
 
 Both of these options will open a new window where you can define your project presets, such as project name, description, system prompt, and any tools and add-ons you want to enable.
 
+## Organizing Conversations
+
+Select the ellipsis icon to perform the following actions on a conversation:
+- Edit Conversation title
+- Clone Conversation
+- Move Conversation
+- Bookmark Conversation
+- Copy/Move Conversation to a Workspace
+- Convert to Forge Mode
+- Delete Conversation
+
+You can also hold down **Shift** or **Ctrl** (or **Cmd** on Mac) and select multiple conversations to perform actions on them in bulk.
+
+Bulk actions include:
+- Moving Conversations
+- Deleting Conversations
+
+![bulk organize conversations](/images/deleting-convos.png)
+
 ::Resources
 
+
+---
+
+When customizing system prompts in Msty Studio (ie, with Projects and Personas), you can control how your custom instructions are combined with the default system prompt using three modes:
+
+* Prepend
+* Replace
+* Append
+
+Each mode affects how the model interprets behavior and tone. Below are examples and explanations for each mode, along with their advantages and disadvantages. The examples use the following prompts: 
+
+```
+Your custom prompt: "You are a pirate who speaks like a pirate."
+Default system prompt: "You are a helpful assistant."
+```
+
+## Prepend
+
+**Definition:**
+Your custom prompt is **added before** the default system prompt.
+
+**Example:**
+
+```
+Final Prompt:
+"You are a pirate who speaks like a pirate. You are a helpful assistant."
+```
+
+**Advantages:**
+
+* Gives your custom instructions **priority**.
+* Useful for setting **tone, style, or specific roles** early on.
+* Keeps the base safety and helpfulness rules.
+
+**Disadvantages:**
+
+* May **conflict** with the system prompt if the tones differ.
+* Custom behavior may not fully override the assistant’s defaults.
+
+**Best For:**
+When you want to **strongly guide** behavior or persona, but still retain the assistant’s helpful baseline.
+
+
+## Replace
+
+**Definition:**
+Your custom prompt **completely overrides** the system prompt.
+
+**Example:**
+
+```
+Final Prompt:
+"You are a pirate who speaks like a pirate."
+```
+
+**Advantages:**
+
+* Gives you **full control** of the assistant’s behavior.
+* Ideal for **custom personas**, creative characters, or specialized workflows.
+
+**Disadvantages:**
+
+* Removes all default behavior (e.g., safety, neutrality, helpfulness).
+* Requires **careful crafting** to avoid issues or undesired responses.
+
+**Best For:**
+When you want to define the assistant’s role or tone **entirely from scratch**.
+
+
+
+## Append
+
+**Definition:**
+Your custom prompt is **added after** the default system prompt.
+
+**Example:**
+
+```
+Final Prompt:
+"You are a helpful assistant. You are a pirate who speaks like a pirate."
+```
+
+**Advantages:**
+
+* Preserves the default assistant behavior.
+* Great for **subtle additions**, like tone adjustments or specific response styles.
+* Less likely to conflict with system rules.
+
+**Disadvantages:**
+
+* Lower priority — your custom instructions may be **overridden or ignored**.
+* Not ideal for dramatic behavior shifts.
+
+**Best For:**
+When you want to **enhance or refine** the assistant’s responses, without changing its core behavior.
+
+
+
+## Comparison Table
+
+| Mode    | Behavior                           | Conflict Risk | Control Level | Keeps Default Prompt |
+| ------- | ---------------------------------- | ------------- | ------------- | -------------------- |
+| Prepend | Adds your prompt **before** system | Medium        | Medium        | ✅ Yes                |
+| Replace | Uses **only** your prompt          | Low           | High          | ❌ No                 |
+| Append  | Adds your prompt **after** system  | Low           | Low–Medium    | ✅ Yes                |
+
+
+
+
+::Resources
 
 ---
 
@@ -1625,7 +2397,7 @@ Azure OpenAI is a Microsoft cloud service that provides access to OpenAI’s pow
 
 This guide will walk you through the steps to set up Azure OpenAI in Msty Studio.
 
-## Azure Setup
+## Azure Steps
 
 These steps cover how to setup Azure OpenAI in the Azure portal. These steps assume you have an Azure account and have access to the Azure OpenAI service.
 
@@ -1660,7 +2432,7 @@ The key parts that we'll want to capture are:
 
 We'll use the target URI and Key in the next steps to set up Msty Studio.
 
-## Msty Studio Setups
+## Msty Studio Steps
 
 Remember to pull the **Target URI** and **Key** from the Azure OpenAI portal before proceeding with these steps.
 
@@ -1685,6 +2457,62 @@ Now, start a new chat and say hello to your new Azure OpenAI model!
 
 ::Resources
 
+
+---
+
+Amazon Bedrock is a fully managed service from AWS that makes it easy to build and scale generative AI applications using foundation models (FMs) from leading AI startups and Amazon. It’s beneficial because it provides a secure and scalable environment for deploying, managing, and fine-tuning AI models, making it ideal for businesses to utilize LLM models and AI applications safely and efficiently.
+
+This guide will walk you through the steps to add Bedrock as an LLM provider in Msty Studio.
+
+## Amazon Bedrock Steps
+
+These steps cover how to setup Amazon Bedrock in the AWS Management Console. These steps assume you have an AWS account and have access to the Amazon Bedrock service.
+
+::steps
+
+1. Go to [AWS Management Console](https://aws.amazon.com/console/)
+2. Search for **Amazon Bedrock** in the main search bar at the top and select it
+3. Review the **Model Catalog** to see what models are available 
+4. Go to **Model Access** and request the models you want to use - it may take a few minutes before your request is granted
+5. Grab the **AWS Region** the model is being enabled in, you will need this for the setup in Msty
+5. Go to **API Keys**, you'll see that you can either create short-term API keys (recommended by AWS) or long-term API keys
+
+If you wish to use short-term API keys, then you'll need to create temporary access session tokens. 
+
+The [aws cli](https://aws.amazon.com/cli/){target="_blank"} can be used for this purpose by running the following command: 
+
+```bash
+aws sts get-session-token
+```
+Grab the session token which you'll need when setting up Bedrock in Msty. 
+
+6. Ensure that the user is setup in IAM with the appropriate permissions
+7. Grab the IAM user's **Access Key ID** and **Secret Access Key** 
+8. Back in Bedrock, verify the model(s) you requested access to have been granted
+::
+
+You can now continue to Msty for adding Bedrock as a provider. 
+
+## Msty Studio Steps
+
+Remember to grab the IAM user's Access Key ID, Secret Access Key, AWS Region ID, and Session Token if using short-term access.  
+
+::steps
+
+1. Go to [Msty Studio](https://msty.studio)
+2. Select **Model Hub** from the left menu
+3. Select **Add Provider**
+4. Select **Amazon Bedrock** from the list of providers
+5. Enter the **Access Key ID** 
+6. Enter the **Secret Access Key**
+7. If using short-term access, enter the **Session Token**
+8. Enter the **AWS Region** (ex: us-east-1)
+9. From the **Models** dropdown, select the models that you enabled in Bedrock that you want to make available in Msty
+10. Click **Add Provider**
+
+Now, start a new chat and say hello to your new Amazon Bedrock model!
+
+::Resources
 
 ---
 
@@ -1838,7 +2666,3 @@ Paste in the URL you created in the previous step and then select **Save and Con
 You should now be connected to Sidecar from the other device. You can now use Sidecar to run local models from your other device.
 
 ::Resources
-
-
----
-
