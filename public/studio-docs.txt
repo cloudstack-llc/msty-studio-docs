@@ -155,7 +155,7 @@ These onboarding instructions are meant for new Msty users. If you are an existi
 
 ::steps
 
-1. [Purchase an Aurum license](https://msty.app/pricing) if you haven't already and keep your license key handy
+1. [Purchase an Aurum license](https://msty.ai/pricing) if you haven't already and keep your license key handy
 
 2. Open a browser and navigate to Msty Studio at [https://msty.studio](https://msty.studio)
 
