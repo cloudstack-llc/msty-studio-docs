@@ -47,7 +47,7 @@ To get started with Studio Desktop, please see the [Desktop](/getting-started/de
 - **Getting Started**: Check out our [Quick Start](/getting-started/quick-start) or [Onboarding](/getting-started/onboarding) guides
 - **How-Tos**: Find step-by-step guides in our [How-Tos](/how-tos/manage-license) section
 - **Whats new**: See what's new in Msty Studio by visiting our [Changelog](https://msty.ai/changelog){target="\_blank"}
-- **Support**: Visit our [Discord](https://msty.app/discord){target="\_blank"} for issues and discussions
+- **Support**: Visit our [Discord](https://msty.ai/discord){target="\_blank"} for issues and discussions
 
 
 ---
@@ -186,7 +186,7 @@ All of the features you love in Msty Studio Web are now available in a desktop a
 
 Check out the our [announcement blog post](https://msty.ai/blog/announcing-studio-desktop) for more details.
 
-Please join our [Discord](https://msty.app/discord) to share your feedback and help us improve the desktop experience. 
+Please join our [Discord](https://msty.ai/discord) to share your feedback and help us improve the desktop experience. 
 
 ![msty studio](/images/image-comparison.png)
 
