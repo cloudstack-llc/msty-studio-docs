@@ -39,7 +39,7 @@ export default defineAppConfig({
       links: [
         {
           icon: "ph:cube",
-          to: "https://msty.app?ref=docs",
+          to: "https://msty.ai?ref=docs",
           target: "_blank",
         },
       ],
@@ -50,7 +50,7 @@ export default defineAppConfig({
       links: [
         {
           title: "Go to Msty App",
-          to: "https://msty.app?ref=docs",
+          to: "https://msty.ai?ref=docs",
           target: "_blank",
         },
       ],
