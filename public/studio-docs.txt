@@ -3,17 +3,29 @@
 If you're looking for the **Msty App 1.x** documentation instead, you can find it here: [**Go to Msty App Docs →**](http://docs.msty.app){target="\_blank"}
 ::
 
-[Msty Studio](https://msty.ai){target="\_blank"} is a [privacy-first](https://msty.ai/privacy-first){target="\_blank"} AI platform that empowers you to design and run advanced AI workflows using local and online models, directly from a web or desktop interface. Msty offers seamless integration with hundreds of top-tier models, powerful tools like Personas, Toolbox, and Turnstiles, and fully local data storage, ensuring both sophistication and security in your AI processes.
+[Msty Studio](https://msty.ai){target="\_blank"} is a [privacy-first](https://msty.ai/privacy-first){target="\_blank"} AI platform that empowers you to design and run advanced AI workflows using local and online models, directly from a web or desktop interface. Msty offers seamless integration with hundreds of top-tier models, powerful tools like Toolbox (MCP), Knowledge Stacks (RAG), Personas (Customized AI Assistants), and Turnstiles (Workflows), and fully local data storage, ensuring both sophistication and security in your AI processes.
+
+
 
 ## Getting Started
 
-Subscribers get access to both Msty Studio Web and Desktop.
+You can get started for free with [Msty Studio Desktop](/getting-started/desktop). 
+
+Aurum subscribers get full access to both Msty Studio Web and Msty Studio Desktop.
+
+See the [plan comparison](https://msty.ai/pricing#plan-comparison){target="_blank"} to view what features are available by plan type. 
 
 ::alert{type="info" icon="tabler:info-circle"}
 Data does not sync between devices. Data is stored locally on your device. Studio web stores data directly to your browser.
 ::
 
-### Msty Studio Web
+### Msty Studio Desktop
+
+Msty Studio Desktop is our Msty Desktop 2.0 app and is FREE to get started on. Check out our [Announcement](https://msty.ai/blog/announcing-studio-desktop){target="\_blank"} to learn more about our vision for Msty Studio Desktop.
+
+To get started with Studio Desktop, please see the [Desktop](/getting-started/desktop) guide.
+
+### Msty Studio Web :aurum-tag
 
 Msty Studio Web is a web-based application that is capable of running the marjority of features that Msty Studio offers. However, to unlock additional features, including Real-Time Data, Toolbox, and Local Models, Studio web will need to connect to [Sidecar](/getting-started/sidecar). Sidecar can either be ran on your same device or on a remote device.
 
@@ -26,12 +38,6 @@ If you are an existing user of Msty App, please see the [Quick Start](/getting-s
 #### New to Msty?
 
 If you are brand new to Msty, please see the [Onboarding](/getting-started/onboarding) guide to get started.
-
-### Msty Studio Desktop
-
-Msty Studio Desktop is our Msty Desktop 2.0 app. Check out our [Announcement](https://msty.ai/blog/announcing-studio-desktop){target="\_blank"} to learn more about our vision for Msty Studio Desktop.
-
-To get started with Studio Desktop, please see the [Desktop](/getting-started/desktop) guide.
 
 ## Popular Topics
 
@@ -52,17 +58,17 @@ To get started with Studio Desktop, please see the [Desktop](/getting-started/de
 
 ---
 
-## Welcome to Msty Studio!
+## Welcome to Msty Studio! 
 
 Already have the **Aurum license** and **Msty App** installed? Awesome — you're all set to start using **Msty Studio**!
 
-If you **do not** have an Aurum license and Msty App running on your device, then please head over to [Onboarding](/getting-started/onboarding).
+These instructions are for those who actively used Msty App 1.x and have an Aurum subscription and will get you started quickly with Msty Studio. 
 
 Before continuing, grab your license key, which you can do by going to [Lemon Squeezy](https://app.lemonsqueezy.com/my-orders/login).
 
 For Studio Desktop, you can migrate your data from Msty App v1.x to Studio Desktop. See the [Data Migration](#data-migration-for-msty-app-users) section for more details.
 
-## Quick Start Instructions for Msty Studio Web
+## Quick Start Instructions for Msty Studio Web :aurum-tag
 
 ::steps
 
@@ -91,9 +97,18 @@ For Studio Desktop, you can migrate your data from Msty App v1.x to Studio Deskt
 No worries — just head to the next section, and we’ll guide you through the full setup step by step.
 ::
 
+## Quick Start Instructions for Msty Studio Desktop :aurum-tag
+::steps
+
+1. [Download Msty Desktop](/getting-started/desktop) and install
+2. Enter your license key in **Settings → License and Access**
+3. Proceed to the following section if you'd like to migrate data from Msty App 1.x to Msty Studio Desktop
+
+::
+
 ## Data Migration for Msty App Users
 
-Msty App v1.x users can migrate much of their data to Msty Studio Desktop. Please keep in mind that Studio Desktop is in Alpha right now - **backup** your data for BOTH Msty App and Msty Studio Desktop prior to migration.
+Msty App v1.x free and Aurum users can migrate much of their data to Msty Studio Desktop. Before proceeding, please **backup** your data for BOTH Msty App and Msty Studio Desktop prior to migration.
 
 ::alert{type="info" icon="tabler:info-circle"}
 Data migration is only available for Msty Studio Desktop at this time. 
@@ -147,11 +162,23 @@ You will see confirmation messages when data migration and attachment imports ar
 
 ---
 
-Msty Studio is currently available exclusively to **Aurum** license holders.
+These onboarding instructions are meant for new Msty Studio users. If you are an existing Msty App and Aurum subscriber, please check out the [Quick Start](/getting-started/quick-start) guide.
 
-These onboarding instructions are meant for new Msty users. If you are an existing Msty App user, check out the [Quick Start](/getting-started/quick-start) guide.
+## Msty Studio Desktop Onboarding Instructions
 
-## Onboarding Instructions
+You can get started with Msty Studio Desktop for FREE. 
+
+::steps
+
+1. [Download Msty Studio Desktop](/getting-started/desktop) 
+
+2. On initial launch, you'll be asked how you'd like to proceed - either with using existing local models, setting up a new local model, or adding an API key for an online provider. The quickest way to get started is to proceed with a local model. You can add additional local and online models later. 
+
+3. Once you have your Remote or Local Provider set up, click on **Let's Go!**
+
+::
+
+## Msty Studio Web Onboarding Instructions :aurum-tag
 
 ::steps
 
@@ -180,25 +207,16 @@ These onboarding instructions are meant for new Msty users. If you are an existi
 
 ---
 
-**Msty Studio Desktop Alpha is now available for Aurum license holders!**
-
-All of the features you love in Msty Studio Web are now available in a desktop application. 
-
-Check out the our [announcement blog post](https://msty.ai/blog/announcing-studio-desktop) for more details.
-
-Please join our [Discord](https://msty.ai/discord) to share your feedback and help us improve the desktop experience. 
-
 ![msty studio](/images/image-comparison.png)
 
 ### Quick Facts
-1. Alpha available for Aurum License holders only.
-2. Studio Desktop installs separately from Msty App (v1.x).
-3. You do not need remove Msty App (v1.x), you can continue using it while using Studio Desktop.
-4. You will need your Aurum license key to activate Studio Desktop - see [Manage License](/how-tos/manage-license) for details on how to get your license key.
-5. Studio Desktop activation will count against your Aurum activated devices limit, so you may need to deactivate a device if you have reached your limit.
-6. Studio Desktop is available for Windows, Mac, and Linux.
-7. A migration tool is being developed to help you migrate your existing Msty App (v1.x) data to Studio Desktop.
-8. Studio Desktop does not require Msty Sidecar to use tools, RTDs, and local models. Sidecar is a companion for the web version of Msty Studio. However, you can optionally connect Studio Web to Studio Desktop instead of Sidecar to use tools, RTDs, and local models.
+Are you a previous Msty App 1.x users? Here are some quick facts to know: 
+
+1. Studio Desktop installs separately from Msty App (v1.x).
+2. You do not need to remove Msty App (v1.x), you can continue using it while using Studio Desktop.
+3. Studio Desktop Aurum activation will count against your Aurum activated devices limit, so you may need to deactivate a device if you have reached your limit.
+4. Studio Desktop is available for Windows, Mac, and Linux.
+5. A migration tool is available to help migrate some of your existing Msty App (v1.x) data to Studio Desktop.
 
 
 ## Download Options
@@ -292,9 +310,9 @@ sudo chmod 4755 /opt/Msty/chrome-sandbox
 
 ---
 
-Msty Sidecar is a companion desktop application that brings powerful local capabilities to Msty Studio — enabling features that go beyond what’s possible in a standard web app.
+Msty Sidecar is a companion desktop application that brings powerful local capabilities to Msty Studio Web, enabling features that go beyond what’s possible in a standard web app.
 
-## Studio Plus Sidecar
+## Studio Plus Sidecar :aurum-tag
 
 Sidecar unlocks the following features in Studio:
 
@@ -439,7 +457,7 @@ Now, you have a starting point for which Model Providers and Models to consider 
 
 Then, the real fun! Testing the models in Msty to see which one best encapsulates your needs.
 
-BTW - a big part of the charm of Msty is the ability to use multiple models. So, if one model doesn't quite cut it, then consider leveraging two (or more models) where each model provides complimentary skills. Check out [Model Squad](#model-squad) and [Turnstiles](/features/toolsets/turnstiles) for more insights.
+BTW - a big part of the charm of Msty is the ability to use multiple models. So, if one model doesn't quite cut it, then consider leveraging two (or more models) where each model provides complimentary skills. Check out [Split Chats](/features/conversations/split-chat) and [Turnstiles](/features/turnstiles) for more insights.
 
 ## Model Providers
 
@@ -496,9 +514,35 @@ Also, from the window that opens when you select the edit icon, you can set the 
 - **Vision**: Analyzing and understanding visual content, such as if you were to add an image attachment to a chat. Typical applications include image classification, object detection, visual search, and image descriptions.
 - **Embedding**: Creating and using embeddings for various tasks. The models are used for vectorization, similarity search, and clustering and are typically used for RAG - such as with Msty's Knowledge Stacks feature.
 - **Streaming**: Handling real-time (or near real-time) data streams. Typical applications include real-time data processing, event detection, and anomaly detection.
+- **Thinking**: Reasoning models will have additional configurations available in model parameters - such as for some models you can set thinking to a low, medium, high setting.
 
 ::Resources
 
+
+---
+
+MLX (Apple Machine Learning eXchange) is Apple’s machine learning framework optimized for Apple Silicon. It enables fast, efficient training and inference using GPU and CPU acceleration on macOS and iOS devices. **Msty Studio Desktop** supports MLX for running local models natively, making it ideal for private, high-performance AI workflows on your Mac.
+
+::alert{type="info" icon="tabler:info-circle"}
+MLX is an experimental feature and you may encounter issues. Please report any problems you find on our Discord server to help us improve the experience. Msty Studio Web support will depend on MLX project's progression and availability of resources for web-based support. 
+::
+
+## Adding MLX Models
+Add and managing MLX models is fundamentally similar to adding and managing other local models in Msty Studio. 
+
+In **Model Hub**, you can view featured MLX models and search for models on the MLX Hugging Face Community tab. 
+
+![mlx models](/images/mlx/mlx-model-hub.png)
+
+Please note that there are fewer models that currently support MLX.
+
+## Managing MLX Service
+
+You can manage and configure the MLX service in **Settings > MLX Service**. Here, you can start or stop the MLX service, which is required to run MLX models locally.
+
+![mlx service](/images/mlx/mlx-service.png)
+
+You can also view the service health, stop and start the service, view the endpoint, version, logs, and more.
 
 ---
 
@@ -923,13 +967,13 @@ Insights provides detailed analytics on token usage patterns, helping you unders
 Costs and token usage are estimations only. Please refer your model provider account for accurate token usage and costs.
 ::
 
-## Summary
+## Summary :aurum-tag
 
 ![token and cost summary](/images/tokens-costs.png)
 
 The **Summary** tab provides an overview of token usage and cost estimates. You can even filter by date range to see how usage has changed over time - including a temperature map visualization of day-by-day usage.
 
-## Provider
+## Provider :aurum-tag
 
 ![provider model insights](/images/provider-insights.png)
 
@@ -965,9 +1009,19 @@ Zen Mode takes Focus Mode a step further by removing the chat input box, allowin
 
 ---
 
-Shiftcuts are a set of keyboard shortcuts that allow you to quickly access common tasks in Msty Studio. By pressing the shift key twice in quick succession, you can activate a mode that enables you to perform various actions without needing to navigate through menus or use the mouse.
+## How to Use Keyboard Shortcuts
+In Msty Studio, you can customize shortcuts for various actions so that you can perform them quickly without needing to navigate through menus. This is particularly useful for power users who want to streamline their workflow.
+
+You can access the keyboard shortcuts settings in **Settings > Keyboard Shortcuts**. Here, you can view the current shortcuts and customize them to suit your preferences. You can also reset them to their default values if needed.
+
+![keyboard shortcuts](/images/shortcuts/keyboard-shortcuts.png)
+
+Some actions have a default shortcut assigned, which you can use that shortcut or customize to your liking. 
+
 
 ## How to Use Shiftcuts
+
+Shiftcuts are a set of keyboard shortcuts that allow you to quickly access common tasks in Msty Studio. By pressing the shift key twice in quick succession, you can activate a mode that enables you to perform various actions without needing to navigate through menus or use the mouse.
 
 To activate Shiftcuts, simply **press the shift key twice quickly**. This will enable the Shiftcut mode, allowing you to use the following shortcuts. **You will then need to press the corresponding key** for the action you want to perform before the mode times out. When you double click the shift key, you will see a yellow up icon that displays - you'll have until this icon disappears to press the corresponding key for the action you want to perform.
 
@@ -1283,7 +1337,7 @@ This step is essential for making your documents usable in Knowledge Stacks and 
 
 You can configure compose settings at the resource level and at the composition process level.
 
-## Resource Compose Advanced Options
+## Resource Compose Advanced Options :aurum-tag
 
 When adding new resources under files, folders, notes, and YouTube links, additional configuration options will be available under the ellipsis menu. 
 
@@ -1416,12 +1470,12 @@ This mode first queries the Knowledge Stack and then sends the results to the mo
 
 This is the default mode. 
 
-#### Pull Mode
+<!-- #### Pull Mode
 This mode allows for the model to perform the actual query. In essence, this makes Knowledge Stacks act more like an MCP tool that a model is able to leverage. 
 
 ::alert{type="info" icon="tabler:info-circle"}
 Ensure the model is able to perform tool calls if using this mode
-::
+:: -->
 
 ### Prompt Prefix
 As with any interaction with LLMs and SLMs, it's all in the prompt. 
@@ -1448,7 +1502,7 @@ Keyword search performs a more literal match, scanning for exact terms or phrase
 #### Hybrid
 Hybrid search intelligently combines both semantic and keyword approaches. It allows Msty to interpret your prompt and dynamically choose the best retrieval method to maximize accuracy and relevance. Useful when you're unsure which method fits best or when queries benefit from both meaning and precision. 
 
-### Max Full Content contexts
+### Max Full Content contexts :aurum-tag
 By default, RAG systems retrieve and send only the most relevant chunks to the model, which is sufficient for many use cases like answering questions or extracting details. However, this approach falls short for tasks that require full-document understanding, such as summarization, narrative analysis, or comprehensive comparisons where partial context can lead to incomplete or inaccurate results.
 
 Msty’s Knowledge Stacks supports sending the full content when needed. Use this setting to define the maximum number of full files that can be included in the model's context when such depth is required.
@@ -1457,12 +1511,12 @@ Msty’s Knowledge Stacks supports sending the full content when needed. Use thi
 Note: This is disabled by default and should be used selectively based on the task and model token limits. Also, this method is triggered semantically - adjust your prompt if full context is desired but is not being provided.
 ::
 
-### Synthesize Query
+### Synthesize Query :aurum-tag
 Synthesizing queries enables the model to generate richer, more dynamic responses by interpreting and combining relevant information from your Knowledge Stack. This leads to more context-aware interactions, especially for tasks that require reasoning, summarization, or multi-part answers.
 
 This is disabled by default. 
 
-### PII Scrubbing
+### PII Scrubbing :aurum-tag
 If you do not want personal identifiable information (PII) to be sent to the model, typically a concern when using online model providers, then enable this setting. 
 
 You will be asked to select a locally installed model that will be tasked with detecting any PII in the Knowledge Stack and to redact the information. 
@@ -1507,7 +1561,7 @@ In Msty Studio’s **Chunk Visualizer**, you're looking to ensure that chunks ar
 Chunk Visualizer is available after the Knowledge Stack completes composition. 
 ::
 
-## What to look for
+## What to look for :aurum-tag
 
 ![chunk visualizer](/images/knowledge-stacks/chunk-visualizer.png)
 
@@ -1551,7 +1605,7 @@ If chunks are returned that you do not want to be included in query results and 
 
 Note that the next time the resource is composed, the chunk will again likely be added back. 
 
-## Personal Identifying Information (PII)
+## Personal Identifying Information (PII) :aurum-tag
 
 Enable the PII Scrubbing option to scrub personal identifying information. This will replace detected PII data with flags so that PII is not sent to the model. 
 
@@ -1591,6 +1645,79 @@ Select the option to **Import Knowledge Stacks** to import a stack into Msty Stu
 The imported stack will automatically be a **locked stack** and you will not be abled to re-compose locked stacks. 
 
 ::Resources
+
+---
+
+The `.mstyignore` file is a powerful tool allows you to specify which files and folders should be ignored when composing your knowledge stack. By using `.mstyignore`, you can streamline your knowledge base, exclude unnecessary files, and maintain a cleaner, more focused stack.
+
+### Understanding .mstyignore Syntax
+
+Good news for those familiar with Git: `.mstyignore` uses the same syntax as `.gitignore`. This means if you're already comfortable with `.gitignore`, you'll find `.mstyignore` intuitive and easy to use. For those new to this syntax, don't worry – it's straightforward and easy to learn.
+
+### How to Create and Use a .mstyignore File
+
+1. Create a new file named `.mstyignore` in the root directory of your knowledge stack folders
+2. Open the file in a text editor
+3. Add patterns for files and folders you want to ignore, one per line
+4. Save the file
+
+### Syntax Rules and Pattern Examples
+
+Here are some common patterns and what they do:
+1. Ignore specific files:
+   `example.txt`
+
+2. Ignore all files with a certain extension:
+   `*.log`
+
+3. Ignore all files in a specific folder:
+   `folder_name/`
+
+4. Ignore a specific folder and all its contents:
+   `folder_name/**`
+
+5. Ignore files or folders that match a pattern:
+   `**/temp_*`
+
+6. Negate a pattern (include a file that would otherwise be ignored):
+   `!important.txt`
+
+Practical Examples
+
+Here's an example of what your `.mstyignore` file might look like:
+
+```
+# Ignore all .log files
+*.log
+
+# Ignore the entire 'temp' folder
+temp/
+
+# Ignore all .tmp files in any directory
+**/*.tmp
+
+# Ignore all files in the 'drafts' folder
+drafts/
+
+# But don't ignore important drafts
+!drafts/important_draft.md
+
+# Ignore all files starting with 'temp_'
+temp_*
+
+# Ignore all files ending with '_old'
+*_old
+```
+
+### Best Practices
+
+1. Keep your `.mstyignore` file in the root directory of your knowledge stack.
+2. Use comments (lines starting with #) to explain complex patterns.
+3. Be specific to avoid accidentally ignoring important files.
+4. Regularly review and update your `.mstyignore` file as your knowledge stack evolves.
+
+By effectively using `.mstyignore`, you can maintain a clean, relevant, and efficient knowledge stack in Misty AI. This allows you to focus on the information that matters most, improving the overall quality and usefulness of your AI assistant.
+
 
 ---
 
@@ -1765,7 +1892,7 @@ This limits the messages sent with messages to the last number of messages enter
 
 By default, all prior messages in the conversation is sent. If you'd like to limit context to only the most recent message, then you can enter **1**, for example.
 
-#### Auto Responder
+#### Auto Responder :aurum-tag
 
 When **Auto Responder** is enabled, the Persona will react to a conversation between you and the model you are chatting with.
 
@@ -2064,7 +2191,7 @@ Forge Mode in Msty Studio offers an intuitive and powerful editing environment t
 
 You can enable Forge Mode by selecting **New Forge Canvas** option under the **New Conversation** menu or by converting an existing conversation by selecting the **Convert to Forge Canvas** option in the conversation menu.
 
-## Key Features
+## Key Features :aurum-tag
 
 ::steps
 
@@ -2200,7 +2327,7 @@ Advanced configurations can be included as model parameters.
 
 Environments are a powerful feature in Msty Studio that allow you to create and manage different settings for your different projects or use cases. By using environments, you can easily switch between different configurations without having to manually change settings each time.
 
-## Add and Manage Environments
+## Add and Manage Environments :aurum-tag
 
 On the left menu, select the ellipsis icon and then select **Environments** and then **Manage Environments**.
 
@@ -2252,7 +2379,7 @@ Use the same variable name across Environments for things like model provider AP
 
 ### Dynamic Variables
 
-There are a few dynamic variables that accessible from the [Shiftcut](/features/shiftcuts) Environment Variable picker (shift+shift+e). These variables are automatically populated with the current date and time, and can be used in your conversations to provide context or information. The following dynamic variables are available:
+There are a few dynamic variables that accessible from the Environment Variable picker (shift+shift+e). These variables are automatically populated with the current date and time, and can be used in your conversations to provide context or information. The following dynamic variables are available:
 
 **These include:**
 
@@ -2397,7 +2524,7 @@ Azure OpenAI is a Microsoft cloud service that provides access to OpenAI’s pow
 
 This guide will walk you through the steps to set up Azure OpenAI in Msty Studio.
 
-## Azure Steps
+## Azure Steps :aurum-tag
 
 These steps cover how to setup Azure OpenAI in the Azure portal. These steps assume you have an Azure account and have access to the Azure OpenAI service.
 
@@ -2464,7 +2591,7 @@ Amazon Bedrock is a fully managed service from AWS that makes it easy to build a
 
 This guide will walk you through the steps to add Bedrock as an LLM provider in Msty Studio.
 
-## Amazon Bedrock Steps
+## Amazon Bedrock Steps :aurum-tag
 
 These steps cover how to setup Amazon Bedrock in the AWS Management Console. These steps assume you have an AWS account and have access to the Amazon Bedrock service.
 
@@ -2523,19 +2650,22 @@ If you'd like to jump to the latest version for use with local AI, you can do so
 ## Manual download
 
 ::tabs{variant="card" sync="download-os"}
-::div{label="Windows" icon="iconoir:windows"} ### Windows
 
-      1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-      2. From under `Assets`, download `ollama-windows-amd64.zip`.
-      3. Once downloaded, extract the contents of the zip file and move `ollama.exe` to  `C:\Users\<username>\AppData\Roaming\Msty`
-      4. Rename `ollama.exe` to `msty-local-sidecar.exe`.
-      5. Move `lib` folder to `C:\Users\<username>\AppData\Roaming\Msty`
+  ::div{label="Windows" icon="iconoir:windows"} 
+    
+    ### Windows
 
-      #### Additional config for AMD ROCm™ GPU users only:
-      1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-      2. From under `Assets`, download `ollama-windows-amd64-rocm.tgz`
-      3. Once downloaded, extract contents and move the whole `rocm` folder under `lib\ollama` to `C:\Users\<username>\AppData\Roaming\Msty\lib\ollama`
-    ::
+    1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
+    2. From under `Assets`, download `ollama-windows-amd64.zip`.
+    3. Once downloaded, extract the contents of the zip file and move `ollama.exe` to  `C:\Users\<username>\AppData\Roaming\Msty`
+    4. Rename `ollama.exe` to `msty-local-sidecar.exe`.
+    5. Move `lib` folder to `C:\Users\<username>\AppData\Roaming\Msty`
+
+  #### Additional config for AMD ROCm™ GPU users only:
+  1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
+  2. From under `Assets`, download `ollama-windows-amd64-rocm.tgz`
+  3. Once downloaded, extract contents and move the whole `rocm` folder under `lib\ollama` to `C:\Users\<username>\AppData\Roaming\Msty\lib\ollama`
+  ::
 
     ::div{label="Mac" icon="hugeicons:apple"}
       ### Mac
