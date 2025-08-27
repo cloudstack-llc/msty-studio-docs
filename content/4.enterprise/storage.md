@@ -1,0 +1,42 @@
+---
+title: Manage License
+description: How to your manage licenses and devices
+navTruncate: false
+---
+
+Storage Profiles
+
+Add S3 compatible storage profiles using top-tier provider such as AWS S3, Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Vultr Object Storage, and any other provider that support S3 API.
+
+
+## What can you do with Storage Profiles?
+
+- Prompt Library
+- Personas
+
+
+## Add New Storage Profile
+
+1. Select provider
+
+Providers will have different profile templates according to the selected provider's requirements.
+
+Most will require that you provide the following: 
+- Endpoint url
+- Region ID
+- Bucket name
+- Access Key ID
+- Secret Access Key
+
+## Add Storage Profile to a Team
+
+
+
+Share to Cloud
+
+Copy from Cloud
+
+Sync with Cloud
+
+
+
