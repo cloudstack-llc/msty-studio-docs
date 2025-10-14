@@ -157,6 +157,120 @@ To locate a **custom workspace** database and attachments, follow these steps:
 
 You will see confirmation messages when data migration and attachment imports are complete. 
 
+#### Migration Workspace Issues
+
+Thank you to our Discord community members, if you are running into issues importing a Workspace, try the following steps: 
+
+
+##### Linux / Mac
+
+1. **Save the script**
+   - Create a new file called `optimize_db.sh` in the same folder as `msty.db`
+   - Paste the following script into it
+
+  ```bash
+      # Close the database properly first to merge WAL files
+      sqlite3 msty.db "PRAGMA wal_checkpoint(FULL);"
+
+      # Create a fresh export that includes all data
+      sqlite3 msty.db ".output msty_temp.sql" ".dump" ".exit"
+
+      # Create a completely new database from the dump
+      rm -f msty_copy.db msty_copy.db-shm msty_copy.db-wal
+      sqlite3 msty_copy.db ".read msty_temp.sql"
+      rm msty_temp.sql
+
+      # Optimize the new database
+      sqlite3 msty_copy.db "PRAGMA integrity_check;"
+      sqlite3 msty_copy.db "PRAGMA optimize;"
+      sqlite3 msty_copy.db "VACUUM;"
+
+      # Verify database access
+      echo "Verification:"
+      sqlite3 msty_copy.db "SELECT COUNT(*) FROM chat_session_folders;"
+
+      # Compare file sizes
+      echo "Original size:"
+      du -h msty.db
+      echo "Optimized copy size:"
+      du -h msty_copy.db
+
+      echo "Done! You can now import msty_copy.db"
+  ```
+
+2. **Open Terminal**
+   - Press `Cmd + Space` and type "Terminal"
+
+3. **Navigate to your folder**
+   - Type: `cd /path/to/your/folder`
+   - Replace `/path/to/your/folder` with the actual path
+
+4. **Make script executable**
+   - Type: `chmod +x optimize_db.sh`
+
+5. **Run the script**
+   - Type: `./optimize_db.sh`
+
+##### Windows
+1. **Install SQLite**
+   - Open Command Prompt (CMD)
+   - Run: `winget install SQLite.SQLite`
+
+2. **Save the script**
+   - Save the `fix-msty-db.ps1` script to: `C:\Users\YourUsername\AppData\Roaming\Msty`
+
+  ```bash
+      # Close the database properly first to merge WAL files
+      sqlite3 msty.db "PRAGMA wal_checkpoint(FULL);"
+
+      # Create a fresh export that includes all data
+      sqlite3 msty.db ".output msty_temp.sql" ".dump" ".exit"
+
+      # Create a completely new database from the dump
+      Remove-Item -Path msty_copy.db, msty_copy.db-shm, msty_copy.db-wal -ErrorAction SilentlyContinue
+      sqlite3 msty_copy.db ".read msty_temp.sql"
+      Remove-Item msty_temp.sql
+
+      # Optimize the new database
+      sqlite3 msty_copy.db "PRAGMA integrity_check;"
+      sqlite3 msty_copy.db "PRAGMA optimize;"
+      sqlite3 msty_copy.db "VACUUM;"
+
+      # Verify database access
+      Write-Host "Verification:" -ForegroundColor Green
+      sqlite3 msty_copy.db "SELECT COUNT(*) FROM chat_session_folders;"
+
+      # Compare file sizes
+      Write-Host "`nOriginal size:" -ForegroundColor Green
+      Get-Item msty.db | Select-Object Name, @{Name="Size";Expression={"{0:N2} MB" -f ($_.Length / 1MB)}}
+
+      Write-Host "`nOptimized copy size:" -ForegroundColor Green
+      Get-Item msty_copy.db | Select-Object Name, @{Name="Size";Expression={"{0:N2} MB" -f ($_.Length / 1MB)}}
+
+      Write-Host "`nDone! You can now import msty_copy.db" -ForegroundColor Green
+  ```
+
+  - Replace `YourUsername` with your actual Windows username
+
+3. **Open PowerShell**
+   - Press `Win + X` and select "Windows PowerShell"
+
+4. **Navigate to the Msty folder**
+   - Run: `cd ~\AppData\Roaming\Msty`
+
+5. **Run the script**
+   - Run: `.\fix-msty-db.ps1`
+
+##### If you get a script execution error
+
+Try one of these options:
+
+**Option 1: Run this single script only**
+- Run: `powershell -ExecutionPolicy Bypass -File .\fix-msty-db.ps1`
+
+**Option 2: Enable PowerShell scripts permanently** (has security implications)
+- Run: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
 ::Resources
 
 
@@ -176,6 +290,26 @@ You can get started with Msty Studio Desktop for FREE.
 
 3. Once you have your Remote or Local Provider set up, click on **Let's Go!**
 
+::
+
+::alert{type="info" icon="tabler:info-circle"}
+Msty Studio installs a separate instance of Ollama when setting up Local AI Services. This is to allow Msty Studio to have control over Ollama, allowing Msty to manage models, version updates, etc. If you have Ollama and do not want Msty Studio to manage Ollama, you can add Ollama as a Remote Provider (remote meaning separate from Msty, but may still be running on local machine) by selecting Ollama in the dropdown. This will allow you to use Ollama models you have setup without Msty having management access over Ollama. 
+::
+
+### Install Local AI From Archive file
+
+During onboarding (and from Settings > Local AI > Services Version) you choose to setup an earlier version of Ollama if you do not want to use the latest version, which is what Msty Studio will install when setting up Local AI Services. 
+
+![import ollama archive](/images/quick-start/import-ollama-archive.png)
+
+To install from an archive file, select the option as seen in the image above. 
+
+You'll want to have an archive file ready. You can download one from the [Ollama Version Archives](https://github.com/ollama/ollama/releases){target="_blank"} by downloading the appropriate file for your Operating System from the verion > assets section. 
+
+Select the archived file from the file selection window and Msty Studio will install using the selected file. 
+
+::alert{type="info" icon="tabler:info-circle"}
+If you see an error during Local AI Services setup, try this option as an alternative method to install Local AI Services.
 ::
 
 ## Msty Studio Web Onboarding Instructions :aurum-tag
@@ -228,7 +362,9 @@ Please select the download option for your operating system.
 
 ### Windows
 
-- [Download Msty Studio Desktop (x64)](https://next-assets.msty.studio/app/alpha/win/MstyStudio_x64.exe)
+- [Download Msty Studio Desktop (x64)](https://next-assets.msty.studio/app/beta/win/MstyStudio_x64.exe)
+
+When installing on Windows, please install as an Administrator for your user account only. Installing for all users is not supported due to a Windows limitation.
 
 ::
 
@@ -236,8 +372,8 @@ Please select the download option for your operating system.
 
 ### Mac
 
-- [Download Msty Studio Desktop (Apple Silicon - M1, M2, M3, M4)](https://next-assets.msty.studio/app/alpha/mac/MstyStudio_arm64.dmg)
-- [Download Msty Studio Desktop (Intel Macs)](https://next-assets.msty.studio/app/alpha/mac/MstyStudio_x64.dmg)
+- [Download Msty Studio Desktop (Apple Silicon - M1, M2, M3, M4)](https://next-assets.msty.studio/app/beta/mac/MstyStudio_arm64.dmg)
+- [Download Msty Studio Desktop (Intel Macs)](https://next-assets.msty.studio/app/beta/mac/MstyStudio_x64.dmg)
 
 ::
 
@@ -251,7 +387,7 @@ Linux requires some additional manual steps after downloading.
 
 ### AppImage Instructions
 
-[Download Msty Studio Desktop (x64 AppImage)](https://next-assets.msty.studio/app/alpha/linux/MstyStudio_x86_64.AppImage)
+[Download Msty Studio Desktop (x64 AppImage)](https://next-assets.msty.studio/app/beta/linux/MstyStudio_x86_64.AppImage)
 
 After download is complete, run the following command in your terminal to make the AppImage executable:
 
@@ -279,7 +415,7 @@ Try running Msty from the terminal with:
 
 ### Deb Instructions
 
-[Download Msty Studio Desktop (x64 deb)](https://next-assets.msty.studio/app/alpha/linux/MstyStudio_amd64.deb)
+[Download Msty Studio Desktop (x64 deb)](https://next-assets.msty.studio/app/beta/linux/MstyStudio_amd64.deb)
 
 After download is complete, run the following command to install the deb package:
 ```
@@ -289,16 +425,16 @@ sudo apt install ./<DownloadedFileName>.deb
 Once the installation is complete, run the following command to launch Msty Studio Desktop:
 
 ```bash
-msty
+MstyStudio
 ```
 
 Sometimes the installation may experience permission issues if the '_apt' user does not have enough privileges. In that case, run the following two commands to mitigate this issue and then run Msty again.
 
 ```bash
-sudo chown root:root /opt/Msty/chrome-sandbox
+sudo chown root:root /opt/MstyStudio/chrome-sandbox
 ```
 ```bash
-sudo chmod 4755 /opt/Msty/chrome-sandbox
+sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
 ```
 
 
@@ -495,7 +631,7 @@ To set a default model, expand the model selection box in the Conversations tool
 
 ## Update Model Name
 
-From the model selector in the the Conversations toolbar, select the edit icon to update the model name.
+From Model Providers, Local AI Models > Installed Models, or the model selector in the the Conversations toolbar, select the edit icon to update the model name.
 
 You can update the model name to be more descriptive of the model's purpose or the type of conversations that you are having with it.
 
@@ -515,6 +651,13 @@ Also, from the window that opens when you select the edit icon, you can set the 
 - **Embedding**: Creating and using embeddings for various tasks. The models are used for vectorization, similarity search, and clustering and are typically used for RAG - such as with Msty's Knowledge Stacks feature.
 - **Streaming**: Handling real-time (or near real-time) data streams. Typical applications include real-time data processing, event detection, and anomaly detection.
 - **Thinking**: Reasoning models will have additional configurations available in model parameters - such as for some models you can set thinking to a low, medium, high setting.
+
+## Provider and Model Logos
+
+You can customize the logo for a Provider or Model by selecting the edit icon in Model Hub and then selecting the image icon to upload a new logo.
+
+![change model logo](/images/change-provider-model-logo.png)
+
 
 ::Resources
 
@@ -986,7 +1129,11 @@ Also provided are graphs displaying model throughput and latency, which can help
 
 ---
 
-You can enhance your Msty Studio experience by enabling different modes. Each mode is designed to optimize the interaction with Sutdio and the model so that you can focus on the task at hand.
+You can enhance your Msty Studio experience by enabling different modes. Each mode is designed to optimize the interaction with Studio and the model so that you can focus on the task at hand.
+
+You can enable modes from **Settings > General > Mode**.
+
+![msty modes](/images/msty-modes.png)
 
 ## Vapor
 
@@ -1048,6 +1195,171 @@ This will open a picker that allows you to quickly select an [environment variab
 ![shiftcut env picker](/images/shiftcuts/shiftcut-env.png)
 
 ::Resources
+
+
+---
+
+## Getting Started with Remote Connections :aurum-tag
+
+Msty Studio Web lets you access many of the same powerful features available in the Desktop version, all from your browser.  
+
+However, certain capabilities require access to a local environment, something the web version cannot do directly due to the inherent constraints of pure web applications.
+
+To bridge this gap, Msty Studio Desktop can act as a **secure proxy**, enabling the web version to connect to your local resources.  
+
+**These capabilities include:**
+- **Accessing Local AI Models** — Run high-performance models stored and executed on your own machine.  
+- **Web Search with Real-Time Data** — Enhance responses with live search capabilities that pull up-to-the-minute results.  
+- **Toolbox MCP Tools** — Use locally installed MCP tools directly from the web version.  
+
+::alert{type="info" icon="tabler:info-circle"}
+Remote connections do not share data between the web and desktop versions. 
+::
+
+### How Remote Connections Work
+When enabled, the Msty Studio Desktop application provides a secure, authenticated tunnel between the web version and your local machine.  
+This allows you to use tools, models, and real-time data that are otherwise inaccessible via the browser alone.
+
+### Step 1 - Allow External Connections to Local AI Service
+
+In **Settings > Local AI**: 
+1. Enable options to **Enable Network Access** and **Allow Access from Msty Studio** 
+2. Add `https://msty.studio` to **https://msty.studio**
+3. Save updated settings
+
+### Step 2 — Configure the Remote Tools Connector
+The Remote Tools Connector defines the communication details between Msty Studio Web and your local Desktop instance.  
+
+You’ll set:
+- **Connection Token** — A secure token to authorize access.  
+- **Enable Tunneling** - Allows remote connections to be established. Leave disabled if you are connecting web to desktop locally on the same device.
+
+### Step 3 — Enable Remote Connections
+Once the connector is configured, select the button to **Enable** remote connections. 
+
+You'll then be provided with a local and tunnel URL (if you enabled tunneling). 
+
+![Remote Tools Connector URLs](/images/remote-tools-connector/connection-urls.png)
+
+Copy the url that corresponds to your desired connection method (local or tunnel).
+
+### Step 4 — Add Connection URL in Studio Web
+
+Once your **Remote Tools Connector** is set up on your desktop, the next step is to tell **Msty Studio Web** where to connect.  
+
+You’ll do this by adding the **Connection URL** in the Studio Web settings.
+
+#### Accessing Local Models
+If you want Studio Web to run **local AI models** through your desktop (instead of only cloud models), go to **Model Hub > Add New Provider** and select **Msty Remote**. 
+
+Paste the Connection URL you copied from earlier into the appropriate field.  
+
+![Remote Tools Connector URLs](/images/remote-tools-connector/connect-to-models.png)  
+
+This allows you to:
+- Use your own hardware for inference
+- Access models not available in the cloud
+- Keep processing and data fully on your machine
+
+#### Accessing Real-Time Data and MCP Tools
+If you also want Studio Web to interact with **real-time data sources** or dependencies for **MCP tools** that are available only through your desktop, paste the Connection URL in the Tools Connection field.  
+
+![Remote Tools Connector URLs](/images/remote-tools-connector/connect-to-tools.png)  
+
+With this connection, you can:
+- Pull in real-time data using your desktop environment 
+- Access local dependencies (Node, python, etc) needed for MCP tools to function
+
+
+---
+
+The Settings section is where you can configure various aspects of Msty Studio to tailor the experience to your needs.
+
+## General
+
+### Appearance
+
+You can customize the appearance of Msty Studio by modifying the following settings:
+* Color preference - Light, Dark, or System Default
+* [Mode](/features/modes)
+* Font Size
+* Font Style
+* Code Theme - for code returned by models
+* Rendering Modules - enable/disable the following:
+    * Markdown - formats markdown content
+    * Mermaid Diagrams
+    * Math LaTeX
+    * GitHub Flavored Markdown
+    * Code Highlights
+    * Collapsing Tags
+    * Enable Links - links returned by models are disabled by default; to make them clickable, enable this setting
+* Right-To-Left (RTL) Support - for languages that require right-to-left text direction
+
+### Application Info
+* App Version - displays your installed version. You can select the overflow menu to check and install updates as well as enable/disable automatic updates
+* App Settings - reset to default
+* Data Paths - provides location of app data and app logs
+* Help and Discussions - links to these docs and [Discord](https://msty.ai/discord)
+* Disable Web Security - enable if your are experiencing CORS related issues; only recommended for specific use cases and you'll need to restart Msty Studio
+
+
+## Local AI Service
+Contains information about the local AI service if you have this installed. 
+
+* Models Path - file path to where models are stored
+* Service Health - displays current status with options to stop, start, and restart
+* Service Endpoint - endpoint if you'd like to connect other applications to the local AI service
+* Service Version - displays current version with options to check for updates, remove service, or [install from archive](/getting-started/onboarding#install-local-ai-from-archive-file)
+* Manage Local AI Models - links to Model Hub > Local AI Models
+* Service Configurations
+    * Configure port number
+    * Maximum Parallel Chats
+    * Maximum Loaded Models
+    * Enable Network Access - allow other devices on local network to connect
+    * Allow Access from Msty Studio Web - enable to allow Msty Studio Web to connect and use local AI services
+    * Allowed Network Origins - manage permitted external origins
+    * Capture Service Logs - enable local AI services logging
+    * Advanced Configurations - set local environment variables; in JSON format
+* Model Configurations
+    * Model Keep-Alive Timeout
+    * Advanced Configurations - enter valid JSON to pass additional parameters to models during chat sessions
+
+
+
+## MLX Service
+
+MLX is availble for Apple Silicon devices only. 
+
+* Model Path - file path to where models are stored
+* Service Health - displays current status with options to stop, start, and restart
+* Service Endpoint - endpoint if you'd like to connect other applications to the local AI service
+* Service Version - displays current version with options to check for updates and remove service
+* Manage MLX AI Models - links to Model Hub > MLX AI Models
+* Service Configurations
+    * Enable Network Access - allow other devices on local network to connect
+    * Capture Service Logs - enable local AI services logging
+
+
+## Remote Service
+
+See [Remote Connections](/features/remote-connections) for more information.
+
+## Data
+See [Data Backups and Restoration](/features/data-backups) and [Data Migration](/getting-started/quick-start#data-migration-for-msty-app-users) for more information.
+
+## Keyboard Shortcuts
+See [Keyboard Shortcuts](/features/keyboard-shortcuts) for more information.
+
+## Log Viewer (Desktop Only)
+You can view application logs to help troubleshoot issues. You can filter by log level, search for specific terms, and copy log entries.
+
+You can even enable live logging to see log entries in real-time as they occur.
+
+## Notifications
+The Notifications section is an additional way to view alerts to help with troubleshooting issues. This section lists key app events, typically related to errors toasts you may have seen. 
+
+## License and Access
+Enter your License to unlock advanced features. 
 
 
 ---
@@ -1201,6 +1513,10 @@ Connect to your favorite APIs to enhance your conversations. You'll first want t
 Once you have created a Live Context, you can use it in your conversations by clicking on the **Toolset** icon and then select the **Live Contexts** you'd like to include in the conversation. You can even add multiple Live Contexts to a conversation.
 
 ![live context in chat](/images/live-contexts-convo.png)
+
+## Example endpoints
+
+Check out the [list of example endpoints](/how-tos/live-context-examples) for example endpoints you can play with.
 
 ::Resources
 
@@ -1411,6 +1727,10 @@ Msty uses [gte-tiny](https://huggingface.co/TaylorAI/gte-tiny){target="_blank"} 
 Some embedding models outperform others by better capturing semantic meaning, understanding context, and generalizing across domains. High-quality models improve retrieval accuracy by generating more meaningful vector representations of text. 
 
 When choosing an embedding model, look for strong retrieval performance, domain relevance, efficiency (in size and speed), and compatibility with your deployment setup.
+
+For an embedding model to display as a selectable option, ensure the model has **Embedding** enabled as a purpose. To check this, select the update model icon from either the model selection list or from the installed local models section in Model Hub. 
+
+![embedding model purpose](/images/knowledge-stacks/embedding-purpose.png)
 
 ### Chunking Method
 
@@ -1718,6 +2038,7 @@ temp_*
 
 By effectively using `.mstyignore`, you can maintain a clean, relevant, and efficient knowledge stack in Misty AI. This allows you to focus on the information that matters most, improving the overall quality and usefulness of your AI assistant.
 
+::Resources
 
 ---
 
@@ -1743,7 +2064,78 @@ Note that some models are better than others with looking for real-time data, in
 
 Right-click on the globe icon to configure advanced options, including which method to use for real-time data.
 
-### Sidecar
+### Google
+You can use and configure Google custom search options. 
+
+This mode is available for all users. However, Google may limit, throttle, or block requests that are too frequent or too broad. Msty does not have control over these limits.
+
+### Brave
+
+You can use and configure Brave search options.
+
+This mode is available for all users. However, Brave may limit, throttle, or block requests that are too frequent or too broad. Msty does not have control over these limits.
+
+### Jina :aurum-tag
+
+You can setup a [Jina](https://jina.ai/) account and grab an API key. Enter the API key in the **Use Jina** tab in Msty Studio.
+
+### SearXNG :aurum-tag
+
+[SearXNG](https://docs.searxng.org/) is a free internet metasearch engine which aggregates results from various search engines without tracking users. You can use your SearXNG instance to search the web for real-time data.
+
+In Msty Studio, enter your instances endpoint on the **Use SearXNG** tab. For example, `https://searxng.example.com/`.
+
+For additional guidance on setting up SearXNG, check out our Youtube video on [How to Set Up SearXNG](https://youtu.be/FFDSy3TX3YI).
+
+### Tavily :aurum-tag
+
+[Tavily](https://www.tavily.com/){target="_blank"} is a privacy-focused search engine that does not track users and provides unbiased search results. You can use Tavily to fetch real-time data for your conversations.
+
+You will need to create a free account to get an API key. Then, enter the API key in the **Use Tavily** tab in Msty Studio.
+
+### Exa :aurum-tag
+[Exa](https://exa.search/) is a privacy-focused search engine that does not track users and provides unbiased search results. You can use Exa to fetch real-time data for your conversations.
+
+You will need to create a free account to get an API key. Then, enter the API key in the **Use Exa** tab in Msty Studio.
+
+### Ollama :aurum-tag
+You can use [Ollama](https://ollama.com/){target="_blank"} to fetch real-time data for your conversations.
+
+You will need to create an account and enter your API Key. 
+
+::alert{type="info" icon="tabler:info-circle"}
+Ollama as a Real-Time Data source is only available for Desktop at this time due to CORS restrictions on the web.
+::
+
+### Google API :aurum-tag
+For more reliable results, you can use your own Google Custom Search Engine (CSE) and API key.
+
+To set this up, follow these steps:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project or select an existing one.
+3. Enable the Custom Search API for your project.
+4. Create credentials (API key) for your project.
+5. Set up a Custom Search Engine (CSE) and get the CSE ID.
+
+Enter your API key and CSE ID in the **Use Google API** tab in Msty Studio.
+
+### Brave API :aurum-tag
+For more reliable results, you can use your own Brave Search API key.
+To set this up, follow these steps: 
+1. Go to the [Brave Search API page](https://search.brave.com/api).
+2. Sign up for an API key.
+3. Choose the appropriate plan based on your needs.
+4. Once you have your API key, enter it in the **Use Brave API** tab in Msty Studio.
+
+
+### Allowing insecure content
+
+Studio uses a JSON API so you will typically need to ensure your instance is being served over HTTPS.
+
+However, some browsers have settings to allow for 'insecure' content served over http for a website. Such as Brave via `brave://settings/content/insecureContent?search=additional+content` > allow Msty Studio to load insecure content.
+
+### Sidecar :aurum-tag
 
 To use [Sidecar](/getting-started/sidecar), you need to have the Sidecar app installed and running.
 
@@ -1758,24 +2150,6 @@ Sidecar provides the follow advanced options:
 - **Search Date Range** allows you to limit the search results to a specific time frame
 
 ::
-
-### Jina
-
-You can setup a [Jina](https://jina.ai/) account and grab an API key. Enter the API key in the **Use Jina** tab in Msty Studio.
-
-### SearXNG
-
-[SearXNG](https://docs.searxng.org/) is a free internet metasearch engine which aggregates results from various search engines without tracking users. You can use your SearXNG instance to search the web for real-time data.
-
-In Msty Studio, enter your instances endpoint on the **Use SearXNG** tab. For example, `https://searxng.example.com/`.
-
-For additional guidance on setting up SearXNG, check out our Youtube video on [How to Set Up SearXNG](https://youtu.be/FFDSy3TX3YI).
-
-#### Allowing insecure content
-
-Studio uses a JSON API so you will typically need to ensure your instance is being served over HTTPS.
-
-However, some browsers have settings to allow for 'insecure' content served over http for a website. Such as Brave via `brave://settings/content/insecureContent?search=additional+content` > allow Msty Studio to load insecure content.
 
 ## Real-Time Data Troubleshooting and Tips
 
@@ -1831,6 +2205,8 @@ You can use advanced messaging commands when chatting with a model and add these
 - `--m--` Message
 - `--r--` Regenerate
 - `--c--` Continue
+- `--cs--` Context Shield
+- `--css--` Context Shield with Summary
 
 ### Example
 
@@ -1935,6 +2311,20 @@ When you create a new project, you can enable the project context to be included
 ![Project Context](/images/project-context.png)
 
 By default, the project context is disabled. Edit the parent folder to enable project context. 
+
+## Mini Map - Conversation Navigation
+
+Mini Map provides quick navigation to different parts of a long conversation.
+
+![mini map](/images/mini-map.png)
+
+Enable Mini Map from Settings > General > Mini Map. 
+
+Once enabled, in conversations you will see a map icon in the middle left of the conversation window. Click on this to open the Mini Map. 
+
+Referencing the image above, selecting the top dot will scroll to the top of the conversation. Clicking on the bottom dot will scroll to the bottom of the conversation. 
+
+If you select the middle area, this will show a very high-level view of the conversation where you can see the different questions and responses that make up the conversation. Click on any area to jump to that part of the conversation.
 
 ::Resources
 
@@ -2069,6 +2459,11 @@ Bulk actions include:
 - Deleting Conversations
 
 ![bulk organize conversations](/images/deleting-convos.png)
+
+## Recent and Pinned Conversations
+Your most recent conversations are listed under the Recent folder on the Projects sidebar.
+
+Pinned conversations are also listed under the Recent folder. You can pin a conversation by selecting the pin icon in the ellipsis menu for that conversation.
 
 ::Resources
 
@@ -2396,6 +2791,308 @@ No newline at end of file
 
 ---
 
+The Enterprise plan is designed for teams and organizations that require additional advanced features; including user management, collaboration tools, audit logs, and additional security features.
+
+To learn more about the Enterprise plan and to get pricing information and request access to a pilot,  please visit the [Msty Studio Enterprise page](https://msty.ai/enterprise){target="_blank"}.
+
+**Enterprise features include everything in Aurum, plus**: 
+- [User Management](/enterprise/users)
+- [Team Management and Access Controls](/enterprise/teams)
+- [Resource Sharing](/enterprise/sharing) including prompts and personas with more to come
+- [Storage Options for Team Sharing](/enterprise/storage)
+- [Audit logs](/enterprise/audit-log)
+
+## Enterprise Security Information
+
+::alert{type="info" icon="tabler:info-circle"}
+In this section, we refer to 'Msty' as the company behind Msty Studio and are no referring to Msty as a product.
+::
+
+We at Msty pride ourselves with leaving data where it belongs, in your control and not ours. We take a hands-off approach to user data and conversations while ensuring that we provide a secure and reliable platform for our users.
+
+- **Conversation Data**: Remains on user devices and is not stored on Msty servers. 
+    - Any external online models used, such as ChatGPT, Gemini, Claude, etc will be provided conversation and context data as they are external LLM providers. Please refer to their respective privacy policies for information on how they process and store your data. 
+    - MCP Tools that connect to external services (such as web search, file retrieval, etc) may also provide data to those external services as needed. Please refer to their respective privacy policies for information on how they process and store your data.
+    - Msty DOES NOT 'watch' or 'read' your conversations, in that we do not have access to them and we do not have Telemetry that provides this information.
+    - Enterprise Admins can enable or disable the use of external online models for their teams. Including, allowing only specific online models to be used, or none at all.
+- **Sharing Resources and Storage**: Enterprise Admins can enable team sharing for Knowledge Stacks, Prompts, and Personas (with more to come). Shared resources are stored on S3 compatible storage that you provide and manage. You can use top-tier providers such as AWS S3, Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Vultr Object Storage, and any other provider that support S3 API. 
+    - Msty DOES NOT have access to your S3 compatible storage or the data stored there. 
+    - Msty DOES NOT store any of your shared resources on our servers. 
+- **User and Team Management**: Users can be added to your Enterprise plan using email invitations and verification codes to authenticate users. 
+    - Msty currently stores User, Team, and Audit Log data on our servers to provide these features.
+    - Msty uses industry best practices to secure this data and encrypt sensitive data.
+    - Msty employs single tenancy for Enterprise plans, meaning your data is stored separately from other Enterprise customers.
+    - In the future, we plan to provide options for self-hosting user/team management and audit log data.
+    - Again, beyond user, team, storage profiles, and audit log data, Msty DOES NOT have any access to your conversations, shared resources, or anything else users do in Msty Studio. We do not have telemetry that provides this information.
+
+## Manage Enterprise Subscription
+
+![manage subscription](/images/enterprise/org-settings.png)
+
+Subscription management and billing information is only accessible to the **Owner** of the Enterprise account.
+
+From the **Settings > Teams > Settings** page in Msty Studio, select the **Manage Subscription** button to open the subscription management portal.
+
+**From here, you can:**
+
+- Update your billing information and payment method
+- Add company information for invoices - please add your tax ID or VAT number if applicable as soon as possible so that they will be included on future invoices
+- View and download past invoices
+- Cancel your subscription
+- Add or remove user seats
+
+::Resources
+
+---
+
+Msty Studio Enterprise allows you to invite and manage users in your Enterprise account.
+
+When purchasing an Enterprise account, you will purchase a set number of user seats. You can invite users up to the number of seats you have purchased.
+
+![user table](/images/enterprise/user-table.png)
+
+## User Roles
+
+There are three users roles in Msty Studio: 
+
+1. **Owner**: there is only one owner per enterprise account at this time. Owners have full access to Msty Studio, including account info and billing.
+2. **Admin**: admins have access to all features in Msty Studio, including user and team management. Admins do not have access to subscription management and billing info.
+3. **User**: users have access to the features of Msty Studio that are assigned to the team they belong to as determined by an admin.
+
+::alert{type="info" icon="tabler:info-circle"}
+User access control is largely determined by teams they are assigned to. See the teams section for more details. 
+::
+
+## Invite Users
+
+Owners and Admins can invite users to Msty Studio by clicking the **Invite User** button and entering user's name and email address. 
+
+Invited users will receive and email with a single-use link to sign into Msty Studio. 
+
+Users can access Msty Studio Desktop and/or Msty Studio Web according to the team entitlements they are assigned to.
+
+Once a user first signs in, they will then appear as an **Active** user on the users list. 
+
+## Manage Users
+
+Select the ellipsis on right side of a user to see available options. 
+
+
+- **Promote to Admin**: promote a user to an admin role
+- **Demote to User**: demote an admin to a user role (only available for owners)
+- **Suspend User**: suspend a user, preventing them from signing in
+- **Unsuspend User**: unsuspend a user, allowing them to sign in again
+- **Manage Team**: assign or remove a user from teams
+- **Edit User**: edit a user's name and email address
+- **Delete User**: remove a user from the enterprise account. Removed users will need to be re-invited to regain access.
+
+::alert{type="info" icon="tabler:info-circle"}
+Users cannot change their email address. If a user's email address needs to be changed, then an admin or owner will need to modify the email on the user's behalf.
+::
+
+## User Onboarding
+
+![enterprise login](/images/enterprise/enterprise-login.png)
+
+When a user is invited, they will receive an email with a **magic link** and **auth code** to sign in.
+
+The link is a one-time use link that will log user into the web version. 
+
+If the link has expired, they can select **Enterprise Login** on the [Msty Studio Web](https://msty.studio){target="_blank"} landing page and then enter their email address to send a code. 
+
+Once they received the code in their email, on Msty Studio Web, select **Enter Code** and enter the code to sign in.
+
+![login code](/images/enterprise/login-code.png)
+
+### Logging into Msty Studio Desktop
+If the user needs to install Msty Studio Desktop, please refer them to [Msty's website](https://msty.ai){target="_blank"} where they can download the latest version for their operating system.
+
+After installing Msty Studio Desktop, they can log into their account from **Settings > License and Access**, select the **Enterprise Login** and then they can enter their email address to send a code.
+
+Once they received the code in their email, on Msty Studio Desktop, they can enter the code to log in.
+
+::Resources
+
+---
+
+Teams allow you to group users and assign access to features, platforms, models, and storage options.
+
+## Add a New Team
+
+![add new team](/images/enterprise/new-team-slideout.png)
+
+From the **Teams** tab, select the **Create New Team** button to open the new team slide-out form. 
+
+#### Configure the following options: 
+- **Team Name**: the name of the team
+- **Platform Access**: select which platforms the team can access - Msty Studio Desktop, Msty Studio Web, or both
+![user table](/images/enterprise/platform-access.png)
+- **Users**: select which users belong to this team
+- **Features**: select which features the team members can access 
+    - Insights
+    - Knowledge Stacks
+    - Toolbox
+    - Personas
+    - Prompts Library
+    - Real Time Data
+    - Attachments 
+    - Forge Mode
+    - Remote Service 
+    - Turnstile
+- **Model Hub**: select which online providers the team can access; they will need to provide their own API keys for these providers
+- **Model Providers**: select pre-configured provider models that the team can access - see the **Model Providers** section below for more details
+- **Storage**: select which S3 compatible storage provider to use for team sharing of Knowledge Stacks, Prompts, and Personas. You must have already configured a storage provider in **Storage** to select it here.
+
+Once you have configured the team, select the **Create Team** button to create the team.
+
+### Model Providers
+
+![user table](/images/enterprise/share-model.png)
+
+When adding a new online provider and model, you can select the cloud-sync option to share with team. You can also select the cloud icon from the Model Hub > Model Providers list as displayed in the image above. 
+
+This will add a copy of the provider and selected models and make this available to other Admins as well as the account Owner. 
+
+You may then enable this provider and models for specific teams when creating or editing a team.
+
+Team members that have the **user** role can use the shared models; however, they can not edit the provider configurations nor manage the shared models.
+
+## Manage User's Teams
+
+You can manage which teams a user belongs to either from the **Teams** tab or from the **Users** tab. 
+
+From the **Users** tab, select the ellipsis on the right side of a user and select **Manage Team** to open the manage teams modal.
+
+![user table](/images/enterprise/manage-users-team.png)
+
+From this modal, you can select or deselect teams for the user. You may also assign the **Active Team** for the user, which can be used to set default entitlements for the user when they first sign in.
+
+::Resources
+
+---
+
+You can add S3 compatible Storage Profiles using top-tier provider such as AWS S3, Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Vultr Object Storage, and any other provider that support S3 API.
+
+## What can you do with Storage Profiles?
+
+With a Storage Profile assigned to a team, team members can share the following resources using the assigned storage provider:
+
+- Knowledge Stacks
+- Prompt Library
+- Personas
+
+This allows for increased collaboration and sharing of resources between team members.
+
+::alert{type="info" icon="tabler:info-circle"}
+We plan to support additional Msty Studio features for storage and team sharing in the future.
+::
+
+## Add New Storage Profile
+
+::steps
+1. **Select provider**
+
+You can select from several popular storage providers or select custom S3 compatible provider.
+![storage provider selection](/images/enterprise/storage-provider-selection.png)
+
+Providers will have different profile templates according to the selected provider's requirements. Please review their documentation and your account's portal to locate the required information.
+
+2. **Enter the required account information**
+
+![configure storage](/images/enterprise/configure-bucket.png)
+**Most will require that you provide the following:** 
+- Endpoint url
+- Region ID
+- Bucket name
+- Access Key ID
+- Secret Access Key
+
+3. **Test the connection**
+
+Ensure that the provided information is correct by selecting the **Check Connection** button.
+
+4. **Enter a profile name and save**
+
+::
+
+## Using Storage with Msty Studio Web - CORS configuration
+
+Cross-Origin Resource Sharing (CORS) issues may prevent Msty Studio Web users from sharing if your storage provider is not properly configured.
+
+To enable sharing in Msty Studio Web, please update your S3 bucket permissions to allow requests from `msty.studio`.
+
+## Add Storage Profile to a Team
+
+After adding a Storage Profile, you can assign this to a team when [creating or editing a team](/enterprise/teams).
+
+
+::Resources
+
+---
+
+With a [Storage Profile](/enterprise/storage) assigned to a team, team members can share the following:
+
+- Knowledge Stacks
+- Prompt Library
+- Personas
+
+This allows for increased collaboration and sharing of resources between team members.
+
+## How to share
+
+With resource sharing, you can share individual resources or a folder of resources.
+
+The same general workflow applies to sharing Knowledge Stacks, Prompts, and Personas.
+
+::steps
+1. **Resource Lists**
+In the resource lists on the left, meaning the individual resources such as Knowledge Stack, Prompt, or Persona or the folders that contain these resources, you will see share options within the ellipsis menu.
+
+2. **Share Folder or Item to Cloud**
+![configure storage](/images/enterprise/ks-share.png)
+From the ellipsis menu, select **Share to Cloud** to share the selected item or folder to the cloud storage assigned to your team.
+
+There must be a [Storage Profile](/enterprise/storage) assigned to your team to share resources.
+
+Team members can then access these shared resources from their own accounts by selecting the ellipsis menu and then importing the shared items.
+::
+
+## Manage Shared Items
+
+![configure storage](/images/enterprise/manage-shared-items.png)
+
+Admins, Owners, and creators of shared items can select the Manage option to view shared items and remove them from the cloud storage if desired.
+
+Also, source items can be re-shared if they have been updated.
+
+## Refresh Shared Items
+
+Users can refresh the shared items to pull the latest changes. 
+
+If refreshing a folder, all items within the folder will be refreshed. However, items removed from cloud will not remove item from user's local list. 
+
+::alert{type="info" icon="tabler:info-circle"}
+If you've modified a shared item locally, refreshing will overwrite your local changes with the version from the cloud. You can always move items to a different folder to prevent overwriting.
+::
+
+::Resources
+
+---
+
+Msty Studio Enterprise includes audit logs to help you track important user and team management-level actions in your Enterprise account.
+
+![audit log](/images/enterprise/audit-trail.png)
+
+Audit logs are accessible to **Owners** and **Admins** from the **Teams > Audit Trail** page.
+
+These DO NOT include user actions such as conversations, Knowledge Stack usage, or other actions users take within Msty Studio. We do not have telemetry that provides this information.
+
+However, this information is stored locally on user devices and can be accessed by users or company admins from the user's local Msty Studio installation.
+
+::Resources
+
+---
+
 If you need to manage your Msty License keys, you can do so by going to [Lemon Squeezy](https://app.lemonsqueezy.com/my-orders/login).
 
 Enter the email you used to purchase your Msty Aurum license with and click **Sign in**.
@@ -2546,7 +3243,10 @@ These steps cover how to setup Azure OpenAI in the Azure portal. These steps ass
     ![target uri](/images/azure/target-uri.png)
 11. Below the Target URI is the **Key** - copy this value as well
 
-The **Target URI** has a format -
+::
+
+The **Target URI** has a format like this: 
+
 https://\<your-resource-name\>.cognitiveservices.azure.com/openai/deployments/\<model-name\> ... ?api-version=\<api-version\>
 
 The key parts that we'll want to capture are:
@@ -2555,9 +3255,8 @@ The key parts that we'll want to capture are:
 - api-version
 - model name
 
-::
 
-We'll use the target URI and Key in the next steps to set up Msty Studio.
+We'll use elements from the target URI and Key in the next steps to set up Msty Studio.
 
 ## Msty Studio Steps
 
@@ -2570,13 +3269,14 @@ Remember to pull the **Target URI** and **Key** from the Azure OpenAI portal bef
 3. Select **Add Provider**
 4. Select **Azure OpenAI** from the list of providers
 5. Enter the **Key** value into the **API Key** field
-6. Enter the **Target URI** from the Azure OpenAI Foundry portal into the **Base URL** field, mainly this portion: `https://<your-resource-name>.cognitiveservices.azure.com/openai/deployments`
+6. Enter the **Target URI** from the Azure OpenAI Foundry portal into the **Base URL** field, mainly this portion: `https://<your-resource-name>.cognitiveservices.azure.com/openai/`; you do not need anything after `/openai/` in the base url
    OR you can skip the base url and enter the **Resource name** in the corresponding field
-7. Enter the **API Version** in the corresponding field
+7. Optionally, enter the **API Version** in the corresponding field; however, this is typically not required in Azure's latest API versions
 8. Select the **Model(s)** that you have deployed in Azure OpenAI - note that all models will be listed but you can only utilize the ones you've deployed for this resource
 9. Select **Add Provider** to save the provider
    ![new azure provider](/images/azure/new-azure-provider.png)
-   ::
+
+::
 
 Now, start a new chat and say hello to your new Azure OpenAI model!
 
@@ -2640,68 +3340,6 @@ Remember to grab the IAM user's Access Key ID, Secret Access Key, AWS Region ID,
 Now, start a new chat and say hello to your new Amazon Bedrock model!
 
 ::Resources
-
----
-
-The latest version of Ollama is included in new Sidecar updates.
-
-If you'd like to jump to the latest version for use with local AI, you can do so by performing these manual steps.
-
-## Manual download
-
-::tabs{variant="card" sync="download-os"}
-
-  ::div{label="Windows" icon="iconoir:windows"} 
-    
-    ### Windows
-
-    1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-    2. From under `Assets`, download `ollama-windows-amd64.zip`.
-    3. Once downloaded, extract the contents of the zip file and move `ollama.exe` to  `C:\Users\<username>\AppData\Roaming\Msty`
-    4. Rename `ollama.exe` to `msty-local-sidecar.exe`.
-    5. Move `lib` folder to `C:\Users\<username>\AppData\Roaming\Msty`
-
-  #### Additional config for AMD ROCm™ GPU users only:
-  1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-  2. From under `Assets`, download `ollama-windows-amd64-rocm.tgz`
-  3. Once downloaded, extract contents and move the whole `rocm` folder under `lib\ollama` to `C:\Users\<username>\AppData\Roaming\Msty\lib\ollama`
-  ::
-
-    ::div{label="Mac" icon="hugeicons:apple"}
-      ### Mac
-      1. Close Sidecar and ensure msty-local-sidecar is not running in your Activity monitor
-      2. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-      3. From under `Assets`, download `ollama-darwin.tgz` (NOT `Ollama-darwin.zip`)
-      4. Once downloaded and extracted, move `ollama` to `~/Applications/MstySidecar.app/Contents/Resources`. Do not copy the whole folder -just the executable inside the extracted folder.
-      5. Rename existing `msty-local-sidecar` to something else - such as `msty-local-sidecar-old` or `msty-local-sidecar-backup`
-      6. Rename `ollama` to `msty-local-sidecar`
-    ::
-
-    ::div{label="Linux" icon="ph:linux-logo"}
-      ### Linux
-
-      1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-      2. From under `Assets`, download `ollama-linux-amd64.tgz`
-      3. Once downloaded, unzip and move `bin` and `lib` directories to `~/.config/Msty/`
-      4. Rename `ollama` executable under `bin` to `msty-local-sidecar`
-      5. Open Terminal and run the following command to make the file executable:
-
-      ```sh
-      chmod +x ~/.config/Msty/bin/msty-local-sidecar
-      ```
-
-      #### Additional config for AMD ROCm™ GPU users only:
-      1. Go to releases page on the Ollama repository: https://github.com/ollama/ollama/releases
-      2. From under `Assets`, download `ollama-linux-amd64-rocm.tgz`
-      3. Once downloaded, unzip and move the whole `rocm` directory under `lib/ollama` to `~/.config/Msty/lib/ollama`
-    ::
-
-::
-
-Restart Sidecar and verify the new version of Local AI service by going to Settings > Local AI > Service Version.
-
-::Resources
-
 
 ---
 
@@ -2796,3 +3434,48 @@ Paste in the URL you created in the previous step and then select **Save and Con
 You should now be connected to Sidecar from the other device. You can now use Sidecar to run local models from your other device.
 
 ::Resources
+
+
+---
+
+The [Live Contexts](/features/toolbox/live-contexts) feature lets you pull data from external endpoints to provide real-time context when interacting with Personas, LLMs, or other tools. 
+
+The list below provides example endpoints you can explore and test. **Please note:** these are third-party endpoints. We do not maintain them and cannot guarantee the accuracy, availability, or reliability of the data returned.  
+
+Please submit a PR to suggest additions.
+
+| Name | Endpoint |
+|------|---------|
+| CISA Known Exploited Vulnerabilities | ```https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json``` |
+| Clock | ```https://worldtimeapi.org/api/ip``` |
+| COVID Global Status | ```https://disease.sh/v3/covid-19/all``` |
+| Current Mars Weather | ```https://api.maas2.apollorion.com/``` |
+| Current Natural Events | ```https://eonet.gsfc.nasa.gov/api/v3/events``` |
+| Current Weather | ```https://wttr.in/?format=j1``` |
+| Crypto Fear / Greed Index | ```https://api.alternative.me/fng/``` |
+| Dummy JSON Data | ```https://jsonplaceholder.typicode.com/posts``` |
+| Earthquakes | ```https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson``` |
+| Food Facts | ```https://world.openfoodfacts.org/api/v0/product/737628064502.json``` |
+| Generate UUID | ```https://www.uuidtools.com/api/generate/v4/count/1``` |
+| GPS (ISS Now) | ```http://api.open-notify.org/iss-now.json``` |
+| HTTP Echo / Request Info | ```https://httpbin.org/get``` |
+| IP Address | ```https://api.ipify.org/``` |
+| Latest GitHub Events | ```https://api.github.com/events``` |
+| Latest NPM Package Metadata Events | ```https://registry.npmjs.org/react/latest``` |
+| Latest PyPI Package Metadata Events | ```https://pypi.org/pypi/requests/json``` |
+| Latest Reddit Posts | ```https://www.reddit.com/r/news/new.json?limit=25``` |
+| Latest Stack Overflow Posts | ```https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow&pagesize=10``` |
+| NASDAQ Listings | ```https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt``` |
+| Network Diagnostics | ```https://www.cloudflare.com/cdn-cgi/trace``` |
+| Not NASDAQ Listings | ```https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt``` |
+| Random Chuck Norris Fact | ```https://api.chucknorris.io/jokes/random``` |
+| Random Fact | ```https://uselessfacts.jsph.pl/api/v2/facts/random``` |
+| Random Joke | ```https://official-joke-api.appspot.com/random_joke``` |
+| Random Number | ```https://www.randomnumberapi.com/api/v1.0/random``` |
+| Random Person (JSON) | ```https://randomuser.me/api/``` |
+| Random Word | ```https://random-word-api.herokuapp.com/word``` |
+| Top Crypto | ```https://api.coinlore.net/api/tickers/``` |
+| US Weather Alerts | ```https://api.weather.gov/alerts/active``` |
+| USD Exchange Rates | ```https://open.er-api.com/v6/latest/USD``` |
+| World Bank Country Data | ```https://api.worldbank.org/v2/country/all?format=json``` |
+| World Bank Indicators | ```https://api.worldbank.org/v2/indicator/SP.POP.TOTL?format=json``` |
