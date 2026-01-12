@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ["shadcn-docs-nuxt"],
-  compatibilityDate: "2024-07-06",
+  compatibilityDate: "2024-09-19",
 
   routeRules: {
     "/": {
@@ -10,7 +10,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxthub/core"],
+  nitro: {
+    preset: "cloudflare_pages",
+  },
 
   components: {
     dirs: [

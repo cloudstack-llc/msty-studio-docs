@@ -1,0 +1,43 @@
+name: Deploy to NuxtHub
+on:
+  push:
+    branches:
+      - 'prod'
+      - 'rel/**'
+
+jobs:
+  deploy-prod:
+    if: github.ref == 'refs/heads/prod'
+    name: "Deploy Production"
+    runs-on: ubuntu-latest
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bun install
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build site
+        run: bun run build
+
+      - name: Deploy to NuxtHub
+        uses: nuxt-hub/action@v1
+        id: deploy
+        with:
+          project-key: msty-studio-doc-w69t
