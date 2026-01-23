@@ -27,17 +27,17 @@ To get started with Studio Desktop, please see the [Desktop](/getting-started/de
 
 ### Msty Studio Web :aurum-tag
 
-Msty Studio Web is a web-based application that is capable of running the marjority of features that Msty Studio offers. However, to unlock additional features, including Real-Time Data, Toolbox, and Local Models, Studio web will need to connect to [Sidecar](/getting-started/sidecar). Sidecar can either be ran on your same device or on a remote device.
+Msty Studio Web is a web-based application that is capable of running the majority of features that Msty Studio Desktop offers. However, to unlock additional features, including Real-Time Data, Toolbox, and Local Models, Studio Web will need to connect to [Msty Studio Desktop](/features/remote-connections) or [Msty Sidecar](/how-tos/sidecar). Connecting Web to Desktop is the recommended approach for most users.
 
-Even though Msty App is a web-based app, data is stored directly on your browser's local storage. This helps us maintain our Privacy-first policy and our commitment to keep your data in your control.
+Even though Msty Studio Web is a web-based app, data is stored directly on your browser's local storage. This helps us maintain our Privacy-first policy and our commitment to keep your data in your control.
 
 #### Existing Msty App v1.x user?
 
 If you are an existing user of Msty App, please see the [Quick Start](/getting-started/quick-start) guide to get started.
 
-#### New to Msty?
+#### New to Msty Studio?
 
-If you are brand new to Msty, please see the [Onboarding](/getting-started/onboarding) guide to get started.
+If you are brand new to Msty Studio, please see the [Onboarding](/getting-started/onboarding) guide to get started.
 
 ## Popular Topics
 
@@ -276,7 +276,11 @@ Try one of these options:
 
 ---
 
-These onboarding instructions are meant for new Msty Studio users. If you are an existing Msty App and Aurum subscriber, please check out the [Quick Start](/getting-started/quick-start) guide.
+These onboarding instructions are meant for new Msty Studio users. If you are an existing Msty App v1.x and Aurum subscriber, please check out the [Quick Start](/getting-started/quick-start) guide.
+
+## Getting Started Video Guide
+::YouTubePlayer{videoId="TdGjKf4vRPo"}
+::
 
 ## Msty Studio Desktop Onboarding Instructions
 
@@ -325,7 +329,6 @@ If you see an error during Local AI Services setup, try this option as an altern
 4. You'll now have a few options on how you can proceed. In order to make use of Msty, you will need to add either a local or remote model provider.
    ![Msty Studio Initial Setup](/images/initial-setup.png)
    - To add a Remote Provider, click **Add Provider**. There are many available options, such as OpenAI, Claude, and Gemini. You will first need an API Key from the desired provider in order to add the remote provider to Msty.
-   - To add a Local Provider, select the **Get Sidecar** option. This may be the better option to begin with at this time, as Sidecar unlocks many additional features in Msty Studio - and, you can always add new Remote Providers later. Installing Sidecar will take you through a Local AI Setup flow - check out the [Sidecar](/getting-started/sidecar) documentation for additional info.
 5. Once you have your Remote or Local Provider set up, click on **Let's Go!**
 
 ## ![Quick Start Msty Studio](/images/welcome-to-msty.png)
@@ -333,7 +336,7 @@ If you see an error during Local AI Services setup, try this option as an altern
 ::
 
 ::alert{type="info" icon="tabler:info-circle"}
-**Safari user?** Safari is not directly supported by Msty Studio however there is a workaround using [Msty Sidecar](/getting-started/sidecar) by leveraging the tunneling feature.
+**Safari user?** Safari is not directly supported by Msty Studio however there is a workaround using [Remote Connections](/features/remote-connections) by leveraging the tunneling feature.
 ::
 
 ::Resources
@@ -353,7 +356,7 @@ Are you a previous Msty App 1.x users? Here are some quick facts to know:
 5. A migration tool is available to help migrate some of your existing Msty App (v1.x) data to Studio Desktop.
 
 
-## Download Options
+## Msty Studio Desktop Download Options
 
 Please select the download option for your operating system.
 
@@ -365,6 +368,12 @@ Please select the download option for your operating system.
 - [Download Msty Studio Desktop (x64)](https://next-assets.msty.studio/app/latest/win/MstyStudio_x64.exe)
 
 When installing on Windows, please install as an Administrator for your user account only. Installing for all users is not supported due to a Windows limitation.
+
+Corporate SSL issues? Try running the following command: 
+```bash
+   $env:NODE_TLS_REJECT_UNAUTHORIZED="0"; & <MSTY STUDIO.EXE PATH>
+```
+Replace `<MSTY STUDIO.EXE PATH>` with the actual path to the Msty Studio executable file.
 
 ::
 
@@ -437,141 +446,94 @@ sudo chown root:root /opt/MstyStudio/chrome-sandbox
 sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
 ```
 
+::
+::
 
 
+### Looking for Msty App 1.x?
+::Collapsible{title="Expand this section to see download options"}
+  Msty App 1.x is still available for download if you need it. See below for download links and installation instructions. See the [Msty App 1.x Docs](https://docs.msty.app){target="_blank"} for more info.
+
+  ::tabs{variant="card" sync="download-os"}
+  ::div{label="Windows" icon="iconoir:windows"}
+  ### Windows
+  Choose between two versions depending on your hardware.
+
+  #### CPU-Only Version
+  Ideal for systems without a dedicated GPU.
+
+  :button-link[Download Msty (x64 CPU)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/win/cpu/Msty_x64.exe" self}
+
+
+
+  #### GPU Version
+  Optimized for systems with a [compatible AMD or NVIDIA GPU](/getting-started/gpus-support), offering improved performance.
+
+  :button-link[Download Msty (x64 GPU)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/win/auto/Msty_x64.exe" self}
+  ::
+  ::div{label="Mac" icon="hugeicons:apple"}
+  ### Mac
+  We offer installers for both Apple Silicon and Intel-based Macs.
+
+  #### Apple Silicon
+  For M1, M2 and M3 chip-based Macs.
+
+  :button-link[Download Msty (M1/M2/M3)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/mac/Msty_arm64.dmg" self}
+
+
+
+  #### Intel
+  For Macs with Intel processors.
+  :button-link[Download Msty (Intel)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/mac/Msty_x64.dmg" self}
+  ::
+  ::div{label="Linux" icon="ph:linux-logo"}
+  ### Linux
+  Download the version that best fits your setup.
+
+  #### AppImage (CPU Version)
+  A universal package that runs on most Linux distributions, optimized for CPUs.
+  :button-link[Download Msty (AppImage CPU)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/linux/amd64/Msty_x86_64_amd64.AppImage" self}
+
+
+
+  #### Deb Installer (CPU Version)
+  Specifically for Debian-based distributions (like Ubuntu) with CPU optimization.
+  :button-link[Download Msty (.deb CPU)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/linux/amd64/Msty_amd64_amd64.deb" self}
+
+
+
+  #### AppImage (AMD GPU - ROCm Version)
+  For systems with AMD GPUs using ROCm, available as a universal AppImage.
+  :button-link[Download Msty (AppImage AMD GPU)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/linux/rocm/Msty_x86_64_rocm.AppImage" self}
+
+
+
+  #### Deb Installer (AMD GPU - ROCm Version)
+  A ROCm-optimized version for Debian-based distributions.
+  :button-link[Download Msty (.deb AMD GPU)]{left-icon="tabler:download" variant="outline" to="https://assets.msty.app/prod/latest/linux/rocm/Msty_amd64_rocm.deb" self}
+  ::
+  ::
+
+  ## Installation Instructions
+  After downloading the appropriate installer for your system, follow the instructions below:
+
+  ::tabs{variant="card" sync="download-os"}
+  ::div{label="Windows" icon="iconoir:windows"}
+  ### Windows
+  Double-click the installer and follow the setup wizard.
+  ::
+  ::div{label="Mac" icon="hugeicons:apple"}
+  ### Mac
+  Open the downloaded `.dmg` file and drag Msty to your Applications folder.
+  ::
+  ::div{label="Linux" icon="ph:linux-logo"}
+  ### Linux
+  Read [how to install Msty on Linux.](/how-to-guides/install-msty-on-linux)
+      ::
+    ::
 ::
 
 ::Resources
-
-
----
-
-Msty Sidecar is a companion desktop application that brings powerful local capabilities to Msty Studio Web, enabling features that go beyond what’s possible in a standard web app.
-
-## Studio Plus Sidecar :aurum-tag
-
-Sidecar unlocks the following features in Studio:
-
-- Enables fetching Real-Time Data from the internet
-- Enables setting up [Tools](/features/toolbox/tools) on your local machine
-- Enables local AI model management
-
-::alert{type="info" icon="tabler:info-circle"}
-To unlock these features, Studio must be successfully connected to Sidecar. Sidecar serves as a proxy between the Studio web app and your local (or remote) machine, and must remain connected for these features to work.
-::
-
-## Download
-
-Please select the download option for your operating system.
-
-::tabs{variant="card" sync="user-os"}
-::div{label="Windows" icon="iconoir:windows"}
-
-### Windows
-
-- [Download Msty Sidecar (x64)](https://sidecar-assets.msty.studio/prod/latest/win/auto/MstySidecar_x64.exe)
-
-::
-
-::div{label="Mac" icon="hugeicons:apple"}
-
-### Mac
-
-- [Download Msty Sidecar (Apple Silicon - M1, M2, M3, M4)](https://sidecar-assets.msty.studio/prod/latest/mac/MstySidecar_arm64.dmg)
-- [Download Msty Sidecar (Intel Macs)](https://sidecar-assets.msty.studio/prod/latest/mac/MstySidecar_x64.dmg)
-
-::
-
-::div{label="Linux" icon="ph:linux-logo"}
-
-### Linux
-
-- [Download Msty Sidecar (x64 AppImage)](https://sidecar-assets.msty.studio/prod/latest/linux/amd64/MstySidecar_x86_64_amd64.AppImage)
-- [Download Msty Sidecar (x64 deb)](https://sidecar-assets.msty.studio/prod/latest/linux/amd64/MstySidecar_amd64_amd64.deb)
-
-::
-
-::
-
-## Getting Started with Local AI Models
-
-After you've downloaded and installed Sidecar, you'll be prompted to continue with setting up your local AI by either downloading Gemma, connecting to Msty App - if you already have Msty App setup and running - or by connecting to Ollama.
-
-For new users, the easiest path is to select option to download Gemma. Once Gemma is installed, you can then go back to Msty Studio and use the local models.
-
-## Connecting Msty Studio to Sidecar
-
-Sidecar runs in the background - a Sidecar icon will be visible in your computer's toolbar when it is running.
-
-![Sidecar app in toolbar](/images/sidecar.png)
-
-One of the primary menu options is to **Open Msty Studio**. This will launch Msty Studio on your default browser with a connection to Sidecar pre-established.
-
-You can of course launch a browser and navigate to Msty Studio. However, if for some reason the connection details change for Sidecar, you can select the **Copy Local Connection Info** option to copy it to your clipboard and then use it in Msty Studio to re-establish connection with Sidecar.
-
-## Safari Web Browser
-
-Safari web browser unfortunately has constraints which do not allow for direct access to Sidecar.
-
-However, you can still connect Safari to Sidecar using the following methods:
-
-- [Enabling Sidecar's Tunneling Feature](/getting-started/sidecar#connecting-remotely-to-local-ai-including-from-mobile-devices)
-- [Using Tailscale](/how-tos/setup-tailscale-for-sidecar)
-
-## Brave Web Browser
-
-If you're connecting to Sidecar from a Brave web browser, disable the shield for Msty Studio. If the shield is enabled, this will block Studio from successfully connecting to Sidecar.
-
-## Connecting Remotely to Local AI - including from Mobile Devices
-
-::alert{type="info" icon="tabler:info-circle"}
-This is an **experimental** feature.
-::
-Sidecar enables you to remotely access your local AI via tunneling - letting you connect from remote devices such as your phone, tablet, or desktop.
-
-::steps
-
-1. From the Sidecar menu, select **Enable Tunneling With Local AI**. This will set up local tunneling and may take a few seconds.
-2. Once tunneling has been enabled, you'll see an option to **Copy Tunnel Connection Info**. Click on this and then share the URL to the device you'd like to connect.
-3. On your remote device, open a browser and go to [msty.studio](https://msty.studio)
-4. You'll first need to **enter a valid Aurum License Key**
-5. On the following screen, select **Add Provider**
-6. Select provider option for **Msty Sidecar Local AI Proxy**
-7. Enter the Proxy endpoint that you copied in step two above and **Add Provider**
-
-You can now remotely access your local AI!
-::
-
-## Connecting to Sidecar using Tailscale
-
-Another option for connecting to Sidecar is to use Tailscale.
-
-See the [Tailscale guide](/how-tos/setup-tailscale-for-sidecar) for more information on how to set up Tailscale with Sidecar.
-
-## Starting Sidecar from the Command Line
-
-You can start Sidecar from the command line by running the following command:
-
-```bash
-open -a MstySidecar
-```
-
-This may come in handy in certain situations, such as if you are experiencing issues with Sidecar detecting services on your local machine, such as NPM, Python, etc.
-
-## Setting a custom token
-
-You can set a custom token for Sidecar by adding a `.token` file to the Sidecar app data directory. On Mac, this is typically located at `~/Library/Application Support/MstySidecar`. On Windows, it is usually found at `%APPDATA%\MstySidecar`.
-
-For a random value, you can use the following command:
-
-```bash
-echo -n $(openssl rand -hex 40) > ~/path/to/MstySidecar/.token
-```
-
-Then, restart Sidecar to apply the new token. This token will be used for both local connections and remote connections via tunneling.
-
-::Resources
-
 
 ---
 
@@ -613,9 +575,15 @@ The **Installed Models** tab displays the models currently installed on your dev
 
 The **Ollama Models** and **Hugging Face Models** tabs allow you to search Ollama and Hugging Face for models that you can install onto your device. As long as the model is public and has an available GGUF (GPT-Generated Unified Format) file for download, then it typically is available to install.
 
-::alert{type="info" icon="tabler:info-circle"}
-Msty does not support Safetensors nor split GGUFs.
-::
+The **Import GGUF Model** tab allows you to Select a GGUF model file from your file system to import into Msty Local AI.
+
+## Import a GGUF Model
+To import a GGUF model that you have downloaded locally, navigate to the **Import GGUF** tab, select directory and then browse to the location of the GGUF file on your device.
+
+You can either establish a symlink to point Msty Studio to the GGUF file location, or you can copy the GGUF file into Msty Studio's models directory.
+
+## Import a Safetensors Model
+To import a Safetensors Model that you have downloaded locally, navigate to the **Import Safetensors** tab, select directory and then browse to the location of the Safetensors file on your device.
 
 ## Model Squad
 
@@ -658,6 +626,9 @@ You can customize the logo for a Provider or Model by selecting the edit icon in
 
 ![change model logo](/images/change-provider-model-logo.png)
 
+## GPU support
+
+If your system has a compatible GPU, you can enable GPU support for models that support it by selecting the corresponding option in **Settings > Local AI > Service ellipsis menu**.
 
 ::Resources
 
@@ -666,12 +637,8 @@ You can customize the logo for a Provider or Model by selecting the edit icon in
 
 MLX (Apple Machine Learning eXchange) is Apple’s machine learning framework optimized for Apple Silicon. It enables fast, efficient training and inference using GPU and CPU acceleration on macOS and iOS devices. **Msty Studio Desktop** supports MLX for running local models natively, making it ideal for private, high-performance AI workflows on your Mac.
 
-::alert{type="info" icon="tabler:info-circle"}
-MLX is an experimental feature and you may encounter issues. Please report any problems you find on our Discord server to help us improve the experience. Msty Studio Web support will depend on MLX project's progression and availability of resources for web-based support. 
-::
-
 ## Adding MLX Models
-Add and managing MLX models is fundamentally similar to adding and managing other local models in Msty Studio. 
+Adding and managing MLX models is fundamentally similar to adding and managing other local models in Msty Studio. 
 
 In **Model Hub**, you can view featured MLX models and search for models on the MLX Hugging Face Community tab. 
 
@@ -686,6 +653,65 @@ You can manage and configure the MLX service in **Settings > MLX Service**. Here
 ![mlx service](/images/mlx/mlx-service.png)
 
 You can also view the service health, stop and start the service, view the endpoint, version, logs, and more.
+
+::Resources
+
+---
+
+llama.cpp is an open source C/C++ library that performs efficient inference on large language models with minimal setup and optimized performance across various hardware.
+
+This provides another option for a local inference engine in Msty Studio in addition to Ollama and MLX. 
+
+::alert{type="info" icon="tabler:info-circle"}
+Llama.cpp support is an experimental feature and you may encounter issues. Please report any problems you find on our Discord server to help us improve the experience. 
+::
+
+Llama.cpp can be installed during new user onboarding or from **Model Hub > Llama.cpp**. 
+
+## Adding Llama.cpp Models
+
+In **Model Hub**, you can view featured Llama.cpp models and search for models on the Llama.cpp Hugging Face Community tab. 
+
+Click on the download icon to download and install a model locally. 
+
+## Managing Llama.cpp Service
+
+You can manage and configure the Llama.cpp service in **Settings > Llama.cpp Service**. Here, you can start or stop the Llama.cpp service, which is required to run Llama.cpp models locally.
+
+You can also view the service health, stop and start the service, view the endpoint, version, logs, and more.
+
+### GPU support
+
+If your system has a compatible GPU, you can enable GPU support for Llama.cpp models by selecting the corresponding option under the Llama.cpp service ellipsis menu. 
+
+## Llama.cpp Model Parameters
+
+LLama.cpp provides a few features that can give them an edge when used during conversations. 
+
+Next to the model selection, when you have a Llama.cpp model selected, click on the **Model Parameters** icon.
+
+**Here, you will see options specific to Llama.cpp, including**:
+
+### Num ctx default to model max
+This is the context window where you can select the option to use the max amount of context for a mode. 
+
+The specific max value may not be known to Llama.cpp or Msty Studio; however, this option will set it to the max value. 
+
+Setting to the max will benefit conversations as more context will be held onto, which will result in fewer hallucinations and improved conversation continuity. 
+
+This does come at a cost in the form of your device's system performances being expended, which may result in decreased system performance. 
+
+### Truncation Strategy 
+
+As conversation get longer, you can set a truncation strategy so that you can continue conversations without getting a context limit reached message. 
+
+**Options**: 
+- **Truncate Middle** this truncates the middle portions of the conversation. This setting is ideal when the first parts of the conversation are important to maintain the overall context. Use this if the first interaction set the stage for the overall conversation. 
+- **Truncate Old** - this truncates the first messages of the conversation. This setting is idea for continued conversations where the first messages are not critical to the continuity of the conversation. Use this if the latest messages are the most critical for continuity. 
+- **None** - this does not truncate any messages in an ongoing conversation. Use this setting if full historical context is needed. However, this does run the risk of context limits being exceeded. 
+
+
+::Resources
 
 ---
 
@@ -707,9 +733,13 @@ Select the down arrow next to **New Persona** and then select **Import Default P
 2. Enter a **Name** you'd like to refer to your Persona by and select a corresponding icon
 3. Fill in the **System Prompt** for the Persona. Prompts are an important part of the equation for making the best use of AI chat conversations. Be clear and descriptive about what you are wanting for the desired output. Don't be afraid to provide examples of a quality output that you are looking for so that the AI can reference the example when crafting its response.
 4. Select whether you want to add the prompt before the system prompt, to replace the system prompts, or add after the system prompts.
-5. Enter a brief **Description** of the Persona
-6. Include **Add Ons** such as any relevant [attachments](/features/attachments), [real-time data](/features/real-time-data), related [toolsets](/features/toolbox/toolsets), context shield, desired model and any pertinent model parameters. Add-Ons add a ton of power and flexibility to your Persona and can take them from a simple canned prompt to a full-blown Agent.
-7. **Few-Shot Prompts** let you provide example prompts to guide the Persona's responses, helping it understand the desired style or context of replies based on previous examples.
+5. Enable any additional settings to:
+  - **Hide and isolate system prompt** which automatically hides and isolates user messages when sending Persona prompt
+  - **Isolate response** which automatically isolates the generated response, excluding it from being added as context in follow-up messages
+  - **Auto Response** which will automatically enable the Persona as an auto-responding persona 
+6. Enter a brief **Description** of the Persona
+7. Include **Add Ons** such as any relevant [attachments](/features/attachments), [real-time data](/features/real-time-data), related [toolsets](/features/toolbox/toolsets), context shield, desired model and any pertinent model parameters. Add-Ons add a ton of power and flexibility to your Persona and can take them from a simple canned prompt to a full-blown Agent.
+8. **Few-Shot Prompts** let you provide example prompts to guide the Persona's responses, helping it understand the desired style or context of replies based on previous examples.
 
 ::
 
@@ -722,41 +752,247 @@ Select the down arrow next to **New Persona** and then select **Import Default P
 
 ---
 
-Create and organize prompts for easy access and reuse across Msty.
+Shadow Personas are assistants that observe the main conversation you are having in a chat or in multiple split chats. 
 
-![Prompts Library](/images/prompts-library.png)
+How the Shadow Persona responds to the conversation, is up to how you have configured the prompt for the underlying persona. 
 
-## Import Default Prompts
+To enable a Shadow Persona for a conversation, select the Shadow Persona icon in the top right of the window, to the left of the ellipsis (...) menu. 
 
-To quickly get started, you can import a collection of ready-to-use prompts:
+::alert{type="warning" icon="tabler:info-circle"}
+Shadow Persona is not available when **Compact Mode** is enabled. Exit Compact Mode in order to enable a Shadow Persona. 
+::
 
-1. Select the **down arrow** next to the **New Prompt** button.
-2. Choose **Import Default Prompts**.
+Shadow Personas can monitor multiple split chats. In the example below, the Shadow Persona is tasked with reviewing the responses from two split chats and then synthesize the responses into one single optimal response that takes the best parts of each split chat. 
+![Shadow Personas Synthesize Split Chats Example](/images/shadow-personas/shadow-persona-synthesizer.png)
 
-This will load a curated set of prompts that you can edit and customize to fit your workflow.
+See the examples section below for additional useful usages for Shadow Personas. 
 
-## Add a New Prompt
+## Adding a new Shadow Persona :aurum-tag
 
-To create your own prompt:
+### Step 1 - Create the underlying Persona
+The underlying directives and capabilities of a Shadow Persona come from the underlying Persona. 
 
-1. Click **New Prompt**.
-2. Enter a **Title** and your **Prompt text**.
+See the [Personas](/features/personas) learn how to create a new persona.
 
-Alternatively, click the **down arrow** next to **New Prompt** to:
+Shadow Personas adopt the following features of a Persona: 
+- **System Prompt** - the prompt provides the main directives that a Shadow Persona is tasked with
+- **Attachments** - add attachments that a Shadow Persona can reference to for additional context
+- **Real-Time Data** - provide access to real-time data so that Shadow Personas can search the internet
+- **Toolbox** - Shadow Personas can call tools and live context endpoints for additional context
+- **Knowledge Stacks** - provide access to a Knowledge Stack so that a Shadow Persona can reference it for specific context
+- **Model** - select a specific model for the Shadow Persona to use; the default model is the same model selected in the conversation
+- **Model Parameters** - configure specific parameters; increase the context limit if using a local model for improved results
 
-- Import prompts from your clipboard.
-- Upload a JSON file with one or more prompts.
 
-## Organize Your Prompts
+### Step 2 - Configure the new Shadow Persona
 
-Keep your prompt library tidy by using folders:
+Click on the Shadow Persona icon in the top right of Msty Studio to expose Shadow Persona. 
 
-- Use the **down arrow** next to **New Prompt** or the **ellipsis (⋯)** icon beside existing folders to create:
+![Configure New Persona Start](/images/shadow-personas/configure-new-shadow-persona.png)
 
-  - New root-level folders
-  - Subfolders (child folders)
+Then, click on **Create New** to configure a new Shadow Persona. If you already have a Shadow Persona you'd like to attach to the conversation, then select the **Attach Existing** option and select the Shadow Persona to attach. 
 
-You can then move prompts into these folders for better organization and faster access.
+After selecting **Create New**, you'll see a modal to configure the new Shadow Persona. 
+
+![Configure Shadow Persona](/images/shadow-personas/configure-shadow-persona.png)
+
+Fill out the Shadow Persona configuration accordingly. 
+
+- **Shadow Persona Name** - provide a unique name for your Shadow Persona
+- **Select Persona** - select the underlying Persona 
+- **Update Trigger** - this is how often the Shadow Persona will respond; either after every new message, every three messages, or manually triggered
+- **Messages Per Split** - the number of messages, per split, that will be sent to the Shadow Persona for context; if you only want a response given the most recent message(s) only, set to 1
+- **Synthesis Mode** - most important for when there are multiple split chats, this will direct the Shadow Persona if it should respond to each split chat uniquely, if it should synthesize all of the split chats, or if it should compare/contrast the split chats
+- **Max Versions** - this is the max number of Shadow Personas that will be kept during a conversation; after the number that is set, then the later messages will be dropped
+
+Once you have your Shadow Persona configured how you want it, select **Create and Assign** to create the persona and assign it to the current conversation. 
+
+## Using Shadow Persona in Conversations
+
+When enabled in a conversation, the Shadow Persona will wait for the models in the conversation to complete their response before providing their own - with the exception of if you set the Shadow Persona to respond via manual trigger. 
+![Shadow Persona working with](/images/shadow-personas/shadow-personas-options.png)
+
+Referencing the above image, here are the key parts of the Shadow Persona: 
+1. **Enable / Disable Shadow Persona** from auto-responding
+2. **Ellipsis overflow menu** provides options to edit the Shadow Personas configuration, create a new Shadow Persona, and delete a Shadow Persona
+3. **Manage Split Chats** section allows you to select which split chats are included for the Shadow Persona to monitor
+4. **Output options** to toggle between outputs, copy an output, or remove an output
+5. **Shadow Persona's response output** message according to their directive; this will also display tool usages, Knowledge Stacks referenced, and real-time data sources
+6. **Manually trigger** Shadow Persona response 
+
+## What you can do with Shadow Personas
+
+There are countless ways you can use a Shadow Persona to provide value to your conversations. 
+
+Here are just a few: 
+- **A commentator** - provide color commentary on the main conversation. 
+- **Response analysis** - provide an analysis of the quality of the response, this is especially useful when you have multiple split chats
+- **Response synthesizer** - take the best parts of multiple responses in split chats and provides an improved response
+- **Fact Checker** - enable add-ons for the underlying persona such as real-time data, knowledge stacks, or toolbox so that the Shadow Persona can check sources of record to see if the conversation models are providing accurate results
+- **Monitor and act** - have a Shadow Persona watch a conversation and look for something specific, they can then either inform you that something you are looking for came up, or they can take further action by triggering a tool call to kick-off a workflows
+- **Summarizer** - summarize your conversations as you are conversing in the main chat, so you have a clear, concise list of items discussed
+
+Be sure to watch the videos in the Resources section below as well for ideas.  
+
+::Resources
+
+---
+
+Environments are a powerful feature in Msty Studio that allow you to create and manage different settings for your different projects or use cases. By using environments, you can easily switch between different configurations without having to manually change settings each time.
+
+## Add and Manage Environments :aurum-tag
+
+On the left menu, select the ellipsis icon and then select **Environments** and then **Manage Environments**.
+
+By default, there is a **Base Environment** that is created for you. This environment is used to store variables that are common across all environments.
+
+Also, if the active environment doesn't have a variable set, it will fall back to the Base Environment and check to see if the variable is defined there.
+
+### Add New Environment
+
+To add a new environment, select the **Add Environment** button. Then, add an Environment **Name** and enter the **Variables** you want to set for this environment.
+
+You can also click on the ellipsis icon next to an existing environment to **Clone Environment** and then use that as a starting point for a new environment.
+![add new environment](/images/new-environment.png)
+
+You can always come back and modify the environment variables later.
+
+### Backup and Restore Environments
+
+Select the down arrow icon next to the **Add Environment** button to backup or restore your environments.
+
+### Remove Environment
+
+To remove an environment, select the ellipsis icon next to the environment you want to remove and select **Delete Environment**.
+
+## Set Active Environment
+
+You can select an active Environment from the Manage Environments section by selecting the ellipsis icon and then select option to **Make Active Environment**.
+
+You can also quickly select an Active Environment from the ellipsis icon on the main left menu and then select an icon under the **Environments** submenu.
+
+If an Environment Variable is not in the selected Environment; however, is in the **Base Environment**, then the variable will fall back to the one listed in the Base Environment.
+
+## Use Environment Variables
+
+You can use Environment Variable in the following areas of Msty Studio:
+
+1. Model provider API keys
+2. System prompts
+3. Conversations
+4. Tools
+
+You can copy and paste variables into these areas. Note that variable names will automatically begin with `MSTY_`, such as `MSTY_MY_VARIABLE`.
+
+When a process runs, the variable placeholder will be replaced with the value of the variable in the active environment.
+
+::alert{type="info" icon="tabler:info-circle"}
+Use the same variable name across Environments for things like model provider API keys, this way, when you change the environment, you change the underlying API Key - making it easy to switch between model API environments.
+::
+
+### Dynamic Variables
+
+There are a few dynamic variables that accessible from the Environment Variable picker (shift+shift+e). These variables are automatically populated with the current date and time, and can be used in your conversations to provide context or information. The following dynamic variables are available:
+
+**These include:**
+
+- {MSTY_LOCAL_DATE} - the current system date
+- {MSTY_LOCAL_DATE_TIME} - the current system date and time
+- {MSTY_LOCAL_TIMEZONE} - the current system timezone
+
+![env dynamic variables](/images/env-dynamic-variables.png)
+In the quick select modal, when you select a variable, it will be copied to your clipboard.
+No newline at end of file
+
+::Resources
+
+
+---
+
+Image generation can be accomplished with compatible models.
+
+![image generation update car color](/images/img-gen/image-gen-cars.png)
+
+## Set 'Image' Purpose
+
+Most models capable of image generation will come with **image** already enabled as a model's purpose.
+
+However, if you are using a model, or have added a custom model, where you know that the model supports image generation, then you'll need to enable **image** as a purpose for the model.
+
+### Adding custom model
+
+When adding a custom model, select **image** as a purpose.
+![add custom model](/images/img-gen/add-custom-model.png)
+
+### Updating existing model
+
+To update purposes for an existing model, in the conversation area, click on the model selector, find the model you want to update, and then click on the edit icon.
+
+This will open a modal where you can update the model's purpose.
+
+Be sure to appropriately select purposes based on if the model is image-only or if it is multimodal.
+
+::alert{type="info" icon="tabler:info-circle"}
+Setting purpose appropriately based on if model is image-only or multimodal impacts how Msty handles the image generation request. If you encounter an error, double check the Model's purpose is configured correctly.
+::
+
+#### Image-only models
+
+It is very important that if the model is an image-model only, meaning the model doesn't have multimodal functionality, then ensure that **only** image is selected.
+
+![image generation only models](/images/img-gen/image-only-model.png)
+
+#### Multimodal models
+
+Likewise, if the model has multimodal functionality, then ensure that more than just image is selected as a purpose. Such as, most multimodal models that support images are also likely to support text.
+
+![multimodals](/images/img-gen/add-purpose-to-existing-model.png)
+
+## Advanced configurations
+
+Not all models support advanced configurations - such as, these configurations may likely work for OpenAI models but may not work for Gemini.
+
+Advanced configurations can be included as model parameters.
+
+![model params](/images/img-gen/model-params.png)
+
+### Aspect Ratio
+
+`size : 1536x1024`
+
+### Number of images generated
+
+`n: 2`
+
+::Resources
+
+
+---
+
+Workspaces in Msty Studio help keep your projects organized by allowing you to create multiple, separate work areas. Each workspace can have its own unique settings, including models, conversations, toolsets, and prompts.
+
+## Add New Workspaces
+
+When you start Msty Studio for the first time, a default Workspace is created for you.
+
+You can create additional workspaces to organize your work. Each workspace can have its own set of conversations, toolsets, prompts, and other settings.
+
+![Add new workspaces](/images/new-workspace.png)
+
+::steps
+
+1. Beneath the Msty logo and the default Workspace icon, select the **+** symbol to create a new **Workspace**
+2. Enter a unique **Workspace Name**
+3. Select any setting(s) you'd like to copy from the current Workspace you are in to the new Workspace
+4. Select **Create and Switch** to create the new Workspace and automatically switch to it
+
+::
+
+## Export And Import Workspaces
+
+You can export a Workspace by right clicking on the Workspace icon and select the **Export Workspace** option. This will create a Zip file that you can save to your local machine.
+
+Likewise, you can import a Workspace by selecting the **+** symbol and then select the **Import Workspace** option. This will allow you to select a Zip file from your local machine to import into Msty Studio.
 
 ::Resources
 
@@ -1104,6 +1340,38 @@ We highly recommend that you back up your data before clearing it.
 
 ---
 
+Lock your workspace with a passphrase so sensitive settings and API keys stay hidden until you unlock. 
+
+::alert{type="info" icon="tabler:info-circle"}
+**IMPORTANT!** Locking Workspace is an experimental feature. Also, keep your passphrase in a secured location where you can access it. If you forget your passphrase, there is no way to recover it nor is there a way to recover the workspace. 
+::
+
+## Lock and Encrypt 
+
+In **Settings > General**, locate the **Workspace Lock & Secrets Encryption** section. 
+
+Select the ellipsis (...) icon and then select **Enable Protection**. 
+
+This will display a modal where you'll enter and confirm a passphrase. 
+
+**Important** store your passphrase in a secure location where you can access it again if needed. **There is no way to recover a passphrase and your Workspace cannot be recovered nor restored if you lose or forget it.**
+
+## Workspace Lock Details
+
+- Workspaces lock after every session
+- You will not be able to use Msty Studio until you unlock your Workspace 
+- Locks are per Workspace, it is not global across all Workspace; however, if you are on a locked Workspace, you cannot navigate to another Workspace until your current Workspace is unlocked
+- Rotate the passphrase manually anytime
+- Turn protection off if you change your mind
+- Creating a new Workspace and copying settings will include Workspace locks if enabled for the current Workspace - passphrase for new Workspace will be same
+- Importing a locked Workspace will require you to unlock the Workspace after import
+
+
+
+::Resources
+
+---
+
 Insights provides detailed analytics on token usage patterns, helping you understand consumption habits across different models. You can also view cost estimates and usage breakdowns by specific models, enabling more informed decision-making about AI tool usage.
 
 ::alert{type="info" icon="tabler:info-circle"}
@@ -1163,8 +1431,28 @@ You can access the keyboard shortcuts settings in **Settings > Keyboard Shortcut
 
 ![keyboard shortcuts](/images/shortcuts/keyboard-shortcuts.png)
 
-Some actions have a default shortcut assigned, which you can use that shortcut or customize to your liking. 
+Some actions have a default shortcut assigned, which you can use that shortcut or customize to your liking.
 
+## Spell Check Toggle (Desktop)
+
+For Desktop users, Msty Studio provides an option to disable the built-in spell check feature. This is particularly useful for developers writing code or for users whose language isn't supported well by the spell checker. When disabled, the red underlines for unrecognized words will no longer appear.
+
+### How to Toggle Spell Check
+
+::steps
+### Open General Settings
+Go to **Settings > General**.
+
+### Find Spell Check Option
+Scroll down to locate the spell check toggle.
+
+### Change and Restart
+Switch the spell check setting as desired, then **restart the application** for the changes to take full effect.
+::
+
+::alert{type="info" icon="tabler:info-circle"}
+Studio Web can disable via the browser settings. For Studio Desktop, please note your OS settings may override this option.
+::
 
 ## How to Use Shiftcuts
 
@@ -1193,6 +1481,57 @@ This will toggle the visibility of the sidebar, allowing you to maximize your wo
 
 This will open a picker that allows you to quickly select an [environment variable](/features/environments). This is useful for inserting variables into your conversations or for quickly accessing specific information.
 ![shiftcut env picker](/images/shiftcuts/shiftcut-env.png)
+
+## How to Disable ShiftCuts
+
+::steps
+### Open Keyboard Shortcuts Settings
+Navigate to **Settings > Keyboard Shortcuts**.
+
+### Toggle the Feature Off
+At the top of the keyboard shortcuts page, you'll find a switch to enable or disable the Shift Cut feature. Turn it off to deactivate the shortcut completely.
+::
+
+::Resources
+
+
+---
+
+Create and organize prompts for easy access and reuse across Msty.
+
+![Prompts Library](/images/prompts-library.png)
+
+## Import Default Prompts
+
+To quickly get started, you can import a collection of ready-to-use prompts:
+
+1. Select the **down arrow** next to the **New Prompt** button.
+2. Choose **Import Default Prompts**.
+
+This will load a curated set of prompts that you can edit and customize to fit your workflow.
+
+## Add a New Prompt
+
+To create your own prompt:
+
+1. Click **New Prompt**.
+2. Enter a **Title** and your **Prompt text**.
+
+Alternatively, click the **down arrow** next to **New Prompt** to:
+
+- Import prompts from your clipboard.
+- Upload a JSON file with one or more prompts.
+
+## Organize Your Prompts
+
+Keep your prompt library tidy by using folders:
+
+- Use the **down arrow** next to **New Prompt** or the **ellipsis (⋯)** icon beside existing folders to create:
+
+  - New root-level folders
+  - Subfolders (child folders)
+
+You can then move prompts into these folders for better organization and faster access.
 
 ::Resources
 
@@ -1339,6 +1678,22 @@ MLX is availble for Apple Silicon devices only.
     * Enable Network Access - allow other devices on local network to connect
     * Capture Service Logs - enable local AI services logging
 
+## Vibe CLI Proxy
+
+Vibe CLI Proxy allows Msty Studio to connect to various CLI providers through a secure local proxy.
+
+* Service Health - displays current status with options to stop, start and restart
+* Service Endpoint - endpoint if you'd like to connect other applications to the vibe CLI proxy
+* Service Version - displays current version with options to check for updates and remove service
+* Service Configurations
+    * Enable Network Access - allow other devices on the network to reach the proxy
+    * Capture Service Logs - persist proxy logs for troubleshooting (may increase disk usage)
+    * Port - the local port where the proxy service listens for requests
+    * Retries - number of retry attempts for failed upstream requests
+    * Auth Folder - path where Vibe CLI Proxy stores OAuth tokens for connected providers. Managed automatically; not editable
+    * Authentication - securely link your AI accounts so Vibe CLI Proxy can call their APIs on your behalf. When you connect, a browser window opens for that provider where you complete sign-in, setup, and authorize [Vibe CLI Proxy providers](/features/vibe-cli-proxy)
+
+
 
 ## Remote Service
 
@@ -1364,11 +1719,197 @@ Enter your License to unlock advanced features.
 
 ---
 
-The Toolbox allows for seamless communication with tools installed on your local machine. These tools can interact with various data sources, perform file operations, and connect to repositories like GitHub, further empowering Msty Studio.
+Several features in Msty Studio have prompts that tell a model how to respond; outside of just the conversation-related prompts. 
+
+Default prompts are located in the Settings > Default Prompts section. 
+
+## Default Prompts
+
+The Default Prompts section contains prompts for the following features:
+- **Context Shield Summary**: used to summarize long context into shorter summaries so that you can save on context length and tokens
+- **Knowledge Stack Context**: included when sending chunks from your Knowledge Stack to the model; this will provide instructions on how to use the context
+- **Knowledge Stack Simple Search**: this prompt is used to help the model generate search queries to find relevant documents in your Knowledge Stack
+- **Knowledge Stack Structured Search**: for a more semantic search, this prompt helps the model generate better search queries for your Knowledge Stack
+- **Real-Time Data Query Synthesis**: creates queries to fetch real-time data in a format common to standard search engines
+- **Title Generation**: used to generate titles for chats based on the conversation content
+- **Youtube Attachments**: provides context to model about how to use YouTube video transcripts when included as attachments in chats
+
+## Editing Default Prompts
+
+To edit a default prompt, select the prompt from the menu and then modify the text in the editor. Once you are done, select the "Save" button to save your changes.
+
+Many of the default prompts include variables, such as `{input}` or `{content}`. These variables will be replaced with the appropriate content when the prompt is used. Be sure to keep these variables in your prompt to ensure proper functionality.
+
+At the bottom of the text editor, there are buttons to fetch a prompt from **Quick Prompts**, to **Clear Content**, and to **Reset to Default**.
+
+::Resources
+
+---
+
+The Lost & Found helps you find orphaned workspaces for both Msty Studio Desktop and Studio Web. 
+
+For privacy and cross-compatibility reasons, Msty Studio Web stores your data locally in an OPFS database [Read our blog post on how this ensures privacy](https://msty.ai/blog/msty-studio-web-opfs){target="_blank"}. Very rarely, your browser may create a new database unexpectedly. When that happens, your previous workspaces may not appear in the app but **Lost & Found** can help you find and recover them easily.
+
+## How to Use Lost & Found to Recover Workspaces
+
+::steps
+### Open Lost & Found
+Go to **Settings > Data > Lost & Found**.
+
+### Run a Scan
+
+**For Desktop**
+
+Choose one of:
+- **Scan App Data** – searches the app’s internal data directory  
+- **Scan Folder** – choose any folder; all subfolders are scanned  
+
+**For Web**
+- **Scan Folder** – select a folder using the browser’s directory picker or file-input fallback - see below for instructions on finding and scanning browser file system folders
+
+### Review results and take action 
+See below for re-importing found workspaces. 
+::
+
+### Scanning Browser File System Data for Msty Studio Web
+
+The **Lost & Found** feature cannot scan your browser’s original `File System` folder directly because it resides in a protected system location. Follow these steps to create a copy of the `File System` folder in an accessible location for scanning:
+
+::steps
+1. Find the directory on your computer where your browser stores its `File System` data. Search the web for your specific browser and OS to see where the file system folder is located. 
+2. Locate the `File System` folder.
+3. Copy the entire folder and paste it somewhere simple and accessible such as your **Desktop** or **Documents**.  
+   *Avoid leaving it in protected locations like the system root (`C:\`).*
+4. In **Lost & Found**, choose **Scan Folder** and select the copied `File System` folder in its new location.
+::
+
+
+## Scan Results Table
+
+Lost & Found scans specific locations for workspace-like SQLite databases and displays them in a table. For each detected workspace file, it shows:
+
+- **Workspace name**  
+- **File name, size, and last modified time**  
+- **Status:**  
+  - **Current** – matches the currently active workspace  
+  - **Linked** – matches an existing workspace in your list  
+  - **Found** – not currently in your workspace list  
+- **Actions:**
+  - **Restore current workspace** (Current only)  
+  - **Import as new workspace** (all statuses)
+
+::alert{type="info" icon="tabler:info-circle"}
+Only actual Msty Studio workspace databases are shown. The feature never reads files outside the app’s storage or outside folders explicitly selected by the user.
+::
+
+## Recover a Workspace
+
+### Restore Current Workspace:
+
+::steps
+1. Find a row labeled **Current**  
+2. Open the **Actions** menu  
+3. Select **Restore current workspace**  
+4. Confirm the warning dialog
+::
+The active workspace is then replaced with the recovered data successfully.
+
+### Import as New Workspace
+
+::steps
+1. Open the **Actions** menu
+2. Select **Import as new workspace** and a new workspace will be created with the recovered data.
+::
+
+::Resources
+
+---
+
+Integrate models from supported CLI applications directly into Msty Studio. This integration supports multiple CLI providers and makes their models available for conversations.
+
+### Supported CLI Providers
+
+- Claude Code
+- Codex
+- Google Gemini
+- iFlow
+- Github Copilot
+- Antigravity
+
+## Link CLI Provider
+
+::steps
+### Open CLI Settings
+Go to **Settings > Vibe CLI Proxy**.
+
+### Authorize
+Under Authentication, select your provider and click **Authorize**.
+
+### Complete Flow
+When you connect, a browser window opens for the selected provider, allowing you to complete the authorization and sign-in process.
+
+::
+
+## Use CLI Models
+
+::steps
+### Select Model
+In any conversation, open the model selector.
+
+### Choose Provider
+Models from authorized CLI providers will appear in the list. Select one to begin chatting.
+::
+
+::alert{type="info" icon="tabler:info-circle"}
+CLI models work alongside your other configured models, no extra setup needed after authorization. Enabled CLI providers will also appear in the Model Hub.
+::
+
+
+---
+
+Threads and the mini map include a branch dropdown for better navigation and comparison. The Branch Explorer allows you to label branches and perform side-by-side diff comparisons between different conversation branches.
+
+## Using Branch Explorer in Threads
+
+::steps
+### Access Branch Dropdown
+In any thread, locate the new branch dropdown menu(Edit as Branch). When you use the feature for a user or assistant message and update the prompt a new branch is created that contains the updated user and assistant message
+
+### Label or Explore
+Use the dropdown to **label a branch** or open **Branch Explorer**.
+
+### Compare Branches
+Branch Explorer displays a side-by-side diff view, letting you compare content between two selected branches.
+::
+
+## Using Branch Explorer in Mini Map
+
+::steps
+### Open Mini Map
+Access the mini map interface.
+
+### Select Branch
+Use the branch dropdown to select a different branch.
+
+### View Updates
+The mini map will update to reflect the selected branch, allowing for quick navigation and comparison.
+::
+
+::Resources
+
+---
+
+The Toolbox allows for seamless communication with tools installed on your local machine or a remote one. These tools can interact with various data sources, perform file operations, and connect to repositories like GitHub, further empowering Msty Studio.
 
 This is Msty Studio's implementation of Model Context Protocol (MCP).
 
-To utilize the Toolbox features, you must have [Sidecar](/getting-started/sidecar) running and Studio connected.
+Msty Studio supports local MCP server that run on your machine as well as remote MCP servers that can be connect to over Streamable HTTP. 
+
+::alert{type="warning" icon="tabler:info-circle"}
+Please note the SSE protocol has been deprecated in favor of Streamable HTTP for remote MCP server connections. Studio's implementation came after the deprecation, and as such, SSE is not supported. However, you can use a local proxy such as mcp-remote to connect to SSE-based MCP servers if needed.
+::
+
+To utilize the Toolbox features with Msty Studio Web, you must have Studio Web connected to Studio Desktop using [Remote Connections](/features/remote-connections) or [Sidecar](/how-tos/sidecar).
 
 ![Msty Studio Tools](/images/tools.png)
 
@@ -1386,8 +1927,9 @@ Select **Add New Tool** to add a new tool to your toolbox. This will open a new 
 
 ::steps
 
-1. Enter a unique **Tool ID** and select a corresponding icon
-2. Enter the **Tool Configuration**.
+1. Select **HTTP** for remote MCP servers setup for streamable HTTP and tools or **STDIO / JSON** for local MCP servers and tools.
+2. If HTTP is selected, enter the **MCP Server URL** endpoint. Also, enter any **Authentication** and **Headers** needed to connect to the MCP server.
+3. If STDIO / JSON is selected, enter the **Tool Configuration** in JSON format.
 
 The configuration should be a valid JSON object. Here is an example configuration for a MYSQL tool.
 
@@ -1481,11 +2023,15 @@ By default, all models have **Tools** disabled as a 'purpose' and you'll want to
 
 ---
 
-Live Context are external data sources that you can add to your conversation. You can create a new Live Context source and use it with a model.
+Live Contexts are external data sources that you can add to your conversation in the form of calling an API. This allows you to bring in information from various sources and services to provide more context and enhance the interaction with models.
+
+Live Contexts can either use a simple GET request to fetch data from an endpoint. Or, it can be more **dynamic** by allowing the model to determine variables and parameters to include in the API call, allowing for more flexibility and adaptability based on the conversation.
 
 ## Add New Live Context
 
 Connect to your favorite APIs to enhance your conversations. You'll first want to identify an API you'd like to use and gather necessary information to connect to it, such as an API key.
+
+Check out the [Live Context Examples](/how-tos/live-context-examples) for some inspiration on APIs you can connect to.
 
 ![add live context](/images/live-context.png)
 
@@ -1493,18 +2039,20 @@ Connect to your favorite APIs to enhance your conversations. You'll first want t
 
 1. From the **Toolbox** section, select **Live Contexts**
 2. Click on the **Add New Live Context** button
-3. Enter the API end point and method (GET or POST)
-4. Adjust the prompt if needed; you can still add prompts at the point of messaging
-5. Include any **Request Headers** needed for the API call, such as an Authorization header
-6. Include any **Request Body** needed for the API call, such as a JSON body
-7. Include any **Processing Function** needed to process the API response. You may need to convert the response to a string.
+3. Select an **HTTP Method** (GET or POST)
+4. Enter the **URL Endpoint** for the API you want to connect to. You can include variables in curly braces, such as `{query:'keyword'}`, which the model can fill in dynamically
+5. Adjust the **Prompt** if needed; you can still add prompts at the point of messaging
+6. Include any **Request Headers** needed for the API call, such as an Authorization header - you can also include variables here for the model to fill in
+7. Set **Live Context Mode** - by default, it is set to 'Push' which will send the Live Context data to the model automatically when included in a conversation. You can also set it to 'Pull' which will allow the model to decide when to call the Live Context during the conversation. Use the Pull mode option when using dynamic variables in the endpoint or headers that the model needs to fill in.
+8. Include any **Request Body** needed for the API call, such as a JSON body - you can also include variables here for the model to fill in
+9. Include any **Processing Function** needed to process the API response. The default is to return the response as a string which for most cases you can leave as-is
 
    `return JSON.stringify(data)`
 
-8. Test the endpoint by selelecting **Test Connection**
-9. Include any helpful **Notes**
-10. Provide a unique **Name** for the Live Context
-11. Select **Add** to save the Live Context
+10. Test the endpoint by selelecting **Test Connection** and you can include test variables if needed
+11. Include any helpful **Notes** which is also visible to the models, which can help guide their use of the Live Context
+12. Provide a unique **Name** for the Live Context
+13. Select **Add** to save the Live Context
 
 ::
 
@@ -1545,14 +2093,7 @@ For `python` and `uv` on Windows, we recommend using [WinGet](https://winget.run
 dependencies.
 Based on your platform, you might have to set full paths to your dependencies in Sidecar connection dialog.
 
-::alert{type="info" icon="tabler:info-circle"}
-Try without setting the full path first. If it doesn't work, then set the full path to your dependencies in the Sidecar
-connection dialog.
-::
-
-::alert{type="info" icon="tabler:info-circle"}
-**macOS users**: We recommend opening Sidecar from the terminal `open -a MstySidecar`. This should detect all the dependencies without setting any paths.
-::
+For `uv` on Mac, you can install via Homebrew `brew install uv`. This will automatically include `uvx`.
 
 ## Configuring Python and uv/uvx on Windows
 
@@ -1572,7 +2113,7 @@ connection dialog.
    ```json
    {
      "command": "uvx",
-     "args": ["mcp-rquest"]
+     "args": ["mcp-request"]
    }
    ```
 
@@ -1786,16 +2327,16 @@ In the Knowledge Stack configuration, select **Query Settings** to set the defau
 You can set which retrieval mode is used during conversations. 
 
 #### Push Mode
-This mode first queries the Knowledge Stack and then sends the results to the model for context. 
+This mode first queries the Knowledge Stack and then sends the results to the model for context.
 
 This is the default mode. 
 
-<!-- #### Pull Mode
-This mode allows for the model to perform the actual query. In essence, this makes Knowledge Stacks act more like an MCP tool that a model is able to leverage. 
+#### Pull Mode
+This mode first allows the model to request context from the Knowledge Stack when it identifies a need, and then retrieves the relevant results to provide to the model.
 
 ::alert{type="info" icon="tabler:info-circle"}
 Ensure the model is able to perform tool calls if using this mode
-:: -->
+::
 
 ### Prompt Prefix
 As with any interaction with LLMs and SLMs, it's all in the prompt. 
@@ -2042,194 +2583,6 @@ By effectively using `.mstyignore`, you can maintain a clean, relevant, and effi
 
 ---
 
-Enable real-time data integration to instantly enhance your conversations with current information, weather updates, sports scores, news headlines, and more.
-
-Real-Time Data can be collected a few different ways. You can use Msty Sidecar or a third-party service such as Jina or SearXNG.
-
-## How RTD Works
-
-RTD is not powered by the model itself, but rather by a search engine that retrieves information from the internet. When you enable RTD, Msty will use the configured search engine to fetch the latest data and provide it to the model as context for your conversation.
-
-The model will then use this context to generate responses that are informed by the most recent information available.
-
-## How to enable Real-Time Data
-
-Click the globe icon inside the chat input box to enable the Real-Time Data feature. When this feature is enabled, Msty retrieves information from the internet and provides it to the model for enhanced context in your conversations.
-
-::alert{type="info" icon="tabler:info-circle"}
-Note that some models are better than others with looking for real-time data, including for the current date. You may need to set the date range to specify a date or be explicit in the prompt to include the exact date you are interested in.
-::
-
-## Real-Time Data Options
-
-Right-click on the globe icon to configure advanced options, including which method to use for real-time data.
-
-### Google
-You can use and configure Google custom search options. 
-
-This mode is available for all users. However, Google may limit, throttle, or block requests that are too frequent or too broad. Msty does not have control over these limits.
-
-### Brave
-
-You can use and configure Brave search options.
-
-This mode is available for all users. However, Brave may limit, throttle, or block requests that are too frequent or too broad. Msty does not have control over these limits.
-
-### Jina :aurum-tag
-
-You can setup a [Jina](https://jina.ai/) account and grab an API key. Enter the API key in the **Use Jina** tab in Msty Studio.
-
-### SearXNG :aurum-tag
-
-[SearXNG](https://docs.searxng.org/) is a free internet metasearch engine which aggregates results from various search engines without tracking users. You can use your SearXNG instance to search the web for real-time data.
-
-In Msty Studio, enter your instances endpoint on the **Use SearXNG** tab. For example, `https://searxng.example.com/`.
-
-For additional guidance on setting up SearXNG, check out our Youtube video on [How to Set Up SearXNG](https://youtu.be/FFDSy3TX3YI).
-
-### Tavily :aurum-tag
-
-[Tavily](https://www.tavily.com/){target="_blank"} is a privacy-focused search engine that does not track users and provides unbiased search results. You can use Tavily to fetch real-time data for your conversations.
-
-You will need to create a free account to get an API key. Then, enter the API key in the **Use Tavily** tab in Msty Studio.
-
-### Exa :aurum-tag
-[Exa](https://exa.search/) is a privacy-focused search engine that does not track users and provides unbiased search results. You can use Exa to fetch real-time data for your conversations.
-
-You will need to create a free account to get an API key. Then, enter the API key in the **Use Exa** tab in Msty Studio.
-
-### Ollama :aurum-tag
-You can use [Ollama](https://ollama.com/){target="_blank"} to fetch real-time data for your conversations.
-
-You will need to create an account and enter your API Key. 
-
-::alert{type="info" icon="tabler:info-circle"}
-Ollama as a Real-Time Data source is only available for Desktop at this time due to CORS restrictions on the web.
-::
-
-### Google API :aurum-tag
-For more reliable results, you can use your own Google Custom Search Engine (CSE) and API key.
-
-To set this up, follow these steps:
-
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a new project or select an existing one.
-3. Enable the Custom Search API for your project.
-4. Create credentials (API key) for your project.
-5. Set up a Custom Search Engine (CSE) and get the CSE ID.
-
-Enter your API key and CSE ID in the **Use Google API** tab in Msty Studio.
-
-### Brave API :aurum-tag
-For more reliable results, you can use your own Brave Search API key.
-To set this up, follow these steps: 
-1. Go to the [Brave Search API page](https://search.brave.com/api).
-2. Sign up for an API key.
-3. Choose the appropriate plan based on your needs.
-4. Once you have your API key, enter it in the **Use Brave API** tab in Msty Studio.
-
-
-### Allowing insecure content
-
-Studio uses a JSON API so you will typically need to ensure your instance is being served over HTTPS.
-
-However, some browsers have settings to allow for 'insecure' content served over http for a website. Such as Brave via `brave://settings/content/insecureContent?search=additional+content` > allow Msty Studio to load insecure content.
-
-### Sidecar :aurum-tag
-
-To use [Sidecar](/getting-started/sidecar), you need to have the Sidecar app installed and running.
-
-Sidecar provides the follow advanced options:
-
-::steps
-
-- **Search Provider** can be configured to use Google or Brave search engines
-- **Custom Search Query** allows you to modify the search query to improve the quality of results
-- **Limit by Domain** restricts your search to a specific domain (e.g., nasa.gov)
-- **Extra Operators** allows you to add special search operators, such as `site:` or `intitle:`
-- **Search Date Range** allows you to limit the search results to a specific time frame
-
-::
-
-## Real-Time Data Troubleshooting and Tips
-
-If you're seeing irrelevant responses, the issue may lie with one of the following: 
-
-**Search engines not returning useful results or no results at all.**
-
-- Check the context window size for the model by clicking the **Model Parameters** icon and try increasing it if possible.
-- If no results are returned, try selecting a different search engine. Some search engines will limit, throttle, or block requests that are too frequent or too broad.
-- If you have a VPN enabled, it may be affecting the search results. Try disabling the VPN and see if that resolves the issue.
-- Try using Jina or SearXNG for more reliable results.
-- If using Sidecar, confirm Studio is connected. 
-
-**Model not using the real-time data effectively.**
-
-- Increase the model's context window size if possible as the context window size determines how much information the model can consider when generating responses.
-- Ensure the model is capable of understanding and utilizing real-time data. Some models may not be optimized for this purpose.
-- If the model is not using the real-time data effectively, try refining your prompts to be more specific about the information you want.
-
-### Best Practices
-
-- Use clear, specific prompts that suggest a need for recent or factual data.
-- If RTD is enabled but no sources are cited, be cautious: the model may have hallucinated.
-- Consider having a system prompt note that a search will occur — it may improve result consistency.
-- If zero results are returned, have the model return an error message or fallback notice rather than hallucinating a confident but false answer.
-
-
-::Resources
-
-
----
-
-Turnstiles is an advanced feature in Msty Studio that enables you to automate and manage complex message sequences through features like queuing messages, reordering, and regeneration, providing sophisticated communication flows.
-
-## Add New Turnstile
-
-![Add new turnstile](/images/turnstile.png)
-
-In the **Turnstiles** section, you can add a new Turnstile by clicking on the **New Turnstile** button. This will open a window where you can define the Turnstile's name and entries.
-
-Use the **New Entry** button to add a new entry. By default, this entry will be a prompt. However, there are additional options to add either a Persona, Regenerate, or Continue Generation.
-
-You are able to sort the order of entries by selecting the touch icon and dragging the entry to the desired position.
-
-To edit or further configure an entry, expand the entry by clicking on the chevron icon.
-
-In addition to the prompt, you can further empower your entry by adding [attachments](/features/attachments), [tools](/features/toolbox/toolsets), enabling [Real-Time Data](/features/real-time-data), and even select which exact model you want to run for the entry. This turbocharges the power of your Turnstile.
-
-### Advanced Messaging Commands
-
-You can use advanced messaging commands when chatting with a model and add these commands to your Turnstile queue.
-
-- `--m--` Message
-- `--r--` Regenerate
-- `--c--` Continue
-- `--cs--` Context Shield
-- `--css--` Context Shield with Summary
-
-### Example
-
-For example, if you add the following to your chat -
-
-```
-hello!
---m--
-Tell me about the weather today in New York
---m--
-Now write a very long poem about the weather
---c2--
-```
-
-Next, select the **Turnstile** icon and then select **Add to Queue**, you will see the messages added to the queue and separated by the advanced commands.
-
-You can then run the messages and they will be processed in the order they are in the queue.
-
-::Resources
-
-
----
-
 Conversations in Msty Studio are designed to be intuitive and user-friendly, allowing you to engage with the selected model seamlessly.
 
 ## Main Chat Features
@@ -2246,7 +2599,7 @@ Attach files, images, websites, and YouTube links to enhance your conversation. 
 
 ### Real-time Data
 
-Have your model scan the web for real-time data. This feature is available when using [Msty Sidecar](/getting-started/sidecar).
+Have your model scan the web for real-time data. This feature is available when using [Remote Connections](/features/remote-connections) or [Msty Sidecar](/how-tos/sidecar).
 
 Check out [Real-Time Data](/features/real-time-data) for more detail.
 
@@ -2308,9 +2661,11 @@ Set a system prompt to provide context for the conversation. This prompt is alwa
 
 When you create a new project, you can enable the project context to be included in conversations. This allows you to have a shared context across all conversations in the project.
 
+Specifically, the project's **title** and **description** are included as context when this option is enabled. If the conversation in a child project, then the parent project's title and description are also included. 
+
 ![Project Context](/images/project-context.png)
 
-By default, the project context is disabled. Edit the parent folder to enable project context. 
+By default, the project context is disabled. Edit the project folder to enable project context. 
 
 ## Mini Map - Conversation Navigation
 
@@ -2338,6 +2693,27 @@ Manage your conversation responses with easy-to-use chat management tools that h
 
 Copy the response to your clipboard for easy sharing and pasting.
 
+#### How to Copy Text to the clipboard
+
+::steps
+### Long Press Copy Button
+In any conversation, long-press the copy button on a message.
+
+### Select Format
+Choose and copy the desired copy method from the options.
+
+### Paste into desired location
+The copied text is now in your clipboard and can be pasted into text editors.
+
+### Set Default Behavior
+Msty Studio remembers your last selected copy method (Markdown, HTML, or Formatted Text) and uses it as the default the next time you click the copy button.
+::
+
+#### Supported Copy Methods
+- Markdown
+- HTML
+- Formatted Text
+
 ### Bookmark message
 
 Bookmark the message for easy access later. Bookmarked messages are saved in the **Bookmarks** section located at the top of the window.
@@ -2352,7 +2728,11 @@ Continue the generation of the message if it was cut off or if you want to expan
 
 ### Enable Context Shield
 
-The Context Shield removes the prior conversation context from continued conversation.
+The Context Shield removes the prior conversation context from continued conversation. Its primary function is to create a barrier, stopping all previous conversation content from influencing or getting involved in your new inputs.
+
+#### Generate Context Summary
+
+After activating the Context Shield, click the shield icon. This will open a dropdown menu with two options: **Remove Context Shield** and **Generate Context Summary**. Select Generate Context Summary to create a summary of your conversation one response at a time.
 
 ### Response Metrics
 
@@ -2461,9 +2841,58 @@ Bulk actions include:
 ![bulk organize conversations](/images/deleting-convos.png)
 
 ## Recent and Pinned Conversations
-Your most recent conversations are listed under the Recent folder on the Projects sidebar.
+Your most recent conversations are listed under the **Recents** folder on the Projects sidebar.
 
-Pinned conversations are also listed under the Recent folder. You can pin a conversation by selecting the pin icon in the ellipsis menu for that conversation.
+Pinned conversations are also listed under the **Recents** folder. You can pin a conversation by selecting the pin icon in the ellipsis menu for that conversation.
+
+## Projects and Conversations Sort and Display
+
+Toggle the filter icon to display the search field and sort and display button. Click the **Sort and Display** button to show available options. 
+
+![sort and display](/images/sort-and-display.png)
+
+**At the project folder level, you can**: 
+- Select the primary sort option - by project name or created date
+- Order ascending or descending 
+- For project with child projects, display nested folders first or conversations first
+
+**At the conversation level**: 
+- Sort by conversation title, created date, or latest activity date
+- Order ascending or descending
+- Show pinned conversations at top or bookmarked conversations at top
+
+**Toggle visibility for**: 
+- Recents folder
+- Archived folder
+- Empty folders
+- Number of conversations within a folder
+
+## Promote Child Project to Root Level
+
+If you need to move a child project (and all its conversations and subfolders) to the root level of your workspace, you can do so easily.
+
+::steps
+### Select the Folder
+Click on the folder you want to move.
+
+### Open Folder Options
+Click the ellipses icon (⋯) next to the folder.
+
+### Move to Root
+Select **Move folder to root** from the menu. The folder and all its children will be moved to the root level of your project structure.
+::
+
+::alert{type="info" icon="tabler:info-circle"}
+This action preserves the folder's entire subtree structure when moving it to root.
+::
+
+## Archive Old Conversations
+
+In **Settings > General > Conversations**, you can auto and manually archive conversations older than the number of days you define. 
+
+Archived conversations are not deleted and will appear in the **Archive** folder in the main project folder tree. 
+
+If you do not see the **Archive** folder, then enable it in the view following the instructions in the **Projects and Conversations Sort and Display** section above. 
 
 ::Resources
 
@@ -2480,13 +2909,13 @@ Each mode affects how the model interprets behavior and tone. Below are examples
 
 ```
 Your custom prompt: "You are a pirate who speaks like a pirate."
-Default system prompt: "You are a helpful assistant."
+System prompt: "You are a helpful assistant."
 ```
 
 ## Prepend
 
 **Definition:**
-Your custom prompt is **added before** the default system prompt.
+Your custom prompt is **added before** the system prompt.
 
 **Example:**
 
@@ -2529,7 +2958,7 @@ Final Prompt:
 
 **Disadvantages:**
 
-* Removes all default behavior (e.g., safety, neutrality, helpfulness).
+* Removes all behavior (e.g., safety, neutrality, helpfulness).
 * Requires **careful crafting** to avoid issues or undesired responses.
 
 **Best For:**
@@ -2540,7 +2969,7 @@ When you want to define the assistant’s role or tone **entirely from scratch**
 ## Append
 
 **Definition:**
-Your custom prompt is **added after** the default system prompt.
+Your custom prompt is **added after** the system prompt.
 
 **Example:**
 
@@ -2567,66 +2996,271 @@ When you want to **enhance or refine** the assistant’s responses, without chan
 
 ## Comparison Table
 
-| Mode    | Behavior                           | Conflict Risk | Control Level | Keeps Default Prompt |
+| Mode    | Behavior                           | Conflict Risk | Control Level | Keeps System Prompt |
 | ------- | ---------------------------------- | ------------- | ------------- | -------------------- |
 | Prepend | Adds your prompt **before** system | Medium        | Medium        | ✅ Yes                |
 | Replace | Uses **only** your prompt          | Low           | High          | ❌ No                 |
 | Append  | Adds your prompt **after** system  | Low           | Low–Medium    | ✅ Yes                |
 
 
+## Project Hierarchy 
+
+For project hierarchy, ie. a project folder that has child and grandchild project folders, can leverage prepend and append system prompt modes to create a chain of prompts. 
+
+The default is to **replace** any inherited system prompts. Meaning, a child project will ignore a parent's system prompt by default unless you choose to **prepend** or **append** the child's system prompt to it's parent's system prompts. 
+
+**For example**:
+A parent project folder has a system prompt "I'm the parent."
+A child (nested) project under the above parent has a system prompt "I'm the child."
+
+In the child's project settings, if **System Prompt Attach Mode** is set to: 
+- **Replace** (default), then a new convo will have a system prompt of "I'm the child."
+- **Prepend**, then a new convo will have a system prompt of "I'm the child. I'm the parent."
+- **Append**, then a new convo will have a system prompt of "I'm the parent. I'm the child."
+
 
 
 ::Resources
 
 ---
 
-Forge Mode in Msty Studio offers an intuitive and powerful editing environment that combines rich text formatting options, inline editing, and dynamic content generation through AI models. Key features include custom prompts, focus mode, undo/redo functionality, real-time collaboration, and advanced formatting tools, making it a comprehensive tool for content creators.
+Turnstiles is an advanced feature in Msty Studio that enables you to automate and manage complex message sequences through features like queuing messages, reordering, and regeneration, providing sophisticated communication flows.
 
-![Forge Mode](/images/forge-mode.png)
+## Add New Turnstile
 
-You can enable Forge Mode by selecting **New Forge Canvas** option under the **New Conversation** menu or by converting an existing conversation by selecting the **Convert to Forge Canvas** option in the conversation menu.
+![Add new turnstile](/images/turnstile.png)
 
-## Key Features :aurum-tag
+In the **Turnstiles** section, you can add a new Turnstile by clicking on the **New Turnstile** button. This will open a window where you can define the Turnstile's name and entries.
 
-::steps
+Use the **New Entry** button to add a new entry. By default, this entry will be a prompt. However, there are additional options to add either a Persona, Regenerate, or Continue Generation.
 
-- Use **Ask** to send a message to the model about the highlighted text
-- Use **Rewrite** to rewrite the selected text - such as to simplify text, make it shorter or longer, emojify, or change the tone
-- Rich-Text editing tools such as applying styles including text decoration and code blocks
-- Use the grip icon to move text blocks around
-- Select the **+** icon to add new text blocks and to apply formatting to the text
+You are able to sort the order of entries by selecting the touch icon and dragging the entry to the desired position.
 
-::
+To edit or further configure an entry, expand the entry by clicking on the chevron icon.
+
+In addition to the prompt, you can further empower your entry by adding [attachments](/features/attachments), [tools](/features/toolbox/toolsets), enabling [Real-Time Data](/features/real-time-data), and even select which exact model you want to run for the entry. This turbocharges the power of your Turnstile.
+
+### Advanced Messaging Commands
+
+You can use advanced messaging commands when chatting with a model and add these commands to your Turnstile queue.
+
+- `--m--` Message
+- `--r--` Regenerate
+- `--c--` Continue
+- `--cs--` Context Shield
+- `--css--` Context Shield with Summary
+
+### Example
+
+For example, if you add the following to your chat -
+
+```
+hello!
+--m--
+Tell me about the weather today in New York
+--m--
+Now write a very long poem about the weather
+--c2--
+```
+
+Next, select the **Turnstile** icon and then select **Add to Queue**, you will see the messages added to the queue and separated by the advanced commands.
+
+You can then run the messages and they will be processed in the order they are in the queue.
 
 ::Resources
 
 
 ---
 
-Workspaces in Msty Studio help keep your projects organized by allowing you to create multiple, separate work areas. Each workspace can have its own unique settings, including models, conversations, toolsets, and prompts.
+Enable Real-Time Data (RTD) integration to instantly enhance your conversations with current information, weather updates, sports scores, news headlines, and more.
 
-## Add New Workspaces
+Real-Time Data is built into Msty Studio Desktop. However, Studio Web cannot access RTD natively but can be connected to an instance of Msty Studio Desktop by using the [Remote Connections](/features/remote-connections) feature or by using [Msty Sidecar](/how-tos/sidecar).
 
-When you start Msty Studio for the first time, a default Workspace is created for you.
+## How RTD Works
 
-You can create additional workspaces to organize your work. Each workspace can have its own set of conversations, toolsets, prompts, and other settings.
+RTD is not powered by the model itself, but rather by a search engine that retrieves information from the internet. When you enable RTD, Msty Studio will use the configured search engine to fetch the latest data and provide it to the model as context for your conversation.
 
-![Add new workspaces](/images/new-workspace.png)
+The model will then use this context to generate responses that are informed by the most recent information available.
 
-::steps
+## How to enable Real-Time Data
 
-1. Beneath the Msty logo and the default Workspace icon, select the **+** symbol to create a new **Workspace**
-2. Enter a unique **Workspace Name**
-3. Select any setting(s) you'd like to copy from the current Workspace you are in to the new Workspace
-4. Select **Create and Switch** to create the new Workspace and automatically switch to it
+Click the globe icon inside the chat input box to enable the Real-Time Data feature. When this feature is enabled, Msty Studio retrieves information from the internet and provides it to the model for enhanced context in your conversations.
 
+::alert{type="info" icon="tabler:info-circle"}
+Note that some models are better than others with looking for real-time data, including for the current date. You may need to set the date range to specify a date or be explicit in the prompt to include the exact date you are interested in.
 ::
 
-## Export And Import Workspaces
+## Real-Time Data Options
 
-You can export a Workspace by right clicking on the Workspace icon and select the **Export Workspace** option. This will create a Zip file that you can save to your local machine.
+Right-click on the globe icon to configure advanced options, including which method to use for real-time data.
 
-Likewise, you can import a Workspace by selecting the **+** symbol and then select the **Import Workspace** option. This will allow you to select a Zip file from your local machine to import into Msty Studio.
+### Google
+You can use and configure Google custom search options. 
+
+This mode is available for all users. However, Google may limit, throttle, or block requests that are too frequent or too broad. Msty Studio does not have control over these limits.
+
+### Brave
+
+You can use and configure Brave search options.
+
+This mode is available for all users. However, Brave may limit, throttle, or block requests that are too frequent or too broad. Msty Studio does not have control over these limits.
+
+### Jina :aurum-tag
+
+You can setup a [Jina](https://jina.ai/) account and grab an API key. Enter the API key in the **Use Jina** tab in Msty Studio.
+
+#### Advantages
+Jina offers specialized capabilities, making it a robust alternative for search:
+*   **Semantic Search:** Excels at understanding query meaning for more relevant results.
+*   **Versatile Use Cases:** Useful for web scraping and content extraction.
+*   **Alternative Search Solution:** Provides a strong alternative to conventional search engines, focusing on semantic understanding.
+
+#### Advanced Options
+
+When integrating Jina, an advanced search option is available to fine-tune its behavior:
+
+*   **Maximum Results:** You can adjust the maximum number of results that Jina will fetch for a given query or task. This allows for control over the volume of data retrieved.
+
+### SearXNG :aurum-tag
+
+[SearXNG](https://docs.searxng.org/) is a free internet metasearch engine which aggregates results from various search engines without tracking users. You can use your SearXNG instance to search the web for real-time data.
+
+In Msty Studio, enter your instances endpoint on the **Use SearXNG** tab. For example, `https://searxng.example.com/`.
+
+For additional guidance on setting up SearXNG, check out our Youtube video on [How to Set Up SearXNG](https://youtu.be/FFDSy3TX3YI).
+
+### Tavily :aurum-tag
+
+[Tavily](https://www.tavily.com/){target="_blank"} is a privacy-focused search engine that does not track users and provides unbiased search results. You can use Tavily to fetch real-time data for your conversations.
+
+You will need to create a free account to get an API key. Then, enter the API key in the **Use Tavily** tab in Msty Studio.
+
+#### Advanced Search Options
+
+Tavily's advanced options provide granular control over how searches are performed, allowing users to tailor results to specific requirements. These settings are crucial for optimizing the relevance and depth of the data provided to your models.
+
+##### Search Topic
+Specify the primary subject matter of your search to narrow down results.
+*   **General (Default):** Broad search results.
+*   **News:** Focuses on current events and journalistic content.
+*   **Finance:** Specializes in financial markets and economic news.
+
+##### Search Depth
+Determines the level of detail and content volume retrieved.
+*   **Basic (Default):** Provides high-level, general information with less contextual detail, suitable for overviews.
+*   **Advanced:** Narrows results, provides significantly greater content volume and deeper context for comprehensive and well-informed responses.
+
+##### Limit Domain
+Restrict the search to specific websites or domains. This ensures results are sourced only from designated or trusted sources, enhancing data relevance and reliability.
+
+##### Custom Search Query
+Manually input a specific search query. While available, it's often recommended to leave this field empty and allow the integrated model to formulate the most appropriate query based on natural language input for optimal results.
+
+##### Time Range
+For time-sensitive queries, specify a particular time frame for the search. This ensures only information published or relevant within that period is retrieved, useful for historical analysis or focusing on recent events.
+
+#### Advantages
+Tavily offers several key benefits:
+*   **Enhanced Privacy:** Offers a private option for data retrieval.
+*   **Advanced Customization:** Provides extensive options for fine-tuning search parameters.
+*   **Richer Context for Models:** Delivers relevant and accurate contextual information for precise model responses.
+
+### Exa :aurum-tag
+[Exa](https://exa.search/) is a privacy-focused search engine that does not track users and provides unbiased search results. You can use Exa to fetch real-time data for your conversations.
+
+You will need to create a free account to get an API key. Then, enter the API key in the **Use Exa** tab in Msty Studio.
+
+### Ollama :aurum-tag
+You can use [Ollama](https://ollama.com/){target="_blank"} to fetch real-time data for your conversations.
+
+You will need to create an account and enter your API Key. 
+
+::alert{type="info" icon="tabler:info-circle"}
+Ollama as a Real-Time Data source is only available for Desktop at this time due to CORS restrictions on the web.
+::
+
+### Google API :aurum-tag
+For more reliable results, you can use your own Google Custom Search Engine (CSE) and API key.
+
+To set this up, follow these steps:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project or select an existing one.
+3. Enable the Custom Search API for your project.
+4. Create credentials (API key) for your project.
+5. Set up a Custom Search Engine (CSE) and get the CSE ID.
+
+Enter your API key and CSE ID in the **Use Google API** tab in Msty Studio.
+
+### Brave API :aurum-tag
+For more reliable results, you can use your own Brave Search API key.
+To set this up, follow these steps: 
+1. Go to the [Brave Search API page](https://search.brave.com/api).
+2. Sign up for an API key.
+3. Choose the appropriate plan based on your needs.
+4. Once you have your API key, enter it in the **Use Brave API** tab in Msty Studio.
+
+::alert{type="info" icon="tabler:info-circle"}
+Brave API is available for Studio Desktop only. Studio Web cannot use Brave API due to CORS restrictions on Brave's end.
+::
+
+## Advanced Options
+
+Many real-time data providers offer advanced settings to fine-tune search behavior and tailor results to specific requirements, optimizing the relevance and depth of the data provided to your models.
+
+#### Maximum Results
+Available for: Jina, Tavily, Exa, Google, Brave
+
+#### Custom Search Query
+Available for: Tavily, Exa, Google, Brave
+
+#### Limit Domain
+Available for: Tavily, Exa, Google, Brave
+
+#### Time Range / Search Date Range
+Available for: Tavily, Exa, Google
+
+#### Search Operators / Filters
+Available for: Google, Brave
+
+### Allowing insecure content
+
+Studio uses a JSON API so you will typically need to ensure your instance is being served over HTTPS.
+
+However, some browsers have settings to allow for 'insecure' content served over http for a website. Such as Brave via `brave://settings/content/insecureContent?search=additional+content` > allow Msty Studio to load insecure content.
+
+## Real-Time Data Troubleshooting and Tips
+
+If you're seeing irrelevant responses, the issue may lie with one of the following: 
+
+**Search engines not returning useful results or no results at all.**
+
+- Check the context window size for the model by clicking the **Model Parameters** icon and try increasing it if possible.
+- If no results are returned, try selecting a different search engine. Some search engines will limit, throttle, or block requests that are too frequent or too broad.
+- If you have a VPN enabled, it may be affecting the search results. Try disabling the VPN and see if that resolves the issue.
+- Try using Jina or SearXNG for more reliable results.
+- If using Sidecar, confirm Studio is connected. 
+
+**Model not using the real-time data effectively.**
+
+- Increase the model's context window size if possible as the context window size determines how much information the model can consider when generating responses.
+- Ensure the model is capable of understanding and utilizing real-time data. Some models may not be optimized for this purpose.
+- If the model is not using the real-time data effectively, try refining your prompts to be more specific about the information you want.
+
+### Best Practices
+
+- Use clear, specific prompts that suggest a need for recent or factual data.
+- If RTD is enabled but no sources are cited, be cautious: the model may have hallucinated.
+- Consider having a system prompt note that a search will occur — it may improve result consistency.
+- If zero results are returned, have the model return an error message or fallback notice rather than hallucinating a confident but false answer.
+
+## Set a default Real-Time Data provider
+
+You can set a default Real-Time Data provider and options in **Settings > General > Add-ons Defaults**. This will apply to all new conversations unless changed at the conversation level.
+
+## Pull Mode
+
+Setting a Real-Time Data provider to Pull mode allows the model to decide when to call the Real-Time Data during the conversation. Use Pull mode when you want the model to have more control over when to fetch real-time data.
 
 ::Resources
 
@@ -2660,131 +3294,23 @@ As with images and documents, YouTube links can be selected or unselected as nee
 
 ---
 
-Image generation can be accomplished with compatible models.
+Forge Mode in Msty Studio offers an intuitive and powerful editing environment that combines rich text formatting options, inline editing, and dynamic content generation through AI models. Key features include custom prompts, focus mode, undo/redo functionality, real-time collaboration, and advanced formatting tools, making it a comprehensive tool for content creators.
 
-![image generation update car color](/images/img-gen/image-gen-cars.png)
+![Forge Mode](/images/forge-mode.png)
 
-## Set 'Image' Purpose
+You can enable Forge Mode by selecting **New Forge Canvas** option under the **New Conversation** menu or by converting an existing conversation by selecting the **Convert to Forge Canvas** option in the conversation menu.
 
-Most models capable of image generation will come with **image** already enabled as a model's purpose.
+## Key Features :aurum-tag
 
-However, if you are using a model, or have added a custom model, where you know that the model supports image generation, then you'll need to enable **image** as a purpose for the model.
+::steps
 
-### Adding custom model
+- Use **Ask** to send a message to the model about the highlighted text
+- Use **Rewrite** to rewrite the selected text - such as to simplify text, make it shorter or longer, emojify, or change the tone
+- Rich-Text editing tools such as applying styles including text decoration and code blocks
+- Use the grip icon to move text blocks around
+- Select the **+** icon to add new text blocks and to apply formatting to the text
 
-When adding a custom model, select **image** as a purpose.
-![add custom model](/images/img-gen/add-custom-model.png)
-
-### Updating existing model
-
-To update purposes for an existing model, in the conversation area, click on the model selector, find the model you want to update, and then click on the edit icon.
-
-This will open a modal where you can update the model's purpose.
-
-Be sure to appropriately select purposes based on if the model is image-only or if it is multimodal.
-
-::alert{type="info" icon="tabler:info-circle"}
-Setting purpose appropriately based on if model is image-only or multimodal impacts how Msty handles the image generation request. If you encounter an error, double check the Model's purpose is configured correctly.
 ::
-
-#### Image-only models
-
-It is very important that if the model is an image-model only, meaning the model doesn't have multimodal functionality, then ensure that **only** image is selected.
-
-![image generation only models](/images/img-gen/image-only-model.png)
-
-#### Multimodal models
-
-Likewise, if the model has multimodal functionality, then ensure that more than just image is selected as a purpose. Such as, most multimodal models that support images are also likely to support text.
-
-![multimodals](/images/img-gen/add-purpose-to-existing-model.png)
-
-## Advanced configurations
-
-Not all models support advanced configurations - such as, these configurations may likely work for OpenAI models but may not work for Gemini.
-
-Advanced configurations can be included as model parameters.
-
-![model params](/images/img-gen/model-params.png)
-
-### Aspect Ratio
-
-`size : 1536x1024`
-
-### Number of images generated
-
-`n: 2`
-
-::Resources
-
-
----
-
-Environments are a powerful feature in Msty Studio that allow you to create and manage different settings for your different projects or use cases. By using environments, you can easily switch between different configurations without having to manually change settings each time.
-
-## Add and Manage Environments :aurum-tag
-
-On the left menu, select the ellipsis icon and then select **Environments** and then **Manage Environments**.
-
-By default, there is a **Base Environment** that is created for you. This environment is used to store variables that are common across all environments.
-
-Also, if the active environment doesn't have a variable set, it will fall back to the Base Environment and check to see if the variable is defined there.
-
-### Add New Environment
-
-To add a new environment, select the **Add Environment** button. Then, add an Environment **Name** and enter the **Variables** you want to set for this environment.
-
-You can also click on the ellipsis icon next to an existing environment to **Clone Environment** and then use that as a starting point for a new environment.
-![add new environment](/images/new-environment.png)
-
-You can always come back and modify the environment variables later.
-
-### Backup and Restore Environments
-
-Select the down arrow icon next to the **Add Environment** button to backup or restore your environments.
-
-### Remove Environment
-
-To remove an environment, select the ellipsis icon next to the environment you want to remove and select **Delete Environment**.
-
-## Set Active Environment
-
-You can select an active Environment from the Manage Environments section by selecting the ellipsis icon and then select option to **Make Active Environment**.
-
-You can also quickly select an Active Environment from the ellipsis icon on the main left menu and then select an icon under the **Environments** submenu.
-
-If an Environment Variable is not in the selected Environment; however, is in the **Base Environment**, then the variable will fall back to the one listed in the Base Environment.
-
-## Use Environment Variables
-
-You can use Environment Variable in the following areas of Msty Studio:
-
-1. Model provider API keys
-2. System prompts
-3. Conversations
-4. Tools
-
-You can copy and paste variables into these areas. Note that variable names will automatically begin with `MSTY_`, such as `MSTY_MY_VARIABLE`.
-
-When a process runs, the variable placeholder will be replaced with the value of the variable in the active environment.
-
-::alert{type="info" icon="tabler:info-circle"}
-Use the same variable name across Environments for things like model provider API keys, this way, when you change the environment, you change the underlying API Key - making it easy to switch between model API environments.
-::
-
-### Dynamic Variables
-
-There are a few dynamic variables that accessible from the Environment Variable picker (shift+shift+e). These variables are automatically populated with the current date and time, and can be used in your conversations to provide context or information. The following dynamic variables are available:
-
-**These include:**
-
-- {MSTY_LOCAL_DATE} - the current system date
-- {MSTY_LOCAL_DATE_TIME} - the current system date and time
-- {MSTY_LOCAL_TIMEZONE} - the current system timezone
-
-![env dynamic variables](/images/env-dynamic-variables.png)
-In the quick select modal, when you select a variable, it will be copied to your clipboard.
-No newline at end of file
 
 ::Resources
 
@@ -3093,19 +3619,21 @@ However, this information is stored locally on user devices and can be accessed 
 
 ---
 
-If you need to manage your Msty License keys, you can do so by going to [Lemon Squeezy](https://app.lemonsqueezy.com/my-orders/login).
+## Manage License Keys and Devices
 
-Enter the email you used to purchase your Msty Aurum license with and click **Sign in**.
+If you need to manage your Msty License keys, you can do so by going to our [Activation Management Portal](https://msty.studio/activation-management){target="_blank"}.
 
-Lemon Squeezy will send you a link to sign into your account. Once you sign in, you will be able to see your orders and manage your License keys.
+Enter the email you used to purchase your Msty Aurum license along with your License Key. 
 
-## Deactivate Device
+Msty will send you to either our new activation portal (for Aurum licenses purchased after December 21st, 2025) or to Lemon Squeezy's customer portal where you'll need to provide your email you used for purchase to receive a login link.
 
-Follow the same steps as above to sign into your Lemon Squeezy account.
+You will then be able to manage the devices that your Aurum license key is activated on.
 
-Once you are signed in, click on the License you'd like to deactivate a device from.
+## Manage Aurum Yearly Subscription or View Invoices
 
-You will see a list of devices the license key is currently activated on. Click on **Deactivate** next to the device you'd like to deactivate.
+If your Aurum License Keys begins with `MSTY-`, then you can manage your yearly subscription or view invoices through our [Stripe Customer Portal](https://billing.stripe.com/p/login/aFa00j7VkeNI6No0lUcQU01){target="_blank"}.
+
+Otherwise, you can manage your subscription and view invoices through our [Lemon Squeezy Customer Portal](https://app.lemonsqueezy.com/my-orders/login){target="_blank"}.
 
 ::Resources
 
@@ -3343,6 +3871,140 @@ Now, start a new chat and say hello to your new Amazon Bedrock model!
 
 ---
 
+Msty Sidecar is a companion desktop application that brings powerful local capabilities to Msty Studio Web, enabling features that go beyond what’s possible in a standard web app.
+
+**Before using Sidecar, first attempt to connect using Msty Studio Desktop as outlined in the [Remote Connections guide](/features/remote-connections).**
+
+Using the Remote Connections feature with Msty Studio Desktop is the recommended approach for most users, as it provides a seamless and integrated experience.
+
+## Studio Web Plus Sidecar :aurum-tag
+
+Sidecar unlocks the following features in Msty Studio Web:
+
+- Enables fetching Real-Time Data from the internet
+- Enables setting up [Tools](/features/toolbox/tools) on your local machine
+- Enables local AI model management
+
+::alert{type="info" icon="tabler:info-circle"}
+To unlock these features, Studio must be successfully connected to Sidecar. Sidecar serves as a proxy between the Studio web app and your local (or remote) machine, and must remain connected for these features to work.
+::
+
+## Download
+
+Please select the download option for your operating system.
+
+::tabs{variant="card" sync="user-os"}
+::div{label="Windows" icon="iconoir:windows"}
+
+### Windows
+
+- [Download Msty Sidecar (x64)](https://sidecar-assets.msty.studio/prod/latest/win/auto/MstySidecar_x64.exe)
+
+::
+
+::div{label="Mac" icon="hugeicons:apple"}
+
+### Mac
+
+- [Download Msty Sidecar (Apple Silicon - M1, M2, M3, M4)](https://sidecar-assets.msty.studio/prod/latest/mac/MstySidecar_arm64.dmg)
+- [Download Msty Sidecar (Intel Macs)](https://sidecar-assets.msty.studio/prod/latest/mac/MstySidecar_x64.dmg)
+
+::
+
+::div{label="Linux" icon="ph:linux-logo"}
+
+### Linux
+
+- [Download Msty Sidecar (x64 AppImage)](https://sidecar-assets.msty.studio/prod/latest/linux/amd64/MstySidecar_x86_64_amd64.AppImage)
+- [Download Msty Sidecar (x64 deb)](https://sidecar-assets.msty.studio/prod/latest/linux/amd64/MstySidecar_amd64_amd64.deb)
+
+::
+
+::
+
+## Getting Started with Local AI Models
+
+After you've downloaded and installed Sidecar, you'll be prompted to continue with setting up your local AI by either downloading Gemma, connecting to Msty App - if you already have Msty App setup and running - or by connecting to Ollama.
+
+For new users, the easiest path is to select option to download Gemma. Once Gemma is installed, you can then go back to Msty Studio and use the local models.
+
+## Connecting Msty Studio Web to Sidecar
+
+Sidecar runs in the background - a Sidecar icon will be visible in your computer's toolbar when it is running.
+
+![Sidecar app in toolbar](/images/sidecar.png)
+
+One of the primary menu options is to **Open Msty Studio**. This will launch Msty Studio on your default browser with a connection to Sidecar pre-established.
+
+You can of course launch a browser and navigate to Msty Studio. However, if for some reason the connection details change for Sidecar, you can select the **Copy Local Connection Info** option to copy it to your clipboard and then use it in Msty Studio to re-establish connection with Sidecar.
+
+## Safari Web Browser
+
+Safari web browser unfortunately has constraints which do not allow for direct access to Msty Studio Desktop or Sidecar.
+
+However, you can still connect Safari using the following methods:
+
+- [Using Remote Connections with tunneling](/features/remote-connections#connecting-remotely-to-local-ai-including-from-mobile-devices) **RECOMMENDED**
+- [Enabling Sidecar's Tunneling Feature](/how-tos/sidecar#connecting-remotely-to-local-ai-including-from-mobile-devices)
+- [Using Tailscale](/how-tos/setup-tailscale-for-sidecar)
+
+## Brave Web Browser
+
+If you're connecting to Sidecar from a Brave web browser, disable the shield for Msty Studio. If the shield is enabled, this will block Studio from successfully connecting to Sidecar.
+
+## Connecting Remotely to Local AI - including from Mobile Devices
+
+::alert{type="info" icon="tabler:info-circle"}
+This is an **experimental** feature.
+::
+Sidecar enables you to remotely access your local AI via tunneling - letting you connect from remote devices such as your phone, tablet, or desktop.
+
+::steps
+
+1. From the Sidecar menu, select **Enable Tunneling With Local AI**. This will set up local tunneling and may take a few seconds.
+2. Once tunneling has been enabled, you'll see an option to **Copy Tunnel Connection Info**. Click on this and then share the URL to the device you'd like to connect.
+3. On your remote device, open a browser and go to [msty.studio](https://msty.studio)
+4. You'll first need to **enter a valid Aurum License Key**
+5. On the following screen, select **Add Provider**
+6. Select provider option for **Msty Sidecar Local AI Proxy**
+7. Enter the Proxy endpoint that you copied in step two above and **Add Provider**
+
+You can now remotely access your local AI!
+::
+
+## Connecting to Sidecar using Tailscale
+
+Another option for connecting to Sidecar is to use Tailscale.
+
+See the [Tailscale guide](/how-tos/setup-tailscale-for-sidecar) for more information on how to set up Tailscale with Sidecar.
+
+## Starting Sidecar from the Command Line
+
+You can start Sidecar from the command line by running the following command:
+
+```bash
+open -a MstySidecar
+```
+
+This may come in handy in certain situations, such as if you are experiencing issues with Sidecar detecting services on your local machine, such as NPM, Python, etc.
+
+## Setting a custom token
+
+You can set a custom token for Sidecar by adding a `.token` file to the Sidecar app data directory. On Mac, this is typically located at `~/Library/Application Support/MstySidecar`. On Windows, it is usually found at `%APPDATA%\MstySidecar`.
+
+For a random value, you can use the following command:
+
+```bash
+echo -n $(openssl rand -hex 40) > ~/path/to/MstySidecar/.token
+```
+
+Then, restart Sidecar to apply the new token. This token will be used for both local connections and remote connections via tunneling.
+
+::Resources
+
+
+---
+
 [Tailscale](https://tailscale.com) allows you to create a secure network between your devices, making it easy to access information on other devices, from anywhere. This is particularly useful for Sidecar, as it allows you to connect to your local AI models and tools securely.
 
 ::alert{type="info" icon="tabler:info-circle"}
@@ -3479,3 +4141,23 @@ Please submit a PR to suggest additions.
 | USD Exchange Rates | ```https://open.er-api.com/v6/latest/USD``` |
 | World Bank Country Data | ```https://api.worldbank.org/v2/country/all?format=json``` |
 | World Bank Indicators | ```https://api.worldbank.org/v2/indicator/SP.POP.TOTL?format=json``` |
+
+---
+
+We are now crowd-sourcing language support for Msty Studio. If you want to see Msty Studio support your preferred languages, please feel free to make a contribution [on our repo page](https://github.com/cloudstack-llc/msty-studio-i18n ){target="_blank"}. 
+
+Right-to-left (RTL) languages are also welcome! We already support a RTL UX.
+
+Your help is greatly appreciated!
+
+## Developer Mode 
+
+You can toggle Developer Mode in Msty Studio to help with translations. This will show you the keys for each text element in the app, which can help you identify what needs to be translated.
+
+You can also download a template JSON file to work from and **import Locale** JSON files to view your translations in Msty Studio. 
+
+::alert{type="info" icon="tabler:info-circle"}
+Imported Locale files will not persist through app restarts. This is meant for testing purposes only. To make permanent contributions, please submit a PR on our [i18n repo](https://github.com/cloudstack-llc/msty-studio-i18n ){target="_blank"}.
+::
+
+::Resources
