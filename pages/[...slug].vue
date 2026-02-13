@@ -86,33 +86,40 @@ function toAbsoluteImageUrl(src: string): string {
   return `${siteBaseUrl}/${src}`;
 }
 
-function findFirstImageSrc(node: unknown): string | null {
-  if (!node || typeof node !== "object") {
-    return null;
-  }
+function findFirstImageSrc(root: unknown): string | null {
+  const maxNodesToScan = 20000;
+  const queue: unknown[] = [root];
+  const visited = new WeakSet<object>();
+  let scanned = 0;
 
-  const n = node as {
-    type?: string;
-    tag?: string;
-    props?: Record<string, unknown>;
-    children?: unknown[];
-  };
+  while (queue.length > 0 && scanned < maxNodesToScan) {
+    const node = queue.shift();
+    scanned += 1;
 
-  if (n.type === "element" && n.tag === "img") {
-    const src = n.props?.src;
-    if (typeof src === "string" && src.trim().length > 0) {
-      return src.trim();
+    if (!node || typeof node !== "object") {
+      continue;
     }
-  }
+    if (visited.has(node)) {
+      continue;
+    }
+    visited.add(node);
 
-  if (!Array.isArray(n.children)) {
-    return null;
-  }
+    const n = node as {
+      type?: string;
+      tag?: string;
+      props?: Record<string, unknown>;
+      children?: unknown;
+    };
 
-  for (const child of n.children) {
-    const found = findFirstImageSrc(child);
-    if (found) {
-      return found;
+    if (n.type === "element" && n.tag === "img") {
+      const src = n.props?.src;
+      if (typeof src === "string" && src.trim().length > 0) {
+        return src.trim();
+      }
+    }
+
+    if (Array.isArray(n.children)) {
+      queue.push(...n.children);
     }
   }
 
@@ -120,8 +127,12 @@ function findFirstImageSrc(node: unknown): string | null {
 }
 
 const socialImage = computed(() => {
-  const firstImageSrc = findFirstImageSrc(page.value?.body);
-  return firstImageSrc ? toAbsoluteImageUrl(firstImageSrc) : fallbackSocialImage;
+  try {
+    const firstImageSrc = findFirstImageSrc(page.value?.body);
+    return firstImageSrc ? toAbsoluteImageUrl(firstImageSrc) : fallbackSocialImage;
+  } catch {
+    return fallbackSocialImage;
+  }
 });
 
 useSeoMeta({
