@@ -86,21 +86,17 @@ function toAbsoluteImageUrl(src: string): string {
   return `${siteBaseUrl}/${src}`;
 }
 
-const socialImage = computed(() => {
-  const configuredImage = page.value?.previewImage;
-  if (typeof configuredImage === "string" && configuredImage.trim().length > 0) {
-    return toAbsoluteImageUrl(configuredImage.trim());
-  }
-  return fallbackSocialImage;
-});
+const configuredImage =
+  typeof page.value?.previewImage === "string" ? page.value.previewImage.trim() : "";
+const socialImage = configuredImage ? toAbsoluteImageUrl(configuredImage) : fallbackSocialImage;
 
 useSeoMeta({
   title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
   ogTitle: page.value?.title,
   description: page.value?.description,
   ogDescription: page.value?.description,
-  ogImage: () => socialImage.value,
+  ogImage: socialImage,
   twitterCard: "summary_large_image",
-  twitterImage: () => socialImage.value,
+  twitterImage: socialImage,
 });
 </script>
