@@ -4,6 +4,7 @@ export default defineAppConfig({
       name: "Msty Studio Docs",
       description:
         "Get started with guides and resources to maximize your conversational AI experience with Msty Studio.",
+      ogImage: "https://docs.msty.studio/images/quick-start.png",
     },
     theme: {
       customizable: false,
