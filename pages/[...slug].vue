@@ -70,15 +70,67 @@ const { page } = useContent();
 const config = useConfig();
 const appConfig = useAppConfig();
 
-const fallbackSocialImage = "https://docs.msty.studio/images/quick-start.png";
+const siteBaseUrl = "https://docs.msty.studio";
+const fallbackSocialImage = `${siteBaseUrl}/images/welcome-to-msty.png`;
+
+function toAbsoluteImageUrl(src: string): string {
+  if (/^https?:\/\//i.test(src)) {
+    return src;
+  }
+  if (src.startsWith("//")) {
+    return `https:${src}`;
+  }
+  if (src.startsWith("/")) {
+    return `${siteBaseUrl}${src}`;
+  }
+  return `${siteBaseUrl}/${src}`;
+}
+
+function findFirstImageSrc(node: unknown): string | null {
+  if (!node || typeof node !== "object") {
+    return null;
+  }
+
+  const n = node as {
+    type?: string;
+    tag?: string;
+    props?: Record<string, unknown>;
+    children?: unknown[];
+  };
+
+  if (n.type === "element" && n.tag === "img") {
+    const src = n.props?.src;
+    if (typeof src === "string" && src.trim().length > 0) {
+      return src.trim();
+    }
+  }
+
+  if (!Array.isArray(n.children)) {
+    return null;
+  }
+
+  for (const child of n.children) {
+    const found = findFirstImageSrc(child);
+    if (found) {
+      return found;
+    }
+  }
+
+  return null;
+}
+
+const socialImage = computed(() => {
+  const firstImageSrc = findFirstImageSrc(page.value?.body);
+  return firstImageSrc ? toAbsoluteImageUrl(firstImageSrc) : fallbackSocialImage;
+});
 
 useSeoMeta({
   title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
   ogTitle: page.value?.title,
   description: page.value?.description,
   ogDescription: page.value?.description,
-  ogImage: fallbackSocialImage,
+  ogImage: () => socialImage.value,
   twitterCard: "summary_large_image",
-  twitterImage: fallbackSocialImage,
+  twitterImage: () => socialImage.value,
 });
 </script>
