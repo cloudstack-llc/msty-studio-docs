@@ -86,53 +86,12 @@ function toAbsoluteImageUrl(src: string): string {
   return `${siteBaseUrl}/${src}`;
 }
 
-function findFirstImageSrc(root: unknown): string | null {
-  const maxNodesToScan = 20000;
-  const queue: unknown[] = [root];
-  const visited = new WeakSet<object>();
-  let scanned = 0;
-
-  while (queue.length > 0 && scanned < maxNodesToScan) {
-    const node = queue.shift();
-    scanned += 1;
-
-    if (!node || typeof node !== "object") {
-      continue;
-    }
-    if (visited.has(node)) {
-      continue;
-    }
-    visited.add(node);
-
-    const n = node as {
-      type?: string;
-      tag?: string;
-      props?: Record<string, unknown>;
-      children?: unknown;
-    };
-
-    if (n.type === "element" && n.tag === "img") {
-      const src = n.props?.src;
-      if (typeof src === "string" && src.trim().length > 0) {
-        return src.trim();
-      }
-    }
-
-    if (Array.isArray(n.children)) {
-      queue.push(...n.children);
-    }
-  }
-
-  return null;
-}
-
 const socialImage = computed(() => {
-  try {
-    const firstImageSrc = findFirstImageSrc(page.value?.body);
-    return firstImageSrc ? toAbsoluteImageUrl(firstImageSrc) : fallbackSocialImage;
-  } catch {
-    return fallbackSocialImage;
+  const configuredImage = page.value?.previewImage;
+  if (typeof configuredImage === "string" && configuredImage.trim().length > 0) {
+    return toAbsoluteImageUrl(configuredImage.trim());
   }
+  return fallbackSocialImage;
 });
 
 useSeoMeta({
