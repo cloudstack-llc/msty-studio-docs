@@ -146,6 +146,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-09-19",
+  experimental: {
+    watcher: "parcel",
+  },
+
+  content: {
+    // Disable Nuxt Content hot watcher to avoid fs.watch EMFILE in constrained environments.
+    watch: false,
+  },
 
   content: {
     watch: false,
