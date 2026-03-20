@@ -1,3 +1,13 @@
+const watchIgnored = [
+  "**/.git/**",
+  "**/.nuxt/**",
+  "**/.output/**",
+  "**/.data/**",
+  "**/dist/**",
+  "**/node_modules/**",
+  "**/.pnpm-store/**",
+];
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -54,5 +64,19 @@ export default defineNuxtConfig({
   },
   alias: {
     "@": "/<rootDir>",
+  },
+
+  watchers: {
+    chokidar: {
+      ignored: watchIgnored,
+    },
+  },
+
+  vite: {
+    server: {
+      watch: {
+        ignored: watchIgnored,
+      },
+    },
   },
 });
