@@ -47,28 +47,9 @@ export default defineNuxtConfig({
 
   watchers: {
     chokidar: {
+      ignored: watchIgnored,
       usePolling: true,
       interval: 250,
-      ignored: watchIgnoredGlobs,
-    },
-  },
-
-  vite: {
-    server: {
-      watch: {
-        usePolling: true,
-        interval: 250,
-        ignored: watchIgnoredGlobs,
-      },
-    },
-  },
-  alias: {
-    "@": "/<rootDir>",
-  },
-
-  watchers: {
-    chokidar: {
-      ignored: watchIgnored,
     },
   },
 
@@ -76,7 +57,13 @@ export default defineNuxtConfig({
     server: {
       watch: {
         ignored: watchIgnored,
+        usePolling: true,
+        interval: 250,
       },
     },
+  },
+
+  alias: {
+    "@": "/<rootDir>",
   },
 });
