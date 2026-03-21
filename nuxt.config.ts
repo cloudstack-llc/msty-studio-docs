@@ -4,6 +4,22 @@ export default defineNuxtConfig({
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-09-19",
 
+  content: {
+    watch: false,
+  },
+
+  components: {
+    dirs: [
+      {
+        path: "./node_modules/shadcn-docs-nuxt/components",
+        ignore: ["ui/**", "**/*.ts"],
+      },
+      {
+        path: "~/components",
+      },
+    ],
+  },
+
   routeRules: {
     "/": {
       redirect: "/getting-started",
@@ -12,17 +28,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare_pages",
-  },
-
-  components: {
-    dirs: [
-      "~/components",
-      "~/components/ui",
-      {
-        path: "~/components/content",
-        prefix: "",
-      },
-    ],
   },
 
   alias: {
