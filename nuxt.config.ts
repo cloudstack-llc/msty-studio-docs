@@ -1,3 +1,13 @@
+const watchIgnored = [
+  "**/.git/**",
+  "**/.nuxt/**",
+  "**/.output/**",
+  "**/.data/**",
+  "**/dist/**",
+  "**/node_modules/**",
+  "**/.pnpm-store/**",
+];
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -17,6 +27,11 @@ export default defineNuxtConfig({
       {
         path: "~/components",
       },
+      "~/components/ui",
+      {
+        path: "~/components/content",
+        prefix: "",
+      },
     ],
   },
 
@@ -28,6 +43,24 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare_pages",
+  },
+
+  watchers: {
+    chokidar: {
+      ignored: watchIgnored,
+      usePolling: true,
+      interval: 250,
+    },
+  },
+
+  vite: {
+    server: {
+      watch: {
+        ignored: watchIgnored,
+        usePolling: true,
+        interval: 250,
+      },
+    },
   },
 
   alias: {
