@@ -2,6 +2,9 @@
   "name": "msty-studio-docs",
   "private": true,
   "type": "module",
+  "imports": {
+    "#internal/nuxt/paths": "./internal/nuxt/paths.mjs"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
