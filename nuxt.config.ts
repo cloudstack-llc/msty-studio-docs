@@ -1,5 +1,5 @@
 import { access, mkdir, writeFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { basename, resolve } from "node:path";
 
 const watchIgnored = [
   "**/.git/**",
@@ -36,8 +36,16 @@ export function buildAssetsURL(...path) {
 
 async function ensureNuxtInternalPathsShim(rootDir: string) {
   const runtimePackageDirs = [
+    // Dev runtime packages
     resolve(rootDir, ".nuxt/dist/server/node_modules/nuxt"),
+    resolve(rootDir, ".nuxt/dist/server/node_modules/nuxt-site-config"),
+    resolve(rootDir, ".nuxt/dist/server/node_modules/_nuxt/content"),
+    resolve(rootDir, ".nuxt/dist/server/node_modules/_nuxtjs/mdc"),
+    // Build/preview runtime packages
     resolve(rootDir, ".output/server/node_modules/nuxt"),
+    resolve(rootDir, ".output/server/node_modules/nuxt-site-config"),
+    resolve(rootDir, ".output/server/node_modules/_nuxt/content"),
+    resolve(rootDir, ".output/server/node_modules/_nuxtjs/mdc"),
   ];
 
   for (const nuxtRuntimePackageDir of runtimePackageDirs) {
@@ -60,7 +68,7 @@ async function ensureNuxtInternalPathsShim(rootDir: string) {
       resolve(nuxtRuntimePackageDir, "package.json"),
       `${JSON.stringify(
         {
-          name: "nuxt-ssr-shim",
+          name: `${basename(nuxtRuntimePackageDir)}-ssr-shim`,
           type: "module",
           imports: {
             "#internal/nuxt/paths": "./dist/internal/paths-shim.mjs",
