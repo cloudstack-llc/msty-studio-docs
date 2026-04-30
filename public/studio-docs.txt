@@ -239,6 +239,83 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
 ::
 
 
+### Historical Desktop Versions
+::Collapsible{title="Expand this section to see Msty Studio 2.5.x to 2.7.x downloads"}
+  Looking for an earlier Msty Studio release? The versions below are available based on the changelog release history. Msty Studio Web is always on the latest version, but you can download a specific version of Msty Studio Desktop here.
+
+  <br />
+
+  ::tabs{variant="card" sync="historical-download-os"}
+  ::div{label="Windows" icon="iconoir:windows"}
+  ### Windows
+
+  - [Msty Studio 2.7.0 (x64) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.4 (x64)](https://next-assets.msty.studio/app/releases/2.6.4/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.3 (x64)](https://next-assets.msty.studio/app/releases/2.6.3/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.2 (x64)](https://next-assets.msty.studio/app/releases/2.6.2/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.1 (x64)](https://next-assets.msty.studio/app/releases/2.6.1/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.0 (x64)](https://next-assets.msty.studio/app/releases/2.6.0/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.6 (x64)](https://next-assets.msty.studio/app/releases/2.5.6/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.5 (x64)](https://next-assets.msty.studio/app/releases/2.5.5/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.4 (x64)](https://next-assets.msty.studio/app/releases/2.5.4/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.3 (x64)](https://next-assets.msty.studio/app/releases/2.5.3/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.0 (x64)](https://next-assets.msty.studio/app/releases/2.5.0/win/MstyStudio_x64.exe)
+  ::
+  ::div{label="Mac" icon="hugeicons:apple"}
+  ### Mac
+
+  - [Msty Studio 2.7.0 (Apple Silicon) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.7.0 (Intel) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.6.4 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.6.4/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.6.4 (Intel)](https://next-assets.msty.studio/app/releases/2.6.4/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.6.3 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.6.3/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.6.3 (Intel)](https://next-assets.msty.studio/app/releases/2.6.3/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.6.2 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.6.2/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.6.2 (Intel)](https://next-assets.msty.studio/app/releases/2.6.2/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.6.1 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.6.1/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.6.1 (Intel)](https://next-assets.msty.studio/app/releases/2.6.1/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.6.0 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.6.0/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.6.0 (Intel)](https://next-assets.msty.studio/app/releases/2.6.0/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.5.6 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.5.6/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.5.6 (Intel)](https://next-assets.msty.studio/app/releases/2.5.6/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.5.5 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.5.5/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.5.5 (Intel)](https://next-assets.msty.studio/app/releases/2.5.5/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.5.4 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.5.4/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.5.4 (Intel)](https://next-assets.msty.studio/app/releases/2.5.4/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.5.3 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.5.3/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.5.3 (Intel)](https://next-assets.msty.studio/app/releases/2.5.3/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.5.0 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.5.0/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.5.0 (Intel)](https://next-assets.msty.studio/app/releases/2.5.0/mac/MstyStudio_x64.dmg)
+  ::
+  ::div{label="Linux" icon="ph:linux-logo"}
+  ### Linux
+
+  - [Msty Studio 2.7.0 (x64 AppImage) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.7.0 (x64 deb) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.6.4 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.6.4/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.6.4 (x64 deb)](https://next-assets.msty.studio/app/releases/2.6.4/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.6.3 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.6.3/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.6.3 (x64 deb)](https://next-assets.msty.studio/app/releases/2.6.3/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.6.2 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.6.2/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.6.2 (x64 deb)](https://next-assets.msty.studio/app/releases/2.6.2/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.6.1 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.6.1/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.6.1 (x64 deb)](https://next-assets.msty.studio/app/releases/2.6.1/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.6.0 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.6.0/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.6.0 (x64 deb)](https://next-assets.msty.studio/app/releases/2.6.0/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.5.6 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.5.6/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.5.6 (x64 deb)](https://next-assets.msty.studio/app/releases/2.5.6/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.5.5 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.5.5/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.5.5 (x64 deb)](https://next-assets.msty.studio/app/releases/2.5.5/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.5.4 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.5.4/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.5.4 (x64 deb)](https://next-assets.msty.studio/app/releases/2.5.4/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.5.3 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.5.3/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.5.3 (x64 deb)](https://next-assets.msty.studio/app/releases/2.5.3/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.5.0 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.5.0/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.5.0 (x64 deb)](https://next-assets.msty.studio/app/releases/2.5.0/linux/MstyStudio_amd64.deb)
+  ::
+  ::
+::
+
 ### Looking for Msty App 1.x?
 ::Collapsible{title="Expand this section to see download options"}
   Msty App 1.x is still available for download if you need it. See below for download links and installation instructions. See the [Msty App 1.x Docs](https://docs.msty.app){target="_blank"} for more info.
@@ -1052,6 +1129,185 @@ These DO NOT include user actions such as conversations, Knowledge Stack usage, 
 However, this information is stored locally on user devices and can be accessed by users or company admins from the user's local Msty Studio installation.
 
 ::Resources
+
+---
+
+Msty Claw is an OpenClaw-style desktop agent app from Msty. It is designed for broader agent workflows, not just dedicated AI coding tasks, and it is currently separate from Msty Studio.
+
+Download Msty Claw from [msty.ai/claw](https://msty.ai/claw){target="_blank"}.
+
+::alert{type="info" icon="tabler:info-circle"}
+Msty Claw currently supports Apple Silicon macOS. Windows and Linux support are coming soon.
+::
+
+::alert{type="warning" icon="tabler:alert-circle"}
+Msty Claw is currently in open beta and is free for personal use only.
+::
+
+## Msty Claw vs Msty Studio
+
+Msty Claw is **not** Msty Studio. They are separate products today.
+
+Over time, the products will become more closely integrated, but right now you should treat Msty Claw as its own app with its own setup and settings.
+
+## What Msty Claw can do
+
+- Run broader agent workflows with local or cloud models
+- Connect chat channels like Discord, Telegram, and WhatsApp
+- Run bots in a managed workspace or an existing project folder
+- Run bots on host runtime or container runtime
+- Use tools via MCP servers and custom skills
+
+For product updates, examples, and the latest release information, check [msty.ai/claw](https://msty.ai/claw){target="_blank"}.
+
+## Workspace and container options
+
+When you create a bot, Msty Claw lets you choose:
+
+- **Managed workspace**: an isolated workspace folder created for that bot
+- **Project folder**: a specific folder you choose on disk
+- **Host runtime**: runs directly on your machine
+- **Container runtime**: runs in Docker or Podman with optional network access
+
+
+---
+
+This page covers the general setup flow.
+
+## App setup (recommended)
+
+::steps
+### Install Msty Claw
+Download it from [msty.ai/claw](https://msty.ai/claw){target="_blank"} and launch the app.
+
+### Connect a model provider
+During onboarding (or later in **Settings > Providers**), connect a provider and pick a model.
+
+### Connect at least one channel
+In **Settings > Channels**, add Discord, Telegram, or WhatsApp and connect it.
+
+### Create your first bot
+Choose workspace mode (managed or project folder), runtime (host or container), and access controls.
+::
+
+## Notes
+
+- Msty Claw is currently in open beta and free for personal use only.
+- Container runtime requires Docker or Podman.
+- If container network is blocked, web access is also blocked.
+- Bots require a connected channel and chat target.
+
+
+---
+
+Msty Claw supports Discord, Telegram, and WhatsApp channels.
+
+Use this as the high-level setup flow. For full platform-specific requirements, always follow each platform's official docs.
+
+## Discord
+
+In Msty Claw:
+
+1. Open **Settings > Channels**.
+2. Add a channel with platform set to **Discord**.
+3. Paste your Discord Bot Token.
+4. Connect the channel, then set your chat target using the Discord channel ID.
+
+Official docs:
+
+- [Discord Developer Quick Start](https://docs.discord.com/developers/quick-start/getting-started){target="_blank"}
+
+## Telegram
+
+In Msty Claw:
+
+1. Open **Settings > Channels**.
+2. Add a channel with platform set to **Telegram**.
+3. Create a bot using `@BotFather` and paste the bot token.
+4. Set the target chat ID for the bot.
+
+Official docs:
+
+- [Telegram Bots FAQ](https://core.telegram.org/bots/faq){target="_blank"}
+
+## WhatsApp
+
+In Msty Claw:
+
+1. Open **Settings > Channels**.
+2. Add a channel with platform set to **WhatsApp**.
+3. Connect and scan the QR code from your phone.
+4. Send a message from the chat you want to use, then choose or paste the chat JID.
+
+Official docs:
+
+- [WhatsApp Help Center](https://faq.whatsapp.com){target="_blank"}
+- [WhatsApp Business Platform Docs](https://developers.facebook.com/docs/whatsapp){target="_blank"}
+
+## Integration tips
+
+- Start with one channel and one bot until your workflow is stable.
+- Keep bot tokens and keys private.
+- Test in a private channel/chat before inviting others.
+
+
+---
+
+Msty Claw supports configuration for tools, skills, security controls, and containerized bot runtime.
+
+## MCP tools
+
+Open **Settings > Tools** to configure MCP servers.
+
+You can:
+
+- Add a server with a `name`, `command`, and `arguments`
+- Connect/disconnect servers
+- Edit or remove saved servers
+- Optionally add a Jina API key for web search
+
+## Skills
+
+Msty Claw auto-discovers skills from:
+
+- Personal skills: `~/.mstyclaw/skills/<skill-name>/SKILL.md`
+- Workspace skills: `<workspace>/.mstyclaw/skills/<skill-name>/SKILL.md`
+
+Use skills to provide reusable workflows and domain-specific instructions.
+
+## Security and permissions
+
+Open **Settings > Security**.
+
+You can configure:
+
+- **Sender groups**: who can message each bot
+- **Allowed folders**: where bots can read/write
+- **Blocked patterns**: sensitive files/folders that stay off-limits (for example `.env`, `.ssh`, and credential paths)
+
+During tool calls, Msty Claw can prompt for **Allow**, **Always**, or **Deny** decisions on actions like command execution or file edits.
+
+## Workspace and runtime
+
+Per bot, you can configure:
+
+- **Workspace mode**: managed workspace or project folder
+- **Runtime**: host or container (Docker/Podman)
+- **Terminal commands**: on/off
+- **Container network**: blocked/allowed
+- **Web access**: on/off (container web access depends on network being allowed)
+
+## Ask Msty Claw to help configure things
+
+You can ask Msty Claw to help set these up for you, for example:
+
+- Install and connect an MCP server
+- Create or install skills
+- Propose safe permission settings
+- Set up a bot runtime for host or container use
+
+This can reduce manual setup work when you prefer guided configuration.
+
 
 ---
 
@@ -3058,28 +3314,6 @@ The onboarding screen also includes basic terminal guidance:
 - **Windows:** Open **Windows Terminal** or **PowerShell** from the Start menu.
 - **Linux:** Open your preferred **Terminal** app from the applications menu.
 
-## Use Local AI Models
-
-Agent Mode can also use local inference servers as backends. Local providers are discovered from providers you have already configured in the Model Hub with a local-compatible inference endpoint, and each enabled provider appears as its own agent in the Agent selector.
-
-Examples include local or self-hosted providers such as Ollama-compatible servers, llama.cpp, MLX, and other OpenAI-compatible local inference servers.
-
-This setup currently requires **Claude Code CLI** to be installed. Local backends are also generally not ideal for every agent CLI workflow and usually work best when you have a strong local model and enough system resources.
-
-::steps
-### Configure a local provider in Model Hub
-Add or configure your local inference server in the Model Hub so it has a working inference endpoint.
-
-### Open Settings > Agent Mode
-Go to the **Local Providers** section in Agent Mode settings.
-
-### Enable the provider
-Turn on the local providers you want Agent Mode to expose.
-
-### Start or refresh an Agent session
-Enabled local providers appear as separate agents in the Agent selector. Refresh agents if needed.
-::
-
 ## Major Parts
 
 ### Sessions and workspaces
@@ -3130,17 +3364,46 @@ Assistant Personas define how an assistant responds. You can configure:
 ### User Personas
 User Personas define reusable user context and memory that can be applied across conversations.
 
-They are useful when you want models, personas, and other assistants in Msty to know important things about you without repeating that context every time. For example, you might want Msty to remember your role, writing preferences, goals, ongoing projects, technical background, or personal constraints.
+They are useful when you want models, personas, and other assistants in Msty Studio to know important things about you without repeating that context every time. For example, you might want Msty Studio to remember your role, writing preferences, goals, ongoing projects, technical background, or personal constraints.
 
 This can help responses feel more consistent and relevant across different workflows. Instead of re-explaining who you are or how you like to work in each conversation, you can keep that information in a User Persona and reuse it wherever needed.
 
-When you create memories from conversation messages, the default memory-generation prompt can be adjusted in [Settings > Default Prompts](/settings/default-prompts).
+## User Memories
 
 ::alert{type="info" icon="tabler:info-circle"}
 The title and summary portions of user persona memories are included directly in the prompt, so assistants can still see that context even without tool calling.
 
 To access the more detailed memory content, the assistant or persona agent must support tool calling.
 ::
+
+User memories are attached to User Personas and reused in persona and crew conversations so Msty Studio can personalize responses without you repeating context each time.
+
+### Add Memories from Persona Studio
+
+1. Open **Persona Studio** and switch to the **User Personas** tab.
+2. Select a user persona.
+3. In the **Memories** section, click **Add Note** or **Add Structured**.
+4. Fill in the memory fields, then save the user persona.
+
+### Add Memories from Conversations
+
+You can add memories from active conversations in two ways:
+
+- Use the **User Persona** icon in the chat tools area, then click **Add memory** next to a user persona to add a manual memory.
+- Open a conversation message menu (overflow/extra actions), then choose **Add to User Persona Memory** to generate a draft from that message.
+
+When you add a memory from a conversation message, Msty Studio:
+
+1. Uses the model assigned to **User Persona Memory Extraction** in **Model Hub > Model Squad**.
+2. Falls back to the split's selected conversation model if no Model Squad assignment exists.
+3. Uses the **User Persona Memory Generation** prompt from [Settings > Default Prompts](/settings/default-prompts) to draft memory content.
+4. Opens a **Review Memory Draft** dialog so you can edit before saving.
+
+### Configure Models and Prompts
+
+- Set the preferred memory extraction model in **Model Hub > Model Squad** with the **User Persona Memory Extraction** assignment.
+- Update the memory drafting prompt in [Settings > Default Prompts](/settings/default-prompts) by editing **User Persona Memory Generation**.
+- Update crew handoff and coordination instructions in [Settings > Default Prompts](/settings/default-prompts) by editing **Crew Mode**.
 
 ## Create and Organize Personas
 
@@ -3349,6 +3612,65 @@ Use templates and AI-assisted drafting to generate or improve skill descriptions
 
 - Keep skill IDs simple and stable.
 - Use folders to separate personal, team, and experimental skills.
+
+
+---
+
+Media Studio is a dedicated session type for creating images and videos with persistent context, history, and comparison tools.
+
+![Media Studio preview](/images/media-studio.png)
+
+## Start a Media Session
+
+::steps
+### Create a new session
+From **New**, choose **New Media Session**.
+
+### Start from an existing attachment
+Use **Open in Media Studio** from message attachments, or **Start New Media Session** from Attachment Manager.
+
+### Configure and generate
+Enter a prompt, choose an image/video model, set outputs per run, then generate.
+::
+
+## Context Workflow
+
+- Add context by drag-and-drop, paperclip, or screenshot capture.
+- Move items between **Context**, **Spotlight**, and **Compare**.
+- Enable **Keep latest only** to retain just the newest generated media in context after each run.
+- Images, videos, and documents can be attached as context references.
+
+## Generation Workflow
+
+- Select from media-capable models configured in [Model Hub image generation](/managing-models/image-gen).
+- Set how many outputs to generate per run.
+- Star a model to keep it as your Media Studio default.
+- If no media models are configured, Media Studio offers a direct path to Model Hub.
+
+## Spotlight, History, and Compare
+
+- **Spotlight** is your main working canvas for selected outputs.
+- **History** stores generated outputs for quick reuse and navigation.
+- **Compare** lets you review up to 3 outputs side by side.
+- Each history item supports fast actions such as:
+  - Add to Spotlight
+  - Add to Context
+  - Compare toggle
+  - Download
+  - Rename title
+  - Delete
+
+## Editing and Iteration
+
+- Use **Edit Image** on image outputs to annotate and save a new version.
+- Edited versions are added back to history and can be reused as fresh context.
+- Prompt history is saved in-session so you can iterate quickly on prior prompts.
+
+## Video Support
+
+Video generation in Media Studio currently supports **xAI** and **Google Veo** models.
+
+::Resources
 
 
 ---
@@ -4182,48 +4504,109 @@ We recommend keeping an eye on Sidecar logs to see if there are any errors or is
 
 ---
 
-Turnstiles is an advanced feature in Msty Studio that enables you to automate and manage complex message sequences through features like queuing messages, reordering, and regeneration, providing sophisticated communication flows.
+Turnstiles help you run structured workflows across multiple prompts and actions, with full control over flow, retries, and reusable templates.
 
-## Add New Turnstile
+![Turnstiles](/images/turnstilesv2.png)
 
-![Add new turnstile](/images/turnstile.png)
+## Open Turnstiles
 
-In the **Turnstiles** section, you can add a new Turnstile by clicking on the **New Turnstile** button. This will open a window where you can define the Turnstile's name and entries.
+::steps
+### Open from the action bar
+Click the **Turnstile** icon in a conversation.
 
-Use the **New Entry** button to add a new entry. By default, this entry will be a prompt. However, there are additional options to add either a Persona, Regenerate, or Continue Generation.
+### Queue from your current prompt
+Write a prompt, then click **Add to Queue**. You can also **Alt+Click** the Turnstile icon to queue quickly.
 
-You are able to sort the order of entries by selecting the touch icon and dragging the entry to the desired position.
+### Load a saved Turnstile
+Use **Load Saved Turnstile** to bring a saved workflow into the queue.
+::
 
-To edit or further configure an entry, expand the entry by clicking on the chevron icon.
+## Entry Types
 
-In addition to the prompt, you can further empower your entry by adding [attachments](/add-ons/attachments), [tools](/toolbox/toolsets), enabling [Real-Time Data](/add-ons/real-time-data), and even select which exact model you want to run for the entry. This turbocharges the power of your Turnstile.
+- **Prompt**: Standard prompt step with optional model, [attachments](/add-ons/attachments), [toolsets](/toolbox/toolsets), and [Real-Time Data](/add-ons/real-time-data).
+- **Persona**: Run a step using a saved persona.
+- **Meta actions**:
+  - Continue
+  - Regenerate
+  - Context Shield
+  - Context Shield with Summary
+- **Conditional**: Branch execution based on assistant or user output.
+- **Loop Start / Loop End**: Repeat a block up to max iterations, with optional early exit condition.
+- **Checkpoint**: Pause execution for review, variable input, and manual routing decisions.
 
-### Advanced Messaging Commands
+## Advanced Step Controls
 
-You can use advanced messaging commands when chatting with a model and add these commands to your Turnstile queue.
+Each step can include advanced controls:
 
-- `--m--` Message
+- **Label** and **Note** for organization
+- **Delay** (seconds) between steps
+- **Pause After** to force a manual checkpoint
+- **Send as Assistant** (inject text without generating)
+
+## Variables and Output Transforms
+
+- Save step output as a variable (for example `summary`) and reuse with `{{summary}}`.
+- Extract only what you need using transformers:
+  - **JSON Path**
+  - **Regex** (first match group)
+  - **Slice** (`start:end`)
+- Loop variables are available in prompts:
+  - `{{loop.iteration}}`
+  - `{{yourLoopId.iteration}}`
+
+## Error Handling and Model Fallbacks
+
+- Set a queue-level default error behavior:
+  - **Stop**
+  - **Retry Once**
+  - **Use Fallback Model**
+- Override error behavior per step when needed.
+- Use default and fallback models to keep workflows portable across environments.
+
+## Running the Queue
+
+- Run controls include **Run**, **Pause**, **Continue**, and **Stop**.
+- Use **Rounds** to repeat the entire queue multiple times.
+- Reorder with drag-and-drop, skip/unskip entries, and clear queue when needed.
+- Checkpoints support:
+  - Continue
+  - Skip next N steps
+  - Jump to a labeled step
+  - Abort
+  - Variable review/edit before continuing
+
+## Organizing Saved Turnstiles
+
+- Save, clone, and update turnstiles from the Turnstiles hub.
+- Organize turnstiles into folders.
+- Set a default folder.
+- Move one or many turnstiles between folders (including drag-and-drop).
+- Import/export turnstiles as zipped bundles.
+
+## Quick Parsing Commands
+
+When queuing directly from chat text, Turnstiles supports separator commands:
+
+- `--m--` Prompt message split
 - `--r--` Regenerate
 - `--c--` Continue
 - `--cs--` Context Shield
 - `--css--` Context Shield with Summary
 
-### Example
-
-For example, if you add the following to your chat -
+Example:
 
 ```
-hello!
+Draft a short update.
 --m--
-Tell me about the weather today in New York
+Rewrite it for executives.
 --m--
-Now write a very long poem about the weather
+Turn it into three bullet points.
 --c2--
 ```
 
-Next, select the **Turnstile** icon and then select **Add to Queue**, you will see the messages added to the queue and separated by the advanced commands.
+## Access :aurum-tag
 
-You can then run the messages and they will be processed in the order they are in the queue.
+Turnstiles are available with an Aurum license.
 
 ::Resources
 
