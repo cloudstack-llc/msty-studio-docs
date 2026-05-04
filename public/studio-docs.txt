@@ -249,17 +249,17 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
   ::div{label="Windows" icon="iconoir:windows"}
   ### Windows
 
-  - [Msty Studio 2.7.0 (x64) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.6.4 (x64)](https://next-assets.msty.studio/app/releases/2.6.4/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.6.3 (x64)](https://next-assets.msty.studio/app/releases/2.6.3/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.6.2 (x64)](https://next-assets.msty.studio/app/releases/2.6.2/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.6.1 (x64)](https://next-assets.msty.studio/app/releases/2.6.1/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.6.0 (x64)](https://next-assets.msty.studio/app/releases/2.6.0/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.5.6 (x64)](https://next-assets.msty.studio/app/releases/2.5.6/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.5.5 (x64)](https://next-assets.msty.studio/app/releases/2.5.5/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.5.4 (x64)](https://next-assets.msty.studio/app/releases/2.5.4/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.5.3 (x64)](https://next-assets.msty.studio/app/releases/2.5.3/win/MstyStudio_x64.exe)
-  - [Msty Studio 2.5.0 (x64)](https://next-assets.msty.studio/app/releases/2.5.0/win/MstyStudio_x64.exe)
+  - [Msty Studio 2.7.0 (x64) - Latest](https://next-assets.msty.studio/app/releases/2.7.0/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.4 (x64)](https://next-assets.msty.studio/app/releases/2.6.4/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.3 (x64)](https://next-assets.msty.studio/app/releases/2.6.3/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.2 (x64)](https://next-assets.msty.studio/app/releases/2.6.2/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.1 (x64)](https://next-assets.msty.studio/app/releases/2.6.1/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.6.0 (x64)](https://next-assets.msty.studio/app/releases/2.6.0/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.6 (x64)](https://next-assets.msty.studio/app/releases/2.5.6/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.5 (x64)](https://next-assets.msty.studio/app/releases/2.5.5/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.4 (x64)](https://next-assets.msty.studio/app/releases/2.5.4/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.3 (x64)](https://next-assets.msty.studio/app/releases/2.5.3/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.5.0 (x64)](https://next-assets.msty.studio/app/releases/2.5.0/win/auto/MstyStudio_x64.exe)
   ::
   ::div{label="Mac" icon="hugeicons:apple"}
   ### Mac
