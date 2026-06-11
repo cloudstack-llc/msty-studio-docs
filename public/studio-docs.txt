@@ -70,13 +70,30 @@ Quick Start is the fastest path for new users to go from install to first chat.
 
 ::steps
 
-1. [Download Msty Studio Desktop](/getting-started/download) and install it.
-2. Open Msty Studio Desktop.
-3. On first launch, choose your setup path:
-   - Use local models (recommended for most new users)
-   - Add a [remote provider with an API key](/how-tos/find-api-keys)
-4. Complete setup and click **Let's Go!**.
-5. Open a chat and send your first prompt.
+### Install and open Msty Studio
+[Download Msty Studio Desktop](/getting-started/download), install it, and open the app.
+
+### Choose how you plan to use Msty Studio
+Select **Just exploring**, **For work**, or **I'm a developer**. Msty uses this choice to tailor the recommended model and optional starter resources.
+
+### Connect your first model
+Choose either:
+
+- **Recommended local model:** Msty checks your hardware, recommends a compatible local engine and model, and lets you adjust the recommendation from **Light** to **Powerful** before downloading.
+- **Online provider:** Connect OpenAI, Claude, xAI, Gemini, OpenRouter, or another [online provider](/managing-models/online-providers). Add at least one model to the provider before continuing.
+
+Local setup displays service and model download progress. You can continue into the app while a local model finishes downloading in the background.
+
+### Choose what to do first
+After model setup, choose a starting workflow:
+
+- Open a normal conversation
+- Connect an image model and open Media Studio
+- Import the Msty Studio Docs Knowledge Stack and create the **Msty Clippy** persona
+- Install suggested personas based on your selected intent
+
+### Start working
+Msty opens the selected workflow with your model and starter resources ready to use.
 
 ::
 
@@ -85,19 +102,19 @@ Msty stores your data locally on your device. Data does not sync automatically b
 ::
 
 ::alert{type="info" icon="tabler:info-circle"}
-Msty Studio can install and manage its own Ollama service during Local AI setup. If you prefer to use an existing Ollama setup independently, add Ollama as a Remote Provider instead.
+Msty Studio can install and manage Ollama, MLX, or Llama.cpp services for local models. The recommended engine depends on your operating system and hardware.
 ::
 
 ### Optional: Install Local AI Services From an Archive File
 
-During setup (and later from **Settings > Local AI > Services Version**), you can install an earlier Ollama version instead of the latest default.
+If the standard service installer is not suitable for your system, use the service settings to install a compatible local archive.
 
 ![import ollama archive](/images/quick-start/import-ollama-archive.png)
 
-To install from an archive file:
+For Ollama:
 
 1. Download the correct archive for your OS from [Ollama Releases](https://github.com/ollama/ollama/releases){target="_blank"}.
-2. In setup, choose the archive file option.
+2. Open **Settings > Local AI > Service Version** and choose the archive file option.
 3. Select the downloaded archive file.
 
 ::alert{type="info" icon="tabler:info-circle"}
@@ -114,7 +131,7 @@ If Local AI setup fails with the default installer, archive install is a useful 
 4. Add a model provider:
    - Add a remote provider (OpenAI, Anthropic, Gemini, and others)
    - Or connect Studio Web to [Msty Studio Desktop](/settings/remote-connections) or [Msty Sidecar](/how-tos/sidecar)
-5. Click **Let's Go!** and run your first prompt.
+5. Finish setup, choose a starting workflow, and run your first prompt.
 
 ::
 
@@ -124,7 +141,7 @@ If Local AI setup fails with the default installer, archive install is a useful 
 
 ## Next Steps
 
-- [Managing Models](/managing-models) to add and tune providers
+- [Managing Models](/managing-models) to add providers, install local models, and monitor downloads
 - [Settings](/settings/settings) to customize behavior and defaults
 - [Remote Connections](/settings/remote-connections) to connect Web and Desktop
 
@@ -599,13 +616,31 @@ Command Palette gives you one searchable command surface for navigation, creatio
 
 Open it with **Cmd/Ctrl + K**.
 
+## Available Across Msty Studio
+
+The Command Palette remains available while you are working in navigable hubs and dialogs, including:
+
+- Model Hub
+- Settings
+- Toolbox
+- Persona Studio
+- Prompt Studio
+- Turnstiles
+- Knowledge Stacks
+- Environments
+- Notifications, Insights, and the Log Viewer
+
+Press **Cmd/Ctrl + K** without manually closing the current hub. When you run a navigation command, Msty closes the existing navigable surface and opens the selected destination.
+
+The palette may remain unavailable while a blocking confirmation, editor drawer, license prompt, or other modal action requires your attention.
+
 ## Major Parts
 
 ### Create commands
 Start new conversations, split chats, persona or crew chats, forge canvases, and workspaces.
 
 ### Navigation commands
-Jump directly to Model Hub, Toolbox, Persona Studio, Prompt Studio, Knowledge Stacks, environments, and notifications.
+Jump directly between Model Hub, Toolbox, Persona Studio, Prompt Studio, Turnstiles, Knowledge Stacks, environments, notifications, and other major surfaces.
 
 ### Settings and appearance commands
 Open settings sections, toggle mini map, and quickly switch theme, mode, split width, accent, or base color.
@@ -896,6 +931,7 @@ From the **Settings > Teams > Settings** page in Msty Studio, select the **Manag
 - Add or remove user seats
 
 ::Resources
+
 
 ---
 
@@ -1704,7 +1740,7 @@ Imported Locale files will not persist through app restarts. This is meant for t
 
 ---
 
-Model Hub is where you connect providers, install local models, and tune model behavior for chats.
+Model Hub is the central place to connect providers, install local models, compare model options, and tune model behavior.
 
 ![adding new models](/images/model-hub.png)
 
@@ -1712,10 +1748,29 @@ Model Hub is where you connect providers, install local models, and tune model b
 
 For most users, model setup follows this order:
 
-1. Choose between online providers, local models, or both
-2. Connect online providers, install local models, or do both
-3. Set defaults and model purpose tags
-4. Tune model-specific options as needed
+1. Open **Model Hub** from the sidebar or Command Palette
+2. Connect an online provider, install a local model, or do both
+3. Monitor active service and model downloads from the Model Hub badge
+4. Set model defaults and purpose tags
+5. Tune model parameters or apply a preset when needed
+
+## Model Hub Sections
+
+- **Model Providers**: Connect and manage hosted providers and their models
+- **Local Models**: Discover, install, import, and manage models across Ollama, MLX, and Llama.cpp
+- **Model Squad**: Assign preferred models to specific tasks
+- **Model Matchmaker**: Get guided recommendations based on your needs
+- **Cost Calculator**: Estimate hosted model usage costs
+- **VRAM Calculator**: Estimate whether local models fit your hardware
+- **Context Explorer**: Learn how context windows and token usage affect conversations
+
+## Active Downloads
+
+When a model or local service is installing, the Model Hub sidebar icon displays an activity badge.
+
+- Select the badge to return to Model Hub
+- View active local and remote install counts
+- Open the active installs panel to review progress or cancel an installation
 
 ## Online and Local Models
 
@@ -1734,7 +1789,7 @@ Go to [Online Providers](/managing-models/online-providers) for supported provid
 
 Use local models when you want more control over privacy, offline access, and local performance tuning.
 
-Go to [Local Models](/managing-models/local-models) for install and import paths, plus MLX and Llama.cpp setup.
+Go to [Local Models](/managing-models/local-models) for the unified Featured, Installed, Model Search, and Import workflows.
 
 ## Find the Right Model Faster
 
@@ -1833,102 +1888,157 @@ After connecting, you can:
 - Rename providers and models for readability
 - Set a default model in chat
 - Apply model purpose tags from [Managing Models](/managing-models)
+- Apply model-parameter presets, including supported provider-native tools
+
+## Provider-Native Tools
+
+Some hosted providers expose tools directly through their model APIs. These tools run through the provider rather than through an Msty Toolbox toolset.
+
+Msty Studio includes model-parameter presets for commonly supported native tools:
+
+| Provider | Included native-tool presets |
+| --- | --- |
+| OpenAI | Web Search, Code Interpreter |
+| Anthropic / Claude | Web Search, Web Fetch, Code Execution |
+| Google Gemini | URL Context, Google Search with URL Context |
+| xAI | Responses API with Web Search |
+| Groq | Browser Search |
+
+### Apply a Native-Tool Preset
+
+::steps
+### Select a compatible model
+Open a conversation and select a model from the supported provider.
+
+### Open Model Parameters
+Select the model-parameters button beside the model selector.
+
+### Choose a preset
+Open **Presets** and select the provider-native tool preset, such as **OpenAI with Web Search** or **Claude with Code Execution**.
+
+### Apply the parameters
+Select **Apply**, then send a prompt that can use the enabled capability.
+::
+
+When a response uses a native tool, supported tool results and grounding sources appear with the response.
+
+::alert{type="info" icon="tabler:info-circle"}
+Native-tool availability depends on the provider, model, API account, region, and current provider capabilities. A preset can be available even when a specific model does not support every configured tool.
+::
 
 
 ---
 
 Local models run on your own machine, giving you more control over privacy, performance, and offline workflows.
 
-## Local Model Options at a Glance
+Msty Studio provides one unified Local Models area for models running through **Ollama**, **MLX**, and **Llama.cpp**.
 
-Use this quick guide to decide where to start:
+## Open Local Models
 
-- [Local AI (via Ollama)](/managing-models/local-models#local-ai-via-ollama): Best for fast setup, broad model availability, and day-to-day local usage.
-- [MLX Models (Apple Silicon)](/managing-models/local-models#mlx-models-apple-silicon): Best for Apple Silicon users who want optimized local performance with MLX-native models.
-- [Llama.cpp Models](/managing-models/local-models#llamacpp-models): Best for advanced local tuning, flexible hardware support, and low-level runtime controls.
+Open **Model Hub > Local Models**.
 
-If you are unsure, start with Local AI first.
+The Local Models area has four tabs:
 
-If you are not sure which model to pick, use [Model Matchmaker](/managing-models/model-matchmaker).
+- **Featured**
+- **Installed**
+- **Model Search**
+- **Import**
 
-## Local AI (via Ollama)
+## Featured
 
-Msty Studio's Local AI backend is **Ollama**.
+Featured provides a curated catalog of models with available Ollama, GGUF/Llama.cpp, and MLX formats grouped together.
 
-Use Ollama when you want the easiest local model workflow for install, discovery, and everyday chat use.
+- Use the engine and format filters to narrow the catalog
+- Review model purpose, size, and hardware-fit information
+- Install using the recommended engine or choose another available format
+- If the selected engine is not installed, Msty sets up the engine before installing the model
 
-Go to **Model Hub > Local AI Models**.
+On Apple Silicon, Msty generally recommends MLX when an MLX format is available. Recommendations on other systems depend on the available hardware and supported engines.
 
-You can use:
+If you are unsure which model best fits your use case, use [Model Matchmaker](/managing-models/model-matchmaker).
 
-- **Featured Models** for curated installs
-- **Installed Models** to manage currently installed models
-- **Ollama Models** and **Hugging Face Models** to search and install
-- **Import GGUF Model** for local GGUF files
-- **Import Safetensors Model** for local Safetensors files
+## Installed
 
-### Import GGUF Model
+Installed combines models from all managed local engines into one list.
 
-Open **Local AI Models > Import GGUF**, select your file, then choose whether to:
+- Filter or browse models without switching between engine-specific pages
+- Review the engine, model location, and configuration
+- Rename a model or update its purpose tags
+- Edit supported model configuration and chat-template settings
+- Uninstall a model
 
-- Symlink to the existing file location
-- Copy the file into Msty Studio's models directory
+## Model Search
 
-### Import Safetensors Model
+Model Search combines local model discovery into one workflow.
 
-Open **Local AI Models > Import Safetensors** and select your Safetensors file.
+- Search the Ollama registry and Hugging Face
+- Filter results by Ollama, GGUF, or MLX format
+- Install directly to a compatible engine
+- Choose between Ollama and Llama.cpp when a GGUF model supports both paths
 
-## MLX Models (Apple Silicon)
+## Import
 
-MLX is Apple's machine learning framework for Apple Silicon, supported in **Msty Studio Desktop**.
+Use Import for models already stored on your computer.
 
-Use MLX when you are on Apple Silicon and want strong local performance with MLX-optimized models.
+### Import a GGUF file
 
-In Model Hub, browse featured MLX models or search the MLX Hugging Face community.
+1. Open **Model Hub > Local Models > Import**.
+2. Select **Select GGUF File**.
+3. Choose the `.gguf` file.
+4. Msty imports it into an available compatible engine or guides you through engine setup.
 
-![mlx models](/images/mlx/mlx-model-hub.png)
+### Import a Safetensors or MLX directory
 
-### Manage MLX Service
+1. Open **Model Hub > Local Models > Import**.
+2. Select **Select Directory**.
+3. Choose the model directory containing its Safetensors or MLX files.
+4. Msty detects the model format and uses an available compatible engine.
 
-Use **Settings > MLX Service** to manage service health, endpoint, version, logs, and start or stop controls.
+## Installation Progress
 
-![mlx service](/images/mlx/mlx-service.png)
+Model and service installations continue while you use other areas of Msty Studio.
 
-## Llama.cpp Models
+- The Model Hub sidebar badge shows the number of active installs
+- The active installs panel shows download progress
+- Downloads can be cancelled from the active installs panel
+- Completed models appear in the Installed tab
 
-Llama.cpp is a local inference engine designed for efficient performance across different hardware.
+## Choosing an Engine
 
-Use Llama.cpp when you want deeper inference controls and hardware-specific tuning options.
+### Ollama
 
-You can set it up during onboarding or from **Model Hub > Llama.cpp**. In Model Hub, browse featured models or search the Llama.cpp Hugging Face community to install models.
+Use Ollama for broad model availability and a straightforward local inference workflow. Msty Studio's managed Ollama integration is labeled **Local AI** in service settings.
 
-### Manage Llama.cpp Service
+### MLX
 
-Use **Settings > Llama.cpp Service** to manage health, endpoint, version, logs, and start or stop controls.
+Use MLX on Apple Silicon for models optimized for Apple's unified-memory hardware.
 
-### Llama.cpp GPU Support
+### Llama.cpp
 
-If your system has a compatible GPU, enable acceleration from the Llama.cpp service ellipsis menu.
+Use Llama.cpp for GGUF models, flexible hardware support, and deeper runtime controls.
 
-### Llama.cpp Model Parameters
+## Manage Local Services
 
-When a Llama.cpp model is selected in chat, open **Model Parameters** for Llama.cpp-specific settings.
+Local engine service controls remain available in Settings:
 
-#### Num ctx default to model max
+- **Settings > Local AI**
+- **Settings > MLX Service**
+- **Settings > Llama.cpp Service**
 
-Uses the maximum available context window, which can improve long-chat continuity at the cost of higher system usage.
+Use these pages to review service health, endpoints, versions, logs, start/stop controls, and supported acceleration options.
 
-#### Truncation Strategy
+## Llama.cpp Model Parameters
 
-Controls how history is trimmed when context limits are reached.
+When a Llama.cpp model is selected in chat, open **Model Parameters** for Llama.cpp-specific settings:
 
-- **Truncate Middle**: Keeps early and recent context, trims middle content
-- **Truncate Old**: Trims oldest messages first
-- **None**: No trimming, with higher risk of hitting context limits
+- **Num ctx** controls the runtime context window
+- **Truncate Middle** keeps early and recent context while trimming the middle
+- **Truncate Old** removes the oldest messages first
+- **None** disables automatic history trimming and may exceed the model context limit
 
 ## General GPU Support
 
-If your system has a compatible GPU, enable GPU support in **Settings > Local AI > Service ellipsis menu** for services that support acceleration.
+If your system has a compatible GPU, enable supported acceleration from the relevant service settings.
 
 
 ---
@@ -2544,6 +2654,12 @@ Specifically, the project's **title** and **description** are included as contex
 
 By default, the project context is disabled. Edit the project folder to enable project context. 
 
+## Export and Import Conversations
+
+Use the conversation menu to export a conversation as JSON or as a portable `.mstyconv` package. Imports are added to a selected project from that project's menu.
+
+See [Conversation Export and Import](/conversations/export-import) for attachment handling, format guidance, and Media Studio session portability.
+
 ## Mini Map - Conversation Navigation
 
 Mini Map provides quick navigation to different parts of a long conversation.
@@ -2740,7 +2856,7 @@ The background prompt used for Crew Mode handoffs and persona coordination can b
 
 ---
 
-Manage your conversation responses with easy-to-use chat management tools that help you copy, save, and organize responses.
+Manage user and assistant messages with inline actions for copying, editing, branching, organizing, and deleting conversation content.
 
 ![Response features](/images/response-features.png)
 
@@ -2795,9 +2911,17 @@ Provides estimated input and output tokens used and latency metrics. If utilizin
 
 ![response metrics](/images/response-metrics.png)
 
-### Use as prompt in new split
+### Use as Prompt in New Split
 
-This allows you to take a message from the current conversation and use it as a prompt in a new split conversation. This is useful if you want to explore different directions based on a specific message.
+Open the message's additional-actions menu and select **Use as Prompt in New Split** to create a new unsynced split with that message as its initial prompt.
+
+This is useful when you want to test a message with another model without copying the entire conversation path.
+
+### Edit as Branch
+
+Open the message's additional-actions menu and select **Edit as Branch**.
+
+Edit the message and save it to create an alternative conversation branch without overwriting the original path. Use [Branch Explorer](/conversations/branch-explorer) to label, navigate, and compare branches.
 
 ### Fold messages
 
@@ -2819,7 +2943,30 @@ Excludes the response from being included in context sent to model during contin
 
 ### Delete message
 
-Delete the message from the conversation if they irrelevant or unwanted messages. There is also an option to delete descendants.
+The delete control separates single-message deletion from branch deletion:
+
+- **Click Delete** to remove only the current message
+- **Right-click Delete** and choose **Delete Message and Descendants** to remove the message and every response that follows it on that branch
+- Hold **Shift** while selecting either delete action to skip the confirmation dialog
+
+Deleting only the current message reconnects the remaining valid conversation path where possible. Delete descendants when you intentionally want to remove the rest of that branch.
+
+## Message Action Layout
+
+Frequently used actions remain directly below each message. Less common actions, including branching, cloning, hiding, isolation, and tool-usage details, are grouped in the additional-actions menu.
+
+For long messages, the action controls can remain accessible as a floating control while you scroll.
+
+## Modern Message Layout
+
+The modern layout displays:
+
+- User messages on the right
+- Assistant messages on the left
+- A simplified assistant identity label
+- Message actions outside the message content
+
+Switch between modern and classic layouts from the conversation menu or **Settings > Conversations > Modern message layout**.
 
 ::Resources
 
@@ -3016,10 +3163,10 @@ Threads and the mini map include a branch dropdown for better navigation and com
 
 ::steps
 ### Access Branch Dropdown
-In any thread, locate the new branch dropdown menu(Edit as Branch). When you use the feature for a user or assistant message and update the prompt a new branch is created that contains the updated user and assistant message
+Open a user or assistant message's additional-actions menu and select **Edit as Branch**. Update the message and save it to create a new branch while preserving the original conversation path.
 
 ### Label or Explore
-Use the dropdown to **label a branch** or open **Branch Explorer**.
+Use the branch dropdown beside a branched message to switch paths, label a branch, or open **Branch Explorer**.
 
 ### Compare Branches
 Branch Explorer displays a side-by-side diff view, letting you compare content between two selected branches.
@@ -3039,6 +3186,76 @@ The mini map will update to reflect the selected branch, allowing for quick navi
 ::
 
 ::Resources
+
+
+---
+
+Export conversations when you want a portable copy, need to move work to another workspace, or want to preserve a Media Studio session.
+
+## Export a Conversation
+
+::steps
+### Open the conversation menu
+Open the conversation and select the ellipsis menu in the top-right corner.
+
+### Select Export Conversation
+Choose **Export Conversation**, then select **As JSON** or **As ZIP**.
+
+### Save the file
+Choose where to save the exported conversation.
+::
+
+## Export Formats
+
+### JSON
+
+JSON creates one `.json` file containing the conversation structure and embedded attachment data.
+
+- Documents, images, webpages, YouTube attachments, and referenced media are included when their files are available
+- Embedded files are encoded inside the JSON, which can make the file substantially larger
+- When embedded attachments total 10 MB or more, Msty recommends using the ZIP format
+
+JSON is useful for smaller conversations or when you need a single text-based export.
+
+### ZIP / `.mstyconv`
+
+The ZIP option creates a `.mstyconv` file containing:
+
+- Conversation metadata
+- Conversation and split data
+- An attachments folder with referenced files
+
+Use `.mstyconv` for media-heavy conversations, large attachments, or the most portable import experience.
+
+## Import a Conversation
+
+::steps
+### Choose the destination project
+In the Projects panel, open the ellipsis menu for the project that should contain the imported conversation.
+
+### Select Import Conversation
+Choose **Import Conversation**.
+
+### Select the export
+Upload a supported `.json` or `.mstyconv` file.
+
+### Open the imported conversation
+After a successful import, Msty adds the conversation to the project and opens it.
+::
+
+## Attachments and Media Studio
+
+- Current JSON exports embed referenced attachment files and restore them during import
+- `.mstyconv` imports restore files from the included attachments folder
+- Existing workspace files are not duplicated when an attachment with the same stored file name is already available
+- Media Studio exports preserve saved session state and referenced media when the attachment files are included
+
+::alert{type="info" icon="tabler:info-circle"}
+If an older JSON export does not contain embedded attachment data, Msty can only reconnect attachments that already exist in the destination workspace.
+::
+
+::Resources
+
 
 ---
 
@@ -3179,6 +3396,8 @@ Review generated file diffs, then commit from the workspace diff panel when you 
 - Agent Mode is currently available on **Msty Studio Desktop**.
 - If no agents appear, re-run your agent CLI setup in terminal and refresh adapters in settings.
 
+::Resources
+
 
 ---
 
@@ -3295,6 +3514,19 @@ Create and organize prompts for easy access and reuse across Msty.
 
 ![Prompts Library](/images/prompts-library.png)
 
+## Discover Prompts
+
+Open the **Discover** tab in Prompt Studio to browse a searchable catalog of ready-to-use prompts.
+
+- Search prompt titles, text, and tags
+- Filter the catalog by **Available**, **Installed**, or **All**
+- Sort the catalog alphabetically
+- Open a prompt to review its full text and tags before installing
+- Install a single prompt directly into your library
+- Select multiple prompts and install them together into the **Misc** folder
+
+Bulk installs display progress and can be stopped before all selected prompts are installed.
+
 ## Import Default Prompts
 
 To quickly get started, you can import a collection of ready-to-use prompts:
@@ -3302,7 +3534,7 @@ To quickly get started, you can import a collection of ready-to-use prompts:
 1. Select the **down arrow** next to the **New Prompt** button.
 2. Choose **Import Default Prompts**.
 
-This will load a curated set of prompts that you can edit and customize to fit your workflow.
+This loads the bundled default collection. Use **Discover** when you want to browse and selectively install prompts from the larger catalog.
 
 ## Add a New Prompt
 
@@ -3449,6 +3681,8 @@ Use templates and AI-assisted drafting to generate or improve skill descriptions
 - Keep skill IDs simple and stable.
 - Use folders to separate personal, team, and experimental skills.
 
+::Resources
+
 
 ---
 
@@ -3475,6 +3709,19 @@ Enter a prompt, choose an image/video model, set outputs per run, then generate.
 - Move items between **Context**, **Spotlight**, and **Compare**.
 - Enable **Keep latest only** to retain just the newest generated media in context after each run.
 - Images, videos, and documents can be attached as context references.
+
+### Context Preview Labels
+
+Context previews make each item's role clearer:
+
+- Image and video previews display a media-type label
+- Context items display their file name below the preview
+- The active Spotlight item displays a **Spotlight** badge
+- Supported video models display **Start** and **End** controls on eligible image context
+
+Use **Start** to assign an image as the first frame of a supported video generation. Use **End** to assign an image as the final frame when the selected model supports end-frame interpolation.
+
+Start and End controls only appear for compatible video models.
 
 ## Generation Workflow
 
@@ -3504,7 +3751,20 @@ Enter a prompt, choose an image/video model, set outputs per run, then generate.
 
 ## Video Support
 
-Video generation in Media Studio currently supports **xAI** and **Google Veo** models.
+Video generation in Media Studio currently supports:
+
+- **xAI**
+- **Google Veo**
+- **Seedance**
+- **OpenRouter video models**
+
+Available context-image and Start/End frame capabilities vary by model.
+
+## Export and Import Media Sessions
+
+Media Studio sessions use the normal conversation export workflow. Export as `.mstyconv` when the session contains generated images, videos, or other large attachments.
+
+Exports preserve the saved Media Studio session state and referenced media when attachment files are included. See [Conversation Export and Import](/conversations/export-import).
 
 ::Resources
 
@@ -3564,8 +3824,10 @@ Once you have created and composed your Knowledge Stack, you can use it in your 
 ::steps
 1. Start or open a conversation in Msty Studio
 2. Select the **Knowledge Stack** icon in the conversation toolbar
-3. Choose the Knowledge Stack you want to use from the list
-4. Start chatting with a model
+3. Browse **Recently Updated** or **All Stacks**, or search by stack title
+4. Select one or more composed Knowledge Stacks
+5. Optionally expand **Configure** to adjust query settings for this conversation
+6. Start chatting with a model
 ::
 
 ![knowledge stacks enabled in chat](/images/knowledge-stacks/select-ks.png)
@@ -3576,11 +3838,26 @@ The model will have access to the knowledge in your selected stack, allowing it 
 
 Check out [Query Settings](/knowledge-stacks/query-settings) for advanced query options that will help you improve search results.
 
-## Import Default Knowledge Stacks
+### Knowledge Stack Picker
 
-Select the down chevron next to **New Knowledge Stack** and then select **Import Default Knowledge Stack**. 
+The conversation picker is designed for larger libraries:
 
-This will load a prebuilt Knowledge Stack containing Msty Studio's documentation. It's a great way to explore and test how Knowledge Stacks work without needing to upload your own files. Plus, you'll have instant access to the full Msty Studio docs directly within your conversations.
+- **Recently Updated** shows up to five recently changed, usable stacks
+- **All Stacks** lists the remaining usable stacks alphabetically
+- Search finds stacks by title
+- Selected stacks remain visible in a dedicated section
+- The most recently selected stack supplies the initial query settings
+- **Manage Stacks** opens the full Knowledge Stacks hub
+
+Only composed stacks with usable content can be selected.
+
+## Install Prebuilt Knowledge Stacks
+
+Open Knowledge Stacks Next Gen and select **Discover** to browse the catalog of prebuilt stacks.
+
+The official **Msty Docs** stack contains Msty Studio documentation and is a useful starting point for testing Knowledge Stacks without uploading your own files.
+
+You can also install Msty Docs during onboarding by selecting **Chat with Msty Studio Docs**. Msty imports the stack and creates the **Msty Clippy** persona with the documentation attached.
 
 ::Resources
 
@@ -3662,7 +3939,7 @@ In the **Compose Settings** area, you can configure the how the Knowledge Stack 
 
 ### Embedding Model
 
-Msty uses [gte-tiny](https://huggingface.co/TaylorAI/gte-tiny){target="_blank"} by default, but you can change it to any other embedding model available in your Msty App. You can find an embedding model in **Model Hub > Local AI Models**.
+Msty uses [gte-tiny](https://huggingface.co/TaylorAI/gte-tiny){target="_blank"} by default, but you can change it to any other embedding model available in your Msty App. You can find an embedding model in **Model Hub > Local Models**.
 
 Some embedding models outperform others by better capturing semantic meaning, understanding context, and generalizing across domains. High-quality models improve retrieval accuracy by generating more meaningful vector representations of text. 
 
@@ -3702,6 +3979,7 @@ When you are ready to compose, select the **Compose** button.
 If you haven't made any changes to compose configurations, and want to re-compose, select the **Force Compose** option. 
 
 ::Resources
+
 
 ---
 
@@ -4005,6 +4283,31 @@ That's it, you're now using the Next Gen version of Knowledge Stacks!
 
 If you'd like to switch back to the classic Knowledge Stacks, you can do that any time by following similar steps to the above. 
 
+## Discover Knowledge Stacks
+
+Select the **Discover** tab to browse Knowledge Stacks published in the Msty catalog.
+
+- Search by name, description, or tag
+- Open an item to review its details
+- Install a Knowledge Stack directly from its catalog URL
+- Refresh the catalog to check for newly available stacks
+
+The catalog includes the official **Msty Docs** Knowledge Stack, which provides setup, feature, and workflow documentation for use in conversations.
+
+::steps
+### Open Knowledge Stacks
+Open the Knowledge Stacks hub and switch to Next Gen if needed.
+
+### Select Discover
+Open the **Discover** tab.
+
+### Review a stack
+Search or select a Knowledge Stack to review its description and tags.
+
+### Install
+Select **Install**. Msty downloads and imports the stack into your library.
+::
+
 
 ## What's new?
 
@@ -4107,6 +4410,7 @@ Beyond the big feature additions, we've also put a lot of work into making the o
 
 
 ::Resources
+
 
 ---
 
@@ -4418,6 +4722,18 @@ Each step can include advanced controls:
 - Set a default folder.
 - Move one or many turnstiles between folders (including drag-and-drop).
 - Import/export turnstiles as zipped bundles.
+
+## Discover Turnstiles
+
+Open the Turnstiles hub and select the **Discover** tab to browse reusable workflows.
+
+- Search by name or description
+- Filter by **Available**, **Installed**, or **All**
+- Review a Turnstile's details before installing it
+- Install one Turnstile or select multiple Turnstiles for bulk installation
+- Monitor bulk-install progress or stop the remaining installation queue
+
+Turnstiles installed from Discover are added to the **Misc** folder and can be edited like other saved Turnstiles.
 
 ## Quick Parsing Commands
 
