@@ -6,6 +6,9 @@ const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL || defaultSiteUrl).replace(
   /\/$/,
   "",
 );
+const siteName = "Msty Studio Docs";
+const siteDescription =
+  "Get started with guides and resources to maximize your conversational AI experience with Msty Studio.";
 
 function getAllMarkdownFiles(dir) {
   let results = [];
@@ -24,6 +27,31 @@ function getAllMarkdownFiles(dir) {
 
 function stripOrderPrefix(segment) {
   return segment.replace(/^\d+\./, "");
+}
+
+function parseFrontmatter(content) {
+  if (!content.startsWith("---")) {
+    return {};
+  }
+
+  const end = content.indexOf("---", 3);
+  if (end === -1) {
+    return {};
+  }
+
+  const yaml = content.slice(3, end);
+  const data = {};
+  yaml.split(/\r?\n/).forEach((line) => {
+    const match = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (!match) {
+      return;
+    }
+
+    const [, key, rawValue] = match;
+    data[key] = rawValue.replace(/^["']|["']$/g, "");
+  });
+
+  return data;
 }
 
 function getRouteFromFile(file, contentDir) {
@@ -100,6 +128,35 @@ function buildSitemap(routes) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
+function formatAbsoluteUrl(route) {
+  return `${siteUrl}${route}`;
+}
+
+function buildLlmsTxt(pages) {
+  const docs = pages
+    .map((page) => {
+      const description = page.description ? `: ${page.description}` : "";
+      return `- [${page.title}](${formatAbsoluteUrl(page.route)})${description}`;
+    })
+    .join("\n");
+
+  return `# ${siteName}
+
+> ${siteDescription}
+
+Msty Studio is Msty's privacy-first AI platform for running local and online AI models across desktop and web workflows.
+
+## Docs
+
+${docs}
+
+## Additional Resources
+
+- [All docs text](${formatAbsoluteUrl("/studio-docs.txt")}): Combined plain-text export of the documentation.
+- [Msty Studio product page](https://msty.ai): Download and product information.
+`;
+}
+
 function writeFileIfChanged(filePath, content) {
   if (fs.existsSync(filePath) && fs.readFileSync(filePath, "utf-8") === content) {
     return false;
@@ -123,9 +180,21 @@ function stripYamlFrontmatter(content) {
 const contentDir = path.join(process.cwd(), "content");
 const publicDir = path.join(process.cwd(), "public");
 const files = getAllMarkdownFiles(contentDir);
-const routes = [...files]
-  .sort((a, b) => compareFilesByRouteOrder(a, b, contentDir))
-  .map((file) => getRouteFromFile(file, contentDir));
+const pages = [...files].sort((a, b) =>
+  compareFilesByRouteOrder(a, b, contentDir),
+).map((file) => {
+  const raw = fs.readFileSync(file, "utf-8");
+  const frontmatter = parseFrontmatter(raw);
+  const route = getRouteFromFile(file, contentDir);
+
+  return {
+    route,
+    title: frontmatter.title || route.replace(/^\//, ""),
+    description: frontmatter.description || "",
+    raw,
+  };
+});
+const routes = pages.map((page) => page.route);
 const allContent = files
   .map((file) => {
     const raw = fs.readFileSync(file, "utf-8");
@@ -135,6 +204,8 @@ const allContent = files
 
 writeFileIfChanged(path.join(publicDir, "studio-docs.txt"), allContent);
 writeFileIfChanged(path.join(publicDir, "sitemap.xml"), buildSitemap(routes));
+writeFileIfChanged(path.join(publicDir, "llms.txt"), buildLlmsTxt(pages));
 
 console.log("Generated public/studio-docs.txt");
 console.log("Generated public/sitemap.xml");
+console.log("Generated public/llms.txt");
