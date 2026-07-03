@@ -44,3 +44,4 @@ This creates or updates:
 
 - `public/studio-docs.txt` with all markdown content and YAML frontmatter removed.
 - `public/sitemap.xml` with canonical `https://docs.msty.ai/studio` docs routes.
+- `public/llms.txt` with an LLM-friendly index of canonical docs pages.

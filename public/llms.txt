@@ -1,0 +1,83 @@
+# Msty Studio Docs
+
+> Get started with guides and resources to maximize your conversational AI experience with Msty Studio.
+
+Msty Studio is Msty's privacy-first AI platform for running local and online AI models across desktop and web workflows.
+
+## Docs
+
+- [Welcome to Msty Studio](https://docs.msty.ai/studio/getting-started): The complete guide to Msty Studio
+- [Quick Start](https://docs.msty.ai/studio/getting-started/quick-start): Get started with Msty Studio in a few easy steps
+- [Download Msty Studio Desktop](https://docs.msty.ai/studio/getting-started/download): Download Msty Studio Desktop for Windows, Mac, or Linux
+- [Managing Models](https://docs.msty.ai/studio/managing-models): Add and manage AI models in Msty Studio
+- [Online Providers](https://docs.msty.ai/studio/managing-models/online-providers): Connect hosted AI providers and manage cloud model access
+- [Local Models](https://docs.msty.ai/studio/managing-models/local-models): Install, import, and run local AI models in Msty Studio Desktop
+- [Vibe CLI Proxy](https://docs.msty.ai/studio/managing-models/vibe-cli-proxy): Connect command-line model providers to use their AI models
+- [Model Matchmaker](https://docs.msty.ai/studio/managing-models/model-matchmaker): Find the best model for your task using ranked recommendations
+- [Image Generation](https://docs.msty.ai/studio/managing-models/image-gen): Image generation with compatible models
+- [Insights](https://docs.msty.ai/studio/managing-models/insights): View insights into token usage for your models
+- [Advanced Configs](https://docs.msty.ai/studio/managing-models/advanced-configs): Configure model parameters and advanced settings
+- [Thinking Effort](https://docs.msty.ai/studio/managing-models/thinking-effort): Enhance your AI's reasoning with advanced thinking effort configurations.
+- [Context Explorer](https://docs.msty.ai/studio/managing-models/context-explorer): Understand context windows, memory usage, and model fit
+- [Conversations](https://docs.msty.ai/studio/conversations/main-chat): Conversations done right
+- [Persona Conversations](https://docs.msty.ai/studio/conversations/persona-conversations): Chat with a selected persona in a dedicated conversation
+- [Shadow Persona](https://docs.msty.ai/studio/conversations/shadow-personas): How to set up a Shadow Persona
+- [Crew Conversations](https://docs.msty.ai/studio/conversations/crew-chats): Chat with your crews
+- [Responses](https://docs.msty.ai/studio/conversations/responses): Manage responses with ease
+- [Split Chat](https://docs.msty.ai/studio/conversations/split-chat): Split chats and find the best model
+- [Forge Mode](https://docs.msty.ai/studio/conversations/forge-mode): Transform content creation with Forge Mode's powerful editing tools
+- [System Prompt Modes](https://docs.msty.ai/studio/conversations/system-prompts): Define how custom prompts interact with the system prompt.
+- [Branch Explorer](https://docs.msty.ai/studio/conversations/branch-explorer): Navigate and compare branches easily
+- [Conversation Export and Import](https://docs.msty.ai/studio/conversations/export-import): Move conversations and their attachments between Msty Studio workspaces
+- [Agent Mode](https://docs.msty.ai/studio/agent-mode/agent-mode): Run coding agents in Msty Studio Desktop
+- [Persona Studio](https://docs.msty.ai/studio/studios/persona-studio): Build Assistant and User Personas in Persona Studio
+- [Prompt Studio](https://docs.msty.ai/studio/studios/prompts-studio): Prompt Studio helps you create, organize, and manage your prompts efficiently
+- [Skills Studio](https://docs.msty.ai/studio/studios/skills-studio): Build, organize, and install agent skills
+- [Media Studio](https://docs.msty.ai/studio/studios/media-studio): Create and refine images and videos with context-aware generation workflows
+- [Overview](https://docs.msty.ai/studio/knowledge-stacks/overview): Get started with Knowledge Stacks in Msty
+- [Compose Options](https://docs.msty.ai/studio/knowledge-stacks/compose-options): Learn how to compose Knowledge Stacks
+- [Query Settings](https://docs.msty.ai/studio/knowledge-stacks/query-settings): Learn how to optimize query settings for Knowledge Stacks
+- [Chunks Visualizer](https://docs.msty.ai/studio/knowledge-stacks/chunks-visualizer): Visualize how your documents were converted into chunks
+- [Chunks Console](https://docs.msty.ai/studio/knowledge-stacks/chunks-console): Test queries and resulting chunks
+- [Analytics and Insights](https://docs.msty.ai/studio/knowledge-stacks/analytics-insights): See how your Knowledge Stacks are performing and how you can optimize results
+- [Share and Manage](https://docs.msty.ai/studio/knowledge-stacks/share-and-manage): Learn how to organize Knowledge Stacks and share them with others
+- [Ignore File](https://docs.msty.ai/studio/knowledge-stacks/ignore-file): Learn how to use an ignore file to have Msty ignore files in a folder
+- [Knowledge Stacks Next Gen](https://docs.msty.ai/studio/knowledge-stacks/next-gen): Explore the next generation of Knowledge Stacks in Msty Studio with new source types, smarter retrieval, and an improved experience.
+- [Tools](https://docs.msty.ai/studio/toolbox/tools): Empower Msty Studio with tools in your toolbox
+- [Toolsets](https://docs.msty.ai/studio/toolbox/toolsets): Empower Msty Studio with toolsets in your toolbox
+- [Live Contexts](https://docs.msty.ai/studio/toolbox/live-contexts): Empower Msty Studio with Live Contexts in your toolbox
+- [Tool Dependencies](https://docs.msty.ai/studio/toolbox/tool-dependencies): Configure dependencies for your tools on different platforms
+- [Turnstiles](https://docs.msty.ai/studio/add-ons/turnstiles): Build reusable multi-step AI workflows with queueing, branching, loops, and checkpoints
+- [Real-Time Data](https://docs.msty.ai/studio/add-ons/real-time-data): Bring the latest information into your conversations
+- [Attachments](https://docs.msty.ai/studio/add-ons/attachments): Enhance your chats with documents, images, websites, and YouTube link attachments
+- [Workspaces](https://docs.msty.ai/studio/workspaces): Organize your work with workspaces
+- [Organize](https://docs.msty.ai/studio/workspaces/organize): Organize your projects and conversations
+- [Environments](https://docs.msty.ai/studio/workspaces/environment): Create and manage environments for your needs
+- [Workspace Lock and Secrets Encryption](https://docs.msty.ai/studio/workspaces/lock-and-encryption): Protect your workspaces and sensitive keys
+- [Settings](https://docs.msty.ai/studio/settings/settings): Configure appearance, services, and app behavior in Msty Studio
+- [Modes](https://docs.msty.ai/studio/settings/modes): Enable the mode that fits the task (or your mood)
+- [Keyboard Shortcuts](https://docs.msty.ai/studio/settings/keyboard-shortcuts): Customize keyboard controls in Msty Studio
+- [Command Palette](https://docs.msty.ai/studio/settings/command-palette): Quickly run actions and navigate Msty Studio
+- [Default Prompts](https://docs.msty.ai/studio/settings/default-prompts): Edit the default prompts for various features in Msty Studio
+- [Remote Connections](https://docs.msty.ai/studio/settings/remote-connections): Connect remotely to Msty Studio Desktop
+- [Data Backups and Restoration](https://docs.msty.ai/studio/settings/data-backups): Backup and restore your data
+- [Lost & Found](https://docs.msty.ai/studio/settings/lost-and-found): Discover and recover lost or orphaned workspaces using the Lost & Found.
+- [Overview](https://docs.msty.ai/studio/enterprise/overview): Enterprise Plan Overview
+- [Manage Users](https://docs.msty.ai/studio/enterprise/users): Invite and manage users
+- [Manage Teams](https://docs.msty.ai/studio/enterprise/teams): Manage teams and what they can access in Msty Studio
+- [Storage](https://docs.msty.ai/studio/enterprise/storage): Manage Storage Profiles for team sharing in Msty Studio
+- [Sharing](https://docs.msty.ai/studio/enterprise/sharing): Share and collaborate with your teams in Msty Studio
+- [Audit Log](https://docs.msty.ai/studio/enterprise/audit-log): View important user and team management-level actions in your Enterprise plan
+- [Manage License](https://docs.msty.ai/studio/how-tos/manage-license): How to your manage licenses and devices
+- [Find Online Model API Keys](https://docs.msty.ai/studio/how-tos/find-api-keys): How to find API keys for various Online AI services
+- [Azure OpenAI](https://docs.msty.ai/studio/how-tos/azure-openai): How to set up Azure OpenAI with Msty Studio
+- [Amazon Bedrock](https://docs.msty.ai/studio/how-tos/aws-bedrock): How to set up Amazon Bedrock with Msty Studio
+- [Sidecar](https://docs.msty.ai/studio/how-tos/sidecar): Msty Studio's companion desktop application
+- [Setup Tailscale for Sidecar](https://docs.msty.ai/studio/how-tos/setup-tailscale-for-sidecar): How to setup a Tailscale network for Sidecar
+- [Live Context Examples](https://docs.msty.ai/studio/how-tos/live-context-examples): List of endpoints that can be used with Live Contexts
+- [Language Support](https://docs.msty.ai/studio/how-tos/language): Contribute to supporting more languages in Msty Studio
+
+## Additional Resources
+
+- [All docs text](https://docs.msty.ai/studio/studio-docs.txt): Combined plain-text export of the documentation.
+- [Msty Studio product page](https://msty.ai): Download and product information.
