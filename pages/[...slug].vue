@@ -69,8 +69,15 @@
 const { page } = useContent();
 const config = useConfig();
 const appConfig = useAppConfig();
+const runtimeConfig = useRuntimeConfig();
 
-const siteBaseUrl = "https://docs.msty.studio";
+const hasPageBody = Boolean(page.value?.body);
+
+if (import.meta.server && !hasPageBody) {
+  setResponseStatus(404);
+}
+
+const siteBaseUrl = (runtimeConfig.public.siteUrl || "").replace(/\/$/, "");
 const fallbackSocialImage = `${siteBaseUrl}/images/welcome-to-msty.png`;
 
 function toAbsoluteImageUrl(src: string): string {
@@ -89,6 +96,19 @@ function toAbsoluteImageUrl(src: string): string {
 const configuredImage =
   typeof page.value?.previewImage === "string" ? page.value.previewImage.trim() : "";
 const socialImage = configuredImage ? toAbsoluteImageUrl(configuredImage) : fallbackSocialImage;
+const canonicalPath = typeof page.value?._path === "string" ? page.value._path : "";
+const canonicalUrl = canonicalPath ? `${siteBaseUrl}${canonicalPath}` : siteBaseUrl;
+
+useHead({
+  link: hasPageBody
+    ? [
+        {
+          rel: "canonical",
+          href: canonicalUrl,
+        },
+      ]
+    : [],
+});
 
 useSeoMeta({
   title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
@@ -96,6 +116,7 @@ useSeoMeta({
   description: page.value?.description,
   ogDescription: page.value?.description,
   ogImage: socialImage,
+  robots: hasPageBody ? "index, follow" : "noindex, nofollow",
   twitterCard: "summary_large_image",
   twitterImage: socialImage,
 });

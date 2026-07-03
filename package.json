@@ -6,9 +6,10 @@
     "#internal/nuxt/paths": "./internal/nuxt/paths.mjs"
   },
   "scripts": {
-    "build": "nuxt build",
+    "build": "node scripts/build-studio-docs.cjs && nuxt build",
+    "docs:artifacts": "node scripts/build-studio-docs.cjs",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "node scripts/build-studio-docs.cjs && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

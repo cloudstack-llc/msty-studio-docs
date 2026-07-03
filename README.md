@@ -32,12 +32,15 @@ Locally preview production build:
 bun run preview
 ```
 
-## Export All Markdown Content
+## Generate Docs Artifacts
 
-To generate a single text file containing all markdown content (with YAML frontmatter removed), run:
+To generate docs artifacts, run:
 
 ```bash
-node scripts/build-studio-docs.cjs
+bun run docs:artifacts
 ```
 
-This will create (or update) `public/studio-docs.txt` with the combined contents of all markdown files in the `content` directory.
+This creates or updates:
+
+- `public/studio-docs.txt` with all markdown content and YAML frontmatter removed.
+- `public/sitemap.xml` with canonical `https://docs.msty.ai/studio` docs routes.
