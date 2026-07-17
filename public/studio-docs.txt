@@ -703,6 +703,9 @@ Default prompts are located in the Settings > Default Prompts section.
 
 The Default Prompts section contains prompts for the following features:
 - **Attachment Prompt**: default prompt used when you send attachments without any additional user text
+- **Attachments Image Analysis**: generates short descriptions, long descriptions, and tags for image and video items in Context Studio
+- **Attachments Document Analysis**: generates short descriptions, long descriptions, and tags for document, webpage, and YouTube items in Context Studio
+- **Attachments Pull Mode**: instructs tool-capable models how to search and read Context Studio content in Dynamic Mode
 - **Context Shield Summary**: used to summarize long context into shorter summaries so that you can save on context length and tokens
 - **Crew Mode**: background instructions applied to crew persona responses, including the crew roster and `@mention` handoffs
 - **Icon Finder**: selects the most appropriate icon based on a user description
@@ -714,6 +717,8 @@ The Default Prompts section contains prompts for the following features:
 - **Title Generation**: used to generate titles for chats based on the conversation content
 - **User Persona Memory Generation**: creates a structured memory draft from a selected conversation message for user persona memories
 - **YouTube Attachments**: provides context to the model about how to use YouTube video transcripts when included as attachments in chats
+
+Context Studio prompts are grouped together in the **Context Studio** category. See [Context Studio](/studios/context-studio) for metadata and Dynamic Mode workflows.
 
 ## Editing Default Prompts
 
@@ -2751,7 +2756,7 @@ Setting a **Sticky Prompt** can be accessed from the ellipsis icon menu. When a 
 
 ### Attachments
 
-Attach files, images, websites, and YouTube links to enhance your conversation. Check out [Chat Attachments](/add-ons/attachments) for more details.
+Attach files, images, websites, and YouTube links to enhance your conversation. Reusable attachments are managed in [Context Studio](/studios/context-studio). Check out [Attachments](/add-ons/attachments) for chat-level attachment details.
 
 ### Real-time Data
 
@@ -3866,7 +3871,7 @@ Media Studio is a dedicated session type for creating images and videos with per
 From **New**, choose **New Media Session**.
 
 ### Start from an existing attachment
-Use **Open in Media Studio** from message attachments, or **Start New Media Session** from Attachment Manager.
+Use **Open in Media Studio** from message attachments, or **Start New Media Session** from [Context Studio](/studios/context-studio).
 
 ### Configure and generate
 Enter a prompt, choose an image/video model, set outputs per run, then generate.
@@ -3878,6 +3883,7 @@ Enter a prompt, choose an image/video model, set outputs per run, then generate.
 - Move items between **Context**, **Spotlight**, and **Compare**.
 - Enable **Keep latest only** to retain just the newest generated media in context after each run.
 - Images, videos, and documents can be attached as context references.
+- Reusable Context Studio items can be added as media context without uploading them again.
 
 ### Context Preview Labels
 
@@ -3934,6 +3940,117 @@ Available context-image and Start/End frame capabilities vary by model.
 Media Studio sessions use the normal conversation export workflow. Export as `.mstyconv` when the session contains generated images, videos, or other large attachments.
 
 Exports preserve the saved Media Studio session state and referenced media when attachment files are included. See [Conversation Export and Import](/conversations/export-import).
+
+::Resources
+
+
+---
+
+Context Studio is the new name for Attachment Manager. It is the central place to store, organize, preview, and reuse context across Msty Studio.
+
+Use Context Studio when you want documents, images, videos, webpages, or YouTube transcripts to be available beyond a single chat message.
+
+::alert{type="info" icon="tabler:info-circle"}
+For the best results, configure **Context Studio Settings** before building a large context library. In particular, assign metadata models for images and documents so Msty can generate useful summaries, descriptions, and tags for Dynamic Mode and filtering.
+::
+
+## Open Context Studio
+
+::steps
+### Open from the sidebar
+Select the paperclip icon in the main sidebar to open **Context Studio**.
+
+### Open from a conversation
+Select the attachment icon in a chat, then choose **Browse Existing Attachments** to pick reusable context from Context Studio.
+
+### Manage selected context
+After Context Studio opens from a conversation, select the items you want to attach and apply the selection back to the chat.
+::
+
+## Build Your Context Library
+
+Context Studio supports:
+
+- **Documents**: upload files and keep reusable text context available across conversations
+- **Images**: store visual references for chats and Media Studio workflows
+- **Videos**: add video files as reusable visual context
+- **Webpages**: save fetched webpage content as reusable context
+- **YouTube links**: import video details and transcript context
+
+You can drag files into Context Studio, upload with **Add Attachment**, add websites with **Add Website**, or import YouTube links with **Add YouTube**.
+
+## Organize Context
+
+Use folders to keep large context libraries manageable.
+
+- Create root folders from the Context Studio overflow menu
+- Drag files and folders to reorganize them
+- Use quick filtering to find folders or files by name
+- Sort folders and files by name, creation date, or update date
+- Use favorites to keep important items easy to find
+
+Folder metadata can summarize what a folder contains. This improves filtering and helps Dynamic Mode decide which context is relevant.
+
+## Preview and Inspect Items
+
+Select an item to open its inspector.
+
+The inspector can show:
+
+- Image, video, webpage, and YouTube previews
+- Converted text previews for supported documents, webpages, and YouTube transcripts
+- File type, size, added date, and updated date
+- Short description, long description, and tags
+- Associations showing where the item is used
+
+Metadata fields auto-save when edited. You can also process selected items to generate metadata with the configured metadata models.
+
+## Reuse Context in Conversations
+
+There are two ways to use Context Studio content in a chat:
+
+### Select Specific Attachments
+
+Use the attachment icon in the chat input, choose a content type, and select the items you want included.
+
+Selected attachments are available to the model for that conversation and can be selected or unselected as needed.
+
+### Use Dynamic Mode :aurum-tag
+
+Dynamic Mode lets a tool-capable model search your Context Studio library on demand instead of pushing every selected item into the prompt upfront.
+
+Use Dynamic Mode when:
+
+- The library or folder is too large to include directly
+- You want the model to find only the most relevant files
+- You have good metadata, summaries, and tags on your context
+- You want to scope retrieval to specific folders or the full library
+
+Dynamic Mode is available with Aurum or Enterprise access. It requires a model that supports tools. If the selected model does not support tools, choose specific attachments instead.
+
+## Use with Media Studio
+
+Context Studio and Media Studio work together.
+
+- Start a new Media Studio session from supported image or video attachments
+- Reuse stored images, videos, and documents as Media Studio context
+- Keep generated media available for later conversations when exported with the session
+
+See [Media Studio](/studios/media-studio) for image and video generation workflows.
+
+## Configure Context Studio
+
+Open **Context Studio Settings** from the Context Studio settings action.
+
+Settings include:
+
+- **Metadata on New Uploads**: automatically generate metadata for new documents and images when metadata models are assigned
+- **Metadata Processing Models**: assign vision and document metadata models through Model Squad
+- **Image Reduction Defaults**: control default image reduction mode and quality
+- **Web Fetch**: choose Studio's default website fetch or Jina, set website content format, and tune extraction parameters
+- **Default Prompts**: edit Context Studio prompts in [Settings > Default Prompts](/settings/default-prompts)
+
+For website attachments, Studio's default fetch requires a desktop sidecar connection. If sidecar is unavailable, enable Jina in Context Studio settings and add a Jina API key.
 
 ::Resources
 
@@ -5129,27 +5246,49 @@ Setting a Real-Time Data provider to Pull mode allows the model to decide when t
 
 ---
 
-In Msty Studio, you can attach files, images, webpages, and YouTube links to enhance your conversations and provide additional context for your chats.
+In Msty Studio, attachments add files, images, webpages, and YouTube links to a conversation as extra context.
+
+For reusable context, use [Context Studio](/studios/context-studio). Context Studio is the new name for Attachment Manager and stores attachments so they can be organized, previewed, reused, and searched with Dynamic Mode.
+
+## Add Attachments to a Chat
+
+Use the attachment icon in the chat input, drag items into the input area, or paste supported URLs.
+
+You can select or unselect attached items during the conversation to control which context is included.
 
 ## Documents
 
-Drag and drop files into the input box or use the attachments icon. Documents can be selected or unselected during the conversation.
+Drag and drop files into the input box or use the attachment icon. Documents are saved to Context Studio and can be reused later.
 
 ## Images
 
-Drag and drop images into the input box or use the attachments icon. Once added, images can be selected or unselected during the chat, allowing you to control which attachments are included in the conversation.
+Drag and drop images into the input box, use the attachment icon, or capture screenshots where supported. Images are saved to Context Studio and can also be used in [Media Studio](/studios/media-studio).
 
 ## Webpages
 
 You can attach webpage URLs to chats by dropping them directly into the input box or by pasting URLs.
 
-For this feature, you will need to use Jina by entering an API key. You can sign up for an account at [Jina.ai](https://jina.ai/) and obtain an API key.
+Website attachments can use Studio's default website fetch when a desktop sidecar is connected. If sidecar is unavailable, enable Jina in [Context Studio](/studios/context-studio) settings and add a Jina API key.
 
 ## YouTube Links
 
 You can attach YouTube links to chats by dropping them directly into the input box or by pasting URLs.
 
-As with images and documents, YouTube links can be selected or unselected as needed during the chat.
+As with images and documents, YouTube links can be selected or unselected as needed during the chat. Msty imports video details and transcript context when available.
+
+## Browse Existing Attachments
+
+Use **Browse Existing Attachments** from the attachment menu to pick items already stored in Context Studio.
+
+This is useful when you want to reuse files, images, webpages, or YouTube links without uploading or fetching them again.
+
+## Dynamic Mode :aurum-tag
+
+Dynamic Mode lets a tool-capable model search selected Context Studio folders or your full context library on demand.
+
+Use Dynamic Mode when you want the model to find relevant context itself instead of sending specific attachments with every prompt.
+
+See [Context Studio](/studios/context-studio) for setup and requirements.
 
 ::Resources
 
