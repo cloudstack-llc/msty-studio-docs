@@ -987,7 +987,11 @@ User access control is largely determined by teams they are assigned to. See the
 
 Owners and Admins can invite users to Msty Studio by clicking the **Invite User** button and entering user's name and email address. 
 
-Invited users will receive and email with a single-use link to sign into Msty Studio. 
+Invited users will receive an email with a single-use link to sign into Msty Studio. 
+
+::alert{type="info" icon="tabler:info-circle"}
+If invite emails or access codes do not arrive, ask users to check their junk folder and have IT whitelist Msty Studio email delivery. This is especially important for security-conscious organizations and education institutions with strict email security protocols. See [Whitelist Msty Studio Emails](/how-tos/whitelist-msty-emails).
+::
 
 Users can access Msty Studio Desktop and/or Msty Studio Web according to the team entitlements they are assigned to.
 
@@ -1020,7 +1024,7 @@ The link is a one-time use link that will log user into the web version.
 
 If the link has expired, they can select **Enterprise Login** on the [Msty Studio Web](https://msty.studio){target="_blank"} landing page and then enter their email address to send a code. 
 
-Once they received the code in their email, on Msty Studio Web, select **Enter Code** and enter the code to sign in.
+Once they receive the code in their email, on Msty Studio Web, select **Enter Code** and enter the code to sign in.
 
 ![login code](/images/enterprise/login-code.png)
 
@@ -1029,9 +1033,10 @@ If the user needs to install Msty Studio Desktop, please refer them to [Msty's w
 
 After installing Msty Studio Desktop, they can log into their account from **Settings > License and Access**, select the **Enterprise Login** and then they can enter their email address to send a code.
 
-Once they received the code in their email, on Msty Studio Desktop, they can enter the code to log in.
+Once they receive the code in their email, on Msty Studio Desktop, they can enter the code to log in.
 
 ::Resources
+
 
 ---
 
@@ -1842,6 +1847,62 @@ The `llms.txt` file lists the main docs pages and links to the full docs text fi
 - Refresh or re-index the source periodically if the AI tool caches external URLs.
 - Do not paste license keys, API keys, or private workspace data into third-party AI tools.
 - If a tool cannot fetch external URLs, download the text file and upload it manually as a document source.
+
+::Resources
+
+
+---
+
+Msty Studio sends important account and access emails from:
+
+```txt
+Msty Studio <hello@notifications.msty.studio>
+```
+
+These emails can include license key messages, login links, and Enterprise access codes. If you do not receive one of these emails, use the steps below before requesting a new code or contacting support.
+
+## Check Your Inbox
+
+::steps
+
+1. Confirm the email address entered in Msty Studio is correct.
+2. Check your **Junk**, **Spam**, **Promotions**, **Quarantine**, or **Clutter** folders.
+3. Search your mailbox for `hello@notifications.msty.studio` or `Msty Studio`.
+4. If you find the email outside your inbox, mark it as **Not Spam** or move it to your inbox.
+
+::
+
+## Ask IT to Whitelist Msty Studio
+
+For Enterprise users, company email filters may block, quarantine, or delay access-code emails before they reach the user's mailbox.
+
+Security-conscious organizations may need to whitelist Msty Studio on their side before these emails can be delivered. This is especially common for education institutions and other organizations with strict email security protocols.
+
+Ask your IT or email administration team to check whether messages from Msty Studio are being blocked, quarantined, trapped, or delayed by:
+
+- Email security gateways
+- Spam filters
+- Mail-flow rules
+- Quarantine policies
+- Phishing or impersonation protection tools
+
+Your IT team should whitelist or allowlist this sender:
+
+```txt
+hello@notifications.msty.studio
+```
+
+If possible, allow messages from the `notifications.msty.studio` sending domain as well.
+
+## If Emails Still Do Not Arrive
+
+If the email is not in junk or quarantine and IT confirms the sender is not blocked, contact Msty:
+
+```txt
+hello@msty.ai
+```
+
+Include the email address that should receive the message and whether you are waiting for a license key, login link, or Enterprise access code.
 
 ::Resources
 
