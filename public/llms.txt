@@ -76,6 +76,7 @@ Msty Studio is Msty's privacy-first AI platform for running local and online AI 
 - [Setup Tailscale for Sidecar](https://docs.msty.ai/studio/how-tos/setup-tailscale-for-sidecar): How to setup a Tailscale network for Sidecar
 - [Live Context Examples](https://docs.msty.ai/studio/how-tos/live-context-examples): List of endpoints that can be used with Live Contexts
 - [Language Support](https://docs.msty.ai/studio/how-tos/language): Contribute to supporting more languages in Msty Studio
+- [Use Studio Docs with AI Tools](https://docs.msty.ai/studio/how-tos/ai-tools-docs): Point AI tools to the latest published Msty Studio documentation
 
 ## Additional Resources
 
