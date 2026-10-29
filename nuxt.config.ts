@@ -188,7 +188,7 @@ async function ensureNuxtInternalPathsShim(rootDir: string) {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-09-19",
 
@@ -207,11 +207,12 @@ export default defineNuxtConfig({
       {
         path: "./node_modules/shadcn-docs-nuxt/components",
         ignore: ["ui/**", "**/*.ts"],
+        priority: -1,
       },
       {
         path: "~/components",
+        priority: 1,
       },
-      "~/components/ui",
       {
         path: "~/components/content",
         prefix: "",
@@ -221,8 +222,9 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/": {
-      redirect: "/getting-started",
+      redirect: "/v3/getting-started",
     },
+    "/v3": { redirect: "/v3/getting-started" },
     ...createLegacyFeatureRedirects(process.cwd()),
     ...reportedLegacyRedirects,
   },

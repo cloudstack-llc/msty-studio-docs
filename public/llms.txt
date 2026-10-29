@@ -1,10 +1,57 @@
 # Msty Studio Docs
 
-> Get started with guides and resources to maximize your conversational AI experience with Msty Studio.
+> Guides for Msty Studio 3.x Desktop, with the preserved 2.x documentation available separately.
 
-Msty Studio is Msty's privacy-first AI platform for running local and online AI models across desktop and web workflows.
+The default documentation covers Msty Studio 3.x Desktop. Msty Studio Web remains on 2.x; use the 2.x guides for that version. Do not apply 3.x interface instructions to 2.x.
 
-## Docs
+## 3.x Desktop docs (default)
+
+- [Msty Studio 3.x](https://docs.msty.ai/studio/v3/getting-started): Start with a model, then build your workflow.
+- [Quick Start](https://docs.msty.ai/studio/v3/getting-started/quick-start): Go from a clean installation to your first conversation.
+- [Install and Upgrade](https://docs.msty.ai/studio/v3/getting-started/install-and-upgrade): Install the desktop app or move from 2.x to 3.x.
+- [Find Your Way](https://docs.msty.ai/studio/v3/getting-started/find-your-way): The sidebar, new conversation menu, and search.
+- [Choose and Connect Models](https://docs.msty.ai/studio/v3/managing-models): Add an online provider, install a local model, or connect an existing model server.
+- [Online Providers](https://docs.msty.ai/studio/v3/managing-models/online-providers): Connect an API provider and choose the models available in Msty Studio.
+- [Local Models](https://docs.msty.ai/studio/v3/managing-models/local-models): Discover, install, and manage models running on your computer.
+- [Import Models](https://docs.msty.ai/studio/v3/managing-models/import-models): Use a local GGUF file or a compatible safetensors model directory.
+- [External Model Servers](https://docs.msty.ai/studio/v3/managing-models/external-servers): Connect models served by Ollama, LM Studio, or another compatible endpoint.
+- [Model Parameters](https://docs.msty.ai/studio/v3/managing-models/model-parameters): Adjust response settings, thinking effort, and reusable parameter presets.
+- [Model Matchmaker](https://docs.msty.ai/studio/v3/managing-models/model-matchmaker): Rank models against the strengths and tradeoffs that matter for your task.
+- [Start a conversation](https://docs.msty.ai/studio/v3/conversations): Choose a model, send a prompt, and organize your chats.
+- [Compare models with split chats](https://docs.msty.ai/studio/v3/conversations/split-chat): Send one prompt to several models or explore separate threads side by side.
+- [Edit responses and explore branches](https://docs.msty.ai/studio/v3/conversations/responses-and-branches): Revise messages, generate alternatives, and return to earlier paths.
+- [Reuse prompts and instructions](https://docs.msty.ai/studio/v3/conversations/prompts): Set a system prompt and insert saved Quick Prompts while composing.
+- [Chat with personas and crews](https://docs.msty.ai/studio/v3/conversations/personas-and-crews): Use a configured assistant or bring several personas into one conversation.
+- [Observe chats with Shadow Personas](https://docs.msty.ai/studio/v3/conversations/shadow-personas): Generate a separate summary or analysis from selected conversation splits.
+- [Export and import conversations](https://docs.msty.ai/studio/v3/conversations/export-import): Save a whole conversation or export one split and its branches.
+- [Set up Agent Mode](https://docs.msty.ai/studio/v3/agent-mode): Connect a coding agent or Local AI and start a task in a folder.
+- [Manage agent sessions and permissions](https://docs.msty.ai/studio/v3/agent-mode/sessions-and-permissions): Review tool requests, inspect results, and resume earlier work.
+- [Studios](https://docs.msty.ai/studio/v3/studios): Build reusable assistants, prompts, skills, context, and media.
+- [Persona Studio](https://docs.msty.ai/studio/v3/studios/persona-studio): Create reusable assistant personas and organize how they work.
+- [Prompt Studio](https://docs.msty.ai/studio/v3/studios/prompt-studio): Save prompts, fill variables, and test revisions before using them.
+- [Skills Studio](https://docs.msty.ai/studio/v3/studios/skills-studio): Create and install reusable task instructions for agents.
+- [Context Studio](https://docs.msty.ai/studio/v3/studios/context-studio): Keep reusable files, images, websites, and transcripts ready for your work.
+- [Media Studio](https://docs.msty.ai/studio/v3/studios/media-studio): Generate images or videos and refine them with reference context.
+- [Create a Knowledge Stack](https://docs.msty.ai/studio/v3/knowledge-stacks/overview): Prepare your own sources for use in conversations.
+- [Add and update sources](https://docs.msty.ai/studio/v3/knowledge-stacks/sources): Choose what a Knowledge Stack indexes and how it handles changes.
+- [Query Settings](https://docs.msty.ai/studio/v3/knowledge-stacks/query-settings): Control how a Knowledge Stack supplies context to the model.
+- [Manage, share, and migrate stacks](https://docs.msty.ai/studio/v3/knowledge-stacks/manage-and-migrate): Export stacks, rebuild indexes, and work with Classic stacks.
+- [Connect MCP tools](https://docs.msty.ai/studio/v3/toolbox/tools): Add an MCP server and test the tools it provides.
+- [Build a toolset](https://docs.msty.ai/studio/v3/toolbox/toolsets): Group tools and select the capabilities a conversation can use.
+- [Live Contexts](https://docs.msty.ai/studio/v3/toolbox/live-contexts): Bring data from an HTTP endpoint into a conversation.
+- [Turnstiles](https://docs.msty.ai/studio/v3/add-ons/turnstiles): Run a reusable sequence of prompts and conversation actions.
+- [Real-Time Data](https://docs.msty.ai/studio/v3/add-ons/real-time-data): Search for current information while chatting.
+- [Add attachments](https://docs.msty.ai/studio/v3/add-ons/attachments): Give a conversation documents, images, pages, or video transcripts.
+- [Workspaces and projects](https://docs.msty.ai/studio/v3/workspaces): Separate your work and organize related conversations.
+- [Environments](https://docs.msty.ai/studio/v3/workspaces/environment): Save named sets of variables for your workflows.
+- [Settings](https://docs.msty.ai/studio/v3/settings/settings): Find app preferences, providers, models, and data controls.
+- [Keyboard Shortcuts and Command Palette](https://docs.msty.ai/studio/v3/settings/keyboard-shortcuts): Find actions quickly and customize their key bindings.
+- [Back up and restore data](https://docs.msty.ai/studio/v3/settings/data-backups): Export your data, recover a backup, and manage desktop storage.
+- [Remote Tools](https://docs.msty.ai/studio/v3/settings/remote-connections): Make desktop tools and local models available to a remote Msty connection.
+
+- [3.x documentation text](https://docs.msty.ai/studio/studio-docs.txt): Combined export of only the 3.x guides.
+
+## 2.x docs
 
 - [Welcome to Msty Studio](https://docs.msty.ai/studio/getting-started): The complete guide to Msty Studio
 - [Quick Start](https://docs.msty.ai/studio/getting-started/quick-start): Get started with Msty Studio in a few easy steps
@@ -34,6 +81,7 @@ Msty Studio is Msty's privacy-first AI platform for running local and online AI 
 - [Prompt Studio](https://docs.msty.ai/studio/studios/prompts-studio): Prompt Studio helps you create, organize, and manage your prompts efficiently
 - [Skills Studio](https://docs.msty.ai/studio/studios/skills-studio): Build, organize, and install agent skills
 - [Media Studio](https://docs.msty.ai/studio/studios/media-studio): Create and refine images and videos with context-aware generation workflows
+- [Context Studio](https://docs.msty.ai/studio/studios/context-studio): Build a reusable library of files, webpages, YouTube links, and media for conversations and creative work
 - [Overview](https://docs.msty.ai/studio/knowledge-stacks/overview): Get started with Knowledge Stacks in Msty
 - [Compose Options](https://docs.msty.ai/studio/knowledge-stacks/compose-options): Learn how to compose Knowledge Stacks
 - [Query Settings](https://docs.msty.ai/studio/knowledge-stacks/query-settings): Learn how to optimize query settings for Knowledge Stacks
@@ -79,7 +127,8 @@ Msty Studio is Msty's privacy-first AI platform for running local and online AI 
 - [Use Studio Docs with AI Tools](https://docs.msty.ai/studio/how-tos/ai-tools-docs): Point AI tools to the latest published Msty Studio documentation
 - [Whitelist Msty Studio Emails](https://docs.msty.ai/studio/how-tos/whitelist-msty-emails): Make sure license keys, login links, and Enterprise access codes are delivered
 
+- [2.x documentation text](https://docs.msty.ai/studio/studio-docs-v2.txt): Separate export of the preserved 2.x guides.
+
 ## Additional Resources
 
-- [All docs text](https://docs.msty.ai/studio/studio-docs.txt): Combined plain-text export of the documentation.
 - [Msty Studio product page](https://msty.ai): Download and product information.
