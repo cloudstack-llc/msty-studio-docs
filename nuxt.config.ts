@@ -138,6 +138,15 @@ const reportedLegacyRedirects = createRedirects({
   "/msty-claw/setup": "https://docs.msty.ai/claw/setup",
 });
 
+const v3GuideRedirects = createRedirects({
+  "/v3/studios": "/v3/getting-started/find-your-way",
+  "/v3/studios/persona-studio": "/v3/personas",
+  "/v3/studios/prompt-studio": "/v3/prompts",
+  "/v3/studios/skills-studio": "/v3/skills",
+  "/v3/studios/context-studio": "/v3/context-studio",
+  "/v3/studios/media-studio": "/v3/media-studio",
+});
+
 async function ensureNuxtInternalPathsShim(rootDir: string) {
   const runtimePackageDirs = [
     // Dev runtime packages
@@ -227,6 +236,7 @@ export default defineNuxtConfig({
     "/v3": { redirect: "/v3/getting-started" },
     ...createLegacyFeatureRedirects(process.cwd()),
     ...reportedLegacyRedirects,
+    ...v3GuideRedirects,
   },
 
   nitro: {

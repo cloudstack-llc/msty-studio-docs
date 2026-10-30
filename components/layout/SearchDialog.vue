@@ -55,9 +55,12 @@ watch(() => route.path, () => { open.value = false; });
         <UiCommandInput :loading="loading" :placeholder="`Search ${version} documentation…`" />
         <UiCommandList @escape-key-down="open = false">
           <template v-if="!input.trim()">
-            <UiCommandGroup v-for="group in versionNavigation" :key="group._path" :heading="group.title">
-              <UiCommandItem v-for="item in group.children" :key="item._path" :value="item._path" @select="openPage(item._path)">{{ item.title }}</UiCommandItem>
-            </UiCommandGroup>
+            <template v-for="group in versionNavigation" :key="group._path">
+              <UiCommandGroup v-if="group.children?.length" :heading="group.title">
+                <UiCommandItem v-for="item in group.children" :key="item._path" :value="item._path" @select="openPage(item._path)">{{ item.title }}</UiCommandItem>
+              </UiCommandGroup>
+              <UiCommandItem v-else :value="group._path" @select="openPage(group._path)">{{ group.title }}</UiCommandItem>
+            </template>
           </template>
           <div v-else-if="results.length" class="p-2">
             <UiCommandItem v-for="item in results" :key="item.id" :value="item.id" class="block p-3" @select="openPage(item.id)">

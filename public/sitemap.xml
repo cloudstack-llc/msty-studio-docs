@@ -61,22 +61,19 @@
     <loc>https://docs.msty.ai/studio/v3/agent-mode/sessions-and-permissions</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/v3/studios</loc>
+    <loc>https://docs.msty.ai/studio/v3/personas</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/v3/studios/persona-studio</loc>
+    <loc>https://docs.msty.ai/studio/v3/prompts</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/v3/studios/prompt-studio</loc>
+    <loc>https://docs.msty.ai/studio/v3/skills</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/v3/studios/skills-studio</loc>
+    <loc>https://docs.msty.ai/studio/v3/context-studio</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/v3/studios/context-studio</loc>
-  </url>
-  <url>
-    <loc>https://docs.msty.ai/studio/v3/studios/media-studio</loc>
+    <loc>https://docs.msty.ai/studio/v3/media-studio</loc>
   </url>
   <url>
     <loc>https://docs.msty.ai/studio/v3/knowledge-stacks/overview</loc>

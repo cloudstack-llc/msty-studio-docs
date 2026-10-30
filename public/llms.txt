@@ -26,12 +26,11 @@ The default documentation covers Msty Studio 3.x Desktop. Msty Studio Web remain
 - [Export and import conversations](https://docs.msty.ai/studio/v3/conversations/export-import): Save a whole conversation or export one split and its branches.
 - [Set up Agent Mode](https://docs.msty.ai/studio/v3/agent-mode): Connect a coding agent or Local AI and start a task in a folder.
 - [Manage agent sessions and permissions](https://docs.msty.ai/studio/v3/agent-mode/sessions-and-permissions): Review tool requests, inspect results, and resume earlier work.
-- [Studios](https://docs.msty.ai/studio/v3/studios): Build reusable assistants, prompts, skills, context, and media.
-- [Persona Studio](https://docs.msty.ai/studio/v3/studios/persona-studio): Create reusable assistant personas and organize how they work.
-- [Prompt Studio](https://docs.msty.ai/studio/v3/studios/prompt-studio): Save prompts, fill variables, and test revisions before using them.
-- [Skills Studio](https://docs.msty.ai/studio/v3/studios/skills-studio): Create and install reusable task instructions for agents.
-- [Context Studio](https://docs.msty.ai/studio/v3/studios/context-studio): Keep reusable files, images, websites, and transcripts ready for your work.
-- [Media Studio](https://docs.msty.ai/studio/v3/studios/media-studio): Generate images or videos and refine them with reference context.
+- [Personas](https://docs.msty.ai/studio/v3/personas): Create reusable assistant personas and organize how they work.
+- [Prompts](https://docs.msty.ai/studio/v3/prompts): Save prompts, fill variables, and test revisions before using them.
+- [Skills](https://docs.msty.ai/studio/v3/skills): Create and install reusable task instructions for agents.
+- [Context Studio](https://docs.msty.ai/studio/v3/context-studio): Keep reusable files, images, websites, and transcripts ready for your work.
+- [Media Studio](https://docs.msty.ai/studio/v3/media-studio): Generate images or videos and refine them with reference context.
 - [Create a Knowledge Stack](https://docs.msty.ai/studio/v3/knowledge-stacks/overview): Prepare your own sources for use in conversations.
 - [Add and update sources](https://docs.msty.ai/studio/v3/knowledge-stacks/sources): Choose what a Knowledge Stack indexes and how it handles changes.
 - [Query Settings](https://docs.msty.ai/studio/v3/knowledge-stacks/query-settings): Control how a Knowledge Stack supplies context to the model.
