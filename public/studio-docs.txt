@@ -20,6 +20,7 @@ These guides cover **Msty Studio Desktop 3.x**. The browser app at msty.studio r
 
 - [Conversations](/v3/conversations): write, compare responses, and explore branches.
 - [Agent Mode](/v3/agent-mode): work with an agent in a folder or a standalone session.
+- [Vibe CLI Proxy](/v3/managing-models/vibe-cli-proxy): connect supported coding assistant accounts and use their available models in conversations.
 - [Knowledge Stacks](/v3/knowledge-stacks/overview): ask questions using your own sources.
 - [Personas](/v3/personas) and [Prompts](/v3/prompts): reuse instructions across conversations.
 - [Context Studio](/v3/context-studio): organize files, images, and other reference material.
@@ -128,6 +129,7 @@ Msty Studio supports models running on your computer and models hosted by a prov
 | Setup | Start here |
 | --- | --- |
 | Use a provider API key | [Online Providers](/v3/managing-models/online-providers) |
+| Connect a supported coding assistant account | [Vibe CLI Proxy](/v3/managing-models/vibe-cli-proxy) |
 | Download and run a model on this computer | [Local Models](/v3/managing-models/local-models) |
 | Use model files you already have | [Import Models](/v3/managing-models/import-models) |
 | Connect an existing Ollama or OpenAI-compatible server | [External Model Servers](/v3/managing-models/external-servers) |
@@ -314,6 +316,28 @@ Model Matchmaker helps create a shortlist. It does not install a model or measur
 Save a strength preset if you regularly compare models for the same kind of work.
 
 Use [Online Providers](/v3/managing-models/online-providers) or [Local Models](/v3/managing-models/local-models) to make a chosen model available in conversations.
+
+---
+
+## Vibe CLI Proxy
+
+Source: https://docs.msty.ai/studio/v3/managing-models/vibe-cli-proxy
+
+Vibe CLI Proxy runs a local service that connects supported coding assistant accounts to Msty Studio. After you authorize an account, its available models can appear in the conversation model selector.
+
+## Connect an account
+
+1. Open **Settings > Vibe CLI Proxy** in Msty Studio Desktop.
+2. Install the proxy and review and accept the notice shown in the app.
+3. Under **Authentication**, open the menu for a supported provider and choose **Authorize**.
+4. Complete the provider's browser sign-in or device-code flow.
+5. With the proxy running, open a conversation and select an available model. Msty discovers and synchronizes the connected models automatically.
+
+Available providers and models depend on the proxy version and your account. Follow your provider's terms for the account and models you use.
+
+## Manage the proxy
+
+Return to **Settings > Vibe CLI Proxy** to start or stop the service, manage authentication, review logs, or change its port and network settings. The proxy runs locally, while requests to connected models go to their providers.
 
 ---
 

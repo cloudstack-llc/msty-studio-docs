@@ -17,6 +17,7 @@ The default documentation covers Msty Studio 3.x Desktop. Msty Studio Web remain
 - [External Model Servers](https://docs.msty.ai/studio/v3/managing-models/external-servers): Connect models served by Ollama, LM Studio, or another compatible endpoint.
 - [Model Parameters](https://docs.msty.ai/studio/v3/managing-models/model-parameters): Adjust response settings, thinking effort, and reusable parameter presets.
 - [Model Matchmaker](https://docs.msty.ai/studio/v3/managing-models/model-matchmaker): Rank models against the strengths and tradeoffs that matter for your task.
+- [Vibe CLI Proxy](https://docs.msty.ai/studio/v3/managing-models/vibe-cli-proxy): Connect supported coding assistant accounts and use their available models in Msty Studio.
 - [Start a conversation](https://docs.msty.ai/studio/v3/conversations): Choose a model, send a prompt, and organize your chats.
 - [Compare models with split chats](https://docs.msty.ai/studio/v3/conversations/split-chat): Send one prompt to several models or explore separate threads side by side.
 - [Edit responses and explore branches](https://docs.msty.ai/studio/v3/conversations/responses-and-branches): Revise messages, generate alternatives, and return to earlier paths.
