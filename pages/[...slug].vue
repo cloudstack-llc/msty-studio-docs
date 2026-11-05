@@ -29,6 +29,13 @@
       :class="[config.toc.enable && (page.toc ?? true) && 'lg:grid lg:grid-cols-[1fr_220px] lg:gap-14 lg:py-8']"
     >
       <div class="mx-auto w-full min-w-0">
+        <div class="mb-6 rounded-md border bg-muted/40 px-4 py-3 text-sm">
+          <template v-if="isV3">Msty Studio 3.x · Desktop guide</template>
+          <template v-else>
+            You’re reading the 2.x documentation.
+            <NuxtLink to="/v3/getting-started" class="ml-1 font-medium underline underline-offset-4">Read the 3.x guide</NuxtLink>
+          </template>
+        </div>
         <LayoutBreadcrumb v-if="page?.body && config.main.breadCrumb && (page.breadcrumb ?? true)" class="mb-4" />
         <LayoutTitle
           v-if="config.main.showTitle"
@@ -70,6 +77,7 @@ const { page } = useContent();
 const config = useConfig();
 const appConfig = useAppConfig();
 const runtimeConfig = useRuntimeConfig();
+const { isV3 } = useDocsVersion();
 
 const hasPageBody = Boolean(page.value?.body);
 

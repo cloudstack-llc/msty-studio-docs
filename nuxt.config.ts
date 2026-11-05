@@ -138,6 +138,15 @@ const reportedLegacyRedirects = createRedirects({
   "/msty-claw/setup": "https://docs.msty.ai/claw/setup",
 });
 
+const v3GuideRedirects = createRedirects({
+  "/v3/studios": "/v3/getting-started/find-your-way",
+  "/v3/studios/persona-studio": "/v3/personas",
+  "/v3/studios/prompt-studio": "/v3/prompts",
+  "/v3/studios/skills-studio": "/v3/skills",
+  "/v3/studios/context-studio": "/v3/context-studio",
+  "/v3/studios/media-studio": "/v3/media-studio",
+});
+
 async function ensureNuxtInternalPathsShim(rootDir: string) {
   const runtimePackageDirs = [
     // Dev runtime packages
@@ -188,7 +197,7 @@ async function ensureNuxtInternalPathsShim(rootDir: string) {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-09-19",
 
@@ -207,11 +216,12 @@ export default defineNuxtConfig({
       {
         path: "./node_modules/shadcn-docs-nuxt/components",
         ignore: ["ui/**", "**/*.ts"],
+        priority: -1,
       },
       {
         path: "~/components",
+        priority: 1,
       },
-      "~/components/ui",
       {
         path: "~/components/content",
         prefix: "",
@@ -221,10 +231,12 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/": {
-      redirect: "/getting-started",
+      redirect: "/v3/getting-started",
     },
+    "/v3": { redirect: "/v3/getting-started" },
     ...createLegacyFeatureRedirects(process.cwd()),
     ...reportedLegacyRedirects,
+    ...v3GuideRedirects,
   },
 
   nitro: {
