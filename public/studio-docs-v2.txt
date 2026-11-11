@@ -176,7 +176,9 @@ Are you a previous Msty App 1.x users? Here are some quick facts to know:
 5. A migration tool is available to help migrate some of your existing Msty App (v1.x) data to Studio Desktop.
 
 
-## Msty Studio Desktop Download Options
+<span id="msty-studio-desktop-download-options"></span>
+
+## Installation Instructions
 
 Please select the download option for your operating system.
 
@@ -491,7 +493,7 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
   ::
   ::
 
-  ## Installation Instructions
+  **Msty App 1.x installation instructions**
   After downloading the appropriate installer for your system, follow the instructions below:
 
   ::tabs{variant="card" sync="download-os"}
@@ -2739,7 +2741,7 @@ For website attachments, Studio's default fetch requires a desktop sidecar conne
 
 ---
 
-## Overview
+## Knowledge Stacks overview
 
 Source: https://docs.msty.ai/studio/knowledge-stacks/overview
 
@@ -4337,7 +4339,7 @@ See [Vibe CLI Proxy](/managing-models/vibe-cli-proxy) for provider details.
 
 - Remote connections: [Remote Connections](/settings/remote-connections)
 - Backups and restore: [Data Backups and Restoration](/settings/data-backups)
-- Data migration: [Quick Start data migration](/getting-started/quick-start#data-migration-for-msty-app-users)
+- Getting started: [Desktop and web setup](/getting-started/quick-start)
 
 ## Keyboard Shortcuts
 
@@ -4748,7 +4750,7 @@ The active workspace is then replaced with the recovered data successfully.
 
 ---
 
-## Overview
+## Enterprise overview
 
 Source: https://docs.msty.ai/studio/enterprise/overview
 
@@ -5420,7 +5422,7 @@ Safari web browser unfortunately has constraints which do not allow for direct a
 
 However, you can still connect Safari using the following methods:
 
-- [Using Remote Connections with tunneling](/settings/remote-connections#connecting-remotely-to-local-ai-including-from-mobile-devices) **RECOMMENDED**
+- [Using Remote Connections with tunneling](/settings/remote-connections#connect-directly-to-local-ai-models) **RECOMMENDED**
 - [Enabling Sidecar's Tunneling Feature](/how-tos/sidecar#connecting-remotely-to-local-ai-including-from-mobile-devices)
 - [Using Tailscale](/how-tos/setup-tailscale-for-sidecar)
 

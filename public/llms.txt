@@ -82,7 +82,7 @@ The default documentation covers Msty Studio 3.x Desktop. Msty Studio Web remain
 - [Skills Studio](https://docs.msty.ai/studio/studios/skills-studio): Build, organize, and install agent skills
 - [Media Studio](https://docs.msty.ai/studio/studios/media-studio): Create and refine images and videos with context-aware generation workflows
 - [Context Studio](https://docs.msty.ai/studio/studios/context-studio): Build a reusable library of files, webpages, YouTube links, and media for conversations and creative work
-- [Overview](https://docs.msty.ai/studio/knowledge-stacks/overview): Get started with Knowledge Stacks in Msty
+- [Knowledge Stacks overview](https://docs.msty.ai/studio/knowledge-stacks/overview): Get started with Knowledge Stacks in Msty
 - [Compose Options](https://docs.msty.ai/studio/knowledge-stacks/compose-options): Learn how to compose Knowledge Stacks
 - [Query Settings](https://docs.msty.ai/studio/knowledge-stacks/query-settings): Learn how to optimize query settings for Knowledge Stacks
 - [Chunks Visualizer](https://docs.msty.ai/studio/knowledge-stacks/chunks-visualizer): Visualize how your documents were converted into chunks
@@ -110,7 +110,7 @@ The default documentation covers Msty Studio 3.x Desktop. Msty Studio Web remain
 - [Remote Connections](https://docs.msty.ai/studio/settings/remote-connections): Connect remotely to Msty Studio Desktop
 - [Data Backups and Restoration](https://docs.msty.ai/studio/settings/data-backups): Backup and restore your data
 - [Lost & Found](https://docs.msty.ai/studio/settings/lost-and-found): Discover and recover lost or orphaned workspaces using the Lost & Found.
-- [Overview](https://docs.msty.ai/studio/enterprise/overview): Enterprise Plan Overview
+- [Enterprise overview](https://docs.msty.ai/studio/enterprise/overview): Enterprise Plan Overview
 - [Manage Users](https://docs.msty.ai/studio/enterprise/users): Invite and manage users
 - [Manage Teams](https://docs.msty.ai/studio/enterprise/teams): Manage teams and what they can access in Msty Studio
 - [Storage](https://docs.msty.ai/studio/enterprise/storage): Manage Storage Profiles for team sharing in Msty Studio

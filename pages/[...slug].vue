@@ -73,17 +73,14 @@
 </template>
 
 <script setup lang="ts">
-const { page } = useContent();
+const route = useRoute();
+const { pages } = useContentState();
+// Capture the route during setup so deferred head getters do not call useRoute.
+const page = computed(() => pages.value[route.path.replace(/\/$/, "")]);
 const config = useConfig();
 const appConfig = useAppConfig();
 const runtimeConfig = useRuntimeConfig();
-const { isV3 } = useDocsVersion();
-
-const hasPageBody = Boolean(page.value?.body);
-
-if (import.meta.server && !hasPageBody) {
-  setResponseStatus(404);
-}
+const { isV3, version } = useDocsVersion();
 
 const siteBaseUrl = (runtimeConfig.public.siteUrl || "").replace(/\/$/, "");
 const fallbackSocialImage = `${siteBaseUrl}/images/welcome-to-msty.png`;
@@ -101,31 +98,36 @@ function toAbsoluteImageUrl(src: string): string {
   return `${siteBaseUrl}/${src}`;
 }
 
-const configuredImage =
-  typeof page.value?.previewImage === "string" ? page.value.previewImage.trim() : "";
-const socialImage = configuredImage ? toAbsoluteImageUrl(configuredImage) : fallbackSocialImage;
-const canonicalPath = typeof page.value?._path === "string" ? page.value._path : "";
-const canonicalUrl = canonicalPath ? `${siteBaseUrl}${canonicalPath}` : siteBaseUrl;
+const hasPageBody = computed(() => Boolean(page.value?.body));
+if (import.meta.server && !hasPageBody.value) {
+  setResponseStatus(404);
+}
 
-useHead({
-  link: hasPageBody
-    ? [
-        {
-          rel: "canonical",
-          href: canonicalUrl,
-        },
-      ]
-    : [],
+const socialImage = computed(() => {
+  const image = typeof page.value?.previewImage === "string" ? page.value.previewImage.trim() : "";
+  return image ? toAbsoluteImageUrl(image) : fallbackSocialImage;
 });
+const canonicalUrl = computed(() => {
+  const path = typeof page.value?._path === "string" ? page.value._path : "";
+  return hasPageBody.value && path ? `${siteBaseUrl}${path}` : undefined;
+});
+const searchTitle = computed(() => hasPageBody.value
+  ? `${page.value?.title} - Msty Studio ${version.value} Docs`
+  : "Page not found");
+
+useHead(() => ({
+  link: canonicalUrl.value ? [{ rel: "canonical", href: canonicalUrl.value }] : [],
+}));
 
 useSeoMeta({
-  title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
-  ogTitle: page.value?.title,
-  description: page.value?.description,
-  ogDescription: page.value?.description,
-  ogImage: socialImage,
-  robots: hasPageBody ? "index, follow" : "noindex, nofollow",
+  title: () => searchTitle.value,
+  ogTitle: () => searchTitle.value,
+  ogUrl: () => canonicalUrl.value,
+  description: () => page.value?.description,
+  ogDescription: () => page.value?.description,
+  ogImage: () => socialImage.value,
+  robots: () => hasPageBody.value ? "index, follow" : "noindex, nofollow",
   twitterCard: "summary_large_image",
-  twitterImage: socialImage,
+  twitterImage: () => socialImage.value,
 });
 </script>
