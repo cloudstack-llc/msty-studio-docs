@@ -87,6 +87,11 @@ function toContentPath(contentDir: string, filePath: string) {
   return `/${segments.filter(Boolean).join("/")}`;
 }
 
+const contentDir = resolve(process.cwd(), "content");
+const contentPagePaths = collectMarkdownFiles(contentDir)
+  .map((filePath) => toContentPath(contentDir, filePath))
+  .filter((path): path is string => Boolean(path));
+
 function createLegacyFeatureRedirects(rootDir: string) {
   const contentDir = resolve(rootDir, "content");
   const contentPaths = collectMarkdownFiles(contentDir)
@@ -207,6 +212,8 @@ export default defineNuxtConfig({
     },
   },
 
+  appConfig: { contentPagePaths },
+
   content: {
     watch: false,
   },
@@ -241,6 +248,20 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare_pages",
+    cloudflare: {
+      pages: {
+        // HTML and redirects are static; keep content and icon APIs available.
+        defaultRoutes: false,
+        routes: { include: ["/api/*"], exclude: [] },
+      },
+    },
+    // Publish guides as HTML so direct visits do not depend on runtime rendering.
+    prerender: {
+      routes: contentPagePaths,
+      crawlLinks: false,
+      autoSubfolderIndex: false,
+      failOnError: true,
+    },
   },
 
   hooks: {
