@@ -4,7 +4,7 @@ These guides preserve the Msty Studio 2.x documentation.
 
 ## Welcome to Msty Studio
 
-Source: https://docs.msty.ai/studio/getting-started
+Source: https://docs.msty.ai/studio/v2/getting-started
 
 ::callout{variant="primary"}
 **Looking for Msty App 1.x docs?**  
@@ -22,7 +22,7 @@ You can start for free with Msty Studio Desktop, then add online providers or ad
 
 ## Start Here
 
-You can get started for free with [Msty Studio Desktop](/getting-started/download).
+You can get started for free with [Msty Studio Desktop](/v2/getting-started/download).
 
 Aurum subscribers get full access to both Msty Studio Web and Msty Studio Desktop.
 
@@ -36,31 +36,31 @@ Data does not sync between devices. Data is stored locally on your device. Studi
 
 Msty Studio Desktop is free to get started on and is the recommended path for new users.
 
-1. Install from [Download](/getting-started/download)
-2. Follow the [Quick Start](/getting-started/quick-start) guide
-3. Use [Managing Models](/managing-models) to add providers and local models
+1. Install from [Download](/v2/getting-started/download)
+2. Follow the [Quick Start](/v2/getting-started/quick-start) guide
+3. Use [Managing Models](/v2/managing-models) to add providers and local models
 
 ### Msty Studio Web :aurum-tag
 
-Msty Studio Web supports most core features in the browser. For local models, Toolbox, and Real-Time Data, connect Studio Web to [Msty Studio Desktop](/settings/remote-connections) or [Msty Sidecar](/how-tos/sidecar).
+Msty Studio Web supports most core features in the browser. For local models, Toolbox, and Real-Time Data, connect Studio Web to [Msty Studio Desktop](/v2/settings/remote-connections) or [Msty Sidecar](/v2/how-tos/sidecar).
 
 Even though Msty Studio Web is a web-based app, data is stored directly in your browser local storage. This helps keep your data in your control.
 
 ## Popular Topics
 
-- [Managing Models](/managing-models) - Learn how to add and configure AI models
-- [Toolbox](/toolbox/tools) - Leverage powerful tools using MCP
-- [Knowledge Stacks](/knowledge-stacks/overview) - RAG the right way
-- [Workspaces](/workspaces) - Organize your projects and conversations
-- [Crew Mode](/conversations/crew-chats) - Run collaborative chats with multiple personas
-- [Agent Mode](/agent-mode/agent-mode) - Complete multi-step tasks with agents
-- [Environment Variables](/workspaces/environment) - Configure your development environment
-- [Data Backups](/settings/data-backups) - Keep your data safe and synchronized
+- [Managing Models](/v2/managing-models) - Learn how to add and configure AI models
+- [Toolbox](/v2/toolbox/tools) - Leverage powerful tools using MCP
+- [Knowledge Stacks](/v2/knowledge-stacks/overview) - RAG the right way
+- [Workspaces](/v2/workspaces) - Organize your projects and conversations
+- [Crew Mode](/v2/conversations/crew-chats) - Run collaborative chats with multiple personas
+- [Agent Mode](/v2/agent-mode/agent-mode) - Complete multi-step tasks with agents
+- [Environment Variables](/v2/workspaces/environment) - Configure your development environment
+- [Data Backups](/v2/settings/data-backups) - Keep your data safe and synchronized
 
 ## Need Help?
 
-- **Getting Started**: Check out our [Quick Start](/getting-started/quick-start) guide
-- **How-Tos**: Find step-by-step guides in our [How-Tos](/how-tos/manage-license) section
+- **Getting Started**: Check out our [Quick Start](/v2/getting-started/quick-start) guide
+- **How-Tos**: Find step-by-step guides in our [How-Tos](/v2/how-tos/manage-license) section
 - **Whats new**: Visit the full [Changelog](https://msty.ai/changelog){target="\_blank"}
 - **Support**: Visit our [Discord](https://msty.ai/discord){target="\_blank"} for issues and discussions
 
@@ -68,7 +68,7 @@ Even though Msty Studio Web is a web-based app, data is stored directly in your 
 
 ## Quick Start
 
-Source: https://docs.msty.ai/studio/getting-started/quick-start
+Source: https://docs.msty.ai/studio/v2/getting-started/quick-start
 
 Quick Start is the fastest path for new users to go from install to first chat.
 
@@ -82,7 +82,7 @@ Quick Start is the fastest path for new users to go from install to first chat.
 ::steps
 
 ### Install and open Msty Studio
-[Download Msty Studio Desktop](/getting-started/download), install it, and open the app.
+[Download Msty Studio Desktop](/v2/getting-started/download), install it, and open the app.
 
 ### Choose how you plan to use Msty Studio
 Select **Just exploring**, **For work**, or **I'm a developer**. Msty uses this choice to tailor the recommended model and optional starter resources.
@@ -91,7 +91,7 @@ Select **Just exploring**, **For work**, or **I'm a developer**. Msty uses this 
 Choose either:
 
 - **Recommended local model:** Msty checks your hardware, recommends a compatible local engine and model, and lets you adjust the recommendation from **Light** to **Powerful** before downloading.
-- **Online provider:** Connect OpenAI, Claude, xAI, Gemini, OpenRouter, or another [online provider](/managing-models/online-providers). Add at least one model to the provider before continuing.
+- **Online provider:** Connect OpenAI, Claude, xAI, Gemini, OpenRouter, or another [online provider](/v2/managing-models/online-providers). Add at least one model to the provider before continuing.
 
 Local setup displays service and model download progress. You can continue into the app while a local model finishes downloading in the background.
 
@@ -141,20 +141,20 @@ If Local AI setup fails with the default installer, archive install is a useful 
 3. Enter your license key and click **Next**.
 4. Add a model provider:
    - Add a remote provider (OpenAI, Anthropic, Gemini, and others)
-   - Or connect Studio Web to [Msty Studio Desktop](/settings/remote-connections) or [Msty Sidecar](/how-tos/sidecar)
+   - Or connect Studio Web to [Msty Studio Desktop](/v2/settings/remote-connections) or [Msty Sidecar](/v2/how-tos/sidecar)
 5. Finish setup, choose a starting workflow, and run your first prompt.
 
 ::
 
 ::alert{type="info" icon="tabler:info-circle"}
-**Safari user?** Safari is not directly supported by Msty Studio. You can still connect through [Remote Connections](/settings/remote-connections) using tunneling.
+**Safari user?** Safari is not directly supported by Msty Studio. You can still connect through [Remote Connections](/v2/settings/remote-connections) using tunneling.
 ::
 
 ## Next Steps
 
-- [Managing Models](/managing-models) to add providers, install local models, and monitor downloads
-- [Settings](/settings/settings) to customize behavior and defaults
-- [Remote Connections](/settings/remote-connections) to connect Web and Desktop
+- [Managing Models](/v2/managing-models) to add providers, install local models, and monitor downloads
+- [Settings](/v2/settings/settings) to customize behavior and defaults
+- [Remote Connections](/v2/settings/remote-connections) to connect Web and Desktop
 
 ::Resources
 
@@ -162,7 +162,7 @@ If Local AI setup fails with the default installer, archive install is a useful 
 
 ## Download Msty Studio Desktop
 
-Source: https://docs.msty.ai/studio/getting-started/download
+Source: https://docs.msty.ai/studio/v2/getting-started/download
 
 ![msty studio](/images/image-comparison.png)
 
@@ -518,7 +518,7 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
 
 ## Managing Models
 
-Source: https://docs.msty.ai/studio/managing-models
+Source: https://docs.msty.ai/studio/v2/managing-models
 
 Model Hub is the central place to connect providers, install local models, compare model options, and tune model behavior.
 
@@ -563,17 +563,17 @@ Msty Studio supports two model sources:
 
 Use online providers when you want quick access to hosted models and managed infrastructure.
 
-Go to [Online Providers](/managing-models/online-providers) for supported providers, setup steps, and OpenAI-compatible bring-your-own endpoints.
+Go to [Online Providers](/v2/managing-models/online-providers) for supported providers, setup steps, and OpenAI-compatible bring-your-own endpoints.
 
 ### Local Models
 
 Use local models when you want more control over privacy, offline access, and local performance tuning.
 
-Go to [Local Models](/managing-models/local-models) for the unified Featured, Installed, Model Search, and Import workflows.
+Go to [Local Models](/v2/managing-models/local-models) for the unified Featured, Installed, Model Search, and Import workflows.
 
 ## Find the Right Model Faster
 
-Use [Model Matchmaker](/managing-models/model-matchmaker) when you are unsure which model to start with.
+Use [Model Matchmaker](/v2/managing-models/model-matchmaker) when you are unsure which model to start with.
 
 ## Organize Models for Daily Use
 
@@ -594,7 +594,7 @@ Purpose tags help categorize what each model is best at.
 - **Text**: General text generation and understanding
 - **Coding**: Code generation, analysis, and debugging
 - **Tools**: Tool/API usage with Toolbox (MCP)
-- **Image**: Image generation models (see [Image Generation](/managing-models/image-gen))
+- **Image**: Image generation models (see [Image Generation](/v2/managing-models/image-gen))
 - **Vision**: Image understanding and analysis
 - **Embedding**: Retrieval and vector workflows, including Knowledge Stacks
 - **Streaming**: Near real-time data processing
@@ -612,11 +612,11 @@ You can change provider and model logos from the edit dialog in Model Hub.
 
 ## Online Providers
 
-Source: https://docs.msty.ai/studio/managing-models/online-providers
+Source: https://docs.msty.ai/studio/v2/managing-models/online-providers
 
 Online providers let you use hosted models with your API keys, without running model inference on your device.
 
-Need API key links? See [Find Online Model API Keys](/how-tos/find-api-keys).
+Need API key links? See [Find Online Model API Keys](/v2/how-tos/find-api-keys).
 
 ## Connect an Online Provider
 
@@ -628,7 +628,7 @@ Go to **Model Hub > Model Providers**.
 Select **Add Provider** and choose your provider.
 
 ### Enter Credentials
-Add your API key (and any required endpoint details), then save. If you need key locations, use [Find Online Model API Keys](/how-tos/find-api-keys).
+Add your API key (and any required endpoint details), then save. If you need key locations, use [Find Online Model API Keys](/v2/how-tos/find-api-keys).
 
 ### Test in Chat
 Open a conversation and select one of the provider's models.
@@ -652,7 +652,7 @@ Msty Studio supports these online provider options:
 - Azure OpenAI
 - Amazon Bedrock
 
-For key locations and endpoint references, see [Find Online Model API Keys](/how-tos/find-api-keys).
+For key locations and endpoint references, see [Find Online Model API Keys](/v2/how-tos/find-api-keys).
 
 ## Bring Your Own Provider
 
@@ -670,7 +670,7 @@ After connecting, you can:
 
 - Rename providers and models for readability
 - Set a default model in chat
-- Apply model purpose tags from [Managing Models](/managing-models)
+- Apply model purpose tags from [Managing Models](/v2/managing-models)
 - Apply model-parameter presets, including supported provider-native tools
 
 ## Provider-Native Tools
@@ -713,7 +713,7 @@ Native-tool availability depends on the provider, model, API account, region, an
 
 ## Local Models
 
-Source: https://docs.msty.ai/studio/managing-models/local-models
+Source: https://docs.msty.ai/studio/v2/managing-models/local-models
 
 Local models run on your own machine, giving you more control over privacy, performance, and offline workflows.
 
@@ -741,7 +741,7 @@ Featured provides a curated catalog of models with available Ollama, GGUF/Llama.
 
 On Apple Silicon, Msty generally recommends MLX when an MLX format is available. Recommendations on other systems depend on the available hardware and supported engines.
 
-If you are unsure which model best fits your use case, use [Model Matchmaker](/managing-models/model-matchmaker).
+If you are unsure which model best fits your use case, use [Model Matchmaker](/v2/managing-models/model-matchmaker).
 
 ## Installed
 
@@ -830,7 +830,7 @@ If your system has a compatible GPU, enable supported acceleration from the rele
 
 ## Vibe CLI Proxy
 
-Source: https://docs.msty.ai/studio/managing-models/vibe-cli-proxy
+Source: https://docs.msty.ai/studio/v2/managing-models/vibe-cli-proxy
 
 Integrate models from supported CLI applications directly into Msty Studio. This integration supports multiple CLI providers and makes their models available for conversations.
 
@@ -875,7 +875,7 @@ CLI models work alongside your other configured models, no extra setup needed af
 
 ## Model Matchmaker
 
-Source: https://docs.msty.ai/studio/managing-models/model-matchmaker
+Source: https://docs.msty.ai/studio/v2/managing-models/model-matchmaker
 
 Model Matchmaker helps you choose a starting model when you are not sure which one to use.
 
@@ -904,20 +904,20 @@ Choose what matters most for your task.
 Matchmaker returns ordered suggestions based on your priorities.
 
 ### Validate in Chat
-Test top models with real prompts in [Conversations](/conversations/main-chat), [Split Chat](/conversations/split-chat), or [Turnstiles](/add-ons/turnstiles).
+Test top models with real prompts in [Conversations](/v2/conversations/main-chat), [Split Chat](/v2/conversations/split-chat), or [Turnstiles](/v2/add-ons/turnstiles).
 ::
 
 ![msty matchmaker ranked models](/images/ranked-models.png)
 
 ## Recommended Follow-Up
 
-After choosing a model, set it as default or tag its purpose from [Managing Models](/managing-models).
+After choosing a model, set it as default or tag its purpose from [Managing Models](/v2/managing-models).
 
 ---
 
 ## Image Generation
 
-Source: https://docs.msty.ai/studio/managing-models/image-gen
+Source: https://docs.msty.ai/studio/v2/managing-models/image-gen
 
 Image generation can be accomplished with compatible models.
 
@@ -980,7 +980,7 @@ Advanced configurations can be included as model parameters.
 
 ## Insights
 
-Source: https://docs.msty.ai/studio/managing-models/insights
+Source: https://docs.msty.ai/studio/v2/managing-models/insights
 
 Insights provides detailed analytics on token usage patterns, helping you understand consumption habits across different models. You can also view cost estimates and usage breakdowns by specific models, enabling more informed decision-making about AI tool usage.
 
@@ -1008,7 +1008,7 @@ Also provided are graphs displaying model throughput and latency, which can help
 
 ## Advanced Configs
 
-Source: https://docs.msty.ai/studio/managing-models/advanced-configs
+Source: https://docs.msty.ai/studio/v2/managing-models/advanced-configs
 
 Wondering what the advanced settings are and how to use them? We've outlined the most common advanced settings in our [The AI Settings Dictionary](https://msty.ai/blog/the-ai-settings-dictionary) blog post. Please check out this article for the most common settings - in which Msty offers quick configs for these common settings.
 
@@ -1019,7 +1019,7 @@ Please note that these settings are _generally_ available across models; however
 
 ## Thinking Effort
 
-See the [Thinking Effort](/managing-models/thinking-effort) docs for more information on how to use the thinking effort feature.
+See the [Thinking Effort](/v2/managing-models/thinking-effort) docs for more information on how to use the thinking effort feature.
 
 
 ## Advanced Runtime Configurations
@@ -1189,7 +1189,7 @@ See the [Thinking Effort](/managing-models/thinking-effort) docs for more inform
 
 ## Thinking Effort
 
-Source: https://docs.msty.ai/studio/managing-models/thinking-effort
+Source: https://docs.msty.ai/studio/v2/managing-models/thinking-effort
 
 Many reasoning models allow you to adjust the thinking effort of the model. This feature allows you to control how much time and effort the model spends reasoning about a response before generating it.
 
@@ -1327,7 +1327,7 @@ Supports:
 
 ## Context Explorer
 
-Source: https://docs.msty.ai/studio/managing-models/context-explorer
+Source: https://docs.msty.ai/studio/v2/managing-models/context-explorer
 
 Context Explorer helps you understand how model context size, VRAM, concurrency, and engine behavior interact before you run real workloads.
 
@@ -1364,7 +1364,7 @@ Use Context Explorer when tuning local models for multi-user or long-context wor
 
 ## Conversations
 
-Source: https://docs.msty.ai/studio/conversations/main-chat
+Source: https://docs.msty.ai/studio/v2/conversations/main-chat
 
 Conversations in Msty Studio are designed to be intuitive and user-friendly, allowing you to engage with the selected model seamlessly.
 
@@ -1372,10 +1372,10 @@ Conversations in Msty Studio are designed to be intuitive and user-friendly, all
 
 Use this quick guide to decide where to start:
 
-- **Normal Conversations** ([Conversations](/conversations/main-chat)): Best for everyday chatting, drafting, Q&A, and iterative work with one model.
-- **Persona Conversations** ([Persona Conversations](/conversations/persona-conversations)): Best when you want a conversation guided by a specific role, voice, or expertise.
-- **Crew Mode Conversations** ([Crew Conversations](/conversations/crew-chats)): Best when you want multiple personas to respond to the same prompt so you can compare perspectives.
-- **Agent Mode Conversations** ([Agent Mode](/agent-mode/agent-mode)): Best for multi-step tasks where an agent plans, uses tools, and executes with less manual steering.
+- **Normal Conversations** ([Conversations](/v2/conversations/main-chat)): Best for everyday chatting, drafting, Q&A, and iterative work with one model.
+- **Persona Conversations** ([Persona Conversations](/v2/conversations/persona-conversations)): Best when you want a conversation guided by a specific role, voice, or expertise.
+- **Crew Mode Conversations** ([Crew Conversations](/v2/conversations/crew-chats)): Best when you want multiple personas to respond to the same prompt so you can compare perspectives.
+- **Agent Mode Conversations** ([Agent Mode](/v2/agent-mode/agent-mode)): Best for multi-step tasks where an agent plans, uses tools, and executes with less manual steering.
 
 If you are not sure where to begin, start with a normal conversation and move to Personas, Crew Mode, or Agent Mode as your task becomes more structured.
 
@@ -1393,13 +1393,13 @@ Setting a **Sticky Prompt** can be accessed from the ellipsis icon menu. When a 
 
 ### Attachments
 
-Attach files, images, websites, and YouTube links to enhance your conversation. Reusable attachments are managed in [Context Studio](/studios/context-studio). Check out [Attachments](/add-ons/attachments) for chat-level attachment details.
+Attach files, images, websites, and YouTube links to enhance your conversation. Reusable attachments are managed in [Context Studio](/v2/studios/context-studio). Check out [Attachments](/v2/add-ons/attachments) for chat-level attachment details.
 
 ### Real-time Data
 
-Have your model scan the web for real-time data. This feature is available when using [Remote Connections](/settings/remote-connections) or [Msty Sidecar](/how-tos/sidecar).
+Have your model scan the web for real-time data. This feature is available when using [Remote Connections](/v2/settings/remote-connections) or [Msty Sidecar](/v2/how-tos/sidecar).
 
-Check out [Real-Time Data](/add-ons/real-time-data) for more detail.
+Check out [Real-Time Data](/v2/add-ons/real-time-data) for more detail.
 
 ### Personas
 
@@ -1435,13 +1435,13 @@ In the chat window, you can also type **/** to quick search for a prompt.
 
 ### Toolsets and Live contexts
 
-Include [Toolsets](/toolbox/toolsets) and [Live Contexts](/toolbox/live-contexts) in your conversation to amp up the power of your conversation.
+Include [Toolsets](/v2/toolbox/toolsets) and [Live Contexts](/v2/toolbox/live-contexts) in your conversation to amp up the power of your conversation.
 
 Tools add MCP capabilities to your conversations and Live Contexts allows you to incorporate data gathered from APIs.
 
 ### Turnstiles
 
-Include [Turnstiles](/add-ons/turnstiles) to get into an Agent-like mode. This allows you to have a conversation with a model that is more focused on the task at hand, rather than just generating text.
+Include [Turnstiles](/v2/add-ons/turnstiles) to get into an Agent-like mode. This allows you to have a conversation with a model that is more focused on the task at hand, rather than just generating text.
 
 ### Model selection
 
@@ -1469,7 +1469,7 @@ By default, the project context is disabled. Edit the project folder to enable p
 
 Use the conversation menu to export a conversation as JSON or as a portable `.mstyconv` package. Imports are added to a selected project from that project's menu.
 
-See [Conversation Export and Import](/conversations/export-import) for attachment handling, format guidance, and Media Studio session portability.
+See [Conversation Export and Import](/v2/conversations/export-import) for attachment handling, format guidance, and Media Studio session portability.
 
 ## Mini Map - Conversation Navigation
 
@@ -1491,7 +1491,7 @@ If you select the middle area, this will show a very high-level view of the conv
 
 ## Persona Conversations
 
-Source: https://docs.msty.ai/studio/conversations/persona-conversations
+Source: https://docs.msty.ai/studio/v2/conversations/persona-conversations
 
 Persona Conversations let you chat directly with one selected persona. This is useful when you want a consistent voice, role, or workflow across a full conversation.
 
@@ -1518,9 +1518,9 @@ This gives you a reliable persona-first chat flow for tasks like role-based supp
 
 ## Tips
 
-- Build focused personas in [Persona Studio](/studios/persona-studio) for better results.
-- Use [System Prompt Modes](/conversations/system-prompts) to control how persona and system instructions combine.
-- Use [Crew Conversations](/conversations/crew-chats) when you need multiple personas in one chat.
+- Build focused personas in [Persona Studio](/v2/studios/persona-studio) for better results.
+- Use [System Prompt Modes](/v2/conversations/system-prompts) to control how persona and system instructions combine.
+- Use [Crew Conversations](/v2/conversations/crew-chats) when you need multiple personas in one chat.
 
 ::Resources
 
@@ -1528,7 +1528,7 @@ This gives you a reliable persona-first chat flow for tasks like role-based supp
 
 ## Shadow Persona
 
-Source: https://docs.msty.ai/studio/conversations/shadow-personas
+Source: https://docs.msty.ai/studio/v2/conversations/shadow-personas
 
 Shadow Personas are assistants that observe the main conversation you are having in a chat or in multiple split chats. 
 
@@ -1546,7 +1546,7 @@ See the examples section below for additional useful usages for Shadow Personas.
 ### Step 1 - Create the underlying Persona
 The underlying directives and capabilities of a Shadow Persona come from the underlying Persona. 
 
-See [Persona Studio](/studios/persona-studio) to learn how to create a new persona.
+See [Persona Studio](/v2/studios/persona-studio) to learn how to create a new persona.
 
 Shadow Personas adopt the following features of a Persona: 
 - **System Prompt** - the prompt provides the main directives that a Shadow Persona is tasked with
@@ -1614,11 +1614,11 @@ Be sure to watch the videos in the Resources section below as well for ideas.
 
 ## Crew Conversations
 
-Source: https://docs.msty.ai/studio/conversations/crew-chats
+Source: https://docs.msty.ai/studio/v2/conversations/crew-chats
 
 Want to chat with multiple personas at the same time? That's what Crew Conversation is for! 
 
-With Crew Conversation, you'll first create [personas](/studios/persona-studio) that you want to include in the conversation. Then, start a new crew conversation, add personas to your crew, and chat away. 
+With Crew Conversation, you'll first create [personas](/v2/studios/persona-studio) that you want to include in the conversation. Then, start a new crew conversation, add personas to your crew, and chat away.
 
 ## Crew Conversation Examples
 
@@ -1670,7 +1670,7 @@ If a persona needs additional context, you can add the context, such as real-tim
 
 Crew Conversations do not allow for other features that you'd find in a the normal conversations, such as split chats and threads. Crew Conversations is more like a chat room with your crew. 
 
-The background prompt used for Crew Mode handoffs and persona coordination can be adjusted in [Settings > Default Prompts](/settings/default-prompts).
+The background prompt used for Crew Mode handoffs and persona coordination can be adjusted in [Settings > Default Prompts](/v2/settings/default-prompts).
 
 ::Resources
 
@@ -1678,7 +1678,7 @@ The background prompt used for Crew Mode handoffs and persona coordination can b
 
 ## Responses
 
-Source: https://docs.msty.ai/studio/conversations/responses
+Source: https://docs.msty.ai/studio/v2/conversations/responses
 
 Manage user and assistant messages with inline actions for copying, editing, branching, organizing, and deleting conversation content.
 
@@ -1745,7 +1745,7 @@ This is useful when you want to test a message with another model without copyin
 
 Open the message's additional-actions menu and select **Edit as Branch**.
 
-Edit the message and save it to create an alternative conversation branch without overwriting the original path. Use [Branch Explorer](/conversations/branch-explorer) to label, navigate, and compare branches.
+Edit the message and save it to create an alternative conversation branch without overwriting the original path. Use [Branch Explorer](/v2/conversations/branch-explorer) to label, navigate, and compare branches.
 
 ### Fold messages
 
@@ -1798,7 +1798,7 @@ Switch between modern and classic layouts from the conversation menu or **Settin
 
 ## Split Chat
 
-Source: https://docs.msty.ai/studio/conversations/split-chat
+Source: https://docs.msty.ai/studio/v2/conversations/split-chat
 
 You can chat with multiple models at once, making it easy to compare responses. This makes it easier to identify the strengths and weaknesses of each model, and to choose the one that best fits your needs.
 
@@ -1837,7 +1837,7 @@ To use a saved Split Preset, select the ellipsis icon (**...**) in the top right
 
 ## Forge Mode
 
-Source: https://docs.msty.ai/studio/conversations/forge-mode
+Source: https://docs.msty.ai/studio/v2/conversations/forge-mode
 
 Forge Mode in Msty Studio offers an intuitive and powerful editing environment that combines rich text formatting options, inline editing, and dynamic content generation through AI models. Key features include custom prompts, focus mode, undo/redo functionality, real-time collaboration, and advanced formatting tools, making it a comprehensive tool for content creators.
 
@@ -1863,7 +1863,7 @@ You can enable Forge Mode by selecting **New Forge Canvas** option under the **N
 
 ## System Prompt Modes
 
-Source: https://docs.msty.ai/studio/conversations/system-prompts
+Source: https://docs.msty.ai/studio/v2/conversations/system-prompts
 
 When customizing system prompts in Msty Studio (ie, with Projects and Personas), you can control how your custom instructions are combined with the default system prompt using three modes:
 
@@ -1992,7 +1992,7 @@ In the child's project settings, if **System Prompt Attach Mode** is set to:
 
 ## Branch Explorer
 
-Source: https://docs.msty.ai/studio/conversations/branch-explorer
+Source: https://docs.msty.ai/studio/v2/conversations/branch-explorer
 
 Threads and the mini map include a branch dropdown for better navigation and comparison. The Branch Explorer allows you to label branches and perform side-by-side diff comparisons between different conversation branches.
 
@@ -2028,7 +2028,7 @@ The mini map will update to reflect the selected branch, allowing for quick navi
 
 ## Conversation Export and Import
 
-Source: https://docs.msty.ai/studio/conversations/export-import
+Source: https://docs.msty.ai/studio/v2/conversations/export-import
 
 Export conversations when you want a portable copy, need to move work to another workspace, or want to preserve a Media Studio session.
 
@@ -2100,7 +2100,7 @@ If an older JSON export does not contain embedded attachment data, Msty can only
 
 ## Agent Mode
 
-Source: https://docs.msty.ai/studio/agent-mode/agent-mode
+Source: https://docs.msty.ai/studio/v2/agent-mode/agent-mode
 
 Agent Mode lets you run coding agents inside Msty Studio Desktop. You can chat with an agent, review plans, inspect diffs, and approve actions in one workspace-aware flow.
 
@@ -2219,7 +2219,7 @@ Start an Agent session from the **New** menu or from Easy Access. Sessions can t
 Agents can propose a plan before applying changes. Review each step and approve what should run.
 
 ### Skills and slash commands
-Use slash commands and installed skills to speed up repeated workflows. To create, manage, and install skills, see [Skills Studio](/studios/skills-studio).
+Use slash commands and installed skills to speed up repeated workflows. To create, manage, and install skills, see [Skills Studio](/v2/studios/skills-studio).
 
 ### Diff and commit flow
 Review generated file diffs, then commit from the workspace diff panel when you are ready.
@@ -2245,7 +2245,7 @@ Review generated file diffs, then commit from the workspace diff panel when you 
 
 ## Persona Studio
 
-Source: https://docs.msty.ai/studio/studios/persona-studio
+Source: https://docs.msty.ai/studio/v2/studios/persona-studio
 
 Persona Studio helps you create and manage custom assistants and user profiles for more consistent conversations.
 
@@ -2297,14 +2297,14 @@ When you add a memory from a conversation message, Msty Studio:
 
 1. Uses the model assigned to **User Persona Memory Extraction** in **Model Hub > Model Squad**.
 2. Falls back to the split's selected conversation model if no Model Squad assignment exists.
-3. Uses the **User Persona Memory Generation** prompt from [Settings > Default Prompts](/settings/default-prompts) to draft memory content.
+3. Uses the **User Persona Memory Generation** prompt from [Settings > Default Prompts](/v2/settings/default-prompts) to draft memory content.
 4. Opens a **Review Memory Draft** dialog so you can edit before saving.
 
 ### Configure Models and Prompts
 
 - Set the preferred memory extraction model in **Model Hub > Model Squad** with the **User Persona Memory Extraction** assignment.
-- Update the memory drafting prompt in [Settings > Default Prompts](/settings/default-prompts) by editing **User Persona Memory Generation**.
-- Update crew handoff and coordination instructions in [Settings > Default Prompts](/settings/default-prompts) by editing **Crew Mode**.
+- Update the memory drafting prompt in [Settings > Default Prompts](/v2/settings/default-prompts) by editing **User Persona Memory Generation**.
+- Update crew handoff and coordination instructions in [Settings > Default Prompts](/v2/settings/default-prompts) by editing **Crew Mode**.
 
 ## Create and Organize Personas
 
@@ -2340,7 +2340,7 @@ Persona Studio AI tools can help you:
 
 ## Use Personas in Conversations
 
-[See how Personas are used in conversations](/conversations/persona-conversations)
+[See how Personas are used in conversations](/v2/conversations/persona-conversations)
 
 - Start a Persona conversation from the **New** menu.
 - Use `@` to quickly select personas in chat.
@@ -2357,7 +2357,7 @@ Persona Studio AI tools can help you:
 
 ## Prompt Studio
 
-Source: https://docs.msty.ai/studio/studios/prompts-studio
+Source: https://docs.msty.ai/studio/v2/studios/prompts-studio
 
 Create and organize prompts for easy access and reuse across Msty.
 
@@ -2487,7 +2487,7 @@ Select the star icon next to the version to set it as the default version used w
 
 ## Skills Studio
 
-Source: https://docs.msty.ai/studio/studios/skills-studio
+Source: https://docs.msty.ai/studio/v2/studios/skills-studio
 
 Skills Studio is a dedicated workspace for creating and managing skills used by Agent Mode.
 
@@ -2539,7 +2539,7 @@ Use templates and AI-assisted drafting to generate or improve skill descriptions
 
 ## Media Studio
 
-Source: https://docs.msty.ai/studio/studios/media-studio
+Source: https://docs.msty.ai/studio/v2/studios/media-studio
 
 Media Studio is a dedicated session type for creating images and videos with persistent context, history, and comparison tools.
 
@@ -2553,7 +2553,7 @@ From **New**, choose **New Media Session**.
 
 ### Start from an existing attachment
 
-Use **Open in Media Studio** from message attachments, or **Start New Media Session** from [Context Studio](/studios/context-studio).
+Use **Open in Media Studio** from message attachments, or **Start New Media Session** from [Context Studio](/v2/studios/context-studio).
 
 ### Configure and generate
 Enter a prompt, choose an image/video model, set outputs per run, then generate.
@@ -2582,7 +2582,7 @@ Start and End controls only appear for compatible video models.
 
 ## Generation Workflow
 
-- Select from media-capable models configured in [Model Hub image generation](/managing-models/image-gen).
+- Select from media-capable models configured in [Model Hub image generation](/v2/managing-models/image-gen).
 - Set how many outputs to generate per run.
 - Star a model to keep it as your Media Studio default.
 - If no media models are configured, Media Studio offers a direct path to Model Hub.
@@ -2621,7 +2621,7 @@ Available context-image and Start/End frame capabilities vary by model.
 
 Media Studio sessions use the normal conversation export workflow. Export as `.mstyconv` when the session contains generated images, videos, or other large attachments.
 
-Exports preserve the saved Media Studio session state and referenced media when attachment files are included. See [Conversation Export and Import](/conversations/export-import).
+Exports preserve the saved Media Studio session state and referenced media when attachment files are included. See [Conversation Export and Import](/v2/conversations/export-import).
 
 ::Resources
 
@@ -2629,7 +2629,7 @@ Exports preserve the saved Media Studio session state and referenced media when 
 
 ## Context Studio
 
-Source: https://docs.msty.ai/studio/studios/context-studio
+Source: https://docs.msty.ai/studio/v2/studios/context-studio
 
 Context Studio is the new name for Attachment Manager. It is the central place to store, organize, preview, and reuse context across Msty Studio.
 
@@ -2721,7 +2721,7 @@ Context Studio and Media Studio work together.
 - Reuse stored images, videos, and documents as Media Studio context
 - Keep generated media available for later conversations when exported with the session
 
-See [Media Studio](/studios/media-studio) for image and video generation workflows.
+See [Media Studio](/v2/studios/media-studio) for image and video generation workflows.
 
 ## Configure Context Studio
 
@@ -2733,7 +2733,7 @@ Settings include:
 - **Metadata Processing Models**: assign vision and document metadata models through Model Squad
 - **Image Reduction Defaults**: control default image reduction mode and quality
 - **Web Fetch**: choose Studio's default website fetch or Jina, set website content format, and tune extraction parameters
-- **Default Prompts**: edit Context Studio prompts in [Settings > Default Prompts](/settings/default-prompts)
+- **Default Prompts**: edit Context Studio prompts in [Settings > Default Prompts](/v2/settings/default-prompts)
 
 For website attachments, Studio's default fetch requires a desktop sidecar connection. If sidecar is unavailable, enable Jina in Context Studio settings and add a Jina API key.
 
@@ -2743,7 +2743,7 @@ For website attachments, Studio's default fetch requires a desktop sidecar conne
 
 ## Knowledge Stacks overview
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/overview
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/overview
 
 ## Knowledge Stacks Next Gen is here!
 
@@ -2757,7 +2757,7 @@ Here's what makes Next Gen worth switching to:
 - **File (Single Chunk) chunking** — A new chunking method that keeps each item as one whole chunk — perfect for pre-chunked documents or content that shouldn't be split up.
 - **A cleaner, more intuitive experience** — We've polished the UI and made things feel a lot smoother across the board.
 
-👉 [Learn more about Knowledge Stacks Next Gen →](/knowledge-stacks/next-gen)
+👉 [Learn more about Knowledge Stacks Next Gen →](/v2/knowledge-stacks/next-gen)
 ::
 
 Knowledge Stacks are Msty Studio's take on Retrieval-Augmented Generation (RAG), designed to help you create, manage, and use collections of knowledge in a structured, flexible way. They let you organize your data for easy access in conversations, proving models with deep, domain-specific understanding.
@@ -2783,7 +2783,7 @@ When creating your Knowledge Stack, think of each stack as a category or topic t
 1. Click the Knowledge Stacks icon and select option to create a new stack
 2. Add a **Title** and **Description** for your stack
 3. Add **Files**, **Folders**, **Notes**, and/or **YouTube Links** to your stack
-4. Configure the **Compose Settings** - view [Compose Options](/knowledge-stacks/compose-options) for advanced configuration options
+4. Configure the **Compose Settings** - view [Compose Options](/v2/knowledge-stacks/compose-options) for advanced configuration options
 5. **Compose** your Knowledge Stack
 ::
 
@@ -2810,7 +2810,7 @@ The model will have access to the knowledge in your selected stack, allowing it 
 
 ![knowledge stacks chat response](/images/knowledge-stacks/sherlock-holmes-response.png)
 
-Check out [Query Settings](/knowledge-stacks/query-settings) for advanced query options that will help you improve search results.
+Check out [Query Settings](/v2/knowledge-stacks/query-settings) for advanced query options that will help you improve search results.
 
 ### Knowledge Stack Picker
 
@@ -2839,7 +2839,7 @@ You can also install Msty Docs during onboarding by selecting **Chat with Msty S
 
 ## Compose Options
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/compose-options
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/compose-options
 
 Composing resources initiates the process of preparing your files for retrieval-based AI interactions. When you compose, each resource is parsed and broken down into meaningful chunks, then transformed into vector representations using an embedding model. These vectors are stored in a searchable index, enabling the system to quickly retrieve relevant context during a prompt. 
 
@@ -2961,7 +2961,7 @@ If you haven't made any changes to compose configurations, and want to re-compos
 
 ## Query Settings
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/query-settings
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/query-settings
 
 For more accurate results, use the **Query Settings** to configure how your stacks should be queried during conversations. 
 
@@ -3039,7 +3039,7 @@ If you do not want personal identifiable information (PII) to be sent to the mod
 
 You will be asked to select a locally installed model that will be tasked with detecting any PII in the Knowledge Stack and to redact the information. 
 
-For best results and for added security, test PII Scrubbing in [Chunks Visualizer](/knowledge-stacks/chunks-visualizer) and [Chunks Console](/knowledge-stacks/chunks-console) prior to using Knowledge Stacks with online providers where PII is a concern. 
+For best results and for added security, test PII Scrubbing in [Chunks Visualizer](/v2/knowledge-stacks/chunks-visualizer) and [Chunks Console](/v2/knowledge-stacks/chunks-console) prior to using Knowledge Stacks with online providers where PII is a concern.
 
 ![pii](/images/knowledge-stacks/pii.png)
 
@@ -3073,7 +3073,7 @@ The last section shows the actual chunks and/or full contents that were returned
 
 ## Chunks Visualizer
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/chunks-visualizer
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/chunks-visualizer
 
 Chunking is the process of breaking down large documents into smaller, manageable pieces (or "chunks") to make them suitable for vectorization and retrieval. Effective chunking ensures that relevant information can be retrieved accurately, improving the quality of responses. 
 
@@ -3096,7 +3096,7 @@ In the above example, you can see how the chunks for this stack are defined and 
 
 The Chunks Visualizer helps you fine-tune by showing overlaps, chunk boundaries, and how text flows between them.
 
-If the chunks are not meeting your expectations, see [Compose Options](/knowledge-stacks/compose-options) to learn how you can adjust chunk settings. 
+If the chunks are not meeting your expectations, see [Compose Options](/v2/knowledge-stacks/compose-options) to learn how you can adjust chunk settings.
 
 ## Show Stitched
 
@@ -3106,7 +3106,7 @@ With Msty Studio’s Knowledge Stacks, models can either retrieve relevant chunk
 
 ## Chunks Console
 
-Chunk Console lets you perform queries against the Knowledge Stack and view results. See [Chunk Console](/knowledge-stacks/chunks-console) for more information. 
+Chunk Console lets you perform queries against the Knowledge Stack and view results. See [Chunk Console](/v2/knowledge-stacks/chunks-console) for more information.
 
 
 
@@ -3116,15 +3116,15 @@ Chunk Console lets you perform queries against the Knowledge Stack and view resu
 
 ## Chunks Console
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/chunks-console
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/chunks-console
 
 With the Chunks Console, you can test how chunks can be queried and what results return. Using the Chunks Console is a key way to refine the accuracy of Knowledge Stacks to help ensure the appropriate data is being made available to models. 
 
-You can test different [Query Settings](/knowledge-stacks/query-settings) to see what is returned. 
+You can test different [Query Settings](/v2/knowledge-stacks/query-settings) to see what is returned.
 
 ![chunks console](/images/knowledge-stacks/chunks-console.png)
 
-If you see unexpected results, then you can modify either the Query Settings or the [Compose Options](/knowledge-stacks/compose-options) to better refine your stacks. 
+If you see unexpected results, then you can modify either the Query Settings or the [Compose Options](/v2/knowledge-stacks/compose-options) to better refine your stacks.
 
 ## Remove Chunks
 If chunks are returned that you do not want to be included in query results and conversations with models, select the trashcan icon to remove the chunk. 
@@ -3147,7 +3147,7 @@ The Chunks Console makes it easier to verify that PII has been scrubbed by using
 
 ## Analytics and Insights
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/analytics-insights
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/analytics-insights
 
 Analytics and Insights is a detailed report providing key insights as well as recommendations for improving Knowledge Stacks. 
 
@@ -3159,7 +3159,7 @@ This feature is in progress. Please join us on Discord and let us know what you 
 
 ## Share and Manage
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/share-and-manage
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/share-and-manage
 
 ## Folder Management 
 
@@ -3184,7 +3184,7 @@ The imported stack will automatically be a **locked stack** and you will not be 
 
 ## Ignore File
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/ignore-file
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/ignore-file
 
 The `.mstyignore` file is a powerful tool allows you to specify which files and folders should be ignored when composing your knowledge stack. By using `.mstyignore`, you can streamline your knowledge base, exclude unnecessary files, and maintain a cleaner, more focused stack.
 
@@ -3262,7 +3262,7 @@ By effectively using `.mstyignore`, you can maintain a clean, relevant, and effi
 
 ## Knowledge Stacks Next Gen
 
-Source: https://docs.msty.ai/studio/knowledge-stacks/next-gen
+Source: https://docs.msty.ai/studio/v2/knowledge-stacks/next-gen
 
 Next Gen is a big step forward for Knowledge Stacks. We've added new ways to bring content into your stacks, made retrieval smarter, introduced new chunking and compose options, and polished up the whole experience.
 
@@ -3418,7 +3418,7 @@ Beyond the big feature additions, we've also put a lot of work into making the o
 
 ## Tools
 
-Source: https://docs.msty.ai/studio/toolbox/tools
+Source: https://docs.msty.ai/studio/v2/toolbox/tools
 
 The Toolbox allows for seamless communication with tools installed on your local machine or a remote one. These tools can interact with various data sources, perform file operations, and connect to repositories like GitHub, further empowering Msty Studio.
 
@@ -3430,7 +3430,7 @@ Msty Studio supports local MCP server that run on your machine as well as remote
 Please note the SSE protocol has been deprecated in favor of Streamable HTTP for remote MCP server connections. Studio's implementation came after the deprecation, and as such, SSE is not supported. However, you can use a local proxy such as mcp-remote to connect to SSE-based MCP servers if needed.
 ::
 
-To utilize the Toolbox features with Msty Studio Web, you must have Studio Web connected to Studio Desktop using [Remote Connections](/settings/remote-connections) or [Sidecar](/how-tos/sidecar).
+To utilize the Toolbox features with Msty Studio Web, you must have Studio Web connected to Studio Desktop using [Remote Connections](/v2/settings/remote-connections) or [Sidecar](/v2/how-tos/sidecar).
 
 ![Msty Studio Tools](/images/tools.png)
 
@@ -3514,7 +3514,7 @@ If you are running into issues with dependencies not showing as available, click
 
 ## Toolsets
 
-Source: https://docs.msty.ai/studio/toolbox/toolsets
+Source: https://docs.msty.ai/studio/v2/toolbox/toolsets
 
 Toolsets are a collection of tools with defined parameters. You can create a toolset and add tools to it. When chatting with a model, you can select one or multiple toolsets to use with the model.
 
@@ -3526,7 +3526,7 @@ Toolsets are a collection of tools with defined parameters. You can create a too
 
 1. Select **Add New Toolset** to add a new toolset
 2. Enable the tools you want to include in the Toolset
-3. Select the asterisk (**\***) icon next to the tool to define the [parameters](/toolbox/tools#set-tools-default-parameters) the tool should use with this Toolset
+3. Select the asterisk (**\***) icon next to the tool to define the [parameters](/v2/toolbox/tools#set-tools-default-parameters) the tool should use with this Toolset
 4. Add any **Notes** to help you remember the purpose of the toolset and any other information you may need to remember
 5. Give the toolset a unique **Name**
 6. Select **Add** to add the toolset to your toolbox
@@ -3548,7 +3548,7 @@ By default, all models have **Tools** disabled as a 'purpose' and you'll want to
 
 ## Live Contexts
 
-Source: https://docs.msty.ai/studio/toolbox/live-contexts
+Source: https://docs.msty.ai/studio/v2/toolbox/live-contexts
 
 Live Contexts are external data sources that you can add to your conversation in the form of calling an API. This allows you to bring in information from various sources and services to provide more context and enhance the interaction with models.
 
@@ -3558,7 +3558,7 @@ Live Contexts can either use a simple GET request to fetch data from an endpoint
 
 Connect to your favorite APIs to enhance your conversations. You'll first want to identify an API you'd like to use and gather necessary information to connect to it, such as an API key.
 
-Check out the [Live Context Examples](/how-tos/live-context-examples) for some inspiration on APIs you can connect to.
+Check out the [Live Context Examples](/v2/how-tos/live-context-examples) for some inspiration on APIs you can connect to.
 
 ![add live context](/images/live-context.png)
 
@@ -3591,7 +3591,7 @@ Once you have created a Live Context, you can use it in your conversations by cl
 
 ## Example endpoints
 
-Check out the [list of example endpoints](/how-tos/live-context-examples) for example endpoints you can play with.
+Check out the [list of example endpoints](/v2/how-tos/live-context-examples) for example endpoints you can play with.
 
 ::Resources
 
@@ -3599,7 +3599,7 @@ Check out the [list of example endpoints](/how-tos/live-context-examples) for ex
 
 ## Tool Dependencies
 
-Source: https://docs.msty.ai/studio/toolbox/tool-dependencies
+Source: https://docs.msty.ai/studio/v2/toolbox/tool-dependencies
 
 Tools run where the Sidecar is running and each tool has its own dependencies such as `npx`, `node`, `python`, `uv`
 etc.
@@ -3660,7 +3660,7 @@ We recommend keeping an eye on Sidecar logs to see if there are any errors or is
 
 ## Turnstiles
 
-Source: https://docs.msty.ai/studio/add-ons/turnstiles
+Source: https://docs.msty.ai/studio/v2/add-ons/turnstiles
 
 Turnstiles help you run structured workflows across multiple prompts and actions, with full control over flow, retries, and reusable templates.
 
@@ -3681,7 +3681,7 @@ Use **Load Saved Turnstile** to bring a saved workflow into the queue.
 
 ## Entry Types
 
-- **Prompt**: Standard prompt step with optional model, [attachments](/add-ons/attachments), [toolsets](/toolbox/toolsets), and [Real-Time Data](/add-ons/real-time-data).
+- **Prompt**: Standard prompt step with optional model, [attachments](/v2/add-ons/attachments), [toolsets](/v2/toolbox/toolsets), and [Real-Time Data](/v2/add-ons/real-time-data).
 - **Persona**: Run a step using a saved persona.
 - **Meta actions**:
   - Continue
@@ -3784,11 +3784,11 @@ Turnstiles are available with an Aurum license.
 
 ## Real-Time Data
 
-Source: https://docs.msty.ai/studio/add-ons/real-time-data
+Source: https://docs.msty.ai/studio/v2/add-ons/real-time-data
 
 Enable Real-Time Data (RTD) integration to instantly enhance your conversations with current information, weather updates, sports scores, news headlines, and more.
 
-Real-Time Data is built into Msty Studio Desktop. However, Studio Web cannot access RTD natively but can be connected to an instance of Msty Studio Desktop by using the [Remote Connections](/settings/remote-connections) feature or by using [Msty Sidecar](/how-tos/sidecar).
+Real-Time Data is built into Msty Studio Desktop. However, Studio Web cannot access RTD natively but can be connected to an instance of Msty Studio Desktop by using the [Remote Connections](/v2/settings/remote-connections) feature or by using [Msty Sidecar](/v2/how-tos/sidecar).
 
 ## How RTD Works
 
@@ -3982,11 +3982,11 @@ Setting a Real-Time Data provider to Pull mode allows the model to decide when t
 
 ## Attachments
 
-Source: https://docs.msty.ai/studio/add-ons/attachments
+Source: https://docs.msty.ai/studio/v2/add-ons/attachments
 
 In Msty Studio, attachments add files, images, webpages, and YouTube links to a conversation as extra context.
 
-For reusable context, use [Context Studio](/studios/context-studio). Context Studio is the new name for Attachment Manager and stores attachments so they can be organized, previewed, reused, and searched with Dynamic Mode.
+For reusable context, use [Context Studio](/v2/studios/context-studio). Context Studio is the new name for Attachment Manager and stores attachments so they can be organized, previewed, reused, and searched with Dynamic Mode.
 
 ## Add Attachments to a Chat
 
@@ -4000,13 +4000,13 @@ Drag and drop files into the input box or use the attachment icon. Documents are
 
 ## Images
 
-Drag and drop images into the input box, use the attachment icon, or capture screenshots where supported. Images are saved to Context Studio and can also be used in [Media Studio](/studios/media-studio).
+Drag and drop images into the input box, use the attachment icon, or capture screenshots where supported. Images are saved to Context Studio and can also be used in [Media Studio](/v2/studios/media-studio).
 
 ## Webpages
 
 You can attach webpage URLs to chats by dropping them directly into the input box or by pasting URLs.
 
-Website attachments can use Studio's default website fetch when a desktop sidecar is connected. If sidecar is unavailable, enable Jina in [Context Studio](/studios/context-studio) settings and add a Jina API key.
+Website attachments can use Studio's default website fetch when a desktop sidecar is connected. If sidecar is unavailable, enable Jina in [Context Studio](/v2/studios/context-studio) settings and add a Jina API key.
 
 ## YouTube Links
 
@@ -4026,7 +4026,7 @@ Dynamic Mode lets a tool-capable model search selected Context Studio folders or
 
 Use Dynamic Mode when you want the model to find relevant context itself instead of sending specific attachments with every prompt.
 
-See [Context Studio](/studios/context-studio) for setup and requirements.
+See [Context Studio](/v2/studios/context-studio) for setup and requirements.
 
 ::Resources
 
@@ -4034,7 +4034,7 @@ See [Context Studio](/studios/context-studio) for setup and requirements.
 
 ## Workspaces
 
-Source: https://docs.msty.ai/studio/workspaces
+Source: https://docs.msty.ai/studio/v2/workspaces
 
 Workspaces in Msty Studio help keep your projects organized by allowing you to create multiple, separate work areas. Each workspace can have its own unique settings, including models, conversations, toolsets, and prompts.
 
@@ -4067,7 +4067,7 @@ Likewise, you can import a Workspace by selecting the **+** symbol and then sele
 
 ## Organize
 
-Source: https://docs.msty.ai/studio/workspaces/organize
+Source: https://docs.msty.ai/studio/v2/workspaces/organize
 
 Keep your Workspace nice and tidy by organizing your projects and conversations into folders.
 
@@ -4162,7 +4162,7 @@ If you do not see the **Archive** folder, then enable it in the view following t
 
 ## Environments
 
-Source: https://docs.msty.ai/studio/workspaces/environment
+Source: https://docs.msty.ai/studio/v2/workspaces/environment
 
 Environments are a powerful feature in Msty Studio that allow you to create and manage different settings for your different projects or use cases. By using environments, you can easily switch between different configurations without having to manually change settings each time.
 
@@ -4236,7 +4236,7 @@ No newline at end of file
 
 ## Workspace Lock and Secrets Encryption
 
-Source: https://docs.msty.ai/studio/workspaces/lock-and-encryption
+Source: https://docs.msty.ai/studio/v2/workspaces/lock-and-encryption
 
 Lock your workspace with a passphrase so sensitive settings and API keys stay hidden until you unlock. 
 
@@ -4272,7 +4272,7 @@ This will display a modal where you'll enter and confirm a passphrase.
 
 ## Settings
 
-Source: https://docs.msty.ai/studio/settings/settings
+Source: https://docs.msty.ai/studio/v2/settings/settings
 
 Use Settings to customize how Msty Studio looks and behaves.
 
@@ -4284,7 +4284,7 @@ You can control:
 - Theme preference (Light, Dark, or System)
 - Interface mood and color styling
 - Accent and base color preferences
-- [Mode](/settings/modes)
+- [Mode](/v2/settings/modes)
 - Font size and font style
 - Code theme
 - Rendering modules (Markdown, Mermaid, Math, GFM, code highlights, collapsible blocks, links)
@@ -4333,13 +4333,13 @@ Vibe CLI Proxy settings include:
 - Auth folder details
 - Provider authentication controls
 
-See [Vibe CLI Proxy](/managing-models/vibe-cli-proxy) for provider details.
+See [Vibe CLI Proxy](/v2/managing-models/vibe-cli-proxy) for provider details.
 
 ## Remote Service and Data
 
-- Remote connections: [Remote Connections](/settings/remote-connections)
-- Backups and restore: [Data Backups and Restoration](/settings/data-backups)
-- Getting started: [Desktop and web setup](/getting-started/quick-start)
+- Remote connections: [Remote Connections](/v2/settings/remote-connections)
+- Backups and restore: [Data Backups and Restoration](/v2/settings/data-backups)
+- Getting started: [Desktop and web setup](/v2/getting-started/quick-start)
 
 ## Keyboard Shortcuts
 
@@ -4364,7 +4364,7 @@ Add your license key to unlock paid features.
 
 ## Modes
 
-Source: https://docs.msty.ai/studio/settings/modes
+Source: https://docs.msty.ai/studio/v2/settings/modes
 
 You can enhance your Msty Studio experience by enabling different modes. Each mode is designed to optimize the interaction with Studio and the model so that you can focus on the task at hand.
 
@@ -4394,7 +4394,7 @@ Zen Mode takes Focus Mode a step further by removing the chat input box, allowin
 
 ## Keyboard Shortcuts
 
-Source: https://docs.msty.ai/studio/settings/keyboard-shortcuts
+Source: https://docs.msty.ai/studio/v2/settings/keyboard-shortcuts
 
 Keyboard shortcuts help you move through Msty Studio faster.
 
@@ -4457,7 +4457,7 @@ Studio Web behavior can depend on your browser shortcut rules.
 
 ## Command Palette
 
-Source: https://docs.msty.ai/studio/settings/command-palette
+Source: https://docs.msty.ai/studio/v2/settings/command-palette
 
 Command Palette gives you one searchable command surface for navigation, creation, settings, and desktop actions.
 
@@ -4513,7 +4513,7 @@ You can customize the Command Palette shortcut in **Settings > Keyboard Shortcut
 
 ## Default Prompts
 
-Source: https://docs.msty.ai/studio/settings/default-prompts
+Source: https://docs.msty.ai/studio/v2/settings/default-prompts
 
 Several features in Msty Studio have prompts that tell a model how to respond; outside of just the conversation-related prompts. 
 
@@ -4538,7 +4538,7 @@ The Default Prompts section contains prompts for the following features:
 - **User Persona Memory Generation**: creates a structured memory draft from a selected conversation message for user persona memories
 - **YouTube Attachments**: provides context to the model about how to use YouTube video transcripts when included as attachments in chats
 
-Context Studio prompts are grouped together in the **Context Studio** category. See [Context Studio](/studios/context-studio) for metadata and Dynamic Mode workflows.
+Context Studio prompts are grouped together in the **Context Studio** category. See [Context Studio](/v2/studios/context-studio) for metadata and Dynamic Mode workflows.
 
 ## Editing Default Prompts
 
@@ -4554,7 +4554,7 @@ At the bottom of the text editor, there are buttons to fetch a prompt from **Qui
 
 ## Remote Connections
 
-Source: https://docs.msty.ai/studio/settings/remote-connections
+Source: https://docs.msty.ai/studio/v2/settings/remote-connections
 
 ## Getting Started with Remote Connections :aurum-tag
 
@@ -4637,7 +4637,7 @@ Studio adds the Local AI proxy path automatically. Do not append `/localai` to t
 
 ## Data Backups and Restoration
 
-Source: https://docs.msty.ai/studio/settings/data-backups
+Source: https://docs.msty.ai/studio/v2/settings/data-backups
 
 Msty Studio saves data locally on your browser. This means that if you clear your browser cache or browser data, you will lose your Msty data. To mitigate this, we recommend regularly backing up your data and restoring it when needed.
 
@@ -4669,7 +4669,7 @@ We highly recommend that you back up your data before clearing it.
 
 ## Lost & Found
 
-Source: https://docs.msty.ai/studio/settings/lost-and-found
+Source: https://docs.msty.ai/studio/v2/settings/lost-and-found
 
 The Lost & Found helps you find orphaned workspaces for both Msty Studio Desktop and Studio Web. 
 
@@ -4752,18 +4752,18 @@ The active workspace is then replaced with the recovered data successfully.
 
 ## Enterprise overview
 
-Source: https://docs.msty.ai/studio/enterprise/overview
+Source: https://docs.msty.ai/studio/v2/enterprise/overview
 
 The Enterprise plan is designed for teams and organizations that require additional advanced features; including user management, collaboration tools, audit logs, and additional security features.
 
 To learn more about the Enterprise plan and to get pricing information and request access to a pilot,  please visit the [Msty Studio Enterprise page](https://msty.ai/enterprise){target="_blank"}.
 
 **Enterprise features include everything in Aurum, plus**: 
-- [User Management](/enterprise/users)
-- [Team Management and Access Controls](/enterprise/teams)
-- [Resource Sharing](/enterprise/sharing) including prompts and personas with more to come
-- [Storage Options for Team Sharing](/enterprise/storage)
-- [Audit logs](/enterprise/audit-log)
+- [User Management](/v2/enterprise/users)
+- [Team Management and Access Controls](/v2/enterprise/teams)
+- [Resource Sharing](/v2/enterprise/sharing) including prompts and personas with more to come
+- [Storage Options for Team Sharing](/v2/enterprise/storage)
+- [Audit logs](/v2/enterprise/audit-log)
 - Single Sign-On - Connect to your identity management system, such as Microsoft Azure's EntraID, so that you can manage access via that system and allow authorized users to SSO into Msty Studio. Contact us at [hello@msty.ai](mailto:hello@msty.ai) to learn more. 
 
 ## Enterprise Security Information
@@ -4810,7 +4810,7 @@ From the **Settings > Teams > Settings** page in Msty Studio, select the **Manag
 
 ## Manage Users
 
-Source: https://docs.msty.ai/studio/enterprise/users
+Source: https://docs.msty.ai/studio/v2/enterprise/users
 
 Msty Studio Enterprise allows you to invite and manage users in your Enterprise account.
 
@@ -4837,7 +4837,7 @@ Owners and Admins can invite users to Msty Studio by clicking the **Invite User*
 Invited users will receive an email with a single-use link to sign into Msty Studio. 
 
 ::alert{type="info" icon="tabler:info-circle"}
-If invite emails or access codes do not arrive, ask users to check their junk folder and have IT whitelist Msty Studio email delivery. This is especially important for security-conscious organizations and education institutions with strict email security protocols. See [Whitelist Msty Studio Emails](/how-tos/whitelist-msty-emails).
+If invite emails or access codes do not arrive, ask users to check their junk folder and have IT whitelist Msty Studio email delivery. This is especially important for security-conscious organizations and education institutions with strict email security protocols. See [Whitelist Msty Studio Emails](/v2/how-tos/whitelist-msty-emails).
 ::
 
 Users can access Msty Studio Desktop and/or Msty Studio Web according to the team entitlements they are assigned to.
@@ -4888,7 +4888,7 @@ Once they receive the code in their email, on Msty Studio Desktop, they can ente
 
 ## Manage Teams
 
-Source: https://docs.msty.ai/studio/enterprise/teams
+Source: https://docs.msty.ai/studio/v2/enterprise/teams
 
 Teams allow you to group users and assign access to features, platforms, models, and storage options.
 
@@ -4948,7 +4948,7 @@ From this modal, you can select or deselect teams for the user. You may also ass
 
 ## Storage
 
-Source: https://docs.msty.ai/studio/enterprise/storage
+Source: https://docs.msty.ai/studio/v2/enterprise/storage
 
 You can add S3 compatible Storage Profiles using top-tier provider such as AWS S3, Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Vultr Object Storage, and any other provider that support S3 API.
 
@@ -5002,7 +5002,7 @@ To enable sharing in Msty Studio Web, please update your S3 bucket permissions t
 
 ## Add Storage Profile to a Team
 
-After adding a Storage Profile, you can assign this to a team when [creating or editing a team](/enterprise/teams).
+After adding a Storage Profile, you can assign this to a team when [creating or editing a team](/v2/enterprise/teams).
 
 
 ::Resources
@@ -5011,9 +5011,9 @@ After adding a Storage Profile, you can assign this to a team when [creating or 
 
 ## Sharing
 
-Source: https://docs.msty.ai/studio/enterprise/sharing
+Source: https://docs.msty.ai/studio/v2/enterprise/sharing
 
-With a [Storage Profile](/enterprise/storage) assigned to a team, team members can share the following:
+With a [Storage Profile](/v2/enterprise/storage) assigned to a team, team members can share the following:
 
 - Knowledge Stacks
 - Prompt Library
@@ -5035,7 +5035,7 @@ In the resource lists on the left, meaning the individual resources such as Know
 ![configure storage](/images/enterprise/ks-share.png)
 From the ellipsis menu, select **Share to Cloud** to share the selected item or folder to the cloud storage assigned to your team.
 
-There must be a [Storage Profile](/enterprise/storage) assigned to your team to share resources.
+There must be a [Storage Profile](/v2/enterprise/storage) assigned to your team to share resources.
 
 Team members can then access these shared resources from their own accounts by selecting the ellipsis menu and then importing the shared items.
 ::
@@ -5064,7 +5064,7 @@ If you've modified a shared item locally, refreshing will overwrite your local c
 
 ## Audit Log
 
-Source: https://docs.msty.ai/studio/enterprise/audit-log
+Source: https://docs.msty.ai/studio/v2/enterprise/audit-log
 
 Msty Studio Enterprise includes audit logs to help you track important user and team management-level actions in your Enterprise account.
 
@@ -5082,7 +5082,7 @@ However, this information is stored locally on user devices and can be accessed 
 
 ## Manage License
 
-Source: https://docs.msty.ai/studio/how-tos/manage-license
+Source: https://docs.msty.ai/studio/v2/how-tos/manage-license
 
 ## Manage License Keys and Devices
 
@@ -5106,7 +5106,7 @@ Otherwise, you can manage your subscription and view invoices through our [Lemon
 
 ## Find Online Model API Keys
 
-Source: https://docs.msty.ai/studio/how-tos/find-api-keys
+Source: https://docs.msty.ai/studio/v2/how-tos/find-api-keys
 
 API keys are required to access the services provided by Online AI services. 
 
@@ -5214,7 +5214,7 @@ Some providers may only show you the API key once, while others allow you to vie
 
 ## Azure OpenAI
 
-Source: https://docs.msty.ai/studio/how-tos/azure-openai
+Source: https://docs.msty.ai/studio/v2/how-tos/azure-openai
 
 Azure OpenAI is a Microsoft cloud service that provides access to OpenAI’s powerful language models, such as GPT, through the secure and scalable Azure platform. It’s beneficial because it combines advanced AI capabilities with enterprise-grade security, compliance, and integration tools, making it ideal for businesses to utilize LLM models and AI applications safely and efficiently.
 
@@ -5287,7 +5287,7 @@ Now, start a new chat and say hello to your new Azure OpenAI model!
 
 ## Amazon Bedrock
 
-Source: https://docs.msty.ai/studio/how-tos/aws-bedrock
+Source: https://docs.msty.ai/studio/v2/how-tos/aws-bedrock
 
 Amazon Bedrock is a fully managed service from AWS that makes it easy to build and scale generative AI applications using foundation models (FMs) from leading AI startups and Amazon. It’s beneficial because it provides a secure and scalable environment for deploying, managing, and fine-tuning AI models, making it ideal for businesses to utilize LLM models and AI applications safely and efficiently.
 
@@ -5347,11 +5347,11 @@ Now, start a new chat and say hello to your new Amazon Bedrock model!
 
 ## Sidecar
 
-Source: https://docs.msty.ai/studio/how-tos/sidecar
+Source: https://docs.msty.ai/studio/v2/how-tos/sidecar
 
 Msty Sidecar is a companion desktop application that brings powerful local capabilities to Msty Studio Web, enabling features that go beyond what’s possible in a standard web app.
 
-**Before using Sidecar, first attempt to connect using Msty Studio Desktop as outlined in the [Remote Connections guide](/settings/remote-connections).**
+**Before using Sidecar, first attempt to connect using Msty Studio Desktop as outlined in the [Remote Connections guide](/v2/settings/remote-connections).**
 
 Using the Remote Connections feature with Msty Studio Desktop is the recommended approach for most users, as it provides a seamless and integrated experience.
 
@@ -5360,7 +5360,7 @@ Using the Remote Connections feature with Msty Studio Desktop is the recommended
 Sidecar unlocks the following features in Msty Studio Web:
 
 - Enables fetching Real-Time Data from the internet
-- Enables setting up [Tools](/toolbox/tools) on your local machine
+- Enables setting up [Tools](/v2/toolbox/tools) on your local machine
 - Enables local AI model management
 
 ::alert{type="info" icon="tabler:info-circle"}
@@ -5422,9 +5422,9 @@ Safari web browser unfortunately has constraints which do not allow for direct a
 
 However, you can still connect Safari using the following methods:
 
-- [Using Remote Connections with tunneling](/settings/remote-connections#connect-directly-to-local-ai-models) **RECOMMENDED**
-- [Enabling Sidecar's Tunneling Feature](/how-tos/sidecar#connecting-remotely-to-local-ai-including-from-mobile-devices)
-- [Using Tailscale](/how-tos/setup-tailscale-for-sidecar)
+- [Using Remote Connections with tunneling](/v2/settings/remote-connections#connect-directly-to-local-ai-models) **RECOMMENDED**
+- [Enabling Sidecar's Tunneling Feature](/v2/how-tos/sidecar#connecting-remotely-to-local-ai-including-from-mobile-devices)
+- [Using Tailscale](/v2/how-tos/setup-tailscale-for-sidecar)
 
 ## Brave Web Browser
 
@@ -5454,7 +5454,7 @@ You can now remotely access your local AI!
 
 Another option for connecting to Sidecar is to use Tailscale.
 
-See the [Tailscale guide](/how-tos/setup-tailscale-for-sidecar) for more information on how to set up Tailscale with Sidecar.
+See the [Tailscale guide](/v2/how-tos/setup-tailscale-for-sidecar) for more information on how to set up Tailscale with Sidecar.
 
 ## Starting Sidecar from the Command Line
 
@@ -5484,7 +5484,7 @@ Then, restart Sidecar to apply the new token. This token will be used for both l
 
 ## Setup Tailscale for Sidecar
 
-Source: https://docs.msty.ai/studio/how-tos/setup-tailscale-for-sidecar
+Source: https://docs.msty.ai/studio/v2/how-tos/setup-tailscale-for-sidecar
 
 [Tailscale](https://tailscale.com) allows you to create a secure network between your devices, making it easy to access information on other devices, from anywhere. This is particularly useful for Sidecar, as it allows you to connect to your local AI models and tools securely.
 
@@ -5566,7 +5566,7 @@ Now that you have the URL, you can connect to Sidecar from another device that i
 
 On the other device, open a web browser and navigate to [Msty Studio](https://msty.studio).
 
-If this is the first time you are using the device to access Msty Studio, you'll need to enter your Aurum license key - see [Quick Start Guide](/getting-started/quick-start) for more information.
+If this is the first time you are using the device to access Msty Studio, you'll need to enter your Aurum license key - see [Quick Start Guide](/v2/getting-started/quick-start) for more information.
 
 In Msty Studio, click **Modes** on the left menu and select the Edit icon for editing the Sidecar connection.
 
@@ -5582,9 +5582,9 @@ You should now be connected to Sidecar from the other device. You can now use Si
 
 ## Live Context Examples
 
-Source: https://docs.msty.ai/studio/how-tos/live-context-examples
+Source: https://docs.msty.ai/studio/v2/how-tos/live-context-examples
 
-The [Live Contexts](/toolbox/live-contexts) feature lets you pull data from external endpoints to provide real-time context when interacting with Personas, LLMs, or other tools. 
+The [Live Contexts](/v2/toolbox/live-contexts) feature lets you pull data from external endpoints to provide real-time context when interacting with Personas, LLMs, or other tools.
 
 The list below provides example endpoints you can explore and test. **Please note:** these are third-party endpoints. We do not maintain them and cannot guarantee the accuracy, availability, or reliability of the data returned.  
 
@@ -5630,7 +5630,7 @@ Please submit a PR to suggest additions.
 
 ## Language Support
 
-Source: https://docs.msty.ai/studio/how-tos/language
+Source: https://docs.msty.ai/studio/v2/how-tos/language
 
 We are now crowd-sourcing language support for Msty Studio. If you want to see Msty Studio support your preferred languages, please feel free to make a contribution [on our repo page](https://github.com/cloudstack-llc/msty-studio-i18n ){target="_blank"}. 
 
@@ -5666,7 +5666,7 @@ Imported Locale files will not persist through app restarts. This is meant for t
 
 ## Use Studio Docs with AI Tools
 
-Source: https://docs.msty.ai/studio/how-tos/ai-tools-docs
+Source: https://docs.msty.ai/studio/v2/how-tos/ai-tools-docs
 
 Msty publishes a combined plain-text version of the Studio docs that AI tools can fetch and use as context.
 
@@ -5747,7 +5747,7 @@ The `llms.txt` file lists the main docs pages and links to the full docs text fi
 
 ## Whitelist Msty Studio Emails
 
-Source: https://docs.msty.ai/studio/how-tos/whitelist-msty-emails
+Source: https://docs.msty.ai/studio/v2/how-tos/whitelist-msty-emails
 
 Msty Studio sends important account and access emails from:
 

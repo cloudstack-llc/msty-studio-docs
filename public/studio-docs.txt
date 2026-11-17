@@ -8,7 +8,7 @@ Source: https://docs.msty.ai/studio/v3/getting-started
 
 Msty Studio brings local and online AI models, conversations, agents, and reusable resources into one desktop app.
 
-These guides cover **Msty Studio Desktop 3.x**. The browser app at msty.studio remains on 2.x; use the version selector for its [2.x documentation](/getting-started).
+These guides cover **Msty Studio Desktop 3.x**. The browser app at msty.studio remains on 2.x; use the version selector for its [2.x documentation](/v2/getting-started).
 
 ## Start here
 
@@ -84,7 +84,7 @@ Already using a 3.0.0 beta? Stable 3.0.0 uses the same 3.x update feed. You do n
 
 ## Browser users
 
-The web app stays on 2.x for this release. Use the version selector to open the [2.x guide](/getting-started); desktop 3.x screens may differ.
+The web app stays on 2.x for this release. Use the version selector to open the [2.x guide](/v2/getting-started); desktop 3.x screens may differ.
 
 ---
 
@@ -1310,4 +1310,4 @@ The copied URL includes the connection token. Treat it like a credential and kee
 
 Return to **Remote Tools** and choose **Disable**. Keep the desktop app and connector running for as long as the remote client needs its services.
 
-The web app has separate version and availability requirements. Use the [2.x documentation](/settings/remote-connections) when connecting from the current 2.x web interface.
+The web app has separate version and availability requirements. Use the [2.x documentation](/v2/settings/remote-connections) when connecting from the current 2.x web interface.

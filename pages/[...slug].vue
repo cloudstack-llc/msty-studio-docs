@@ -30,10 +30,10 @@
     >
       <div class="mx-auto w-full min-w-0">
         <div class="mb-6 rounded-md border bg-muted/40 px-4 py-3 text-sm">
-          <template v-if="isV3">Msty Studio 3.x · Desktop guide</template>
+          <template v-if="isLatest">Msty Studio {{ version }}<template v-if="selectedVersion.scope"> · {{ selectedVersion.scope }} guide</template></template>
           <template v-else>
-            You’re reading the 2.x documentation.
-            <NuxtLink to="/v3/getting-started" class="ml-1 font-medium underline underline-offset-4">Read the 3.x guide</NuxtLink>
+            You’re reading the {{ version }} documentation.
+            <NuxtLink :to="latestDocsHome" class="ml-1 font-medium underline underline-offset-4">Read the {{ latestDocsVersion.label }} guide</NuxtLink>
           </template>
         </div>
         <LayoutBreadcrumb v-if="page?.body && config.main.breadCrumb && (page.breadcrumb ?? true)" class="mb-4" />
@@ -80,7 +80,7 @@ const page = computed(() => pages.value[route.path.replace(/\/$/, "")]);
 const config = useConfig();
 const appConfig = useAppConfig();
 const runtimeConfig = useRuntimeConfig();
-const { isV3, version } = useDocsVersion();
+const { isLatest, selectedVersion, version, latestDocsHome, latestDocsVersion } = useDocsVersion();
 
 const siteBaseUrl = (runtimeConfig.public.siteUrl || "").replace(/\/$/, "");
 const fallbackSocialImage = `${siteBaseUrl}/images/welcome-to-msty.png`;

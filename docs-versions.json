@@ -1,0 +1,17 @@
+{
+  "latest": "v3",
+  "versions": [
+    {
+      "id": "v3",
+      "label": "3.x",
+      "scope": "Desktop",
+      "description": "These guides cover Msty Studio 3.x Desktop. Studio Web remains on 2.x."
+    },
+    {
+      "id": "v2",
+      "label": "2.x",
+      "scope": "",
+      "description": "These guides preserve the Msty Studio 2.x documentation."
+    }
+  ]
+}

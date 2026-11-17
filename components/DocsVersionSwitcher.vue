@@ -1,16 +1,18 @@
 <script setup lang="ts">
+import { getDocsHome } from '../utils/docsVersions';
+
 const route = useRoute();
-const { isV3 } = useDocsVersion();
+const { selectedVersion, docsVersions, latestDocsVersion } = useDocsVersion();
 const switching = ref(false);
 const open = ref(false);
 const selectorId = useId();
 
 async function switchVersion(version: string) {
   open.value = false;
-  if (version === (isV3.value ? '3' : '2')) return;
-  const path = route.path.replace(/^\/v3(?=\/|$)/, '') || '/getting-started';
-  const target = version === '3' ? `/v3${path}` : path;
-  const fallback = version === '3' ? '/v3/getting-started' : '/getting-started';
+  if (version === selectedVersion.value.id) return;
+  const path = route.path.replace(/\/$/, '').replace(`/${selectedVersion.value.id}`, '') || '/getting-started';
+  const target = `/${version}${path}`;
+  const fallback = getDocsHome(version);
   switching.value = true;
   try {
     const page = await queryContent().where({ _path: target }).only(['_path']).findOne();
@@ -34,7 +36,7 @@ async function switchVersion(version: string) {
           :disabled="switching"
           class="w-full justify-between font-normal"
         >
-          {{ isV3 ? '3.x' : '2.x (previous version)' }}
+          {{ selectedVersion.id }}{{ selectedVersion.id === latestDocsVersion.id ? ' (latest)' : '' }}
           <Icon name="lucide:chevrons-up-down" class="ml-2 size-4 shrink-0 text-muted-foreground" />
         </UiButton>
       </UiPopoverTrigger>
@@ -42,13 +44,9 @@ async function switchVersion(version: string) {
         <UiCommand>
           <UiCommandList aria-label="Documentation version">
             <UiCommandGroup>
-              <UiCommandItem value="3" @select="switchVersion('3')">
-                <Icon name="lucide:check" class="mr-2 size-4" :class="isV3 ? 'opacity-100' : 'opacity-0'" />
-                3.x
-              </UiCommandItem>
-              <UiCommandItem value="2" @select="switchVersion('2')">
-                <Icon name="lucide:check" class="mr-2 size-4" :class="isV3 ? 'opacity-0' : 'opacity-100'" />
-                2.x (previous version)
+              <UiCommandItem v-for="option in docsVersions" :key="option.id" :value="option.id" @select="switchVersion(option.id)">
+                <Icon name="lucide:check" class="mr-2 size-4" :class="selectedVersion.id === option.id ? 'opacity-100' : 'opacity-0'" />
+                {{ option.id }}{{ option.id === latestDocsVersion.id ? ' (latest)' : '' }}
               </UiCommandItem>
             </UiCommandGroup>
           </UiCommandList>
