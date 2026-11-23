@@ -273,7 +273,7 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
 
 
 ### Historical Desktop Versions
-::Collapsible{title="Expand this section to see Msty Studio 2.5.x to 2.9.4 downloads"}
+::Collapsible{title="Expand this section to see Msty Studio 2.5.x to 2.9.11 downloads"}
   Looking for an earlier Msty Studio release? The versions below are available based on the changelog release history. Msty Studio Web is always on the latest version, but you can download a specific version of Msty Studio Desktop here.
 
   <br />
@@ -282,7 +282,15 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
   ::div{label="Windows" icon="iconoir:windows"}
   ### Windows
 
-  - [Msty Studio 2.9.4 (x64) - Latest](https://next-assets.msty.studio/app/releases/2.9.4/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.11 (x64) - Latest](https://next-assets.msty.studio/app/releases/2.9.11/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.10 (x64)](https://next-assets.msty.studio/app/releases/2.9.10/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.9 (x64)](https://next-assets.msty.studio/app/releases/2.9.9/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.8 (x64)](https://next-assets.msty.studio/app/releases/2.9.8/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.7 (x64)](https://next-assets.msty.studio/app/releases/2.9.7/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.6 (x64)](https://next-assets.msty.studio/app/releases/2.9.6/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.5 (x64)](https://next-assets.msty.studio/app/releases/2.9.5/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.4 (x64)](https://next-assets.msty.studio/app/releases/2.9.4/win/auto/MstyStudio_x64.exe)
+  - [Msty Studio 2.9.3 (x64)](https://next-assets.msty.studio/app/releases/2.9.3/win/auto/MstyStudio_x64.exe)
   - [Msty Studio 2.9.2 (x64)](https://next-assets.msty.studio/app/releases/2.9.2/win/auto/MstyStudio_x64.exe)
   - [Msty Studio 2.9.1 (x64)](https://next-assets.msty.studio/app/releases/2.9.1/win/auto/MstyStudio_x64.exe)
   - [Msty Studio 2.9.0 (x64)](https://next-assets.msty.studio/app/releases/2.9.0/win/auto/MstyStudio_x64.exe)
@@ -313,8 +321,24 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
   ::div{label="Mac" icon="hugeicons:apple"}
   ### Mac
 
-  - [Msty Studio 2.9.4 (Apple Silicon) - Latest](https://next-assets.msty.studio/app/releases/2.9.4/mac/MstyStudio_arm64.dmg)
-  - [Msty Studio 2.9.4 (Intel) - Latest](https://next-assets.msty.studio/app/releases/2.9.4/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.11 (Apple Silicon) - Latest](https://next-assets.msty.studio/app/releases/2.9.11/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.11 (Intel) - Latest](https://next-assets.msty.studio/app/releases/2.9.11/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.10 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.10/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.10 (Intel)](https://next-assets.msty.studio/app/releases/2.9.10/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.9 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.9/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.9 (Intel)](https://next-assets.msty.studio/app/releases/2.9.9/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.8 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.8/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.8 (Intel)](https://next-assets.msty.studio/app/releases/2.9.8/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.7 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.7/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.7 (Intel)](https://next-assets.msty.studio/app/releases/2.9.7/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.6 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.6/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.6 (Intel)](https://next-assets.msty.studio/app/releases/2.9.6/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.5 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.5/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.5 (Intel)](https://next-assets.msty.studio/app/releases/2.9.5/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.4 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.4/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.4 (Intel)](https://next-assets.msty.studio/app/releases/2.9.4/mac/MstyStudio_x64.dmg)
+  - [Msty Studio 2.9.3 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.3/mac/MstyStudio_arm64.dmg)
+  - [Msty Studio 2.9.3 (Intel)](https://next-assets.msty.studio/app/releases/2.9.3/mac/MstyStudio_x64.dmg)
   - [Msty Studio 2.9.2 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.2/mac/MstyStudio_arm64.dmg)
   - [Msty Studio 2.9.2 (Intel)](https://next-assets.msty.studio/app/releases/2.9.2/mac/MstyStudio_x64.dmg)
   - [Msty Studio 2.9.1 (Apple Silicon)](https://next-assets.msty.studio/app/releases/2.9.1/mac/MstyStudio_arm64.dmg)
@@ -371,8 +395,24 @@ sudo chmod 4755 /opt/MstyStudio/chrome-sandbox
   ::div{label="Linux" icon="ph:linux-logo"}
   ### Linux
 
-  - [Msty Studio 2.9.4 (x64 AppImage) - Latest](https://next-assets.msty.studio/app/releases/2.9.4/linux/MstyStudio_x86_64.AppImage)
-  - [Msty Studio 2.9.4 (x64 deb) - Latest](https://next-assets.msty.studio/app/releases/2.9.4/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.11 (x64 AppImage) - Latest](https://next-assets.msty.studio/app/releases/2.9.11/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.11 (x64 deb) - Latest](https://next-assets.msty.studio/app/releases/2.9.11/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.10 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.10/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.10 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.10/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.9 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.9/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.9 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.9/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.8 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.8/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.8 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.8/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.7 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.7/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.7 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.7/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.6 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.6/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.6 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.6/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.5 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.5/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.5 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.5/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.4 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.4/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.4 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.4/linux/MstyStudio_amd64.deb)
+  - [Msty Studio 2.9.3 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.3/linux/MstyStudio_x86_64.AppImage)
+  - [Msty Studio 2.9.3 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.3/linux/MstyStudio_amd64.deb)
   - [Msty Studio 2.9.2 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.2/linux/MstyStudio_x86_64.AppImage)
   - [Msty Studio 2.9.2 (x64 deb)](https://next-assets.msty.studio/app/releases/2.9.2/linux/MstyStudio_amd64.deb)
   - [Msty Studio 2.9.1 (x64 AppImage)](https://next-assets.msty.studio/app/releases/2.9.1/linux/MstyStudio_x86_64.AppImage)
@@ -4757,6 +4797,38 @@ Source: https://docs.msty.ai/studio/v2/enterprise/overview
 The Enterprise plan is designed for teams and organizations that require additional advanced features; including user management, collaboration tools, audit logs, and additional security features.
 
 To learn more about the Enterprise plan and to get pricing information and request access to a pilot,  please visit the [Msty Studio Enterprise page](https://msty.ai/enterprise){target="_blank"}.
+
+## Enterprise Version Support
+
+::alert{type="warning" icon="tabler:alert-triangle"}
+Enterprise features are currently supported in Msty Studio 2.x. Msty Studio 3.x does not currently support Enterprise features.
+::
+
+Msty Studio 2.x continues to be maintained for Enterprise customers while Enterprise support for 3.x is being developed. Automatic updates from 2.x to 3.x are disabled for Enterprise customers, so existing Enterprise installations remain on the supported 2.x release line.
+
+### Download Msty Studio 2.x for Enterprise
+
+The latest supported Msty Studio 2.x release is **2.9.11**. Enterprise customers use the standard Msty Studio 2.x installer, then sign in with their Enterprise account from **Settings > License and Access** to enable Enterprise features.
+
+::tabs{variant="card" sync="enterprise-download-os"}
+::div{label="Windows" icon="iconoir:windows"}
+
+- [Download for Windows (x64)](https://next-assets.msty.studio/app/latest/win/MstyStudio_x64.exe)
+
+::
+::div{label="Mac" icon="hugeicons:apple"}
+
+- [Download for Mac (Apple Silicon)](https://next-assets.msty.studio/app/latest/mac/MstyStudio_arm64.dmg)
+- [Download for Mac (Intel)](https://next-assets.msty.studio/app/latest/mac/MstyStudio_x64.dmg)
+
+::
+::div{label="Linux" icon="ph:linux-logo"}
+
+- [Download for Linux (x64 AppImage)](https://next-assets.msty.studio/app/latest/linux/MstyStudio_x86_64.AppImage)
+- [Download for Linux (x64 deb)](https://next-assets.msty.studio/app/latest/linux/MstyStudio_amd64.deb)
+
+::
+::
 
 **Enterprise features include everything in Aurum, plus**: 
 - [User Management](/v2/enterprise/users)
