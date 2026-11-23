@@ -10,6 +10,10 @@ Msty Studio brings local and online AI models, conversations, agents, and reusab
 
 These guides cover **Msty Studio Desktop 3.x**. The browser app at msty.studio remains on 2.x; use the version selector for its [2.x documentation](/v2/getting-started).
 
+::alert{type="warning" icon="tabler:alert-triangle"}
+**Enterprise customers:** Msty Studio 3.x does not currently support Enterprise features. Continue using the maintained Msty Studio 2.x release line; automatic upgrades from Enterprise 2.x to 3.x are disabled. See the [Msty Studio 2.x Enterprise documentation](/v2/enterprise) for supported features and downloads.
+::
+
 ## Start here
 
 1. [Install or upgrade](/v3/getting-started/install-and-upgrade).
