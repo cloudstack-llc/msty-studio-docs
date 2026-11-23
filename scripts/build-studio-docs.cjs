@@ -1,5 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const configuration = require("../docs-versions.json");
+const latestVersion = configuration.versions.find(({ id }) => id === configuration.latest);
+if (!latestVersion) throw new Error(`Unknown latest docs version: ${configuration.latest}`);
+const docsVersions = [latestVersion, ...configuration.versions.filter(({ id }) => id !== configuration.latest)];
 
 const defaultSiteUrl = "https://docs.msty.ai/studio";
 const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL || defaultSiteUrl).replace(
@@ -7,8 +11,7 @@ const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL || defaultSiteUrl).replace(
   "",
 );
 const siteName = "Msty Studio Docs";
-const siteDescription =
-  "Guides for Msty Studio 3.x Desktop, with the preserved 2.x documentation available separately.";
+const siteDescription = `Guides for Msty Studio ${latestVersion.label}${latestVersion.scope ? ` ${latestVersion.scope}` : ""}, with previous versions available separately.`;
 
 function getAllMarkdownFiles(dir) {
   let results = [];
@@ -149,25 +152,21 @@ function formatPageList(pages) {
     .join("\n");
 }
 
-function buildLlmsTxt(currentPages, legacyPages) {
+function buildLlmsTxt(pagesByVersion) {
+  const sections = docsVersions.map((version) => {
+    const isLatest = version.id === configuration.latest;
+    const heading = `${version.label}${version.scope ? ` ${version.scope}` : ""} docs${isLatest ? " (default)" : ""}`;
+    const exportPath = isLatest ? "/studio-docs.txt" : `/studio-docs-${version.id}.txt`;
+    return `## ${heading}\n\n${version.description}\n\n${formatPageList(pagesByVersion.get(version.id))}\n\n- [${version.label} documentation text](${formatAbsoluteUrl(exportPath)}): Combined export of only the ${version.label} guides.`;
+  }).join("\n\n");
 
   return `# ${siteName}
 
 > ${siteDescription}
 
-The default documentation covers Msty Studio 3.x Desktop. Msty Studio Web remains on 2.x; use the 2.x guides for that version. Do not apply 3.x interface instructions to 2.x.
+The default documentation covers Msty Studio ${latestVersion.label}${latestVersion.scope ? ` ${latestVersion.scope}` : ""}. Use the guides for your installed version.
 
-## 3.x Desktop docs (default)
-
-${formatPageList(currentPages)}
-
-- [3.x documentation text](${formatAbsoluteUrl("/studio-docs.txt")}): Combined export of only the 3.x guides.
-
-## 2.x docs
-
-${formatPageList(legacyPages)}
-
-- [2.x documentation text](${formatAbsoluteUrl("/studio-docs-v2.txt")}): Separate export of the preserved 2.x guides.
+${sections}
 
 ## Additional Resources
 
@@ -176,14 +175,11 @@ ${formatPageList(legacyPages)}
 }
 
 function buildDocumentationText(pages, version) {
-  const scope = version === "3.x"
-    ? "These guides cover Msty Studio 3.x Desktop. Studio Web remains on 2.x."
-    : "These guides preserve the Msty Studio 2.x documentation.";
   const content = pages.map((page) =>
     `## ${page.title}\n\nSource: ${formatAbsoluteUrl(page.route)}\n\n${stripYamlFrontmatter(page.raw).trim()}`,
   ).join("\n\n---\n\n");
 
-  return `# Msty Studio ${version} documentation\n\n${scope}\n\n${content}\n`;
+  return `# Msty Studio ${version.label} documentation\n\n${version.description}\n\n${content}\n`;
 }
 
 function writeFileIfChanged(filePath, content) {
@@ -219,25 +215,31 @@ const pages = [...files].sort((a, b) =>
     return null;
   }
 
+  const versionId = route.split("/")[1];
+  if (!docsVersions.some(({ id }) => id === versionId)) {
+    throw new Error(`Guide ${file} must live under a configured version directory`);
+  }
+
   return {
     route,
     title: frontmatter.title || route.replace(/^\//, ""),
     description: frontmatter.description || "",
     raw,
-    version: route === "/v3" || route.startsWith("/v3/") ? "3.x" : "2.x",
+    versionId,
   };
 }).filter(Boolean);
-const currentPages = pages.filter((page) => page.version === "3.x");
-const legacyPages = pages.filter((page) => page.version === "2.x");
-const routes = [...currentPages, ...legacyPages].map((page) => page.route);
+const pagesByVersion = new Map(docsVersions.map(({ id }) => [id, pages.filter((page) => page.versionId === id)]));
+const routes = docsVersions.flatMap(({ id }) => pagesByVersion.get(id).map((page) => page.route));
 
 fs.mkdirSync(publicDir, { recursive: true });
-writeFileIfChanged(path.join(publicDir, "studio-docs.txt"), buildDocumentationText(currentPages, "3.x"));
-writeFileIfChanged(path.join(publicDir, "studio-docs-v2.txt"), buildDocumentationText(legacyPages, "2.x"));
+for (const version of docsVersions) {
+  const text = buildDocumentationText(pagesByVersion.get(version.id), version);
+  writeFileIfChanged(path.join(publicDir, `studio-docs-${version.id}.txt`), text);
+  if (version.id === configuration.latest) {
+    writeFileIfChanged(path.join(publicDir, "studio-docs.txt"), text);
+  }
+}
 writeFileIfChanged(path.join(publicDir, "sitemap.xml"), buildSitemap(routes));
-writeFileIfChanged(path.join(publicDir, "llms.txt"), buildLlmsTxt(currentPages, legacyPages));
+writeFileIfChanged(path.join(publicDir, "llms.txt"), buildLlmsTxt(pagesByVersion));
 
-console.log("Generated public/studio-docs.txt");
-console.log("Generated public/studio-docs-v2.txt");
-console.log("Generated public/sitemap.xml");
-console.log("Generated public/llms.txt");
+console.log("Generated versioned documentation exports, public/studio-docs.txt, public/sitemap.xml, and public/llms.txt");

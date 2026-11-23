@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, statSync } from "node:fs";
 import { access, mkdir, writeFile } from "node:fs/promises";
 import { basename, extname, join, resolve } from "node:path";
+import { docsVersions, getDocsHome, latestDocsHome } from "./utils/docsVersions";
 
 const watchIgnored = [
   "**/.git/**",
@@ -37,15 +38,6 @@ export function buildAssetsURL(...path) {
 }
 `;
 
-function permanentRedirect(to: string) {
-  return {
-    redirect: {
-      to,
-      statusCode: 301,
-    },
-  };
-}
-
 function stripOrderPrefix(segment: string) {
   return segment.replace(/^\d+\./, "");
 }
@@ -76,7 +68,7 @@ function toContentPath(contentDir: string, filePath: string) {
   const segments = relativePath.split("/").map(stripOrderPrefix);
   const pageName = segments.at(-1);
 
-  if (!pageName || pageName.startsWith("_")) {
+  if (!pageName || segments.some((segment) => segment.startsWith("_") || segment.startsWith("."))) {
     return null;
   }
 
@@ -91,66 +83,6 @@ const contentDir = resolve(process.cwd(), "content");
 const contentPagePaths = collectMarkdownFiles(contentDir)
   .map((filePath) => toContentPath(contentDir, filePath))
   .filter((path): path is string => Boolean(path));
-
-function createLegacyFeatureRedirects(rootDir: string) {
-  const contentDir = resolve(rootDir, "content");
-  const contentPaths = collectMarkdownFiles(contentDir)
-    .map((filePath) => toContentPath(contentDir, filePath))
-    .filter((path): path is string => Boolean(path));
-
-  return Object.fromEntries([
-    ...contentPaths.map((path) => [`/features${path}`, permanentRedirect(path)]),
-    ...contentPaths
-      .filter((path) => path.startsWith("/managing-models/"))
-      .map((path) => [
-        `/features/${path.slice("/managing-models/".length)}`,
-        permanentRedirect(path),
-      ]),
-  ]);
-}
-
-function createRedirects(redirects: Record<string, string>) {
-  return Object.fromEntries(
-    Object.entries(redirects).map(([from, to]) => [from, permanentRedirect(to)]),
-  );
-}
-
-const reportedLegacyRedirects = createRedirects({
-  "/features/advanced-configs": "/managing-models/advanced-configs",
-  "/features/conversations/main-chat": "/conversations/main-chat",
-  "/features/conversations/split-chat": "/conversations/split-chat",
-  "/features/conversations/system-prompts": "/conversations/system-prompts",
-  "/features/forge-mode": "/conversations/forge-mode",
-  "/features/image-gen": "/managing-models/image-gen",
-  "/features/knowledge-stacks/overview": "/knowledge-stacks/overview",
-  "/features/real-time-data": "/add-ons/real-time-data",
-  "/features/remote-connections": "/settings/remote-connections",
-  "/features/settings": "/settings",
-  "/features/thinking-effort": "/managing-models/thinking-effort",
-  "/features/toolbox/live-contexts": "/toolbox/live-contexts",
-  "/features/toolbox/tool-dependencies": "/toolbox/tool-dependencies",
-  "/features/toolbox/tools": "/toolbox/tools",
-  "/features/toolbox/toolsets": "/toolbox/toolsets",
-  "/features/turnstiles": "/add-ons/turnstiles",
-  "/getting-started/desktop": "/getting-started/download",
-  "/getting-started/llama.cpp-models": "/managing-models/local-models",
-  "/getting-started/managing-models": "/managing-models",
-  "/getting-started/mlx-models": "/managing-models/local-models",
-  "/getting-started/onboarding": "/getting-started/quick-start",
-  "/getting-started/sidecar": "/how-tos/sidecar",
-  "/how-tos/get-latest-ollama": "/managing-models/local-models",
-  "/msty-claw/configurations": "https://docs.msty.ai/claw/general-settings",
-  "/msty-claw/setup": "https://docs.msty.ai/claw/setup",
-});
-
-const v3GuideRedirects = createRedirects({
-  "/v3/studios": "/v3/getting-started/find-your-way",
-  "/v3/studios/persona-studio": "/v3/personas",
-  "/v3/studios/prompt-studio": "/v3/prompts",
-  "/v3/studios/skills-studio": "/v3/skills",
-  "/v3/studios/context-studio": "/v3/context-studio",
-  "/v3/studios/media-studio": "/v3/media-studio",
-});
 
 async function ensureNuxtInternalPathsShim(rootDir: string) {
   const runtimePackageDirs = [
@@ -207,6 +139,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-09-19",
 
   runtimeConfig: {
+    docsPagePaths: contentPagePaths,
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || defaultSiteUrl,
     },
@@ -237,22 +170,19 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/": {
-      redirect: "/v3/getting-started",
-    },
-    "/v3": { redirect: "/v3/getting-started" },
-    ...createLegacyFeatureRedirects(process.cwd()),
-    ...reportedLegacyRedirects,
-    ...v3GuideRedirects,
+    "/": { redirect: { to: latestDocsHome, statusCode: 302 } },
+    ...Object.fromEntries(docsVersions.map(({ id }) => [
+      `/${id}`,
+      { redirect: { to: getDocsHome(id), statusCode: 302 } },
+    ])),
   },
 
   nitro: {
     preset: "cloudflare_pages",
     cloudflare: {
       pages: {
-        // HTML and redirects are static; keep content and icon APIs available.
-        defaultRoutes: false,
-        routes: { include: ["/api/*"], exclude: [] },
+        // Serve known pages/assets statically; send unmatched URLs to the redirect middleware.
+        routes: { include: ["/*"] },
       },
     },
     // Publish guides as HTML so direct visits do not depend on runtime rendering.

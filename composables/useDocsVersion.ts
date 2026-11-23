@@ -1,16 +1,17 @@
+import { docsVersions, getDocsHome, getDocsVersion, latestDocsHome, latestDocsVersion } from '../utils/docsVersions';
+
 export function useDocsVersion() {
   const route = useRoute();
   const { navigation } = useContent();
-  const isV3 = computed(() => route.path === '/v3' || route.path.startsWith('/v3/'));
-  const version = computed(() => isV3.value ? '3.x' : '2.x');
-  const home = computed(() => isV3.value ? '/v3/getting-started' : '/getting-started');
-  const belongsToVersion = (path: string) => (path === '/v3' || path.startsWith('/v3/')) === isV3.value;
+  const selectedVersion = computed(() => getDocsVersion(route.path));
+  const isLatest = computed(() => selectedVersion.value.id === latestDocsVersion.id);
+  const version = computed(() => selectedVersion.value.label);
+  const home = computed(() => getDocsHome(selectedVersion.value.id));
+  const belongsToVersion = (path: string) => path === `/${selectedVersion.value.id}` || path.startsWith(`/${selectedVersion.value.id}/`);
   const versionNavigation = computed(() => {
     const links = navigation.value ?? [];
-    return isV3.value
-      ? links.find(link => link._path === '/v3')?.children ?? []
-      : links.filter(link => link._path !== '/v3');
+    return links.find(link => link._path === `/${selectedVersion.value.id}`)?.children ?? [];
   });
 
-  return { isV3, version, home, belongsToVersion, versionNavigation };
+  return { selectedVersion, isLatest, version, home, belongsToVersion, versionNavigation, docsVersions, latestDocsVersion, latestDocsHome };
 }

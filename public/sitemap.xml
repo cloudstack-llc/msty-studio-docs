@@ -127,222 +127,222 @@
     <loc>https://docs.msty.ai/studio/v3/settings/remote-connections</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/getting-started</loc>
+    <loc>https://docs.msty.ai/studio/v2/getting-started</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/getting-started/quick-start</loc>
+    <loc>https://docs.msty.ai/studio/v2/getting-started/quick-start</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/getting-started/download</loc>
+    <loc>https://docs.msty.ai/studio/v2/getting-started/download</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/online-providers</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/online-providers</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/local-models</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/local-models</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/vibe-cli-proxy</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/vibe-cli-proxy</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/model-matchmaker</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/model-matchmaker</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/image-gen</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/image-gen</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/insights</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/insights</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/advanced-configs</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/advanced-configs</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/thinking-effort</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/thinking-effort</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/managing-models/context-explorer</loc>
+    <loc>https://docs.msty.ai/studio/v2/managing-models/context-explorer</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/main-chat</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/main-chat</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/persona-conversations</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/persona-conversations</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/shadow-personas</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/shadow-personas</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/crew-chats</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/crew-chats</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/responses</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/responses</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/split-chat</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/split-chat</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/forge-mode</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/forge-mode</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/system-prompts</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/system-prompts</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/branch-explorer</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/branch-explorer</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/conversations/export-import</loc>
+    <loc>https://docs.msty.ai/studio/v2/conversations/export-import</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/agent-mode/agent-mode</loc>
+    <loc>https://docs.msty.ai/studio/v2/agent-mode/agent-mode</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/studios/persona-studio</loc>
+    <loc>https://docs.msty.ai/studio/v2/studios/persona-studio</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/studios/prompts-studio</loc>
+    <loc>https://docs.msty.ai/studio/v2/studios/prompts-studio</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/studios/skills-studio</loc>
+    <loc>https://docs.msty.ai/studio/v2/studios/skills-studio</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/studios/media-studio</loc>
+    <loc>https://docs.msty.ai/studio/v2/studios/media-studio</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/studios/context-studio</loc>
+    <loc>https://docs.msty.ai/studio/v2/studios/context-studio</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/overview</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/overview</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/compose-options</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/compose-options</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/query-settings</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/query-settings</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/chunks-visualizer</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/chunks-visualizer</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/chunks-console</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/chunks-console</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/analytics-insights</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/analytics-insights</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/share-and-manage</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/share-and-manage</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/ignore-file</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/ignore-file</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/knowledge-stacks/next-gen</loc>
+    <loc>https://docs.msty.ai/studio/v2/knowledge-stacks/next-gen</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/toolbox/tools</loc>
+    <loc>https://docs.msty.ai/studio/v2/toolbox/tools</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/toolbox/toolsets</loc>
+    <loc>https://docs.msty.ai/studio/v2/toolbox/toolsets</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/toolbox/live-contexts</loc>
+    <loc>https://docs.msty.ai/studio/v2/toolbox/live-contexts</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/toolbox/tool-dependencies</loc>
+    <loc>https://docs.msty.ai/studio/v2/toolbox/tool-dependencies</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/add-ons/turnstiles</loc>
+    <loc>https://docs.msty.ai/studio/v2/add-ons/turnstiles</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/add-ons/real-time-data</loc>
+    <loc>https://docs.msty.ai/studio/v2/add-ons/real-time-data</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/add-ons/attachments</loc>
+    <loc>https://docs.msty.ai/studio/v2/add-ons/attachments</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/workspaces</loc>
+    <loc>https://docs.msty.ai/studio/v2/workspaces</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/workspaces/organize</loc>
+    <loc>https://docs.msty.ai/studio/v2/workspaces/organize</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/workspaces/environment</loc>
+    <loc>https://docs.msty.ai/studio/v2/workspaces/environment</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/workspaces/lock-and-encryption</loc>
+    <loc>https://docs.msty.ai/studio/v2/workspaces/lock-and-encryption</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/settings</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/settings</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/modes</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/modes</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/keyboard-shortcuts</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/keyboard-shortcuts</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/command-palette</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/command-palette</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/default-prompts</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/default-prompts</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/remote-connections</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/remote-connections</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/data-backups</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/data-backups</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/settings/lost-and-found</loc>
+    <loc>https://docs.msty.ai/studio/v2/settings/lost-and-found</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/enterprise/overview</loc>
+    <loc>https://docs.msty.ai/studio/v2/enterprise/overview</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/enterprise/users</loc>
+    <loc>https://docs.msty.ai/studio/v2/enterprise/users</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/enterprise/teams</loc>
+    <loc>https://docs.msty.ai/studio/v2/enterprise/teams</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/enterprise/storage</loc>
+    <loc>https://docs.msty.ai/studio/v2/enterprise/storage</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/enterprise/sharing</loc>
+    <loc>https://docs.msty.ai/studio/v2/enterprise/sharing</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/enterprise/audit-log</loc>
+    <loc>https://docs.msty.ai/studio/v2/enterprise/audit-log</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/manage-license</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/manage-license</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/find-api-keys</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/find-api-keys</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/azure-openai</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/azure-openai</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/aws-bedrock</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/aws-bedrock</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/sidecar</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/sidecar</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/setup-tailscale-for-sidecar</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/setup-tailscale-for-sidecar</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/live-context-examples</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/live-context-examples</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/language</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/language</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/ai-tools-docs</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/ai-tools-docs</loc>
   </url>
   <url>
-    <loc>https://docs.msty.ai/studio/how-tos/whitelist-msty-emails</loc>
+    <loc>https://docs.msty.ai/studio/v2/how-tos/whitelist-msty-emails</loc>
   </url>
 </urlset>

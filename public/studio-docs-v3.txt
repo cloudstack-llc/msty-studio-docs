@@ -1,0 +1,1313 @@
+# Msty Studio 3.x documentation
+
+These guides cover Msty Studio 3.x Desktop. Studio Web remains on 2.x.
+
+## Msty Studio 3.x
+
+Source: https://docs.msty.ai/studio/v3/getting-started
+
+Msty Studio brings local and online AI models, conversations, agents, and reusable resources into one desktop app.
+
+These guides cover **Msty Studio Desktop 3.x**. The browser app at msty.studio remains on 2.x; use the version selector for its [2.x documentation](/v2/getting-started).
+
+## Start here
+
+1. [Install or upgrade](/v3/getting-started/install-and-upgrade).
+2. Follow [Quick Start](/v3/getting-started/quick-start) to choose a model.
+3. [Find your way around](/v3/getting-started/find-your-way) and start a conversation.
+
+## Choose a workflow
+
+- [Conversations](/v3/conversations): write, compare responses, and explore branches.
+- [Agent Mode](/v3/agent-mode): work with an agent in a folder or a standalone session.
+- [Vibe CLI Proxy](/v3/managing-models/vibe-cli-proxy): connect supported coding assistant accounts and use their available models in conversations.
+- [Knowledge Stacks](/v3/knowledge-stacks/overview): ask questions using your own sources.
+- [Personas](/v3/personas) and [Prompts](/v3/prompts): reuse instructions across conversations.
+- [Context Studio](/v3/context-studio): organize files, images, and other reference material.
+- [Media Studio](/v3/media-studio): generate and refine images or videos.
+- [Toolbox](/v3/toolbox/tools): connect tools and reusable Live Contexts.
+
+Your conversations and workspaces are stored on your device. Requests to an online model or connected service send the context you choose to that service. Data does not automatically sync between devices.
+
+---
+
+## Quick Start
+
+Source: https://docs.msty.ai/studio/v3/getting-started/quick-start
+
+## Set up a model
+
+1. Open Msty Studio and choose **Just exploring**, **For work**, or **I'm a developer**. This helps tailor the setup suggestions.
+2. Choose a recommended local model, or connect an online provider.
+3. For a local model, adjust the recommendation from **Light** to **Powerful**, then choose **Download & Get Started**. Local models need enough disk space and memory.
+4. For an online provider, choose the provider, add its API key, and select at least one model before continuing. Your provider handles usage and billing.
+5. Choose your first activity: chat, generate images, chat with Msty Studio Docs, or explore personas.
+
+![The clean onboarding screen with three workflow choices](/images/v3/onboarding.png)
+
+![The model setup step with a local recommendation and online provider choices](/images/v3/model-setup.png)
+
+You can use **Skip to app** to explore first and add a model later under **Settings > Model Providers** or **Settings > Local Models**.
+
+## Send your first message
+
+1. Select **New Conversation** in the sidebar.
+2. Choose your model below the message box.
+3. Write a message and send it. For example: “Help me plan a small community garden.”
+4. Continue the conversation, or use **Add Split Chat** to compare another model alongside it.
+
+Next: [manage models](/v3/managing-models) or learn [conversation controls](/v3/conversations).
+
+---
+
+## Install and Upgrade
+
+Source: https://docs.msty.ai/studio/v3/getting-started/install-and-upgrade
+
+## Install the desktop app
+
+Download the installer for your operating system from the [Msty website](https://msty.ai). On macOS, choose the build for Apple Silicon or Intel. Windows also has separate x64 and ARM64 builds.
+
+Open the installer, launch Msty Studio, and follow [Quick Start](/v3/getting-started/quick-start).
+
+Some local engines depend on your operating system and hardware. The onboarding recommendation helps you choose; you can manage engines later in [Local Models](/v3/managing-models/local-models).
+
+## Before upgrading
+
+Create a [data backup](/v3/settings/data-backups) and keep a copy outside the app's data folder. Keep your model files if you want to reuse downloaded models.
+
+## Move from 2.x
+
+2.x users remain on the 2.x update line until they explicitly select the 3.x track. Select the 3.x option in the application update settings when you are ready to upgrade.
+
+Already using a 3.0.0 beta? Stable 3.0.0 uses the same 3.x update feed. You do not need to reinstall or switch tracks to receive it once it is released.
+
+## Browser users
+
+The web app stays on 2.x for this release. Use the version selector to open the [2.x guide](/v2/getting-started); desktop 3.x screens may differ.
+
+---
+
+## Find Your Way
+
+Source: https://docs.msty.ai/studio/v3/getting-started/find-your-way
+
+## Sidebar
+
+The upper sidebar holds your conversations and projects. Use the workspace switcher to move between workspaces, and drag the divider to adjust how much space conversations use.
+
+The lower sidebar opens [Knowledge Stacks](/v3/knowledge-stacks/overview), [Prompts](/v3/prompts), [Turnstiles](/v3/add-ons/turnstiles), [Skills](/v3/skills), [Personas](/v3/personas), [Context Studio](/v3/context-studio), [Toolbox](/v3/toolbox/tools), and [Settings](/v3/settings/settings). Drag sidebar items to reorder or hide them.
+
+## Start something new
+
+Select **New Conversation** for a normal chat. Its adjacent menu also starts a Persona Conversation, Crew Conversation, Agent Session, Forge Canvas, or Media Session.
+
+![The new conversation menu in a clean workspace](/images/v3/new-conversation-menu.png)
+
+- **Normal chat:** pick a model and write a message.
+- **Persona or crew:** use saved assistants and shared instructions.
+- **Agent Session:** work through tasks with an installed agent.
+- **Forge Canvas:** start with a canvas-style conversation.
+- **Media Session:** open [Media Studio](/v3/media-studio) to work with connected image or video models.
+
+## Find an action
+
+Use the sidebar search button to open the command palette. Search for conversations, resources, settings, and actions. Manage keyboard bindings in **Settings > Keyboard Shortcuts**.
+
+Next: [conversations](/v3/conversations), [workspaces](/v3/workspaces), or [settings](/v3/settings/settings).
+
+---
+
+## Choose and Connect Models
+
+Source: https://docs.msty.ai/studio/v3/managing-models
+
+Msty Studio supports models running on your computer and models hosted by a provider. Select the model for each conversation from its model selector.
+
+## Choose a setup
+
+| Setup | Start here |
+| --- | --- |
+| Use a provider API key | [Online Providers](/v3/managing-models/online-providers) |
+| Connect a supported coding assistant account | [Vibe CLI Proxy](/v3/managing-models/vibe-cli-proxy) |
+| Download and run a model on this computer | [Local Models](/v3/managing-models/local-models) |
+| Use model files you already have | [Import Models](/v3/managing-models/import-models) |
+| Connect an existing Ollama or OpenAI-compatible server | [External Model Servers](/v3/managing-models/external-servers) |
+
+Open **Settings > Model Providers** to manage connections. Open **Settings > Local Models** to discover, download, and manage local models.
+
+## Select a model
+
+1. Open a conversation and select its current model.
+2. Search the available models or filter by provider and purpose.
+3. Choose a model for that conversation.
+
+An image, embedding, or speech model is not automatically suitable for chat. Check its purpose when adding a custom model.
+
+To adjust responses, see [Model Parameters](/v3/managing-models/model-parameters). To make a shortlist before connecting a model, use [Model Matchmaker](/v3/managing-models/model-matchmaker).
+
+---
+
+## Online Providers
+
+Source: https://docs.msty.ai/studio/v3/managing-models/online-providers
+
+![The new model provider form with provider, API key, and model fields](/images/v3/model-providers.png)
+
+## Add a provider
+
+1. Open **Settings > Model Providers** and choose **Add Provider**.
+2. Select your provider.
+3. Enter the credentials and endpoint details requested by that provider.
+4. Choose **Fetch Models** when available, then select the models you want to use. You can also choose **Add Custom Model** and enter its model ID.
+5. Optionally give the connection a name, then choose **Save**.
+6. Open a conversation and select one of the added models.
+
+API access and billing are managed by the provider. An Msty license does not supply a provider API key or include its usage charges.
+
+## Provider-specific details
+
+- **Azure OpenAI:** enter the deployment name as a custom model. Msty cannot fetch Azure deployment names.
+- **Amazon Bedrock:** choose the authentication method and enter the required region and credentials.
+- **OpenAI-compatible providers:** enter the inference endpoint required by that service. Many use a base URL ending in `/v1`.
+
+Some provider types and options require Aurum. The app marks restricted choices.
+
+## Manage a connection
+
+Return to **Model Providers** to update credentials, change the selected models, or refresh the provider list. **Show in Model Selector** controls whether that provider appears when choosing models.
+
+Providers belong to workspaces. The provider form can copy or sync a connection to other workspaces.
+
+---
+
+## Local Models
+
+Source: https://docs.msty.ai/studio/v3/managing-models/local-models
+
+Open **Settings > Local Models**. The page brings local models together across Ollama, LLaMA.cpp, and MLX.
+
+![The Local Models catalog with engine filters and model choices](/images/v3/local-models.png)
+
+## Install a model
+
+1. Choose **Discover** for the catalog, or **Search** to search Ollama and Hugging Face.
+2. Select a model and review its available files or variants.
+3. Choose a compatible engine and select **Install**.
+4. If the engine is missing, confirm its setup first. Msty installs the engine before downloading the model.
+5. Wait for the model to be ready, then select it in a conversation.
+
+MLX models require an Apple Silicon Mac. The available engines, files, and recommendations depend on your device and the selected model.
+
+## Follow downloads
+
+Active downloads show their stage and progress. Use the available pause, resume, or cancel controls for that download. A model is ready for use after installation completes.
+
+## Manage installed models
+
+Choose **Installed**, then select a model to inspect its details and available settings. Search and engine filters help narrow the list.
+
+Removing a model uninstalls its local files; it does not remove the whole engine. Msty asks for confirmation before removal. Holding **Shift** while using the remove action skips that confirmation.
+
+For existing files, see [Import Models](/v3/managing-models/import-models). For services managed outside Msty, see [External Model Servers](/v3/managing-models/external-servers).
+
+---
+
+## Import Models
+
+Source: https://docs.msty.ai/studio/v3/managing-models/import-models
+
+## Import files you already have
+
+1. Open **Settings > Local Models**.
+2. Choose **Import**.
+3. Select a GGUF file, or choose the directory option for a safetensors model.
+4. Follow any required engine setup and wait for import to finish.
+5. Find the model under **Installed** and select it in a conversation.
+
+Keep all required configuration, tokenizer, and weight files together when importing a safetensors directory. A single weight file may not contain everything the engine needs.
+
+## Which engine receives the model?
+
+- GGUF imports use an installed LLaMA.cpp engine when available; otherwise they use Ollama, with setup offered if needed.
+- On Apple Silicon, an existing MLX provider can import a compatible MLX model directory.
+- Other supported safetensors imports use Ollama. Compatibility depends on the model format and architecture.
+
+Importing a file does not make an unsupported model architecture compatible. If import fails, check the reported error and confirm that the complete model is supported by the selected engine.
+
+To download a model directly instead, use [Local Models](/v3/managing-models/local-models).
+
+---
+
+## External Model Servers
+
+Source: https://docs.msty.ai/studio/v3/managing-models/external-servers
+
+## Connect an existing server
+
+1. Start the model server and load or install the models it should serve.
+2. In Msty, open **Settings > Model Providers > Add Provider**.
+3. Select the matching provider type, such as **Ollama Remote**, **LM Studio**, or an OpenAI-compatible provider.
+4. Enter its endpoint and any required token or API key.
+5. Fetch or select the available models, then save the provider.
+
+The server must remain running and reachable while you use its models. Use the address reachable from the computer running Msty; `localhost` refers to that computer.
+
+## Endpoint details
+
+- **Ollama:** enter the service endpoint, commonly `http://localhost:11434` for a local installation.
+- **LM Studio:** use the server's API endpoint, commonly `http://localhost:1234/v1`. If its API authentication is enabled, enter the API key too.
+- **OpenAI-compatible servers:** use the base URL expected by that server, often including `/v1`.
+
+If model discovery is unavailable, add a custom model using the exact model ID recognized by the server.
+
+## Connect Msty Nexus
+
+**Settings > Model Providers** also offers a Msty Nexus connection. Open Nexus, choose **Connect** in Studio, approve the displayed code in Nexus, and return to Studio. Studio then loads the models available through that connection.
+
+---
+
+## Model Parameters
+
+Source: https://docs.msty.ai/studio/v3/managing-models/model-parameters
+
+## Change settings for a conversation
+
+1. Select a model in the conversation.
+2. Open the parameter control beside the model selector.
+3. Adjust the settings offered for that model.
+4. Choose **Apply**.
+
+Available parameters depend on the provider and model. Start with defaults, then change one setting at a time.
+
+## Common controls
+
+- **Temperature:** controls variation where the model supports it.
+- **Maximum output tokens:** limits the generated response length.
+- **Context size:** controls how much input a supported local model can consider. Larger contexts can require more memory.
+- **Thinking effort:** adjusts reasoning for models that expose this setting. Some models always use reasoning or only support the provider default.
+
+Thinking display options and reasoning effort are separate: changing how reasoning is shown does not necessarily change how much the model performs.
+
+## Reuse settings
+
+Use the parameter menu to save a preset or apply an existing one. The menu also supports JSON import and export.
+
+**Apply and Save as Model Default** stores settings for that model as well as applying them to the current conversation. Use a conversation-only change when you do not want a new default.
+
+Advanced parameters and provider options are intended for settings supported by the underlying service. An unsupported option can cause the provider to reject a request.
+
+---
+
+## Model Matchmaker
+
+Source: https://docs.msty.ai/studio/v3/managing-models/model-matchmaker
+
+Model Matchmaker helps create a shortlist. It does not install a model or measure its performance on your computer.
+
+## Compare models
+
+1. Open **Model Matchmaker**.
+2. Choose **Local**, **Remote**, or both model types to compare.
+3. Adjust the strength sliders for priorities such as coding, reasoning, language, context, or token cost.
+4. Review the ranked models. Select a model name to inspect its strength chart, or open its capabilities.
+5. Connect or install a shortlisted model, then test it with your own prompts.
+
+Save a strength preset if you regularly compare models for the same kind of work.
+
+Use [Online Providers](/v3/managing-models/online-providers) or [Local Models](/v3/managing-models/local-models) to make a chosen model available in conversations.
+
+---
+
+## Vibe CLI Proxy
+
+Source: https://docs.msty.ai/studio/v3/managing-models/vibe-cli-proxy
+
+Vibe CLI Proxy runs a local service that connects supported coding assistant accounts to Msty Studio. After you authorize an account, its available models can appear in the conversation model selector.
+
+## Connect an account
+
+1. Open **Settings > Vibe CLI Proxy** in Msty Studio Desktop.
+2. Install the proxy and review and accept the notice shown in the app.
+3. Under **Authentication**, open the menu for a supported provider and choose **Authorize**.
+4. Complete the provider's browser sign-in or device-code flow.
+5. With the proxy running, open a conversation and select an available model. Msty discovers and synchronizes the connected models automatically.
+
+Available providers and models depend on the proxy version and your account. Follow your provider's terms for the account and models you use.
+
+## Manage the proxy
+
+Return to **Settings > Vibe CLI Proxy** to start or stop the service, manage authentication, review logs, or change its port and network settings. The proxy runs locally, while requests to connected models go to their providers.
+
+---
+
+## Start a conversation
+
+Source: https://docs.msty.ai/studio/v3/conversations
+
+![A sample community garden conversation in a clean workspace](/images/v3/conversation.png)
+
+## Send your first message
+
+1. Click **New Conversation** in the sidebar. If the button shows another conversation type, open its menu and choose **New Conversation**.
+2. Select a model in the chat. [Add a provider](/v3/managing-models/online-providers) or [install a local model](/v3/managing-models/local-models) first if the list is empty.
+3. Write your prompt and click the send button.
+4. Continue in the same chat to keep the preceding messages available as context.
+
+The send button shows the current keyboard shortcut. Open its menu to choose whether Enter or a modifier plus Enter sends a message.
+
+Use the stop control to interrupt a response. You can then refine your request or [regenerate the response](/v3/conversations/responses-and-branches).
+
+## Add context
+
+Use the controls around the composer to add attachments, a system prompt, Knowledge Stacks, or tools. Availability depends on the selected model and your plan. Review the selected items before sending: an attachment being stored in the workspace does not automatically mean it is included in this prompt.
+
+For a repeatable role or a group of assistants, start a [persona or crew conversation](/v3/conversations/personas-and-crews).
+
+## Find and organize chats
+
+Conversations appear in the sidebar under their projects. Open a conversation's actions to rename, move, bookmark, archive, or export it. Use **Sort & Display** above the conversation list to change ordering or show archived conversations.
+
+The sidebar search opens the command palette. Use Bookmarks for conversations and messages you want to return to quickly.
+
+## Compare answers
+
+Add a [split chat](/v3/conversations/split-chat) to keep another model or line of thought beside the current chat. Each split has its own message history; prompt synchronization lets selected splits receive the same next prompt.
+
+---
+
+## Compare models with split chats
+
+Source: https://docs.msty.ai/studio/v3/conversations/split-chat
+
+![A conversation with a second split ready for another model](/images/v3/split-chat.png)
+
+## Add a split
+
+1. Open a conversation and choose **Add Split Chat**.
+2. Select the model for the new split.
+3. Check **Toggle Prompts Sync with Splits** beside each split's send controls.
+4. Send a prompt from a synced split to compare responses from the participating splits.
+
+Turn prompt sync off for a split when you want to ask it something separately. Sync shares prompts; it does not merge the splits' response histories.
+
+## Start from an existing message
+
+Open a message's **Extra Actions** menu:
+
+- **Use as prompt in new split** carries the associated prompt into another split.
+- **Clone with Ancestors to New Split** copies the conversation up to that message so you can continue from the same context.
+
+These actions are available in supported conversation types. Crew conversations use their own multi-persona response flow.
+
+## Manage a split
+
+Open **Split Options** to find a message, bookmark the split, export its chat, or copy or move it into a new conversation.
+
+**Hide Split** removes it from the current view. **Delete Split** removes its data after confirmation. Check which action you selected before confirming.
+
+Use [branches](/v3/conversations/responses-and-branches) when you want alternate replies at the same point in a split instead of another side-by-side chat.
+
+---
+
+## Edit responses and explore branches
+
+Source: https://docs.msty.ai/studio/v3/conversations/responses-and-branches
+
+## Work with a response
+
+Move over a message to reveal its actions. Depending on the message, you can copy it, bookmark it, edit it, or open **Extra Actions**.
+
+- **Regenerate** asks for a new assistant response as another branch.
+- **Continue Generation** asks the model to continue the current answer.
+- **Edit Raw Markdown** changes the saved message text directly.
+- **Edit as Branch** keeps the original and saves your revision on another branch.
+
+Editing saved text does not ask the model for a new answer. Send another prompt or regenerate when you want a model response.
+
+## Switch between alternatives
+
+1. Regenerate a response or edit a message as a branch.
+2. Use the branch arrows beside the message to move between alternatives.
+3. Open the branch count menu to label the branch or view its timeline when multiple alternatives exist.
+
+Continuing a chat uses the path you currently selected. Keep useful alternatives instead of deleting them just to try a different answer.
+
+## Adjust what you see and send
+
+The **Extra Actions** menu includes controls to fold older messages, hide a message, or isolate it from model context. Hiding and context isolation are different actions: use context isolation when your aim is to exclude a message from future model requests.
+
+**Clone with Ancestors to New Conversation** creates a separate conversation from the selected point.
+
+## Write in Forge
+
+Choose **New Forge Canvas** from the sidebar's new-conversation menu to work in a document editor. You can also choose **Forge Content** from a message's extra actions.
+
+Use the editor's formatting controls or select text to ask the model to rewrite it. Available actions include simplifying, changing length, fixing spelling and grammar, and changing tone. Save changes when finished.
+
+Forged content uses the rich text editor; raw Markdown editing is unavailable for that content. Forge availability depends on your plan.
+
+---
+
+## Reuse prompts and instructions
+
+Source: https://docs.msty.ai/studio/v3/conversations/prompts
+
+## Set a system prompt
+
+1. Open **System Prompt** using the robot-face control near the composer.
+2. Enter the instructions you want the model to follow, such as the role, tone, or response format.
+3. Click **Apply**.
+
+For example: “Explain unfamiliar terms and end with one practical next step.”
+
+When prompt sync is active across multiple splits, **Apply and Share with Synced Splits** is available. Use it when those splits should follow the same instructions.
+
+## Save instructions for reuse
+
+1. Enter the system prompt you want to keep.
+2. Choose **Save to Quick Prompts**.
+3. Give it a short name and save it.
+
+Use the Quick Prompts control in the system-prompt editor to insert a saved prompt and apply it to the chat.
+
+## Insert a prompt while writing
+
+Open the prompt picker from the conversation composer and select a saved prompt. It inserts into your current draft, so you can combine it with your own text before sending.
+
+Review the resulting draft before sending, especially when a saved prompt contains placeholders or variables. Manage reusable prompts in [Prompts](/v3/prompts).
+
+## Choose the right scope
+
+Use a system prompt for instructions that should guide the chat. Use a normal message for the task you want answered now. For a reusable assistant with its own model and resources, use a [persona](/v3/conversations/personas-and-crews).
+
+---
+
+## Chat with personas and crews
+
+Source: https://docs.msty.ai/studio/v3/conversations/personas-and-crews
+
+## Start a persona conversation
+
+1. Open the sidebar's new-conversation menu and choose **New Persona Conversation**.
+2. Select a persona.
+3. Check the model and send your message.
+
+A persona can provide instructions, a model, and resources configured in [Personas](/v3/personas). If it has no model assigned, select one for the chat.
+
+## Start a crew conversation
+
+1. Create a crew with the personas you want to use in Personas.
+2. Choose **New Crew Conversation** from the sidebar's new-conversation menu.
+3. Select the crew and review which personas should respond.
+4. Choose the response and context settings, then send a message.
+
+Select a fallback model if any crew members do not have their own model.
+
+## Control who responds
+
+- **Auto:** enabled personas respond automatically to a message.
+- **Manual:** choose the responding personas and click **Trigger** when ready.
+
+Use Manual when you want to collect your thoughts or direct a question to selected crew members before asking the others.
+
+## Control shared context
+
+- **Independent:** each persona sees your messages without the other personas' answers.
+- **Contextual:** personas can see one another's responses.
+
+Independent is useful for separate opinions. Contextual lets the crew build on the discussion. Multiple responding personas create multiple model requests, so model usage can increase.
+
+For a separate observer that produces analysis alongside a normal conversation, use [Shadow Personas](/v3/conversations/shadow-personas).
+
+---
+
+## Observe chats with Shadow Personas
+
+Source: https://docs.msty.ai/studio/v3/conversations/shadow-personas
+
+Shadow Personas are an experimental way to analyze a conversation without adding the analysis to its main message thread. They use a persona's configured model and instructions.
+
+## Add an observer
+
+1. Open **Shadow Personas** in a saved conversation.
+2. Choose **Create Shadow Persona**, name it, and select a persona.
+3. Choose an **Update Trigger** and the number of recent messages to include from each split.
+4. Select a synthesis mode and create the Shadow Persona.
+5. Use **Manage Splits** to choose which splits it monitors.
+
+You can attach an existing Shadow Persona instead of creating another. Save a new conversation before expecting its observer to process messages.
+
+## Choose when it runs
+
+- **Every Message:** analyze after each message.
+- **Every N Messages:** analyze after the configured interval.
+- **Manual Only:** run only when you click **Process Now**.
+
+Use **Deactivate** to pause automatic analysis. Each analysis is a separate model request.
+
+## Choose the analysis format
+
+**Combined Analysis** produces one result across monitored splits. **Per Split** keeps results separate, and **Comparative** highlights differences and agreements. **Auto** chooses based on the splits and models in use.
+
+Open **View Latest** to see the current result or **View History** for earlier versions.
+
+## Remove it from a conversation
+
+**Detach** removes the observer from this conversation while keeping it available elsewhere. **Delete Shadow Persona** deletes it from all conversations where it is attached; review the confirmation before continuing.
+
+---
+
+## Export and import conversations
+
+Source: https://docs.msty.ai/studio/v3/conversations/export-import
+
+## Export a conversation
+
+1. Open the conversation's actions in the sidebar.
+2. Choose an export format.
+3. Save the downloaded file somewhere you can find it later.
+
+JSON and `.mstyconv` exports can be imported into Msty. A `.mstyconv` file packages the conversation and its attachment files together and is useful for conversations with larger attachments.
+
+## Export one split
+
+Open **Split Options → Export Chat**, then choose:
+
+- **Active Branch as JSON** for the selected message path.
+- **Active Branch as Markdown** for a readable text copy.
+- **All Branches as JSON** to retain the split's alternatives.
+
+**Copy Chat** offers the same choices for the clipboard. Markdown is a readable export, not a full conversation backup.
+
+## Import into a project
+
+1. Open the destination project's actions in the sidebar.
+2. Choose **Import Conversation**.
+3. Select a conversation JSON or `.mstyconv` export and complete the import.
+
+Use an export produced by Msty; an arbitrary JSON chat transcript may not have the required format.
+
+Conversation exports are separate from workspace backups. Before moving all your data, use the backup and export options for the whole workspace as well.
+
+---
+
+## Set up Agent Mode
+
+Source: https://docs.msty.ai/studio/v3/agent-mode
+
+Agent Mode runs in Msty Studio Desktop. It connects an agent to a task, with access to the tools and permissions supported by that agent. It is separate from choosing a chat model for a normal conversation.
+
+![The Agent Mode start screen with detected coding agents](/images/v3/agent-mode.png)
+
+## Choose an agent
+
+1. Open the sidebar's new-conversation menu and choose **New Agent Session**.
+2. Select a detected agent or follow the setup card for the agent you want.
+3. If you installed or signed into an agent outside Msty, use **Re-check for agents** to detect it again.
+
+The setup screen includes Claude Code, Codex, Gemini CLI, and Local AI. Follow the selected agent's setup and sign-in instructions. Its account or model access is managed separately from your Msty license.
+
+## Use Local AI
+
+Enable Local AI as an agent, then choose its provider and model. The local service must be running. If Msty reports a missing runtime or adapter, follow the setup guidance before starting the session.
+
+## Start a task
+
+1. Select the agent.
+2. Choose a workspace folder, a recent folder, or **Start without folder**.
+3. Choose a model, reasoning level, and operating mode when those controls are available.
+4. Describe the task and send it.
+
+A useful first task is: “Read this project and explain how to run it. Do not change any files.” Choose the project folder you want the agent to inspect.
+
+Here, a workspace folder is the filesystem folder for the agent's task. It is different from a Msty workspace that organizes your chats and resources.
+
+Model choices, reasoning controls, and modes depend on the agent. Gemini CLI applies model selection at session start; start a new session to use another model.
+
+Continue with [sessions and permissions](/v3/agent-mode/sessions-and-permissions).
+
+---
+
+## Manage agent sessions and permissions
+
+Source: https://docs.msty.ai/studio/v3/agent-mode/sessions-and-permissions
+
+## Review a running task
+
+Agent messages show progress and tool activity alongside the response. Open a tool call to inspect its input and result. When the agent provides a plan, use the plan controls to follow its steps.
+
+Use the stop control to interrupt a task. **Disconnect** ends the current connection; when the agent is running, the header offers **Stop & Disconnect**.
+
+## Respond to a permission request
+
+1. Read the requested action.
+2. Open **Show details** to inspect the command or other inputs.
+3. Choose **Allow Once**, **Allow Always**, or **Deny**, when offered.
+
+The available choices come from the agent. **Allow Always** grants broader approval than a single action; use the wording and scope of the current request to decide.
+
+An operating mode can change what the agent is allowed to do. Review its description before switching modes, especially one that permits access outside the selected folder.
+
+## Resume earlier work
+
+1. Choose the same agent on the Agent Mode start screen.
+2. Open **View session**.
+3. Search or select an entry from **Recent Sessions** to resume it.
+
+When supported, a session can also be opened in a new conversation. Session history depends on the selected agent; Msty shows a notice when it is unavailable.
+
+## Reuse skills
+
+Type `/` in the prompt to choose from available skills. Enabled skills from [Skills](/v3/skills) and supported skills detected for the agent can appear in the list.
+
+Review the inserted instructions before sending. Skills guide the agent; they do not replace the agent's tool permissions or guarantee a particular result.
+
+---
+
+## Personas
+
+Source: https://docs.msty.ai/studio/v3/personas
+
+## Start with a persona
+
+1. Open **Personas > Assistants**.
+2. Browse **Discover**, preview a persona, and choose **Install**.
+3. Choose **Use in chat**, or select that persona from a conversation's persona control.
+
+![An assistant persona with a name, description, and reusable system prompt](/images/v3/persona-studio.png)
+
+## Create your own
+
+1. Choose **New Assistant Persona**.
+2. Give it a name and write its system prompt. Describe its role, task, and expected response style.
+3. Optionally assign a model, tools, context, Knowledge Stacks, Live Contexts, or few-shot examples.
+4. Choose how its system prompt combines with the conversation prompt, then **Save**.
+5. Open **Sandbox** to try it before using it in your work.
+
+For example, an editing persona can ask the assistant to preserve the author's meaning, shorten long sentences, and explain substantial edits.
+
+## Organize and revise
+
+Use folders and tags to group personas. **Save as Version** records a named revision; the version selector lets you inspect saved versions. The persona menu offers cloning and export.
+
+**Users** stores user personas, including notes and structured memories. **Crew** combines assistant personas for [crew conversations](/v3/conversations/personas-and-crews).
+
+Changes to a saved persona and the instructions already applied to a conversation are distinct. Check the conversation's selected persona and prompt when testing a revision.
+
+---
+
+## Prompts
+
+Source: https://docs.msty.ai/studio/v3/prompts
+
+![A saved checklist prompt with reusable team and notes variables](/images/v3/prompt-studio.png)
+
+## Save a reusable prompt
+
+1. Open **Prompts** and choose a prompt from **Discover**, or create a new prompt.
+2. Enter a title and the prompt text.
+3. Add tags or place it in a folder, then **Save**.
+4. In a conversation, open **Quick Prompts** and choose the saved prompt to insert it into the composer.
+
+Quick Prompts insert text; review it and send when ready. A conversation's **System Prompt** sets ongoing instructions instead.
+
+## Add variables
+
+Use placeholders when part of a prompt should change each time:
+
+```text
+Summarize {{topic!}} for {{audience:beginners}} in three bullets.
+```
+
+`{{topic!}}` is required. `{{audience:beginners}}` starts with a default value. Fill the detected variables before running the prompt.
+
+## Test and compare
+
+Open **Sandbox** to try a prompt with selected models and inspect test runs. Use **Save as Version** to keep a revision before making a larger change. A saved version can be selected without discarding the other versions.
+
+**AI Assistant** can help draft or improve prompt text; review its result before applying and saving it.
+
+## Default Prompts
+
+The **Default Prompts** section changes Msty's built-in task prompts, including Context Studio analysis and Knowledge Stack tasks. These affect those app workflows rather than merely adding text to the prompt library. Use the reset action to restore a built-in prompt.
+
+---
+
+## Skills
+
+Source: https://docs.msty.ai/studio/v3/skills
+
+Skills describe how to perform a task. Use them with a compatible agent in [Agent Mode](/v3/agent-mode).
+
+## Create a skill
+
+1. Open **Skills** and choose **New Skill**.
+2. Enter a unique **Skill ID**, such as `review-release-notes`. Use lowercase letters, numbers, and single hyphens.
+3. Write a description explaining what the skill does and when to use it.
+4. Add the instructions in the **SKILL.md** editor. Use **View** to preview them.
+5. Optionally add tags, then **Save**.
+
+An existing skill's ID is fixed. Edit its description and instructions to update its behavior.
+
+## Install existing skills
+
+Browse **Discover** or use **Add GitHub Repo** to add a skills repository. Inspect a skill before installing it. **Refresh Skills** updates the available repository information.
+
+The add menu also offers **From Template** and **Import Default Templates** where your license supports them.
+
+## Use skills with an agent
+
+Choose skills in the agent session's skill controls. A skill supplies instructions; it does not grant the agent extra tools or bypass approval settings. Agent support and how skills are applied depend on the selected agent.
+
+Organize installed skills in folders and enable the ones you want available.
+
+---
+
+## Context Studio
+
+Source: https://docs.msty.ai/studio/v3/context-studio
+
+## Add context
+
+1. Open **Context Studio**.
+2. Create a folder if you want to group related material.
+3. Add files, add a website, or add a YouTube link from the add menu.
+4. Select an item to inspect its content and details.
+
+Website extraction uses the configured extraction provider. YouTube transcript import requires a connected desktop sidecar. Import success depends on whether the source is accessible and supported.
+
+## Find and reuse material
+
+Use **All Items**, **Recents**, or **Favorites**, then search or filter by attachment type. Select an item to view its descriptions, tags, and **Associations**.
+
+Attach existing context from a conversation's attachment controls. Associations show where an item is used; detaching it removes that association without deleting the stored item.
+
+Deleting context is different: it removes the item from conversations and other resources that use it. Review the confirmation before deleting.
+
+## Generate metadata
+
+Open **Context Studio Settings** to assign a vision metadata model for images and a document metadata model for documents and websites. These assignments are shared with **Model Squad**.
+
+Enable **Process New Uploads** to generate metadata after compatible new uploads, or process selected items manually. Metadata generation uses the assigned model and may incur provider usage charges.
+
+The same settings include image reduction and website extraction options. Automatic image reduction changes the saved image quality, so choose **Ask each time** or **Off** when you need to preserve originals.
+
+---
+
+## Media Studio
+
+Source: https://docs.msty.ai/studio/v3/media-studio
+
+![Media Studio with a prompt, an image model, and optional context](/images/v3/media-studio.png)
+
+## Generate media
+
+1. Add an image- or video-capable model in **Settings > Model Providers**.
+2. Open the **New Conversation** menu and choose **Start New Media Session**.
+3. Select the image/video model.
+4. Write a prompt. Optionally use **Add Context** to include reference material.
+5. Adjust the generation settings offered for that model, then generate.
+6. Select an output in the history to inspect or download it.
+
+The selected model determines whether the output is an image or video and which settings and reference inputs are supported. A normal chat model does not automatically support media generation.
+
+## Refine an image
+
+Use a previous output or an uploaded image as context, then describe the change you want. Check which context items are enabled before generating again.
+
+Image annotation tools can add marks, text, or a crop to a reference. These annotations are saved as an image; they are not a promise that every model will follow the marks in the same way.
+
+## Compare and keep outputs
+
+History keeps the results of a session. Use **Compare** to inspect up to three selected outputs together. The history and item menus provide actions such as downloading, renaming, and managing context.
+
+For supported video models, reference images can be assigned as starting or ending frames. The available frame controls depend on the selected model.
+
+---
+
+## Create a Knowledge Stack
+
+Source: https://docs.msty.ai/studio/v3/knowledge-stacks/overview
+
+A Knowledge Stack turns documents and other sources into searchable context. Use it when a model needs to answer from your material.
+
+![A saved Knowledge Stack with a note source, ready to compose](/images/v3/knowledge-stack.png)
+
+## Create and compose
+
+1. Open **Knowledge Stacks** and choose **New Knowledge Stack**.
+2. Enter a title and, optionally, a description.
+3. Add content under **Files**, **Folders**, **Notes**, **YouTube Links**, **Web Links**, **Conversations**, or **Conversation Projects**.
+4. Open **Compose Settings** to choose an available embedding model and review how content is divided into chunks.
+5. Choose **Compose** and wait for the stack to become ready.
+
+**Save** stores changes to the stack. **Compose** prepares its content for search. A saved stack without a ready index cannot be added to a conversation.
+
+## Use it in a conversation
+
+Open the conversation's **Knowledge Stacks** add-on and select a ready stack. You can also attach stacks to a project or persona for repeated use.
+
+Ask a question that the selected sources can answer. For example, after composing your project notes, ask: “Which tasks are still open?”
+
+See [Add sources](/v3/knowledge-stacks/sources) and [Query Settings](/v3/knowledge-stacks/query-settings) for more control.
+
+---
+
+## Add and update sources
+
+Source: https://docs.msty.ai/studio/v3/knowledge-stacks/sources
+
+Open a stack and expand the source section you need. Files, folders, notes, links, conversations, and conversation projects can live in the same stack.
+
+## Choose sources
+
+- **Files:** Select documents to process.
+- **Folders:** Select local directories. Review ignore rules to exclude files you do not want indexed.
+- **Notes:** Write or paste text directly into the stack.
+- **YouTube Links:** Add videos with usable transcript content.
+- **Web Links:** Add pages to extract and index.
+- **Conversations:** Use selected conversations as source material.
+- **Conversation Projects:** Include conversation content from a project.
+
+Use **Compose** after adding or changing sources. Review any processing errors before using the stack in a chat.
+
+## Watch for changes
+
+Sources that support watching offer **Watch Mode**:
+
+| Mode | What happens |
+| --- | --- |
+| Manual | Reprocess when you compose the stack. |
+| Watch & Mark | Detect changes and mark content for reprocessing. |
+| Watch & Compose | Detect changes and compose in the background. |
+| Ignore | Skip the source during composition. |
+
+Watching requires access to the original source. Keep local directories available and review the compose schedule in **Compose Settings**.
+
+## Control a running compose
+
+Use **Pause** to suspend work and **Resume** to continue. **Abort** stops processing. Progress and errors stay with the stack so you can see what needs attention.
+
+---
+
+## Query Settings
+
+Source: https://docs.msty.ai/studio/v3/knowledge-stacks/query-settings
+
+Open a stack, choose **Query Settings**, adjust the controls, then **Save**. These settings affect retrieval; changing the embedding model belongs in **Compose Settings**.
+
+## Choose how context is retrieved
+
+- **Push Mode:** Msty retrieves relevant chunks and supplies them with the conversation.
+- **Pull Mode:** The model can query the stack as a tool when it needs information. Use a model that supports tool calling.
+
+Some retrieval modes and advanced controls depend on your plan.
+
+## Tune relevance
+
+- **Number of Chunks** controls how much retrieved material is supplied.
+- **Similarity Threshold** filters out weak matches. A stricter threshold can return fewer results.
+- **Semantic Search** looks for related meaning.
+- **Keyword Search** matches terms; **Hybrid Search** combines keyword and semantic search where available.
+- **Rerank Model** reorders retrieved chunks to improve relevance where available.
+
+Start with the defaults. If useful sources are missing, try a more specific question or a less strict threshold before increasing the amount of context.
+
+## Check the result
+
+Use **Chunks Console** from the stack's menu to search its indexed content. **Chunks Visualizer** and analytics are available where your plan allows them.
+
+If the source text is absent, update or recompose the stack rather than changing retrieval settings.
+
+---
+
+## Manage, share, and migrate stacks
+
+Source: https://docs.msty.ai/studio/v3/knowledge-stacks/manage-and-migrate
+
+Open a stack's action menu to organize it, inspect chunks, or export it.
+
+## Export and import
+
+Choose **Export...** to save a stack as a `.mstyks` package. A folder's **Export Folder...** action exports its stacks together.
+
+To import, open the Knowledge Stacks sidebar menu and choose **Import Knowledge Stacks...**, then select the package. Check its status before adding it to a conversation; an imported stack may need processing or an available embedding model.
+
+## Organize without deleting
+
+- **Pin Knowledge Stack** keeps an important stack marked for quick access.
+- **Move Knowledge Stack** changes its folder.
+- **Clone Knowledge Stack** creates a separate copy.
+- **Archive Knowledge Stack** preserves the stack while making it read-only. Use **Unarchive Knowledge Stack** to edit it again.
+
+## Rebuild searchable data
+
+Use **Rebuild Index** when the index is missing but original content is available. **Force Compose...** reprocesses eligible items in a ready stack.
+
+If you change the embedding model, rebuild the stack before using its new index. Keep the original sources available.
+
+## Existing Classic stacks
+
+Classic stacks continue to work in their current format. Choose **Migrate to Next Gen** only when you are ready to update that stack.
+
+Migration is one-way and applies to the selected stack. After migration, build its Next Gen index before using it again. Export a copy first if you want to retain a separate backup.
+
+An imported Classic stack with no original content may be blocked from migration. Keep using it as-is, or import an updated package. A stack missing both searchable data and original content must be imported or installed again.
+
+---
+
+## Connect MCP tools
+
+Source: https://docs.msty.ai/studio/v3/toolbox/tools
+
+Toolbox connects Msty to MCP servers. A server can provide tools for tasks such as reading files or looking up information.
+
+![The new MCP tool form with HTTP and STDIO connection choices](/images/v3/mcp-tool.png)
+
+## Add a server
+
+1. Open **Toolbox** and select **Tools**.
+2. Choose **Add New Tool** and give it a name.
+3. Select **HTTP** for a server URL, or **STDIO / JSON** for a command-based server configuration.
+4. For HTTP, enter **MCP Server URL** and the authentication method required by the server. Options include a bearer token and OAuth.
+5. For STDIO, paste the server's configuration. Its command and dependencies must be available on the desktop.
+6. Use **Test tool** to check the connection, then **Save**.
+
+Use the configuration supplied by the MCP server's author. Authentication, required environment values, and installed dependencies vary by server.
+
+## Make tools available to a conversation
+
+Add the server to a [toolset](/v3/toolbox/toolsets), then select that toolset in the conversation. Use a model that supports tool calling.
+
+A successful connection does not guarantee every request will use a tool. The model chooses from the tools made available to it.
+
+## If a tool does not connect
+
+Recheck the URL or command, required values, and authentication. Use the tool's console to inspect errors. For command-based servers, verify the required executable is installed and reachable.
+
+---
+
+## Build a toolset
+
+Source: https://docs.msty.ai/studio/v3/toolbox/toolsets
+
+A toolset groups connected MCP servers and the tools you want to make available together.
+
+## Create one
+
+1. Add and test your servers under [Tools](/v3/toolbox/tools).
+2. In **Toolbox**, select **Toolsets**, then **Add New Toolset**.
+3. Enter a name and optional notes.
+4. Select the tools to include. Configure their available features and required values where offered.
+5. **Save** the toolset.
+
+Select the toolset from a conversation's toolsets control. Toolsets can also be assigned to personas and projects for repeated use.
+
+## Keep toolsets focused
+
+Create a small toolset for each task rather than enabling every connected server. For example, a writing workflow might need a document toolset, while a coding workflow needs different capabilities.
+
+Toolbox provides import actions for clipboard content, files, and default items. Review imported configurations and test their connections before using them.
+
+---
+
+## Live Contexts
+
+Source: https://docs.msty.ai/studio/v3/toolbox/live-contexts
+
+A Live Context retrieves information from an HTTP endpoint and makes it available to the model. Use it for data that changes, such as a service status response.
+
+## Create a Live Context
+
+1. Open **Toolbox**, select **Live Contexts**, then **Add New Live Context**.
+2. Give it a name and instructions explaining when to use the result.
+3. Choose **GET** or **POST** and enter the endpoint URL.
+4. Add required headers and, for POST requests, a request body.
+5. Choose **Push** or **Pull** mode.
+6. Test the connection and inspect the result, then **Save**.
+
+The form supports placeholders for values requested when the Live Context runs. Use them for values that vary between requests.
+
+## Push or Pull
+
+**Push** adds the context with the conversation. **Pull** makes it available for the model to request when needed; use a model that supports tool calling.
+
+Select the Live Context from the conversation's add-ons, or assign it to a persona or project.
+
+If the endpoint returns too much data, use its supported filters or the form's processing function to reduce the result before it reaches the model.
+
+---
+
+## Turnstiles
+
+Source: https://docs.msty.ai/studio/v3/add-ons/turnstiles
+
+A Turnstile runs a sequence in a conversation. Use one for a repeatable workflow, such as drafting an answer, reviewing it, and revising it.
+
+## Create a sequence
+
+1. Open **Turnstiles** and create a new Turnstile.
+2. Name it and add a prompt entry.
+3. Add more entries in the order you want them to run.
+4. Review the model and persona choices, then **Save**.
+5. Select the Turnstile from the conversation's Turnstiles control and start it.
+
+Begin with a short sequence and inspect the results before adding more steps.
+
+## Available actions
+
+Alongside prompt entries, you can insert **Continue**, **Regenerate**, persona entries, and context-shield actions. Drag entries to reorder them.
+
+For a controlled workflow, use:
+
+- **Conditional** entries to react to matching user, assistant, or variable text.
+- **Loop** entries to repeat a section with an iteration limit or exit condition.
+- **Checkpoint** entries to pause for review or collect variable values.
+
+At a checkpoint, review the instructions and variable values. Continue, skip entries, jump to a label, or abort the run using the offered controls.
+
+---
+
+## Real-Time Data
+
+Source: https://docs.msty.ai/studio/v3/add-ons/real-time-data
+
+Real-Time Data brings search results into a conversation. It uses a search provider separate from your chat model.
+
+## Configure a provider
+
+1. Open **Settings → RTD Providers**.
+2. Select a provider, such as Jina, Google Custom Search, Brave Search, Tavily, Exa, SearXNG, or Ollama.
+3. Enter the credentials or endpoint required by that provider and save the configuration.
+4. Open a conversation's **Real-Time Data** control and select the configured provider.
+5. Ask a question that needs current information.
+
+Provider availability depends on your platform and plan. Some providers require their own paid account.
+
+## Choose when to search
+
+**Push** supplies search context with the request. **Pull**, where available, lets the model request searches when it needs them and requires tool-calling support.
+
+Review the returned sources rather than treating a search result as a guarantee that an answer is correct. If no results appear, check the selected provider, credentials, and connection.
+
+---
+
+## Add attachments
+
+Source: https://docs.msty.ai/studio/v3/add-ons/attachments
+
+Use the attachment control beside the message input to add context for a conversation.
+
+## Attach content
+
+1. Open the attachment selector.
+2. Choose **Documents**, **Images**, **Webpages**, or **YouTube Links**.
+3. Add the file or link, or select an existing item.
+4. Wait for processing to finish, then send your question.
+
+Use an image-capable model when you want the model to interpret an image. Webpages and YouTube links need readable page text or transcript content.
+
+## Reuse and manage context
+
+[Context Studio](/v3/context-studio) keeps reusable attachments organized. You can select existing items without importing them again.
+
+Where available, **Dynamic** selection follows chosen Context Studio folders or all attachments instead of a fixed list. Review that selection before sending a prompt so you know which material is included.
+
+## Pick the right amount
+
+Attach only the material needed for the question. Large documents can use substantial model context. For a reusable searchable collection, create a [Knowledge Stack](/v3/knowledge-stacks/overview).
+
+---
+
+## Workspaces and projects
+
+Source: https://docs.msty.ai/studio/v3/workspaces
+
+A workspace keeps a separate set of local work. Projects organize conversations inside a workspace.
+
+## Create a workspace
+
+1. Open the workspace selector in the sidebar.
+2. Choose **New Workspace**.
+3. Enter a name and choose a color.
+4. On desktop, optionally choose the folder where Msty should store the workspace.
+5. Choose **Create and Switch**, or use **Create and Stay** to keep working in the current workspace.
+
+Switch between workspaces from the same selector. Its actions include editing, exporting, importing, and workspace protection.
+
+## Organize conversations with projects
+
+Create a project from the conversation sidebar, then move related conversations into it. A project can provide shared model and add-on choices such as attachments, Knowledge Stacks, toolsets, and Live Contexts.
+
+For example, keep one project for a research topic and attach its reference material there instead of selecting it for every conversation.
+
+## Protect and back up
+
+Workspace protection can lock a workspace with a passphrase. Keep that passphrase somewhere safe and export a backup before changing storage or protection settings.
+
+Use the workspace menu to export one workspace. For a broader backup, see [Back up and restore data](/v3/settings/data-backups).
+
+Workspaces are local; creating one does not synchronize it to another device.
+
+---
+
+## Environments
+
+Source: https://docs.msty.ai/studio/v3/workspaces/environment
+
+Environments store values used by workflows that accept environment variables. Keep a separate environment for each set of connection details you need.
+
+## Create and activate
+
+1. Open **Settings → Environments**.
+2. Choose **New Environment** and enter a unique name.
+3. Add variable names and values, then **Save**.
+4. Open that environment's action menu and choose **Make Active**.
+
+Values are hidden by default. Use **Show values** only when you need to inspect them.
+
+## Reuse an environment
+
+Use **Clone** to create a copy before changing a working configuration. The base environment cannot be deleted.
+
+The New Environment menu includes **Export Environments** and a restore action. Restoring replaces existing environments, so export the current set first if you want to keep it.
+
+Avoid putting real credentials in shared screenshots or example exports.
+
+---
+
+## Settings
+
+Source: https://docs.msty.ai/studio/v3/settings/settings
+
+Open **Settings** from the sidebar. Use the settings search to find a control by name instead of opening each section.
+
+## App
+
+| Section | Use it for |
+| --- | --- |
+| General | Language and conversation behavior. |
+| Appearance | Theme, colors, and display preferences. |
+| Data | Backups, restoration, storage, and recovery. |
+| Environments | Named sets of workflow variables. |
+| Keyboard Shortcuts | View and customize key bindings. |
+| Notifications | Review, search, download, and manage app notifications. |
+| Log Viewer | Search and filter application logs for troubleshooting. |
+
+Notifications and Log Viewer are available in the desktop app. Both can export information for troubleshooting; review it before sharing.
+
+In **Notifications**, search or filter app events, copy or download them, and remove entries you no longer need. In **Log Viewer**, search and filter logs, control automatic refresh, and copy or download the results. Clearing the log display is temporary; clearing the log file permanently deletes its entries.
+
+## Providers and engines
+
+| Section | Use it for |
+| --- | --- |
+| Model Providers | Connections to online and external model providers. |
+| Local Engines | Desktop Ollama, MLX, and Llama.cpp service settings. |
+| Agent Mode | Configure agent adapters and skills. |
+| Vibe CLI Proxy | Connect supported coding assistant accounts through a local proxy. |
+| RTD Providers | Connections used by Real-Time Data. |
+
+See [Online Providers](/v3/managing-models/online-providers), [Agent Mode](/v3/agent-mode), and [Vibe CLI Proxy](/v3/managing-models/vibe-cli-proxy).
+
+## Models
+
+| Section | Use it for |
+| --- | --- |
+| Local Models | Installed models and downloads. |
+| Model Squad | Models assigned to supporting tasks. |
+
+## Access, insights, and integrations
+
+| Section | Use it for |
+| --- | --- |
+| Account | License and account access. |
+| Usage | Recorded model usage. |
+| Remote Tools | Desktop connector for remote tools and local models. |
+
+The available sections depend on the platform and enabled features. For example, local-engine controls appear on desktop.
+
+Default prompts are managed in **Prompts → Default Prompts**. MCP tools, toolsets, and Live Contexts are managed in **Toolbox**.
+
+See [Keyboard Shortcuts](/v3/settings/keyboard-shortcuts), [Data Backups](/v3/settings/data-backups), and [Remote Tools](/v3/settings/remote-connections).
+
+---
+
+## Keyboard Shortcuts and Command Palette
+
+Source: https://docs.msty.ai/studio/v3/settings/keyboard-shortcuts
+
+## Open the Command Palette
+
+Press **⌘K** on macOS or **Ctrl+K** on Windows and Linux, or use the sidebar search button.
+
+Type the action, setting, or destination you need. Use the arrow keys to choose a result, **Enter** to run it, and **Escape** to close the palette.
+
+The palette includes navigation, workspace switching, settings, appearance, and conversation commands. Available actions depend on the current screen.
+
+## Change a shortcut
+
+1. Open **Settings → Keyboard Shortcuts**.
+2. Search by name or record a key combination to find its binding.
+3. Choose the shortcut you want to edit and press the new combination.
+4. If Msty reports a conflict, choose another combination or change the conflicting action first.
+
+Use the category filter to narrow the list. Reset controls restore the original bindings when you want to undo customization.
+
+Customized bindings take precedence over the default combinations shown in guides.
+
+---
+
+## Back up and restore data
+
+Source: https://docs.msty.ai/studio/v3/settings/data-backups
+
+Msty keeps workspace data locally. Export a backup before moving devices, changing workspace storage, or restoring older data.
+
+## Export a backup
+
+1. Open **Settings → Data**.
+2. Under **Export data**, choose **Export** and save the archive.
+3. Set a **Backup reminder** interval if you want reminders to export regularly.
+
+A reminder prompts you to back up; it is not an automatic sync service. To export only one workspace, use its workspace-menu export action.
+
+## Restore
+
+1. Export the current data first if you need to keep it.
+2. In **Settings → Data → Recovery**, start **Restore data**.
+3. Choose the backup archive and review the confirmation.
+4. Restore it, then restart when prompted.
+
+Restoring replaces existing data and cannot be undone through the restore dialog.
+
+## Desktop workspace storage
+
+The **Workspace storage** section can enable file-based storage for an older workspace or change its location after migration. Finish any running data operation before moving it.
+
+**Lost Workspaces** can find workspace databases no longer listed in the app. Recovery depends on those files still being available.
+
+---
+
+## Remote Tools
+
+Source: https://docs.msty.ai/studio/v3/settings/remote-connections
+
+The desktop Remote Tools connector accepts authenticated connections for tools and local models. This feature requires access to Remote Tools on your plan.
+
+## Start the connector
+
+1. On desktop, open **Settings → Remote Tools**.
+2. Enter a connection token.
+3. Enable tunneling only if the connection needs to reach the desktop outside its local network.
+4. Optionally remember the token for future connector sessions, then choose **Enable**.
+5. Copy the local connection URL, or the tunnel URL when enabled, into the remote connection setup.
+
+The copied URL includes the connection token. Treat it like a credential and keep it out of screenshots, shared chats, and public documents.
+
+## Stop accepting connections
+
+Return to **Remote Tools** and choose **Disable**. Keep the desktop app and connector running for as long as the remote client needs its services.
+
+The web app has separate version and availability requirements. Use the [2.x documentation](/v2/settings/remote-connections) when connecting from the current 2.x web interface.
